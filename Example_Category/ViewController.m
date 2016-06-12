@@ -78,7 +78,7 @@
      */
     
     
-    // 3 图片处理只拿到图片的一部分
+    // 4 图片处理只拿到图片的一部分
     
     UIImage *image = [UIImage imageNamed:@"Default"];// 750 * 1334
     CGImageRef imageRef = image.CGImage;
@@ -105,7 +105,13 @@
     //    //同样可以设置显示的图片范围
     //    //不过此处略有不同，这里的四个值均为0-1之间；对应的依然是写x,y,widt,height
     //    [self.view addSubview:layerView];
+  
     
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+
     activityIndicator = [[YRActivityIndicator alloc] init];
     activityIndicator.frame = CGRectMake(0, 0, 50, 50);
     activityIndicator.center = self.view.center;
@@ -119,11 +125,9 @@
     //    activityIndicator.maxSpeed = 1.6;
     [self.view addSubview:activityIndicator];
     [activityIndicator startAnimating];
-    
-    
-    
-    
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

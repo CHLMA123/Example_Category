@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36AC0DA21D0CF60300671FD0 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 36AC0DA11D0CF60300671FD0 /* README.md */; };
 		36C891701D0CEAE100DC86E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C8916F1D0CEAE100DC86E0 /* main.m */; };
 		36C891731D0CEAE100DC86E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C891721D0CEAE100DC86E0 /* AppDelegate.m */; };
 		36C891761D0CEAE100DC86E0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C891751D0CEAE100DC86E0 /* ViewController.m */; };
@@ -53,6 +54,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		36AC0DA11D0CF60300671FD0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		36C8916B1D0CEAE100DC86E0 /* Example_Category.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example_Category.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36C8916F1D0CEAE100DC86E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		36C891711D0CEAE100DC86E0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			children = (
 				36C891E31D0CEB9900DC86E0 /* Images */,
 				36C8916F1D0CEAE100DC86E0 /* main.m */,
+				36AC0DA11D0CF60300671FD0 /* README.md */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				36C891761D0CEAE100DC86E0 /* ViewController.m in Sources */,
 				36C891731D0CEAE100DC86E0 /* AppDelegate.m in Sources */,
 				36C891E21D0CEB7B00DC86E0 /* ViewController_push.m in Sources */,
+				36AC0DA21D0CF60300671FD0 /* README.md in Sources */,
 				36C891701D0CEAE100DC86E0 /* main.m in Sources */,
 				36C891DF1D0CEB6F00DC86E0 /* YRActivityIndicator.m in Sources */,
 				36C891DE1D0CEB6F00DC86E0 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
@@ -464,6 +468,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Example_Category/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.test.Example-Category";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -475,6 +480,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Example_Category/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.test.Example-Category";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -500,6 +506,7 @@
 				36C891841D0CEAE100DC86E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
