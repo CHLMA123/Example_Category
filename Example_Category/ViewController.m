@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.view.backgroundColor = [UIColor blueColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame = CGRectMake(20, 89, 290, 60);
@@ -117,7 +117,7 @@
     activityIndicator.center = self.view.center;
     //    activityIndicator.maxItems = 7;
     //    activityIndicator.itemImage = [UIImage imageNamed:@"findhome_20160126202805dianying"];
-    //    activityIndicator.itemColor = [UIColor whiteColor];
+        activityIndicator.itemColor = [UIColor redColor];
     //    activityIndicator.maxItemSize = CGSizeMake(25, 25);
     //    activityIndicator.minItemSize = CGSizeMake(5, 5);
     //    activityIndicator.radius = 80;
