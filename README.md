@@ -5,3 +5,6 @@ My Category Set ...
 2 侧滑手势返回 btn:pushVCAction
 3 关于block使用的ji点注意事项
 4 图片处理只拿到图片的一部分
+5 setupBarStyle;
+6 Performant animated GIF engine for iOS;
+... ...
