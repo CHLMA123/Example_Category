@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "ViewController_push.h"
 #import "YRActivityIndicator.h"
+#import "LKBadgeView.h"
 
 @interface ViewController ()
 {
@@ -106,7 +107,17 @@
     //    //不过此处略有不同，这里的四个值均为0-1之间；对应的依然是写x,y,widt,height
     //    [self.view addSubview:layerView];
   
-    
+    // 5
+    LKBadgeView *timestampLabel = [[LKBadgeView alloc] initWithFrame:CGRectMake(5, 500, self.view.bounds.size.width-10, 55)];
+    timestampLabel.backgroundColor = [UIColor grayColor];
+    timestampLabel.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleLeftMargin;
+    timestampLabel.badgeColor = [UIColor redColor];
+    timestampLabel.textColor = [UIColor blackColor];
+    timestampLabel.font = [UIFont systemFontOfSize:10.0f];
+    timestampLabel.text = @"99";
+    //    timestampLabel.center = CGPointMake(CGRectGetWidth([[UIScreen mainScreen] bounds]) / 2.0, timestampLabel.center.y);
+    [self.view addSubview:timestampLabel];
+
     
 }
 
@@ -144,34 +155,3 @@
 }
 
 @end
-
-
-
-
-////
-////  ViewController.m
-////  Example_Category
-////
-////  Created by MCL on 16/6/12.
-////  Copyright © 2016年 MCL. All rights reserved.
-////
-//
-//#import "ViewController.h"
-//
-//@interface ViewController ()
-//
-//@end
-//
-//@implementation ViewController
-//
-//- (void)viewDidLoad {
-//    [super viewDidLoad];
-//    // Do any additional setup after loading the view, typically from a nib.
-//}
-//
-//- (void)didReceiveMemoryWarning {
-//    [super didReceiveMemoryWarning];
-//    // Dispose of any resources that can be recreated.
-//}
-//
-//@end
