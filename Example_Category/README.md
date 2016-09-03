@@ -36,3 +36,21 @@ App迭代开发版本号的规则
 [self tableViewContentInset];               // 指定滚动条在scrollview的位置
 [self testArraySum];                        // array快速求总和, 最大值, 最小值和平均值
 
+#pragma mark - Examples3
+
+[self addNoteView];                         // NoteView组件化
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
