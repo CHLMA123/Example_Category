@@ -24,8 +24,15 @@ App迭代开发版本号的规则
 [self testDictonaryAction];                 // testDictonaryAction
 [self pushAnimatedImage];                   // AnimatedImageViewController gif动画加载
 [self cutCircleImageAction];                // iOS开发中设置圆角的几种方法
-
+[self createAnimatedImage];                 // 使用图片实现GIF动画
+[self createButtonRectCorner];              // 控件的局部圆角问题: 图层蒙版(一个button或者label，只要右边的两个角圆角，或者只要一个圆角)。
 
 #pragma mark - Examples2
 
+[self GetContendImageView];                 // 图片处理只拿到图片的一部分
+[self setImageforUIView];                   // 给UIView设置图片
+[self buildBarButtonItem];                  // 旋转动画
+[self Screenshots];                         // 截屏
+[self tableViewContentInset];               // 指定滚动条在scrollview的位置
+[self testArraySum];                        // array快速求总和, 最大值, 最小值和平均值
 
