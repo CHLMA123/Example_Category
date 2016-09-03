@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController_push : UIViewController
+@interface AnimatedImageViewController : UIViewController
 
 @end
+

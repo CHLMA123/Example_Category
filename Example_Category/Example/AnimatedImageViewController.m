@@ -6,10 +6,10 @@
 //  Copyright © 2016年 MCL. All rights reserved.
 //
 
-#import "ViewController_push.h"
+#import "AnimatedImageViewController.h"
 #import "FLAnimatedImage.h"
 
-@interface ViewController_push ()
+@interface AnimatedImageViewController ()
 
 @property (nonatomic, strong) FLAnimatedImageView *imageView1;
 @property (nonatomic, strong) FLAnimatedImageView *imageView2;
@@ -17,7 +17,7 @@
 
 @end
 
-@implementation ViewController_push
+@implementation AnimatedImageViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
