@@ -12,6 +12,7 @@
 #import "UIImage+Extend.h"
 #import "CreateAnimatedViewController.h"
 #import "NoteViewController.h"
+#import "OverviewStructureController1.h"
 
 #define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
 //ImageView旋转状态枚举
@@ -76,6 +77,14 @@ static NSInteger i = 0;
 #pragma mark - Examples3
     
     [self addNoteView];                         // NoteView组件化
+    [self OverviewStructure];                         //OverviewStructure
+}
+
+#pragma mark - OverviewStructure
+- (void)OverviewStructure{
+    
+    OverviewStructureController1 *push = [[OverviewStructureController1 alloc] init];
+    [self.navigationController pushViewController:push animated:YES];
 }
 
 #pragma mark - addNoteView
