@@ -50,6 +50,13 @@
 		36514A581D7A7A560047BDBC /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 36514A531D7A7A560047BDBC /* MBProgressHUD.m */; };
 		36514A591D7A7A560047BDBC /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 36514A561D7A7A560047BDBC /* UIView+Toast.m */; };
 		36514A611D7A7A970047BDBC /* BlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 36514A601D7A7A970047BDBC /* BlockButton.m */; };
+		36514A6F1D7A9CCC0047BDBC /* NoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36514A6E1D7A9CCC0047BDBC /* NoteView.m */; };
+		36514A721D7A9E040047BDBC /* CommonMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 36514A711D7A9E040047BDBC /* CommonMode.m */; };
+		36514A761D7AA0210047BDBC /* NoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36514A751D7AA0210047BDBC /* NoteViewController.m */; };
+		36514A7B1D7AA1DE0047BDBC /* checkbox_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36514A771D7AA1DE0047BDBC /* checkbox_nor@2x.png */; };
+		36514A7C1D7AA1DE0047BDBC /* checkbox_nor@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36514A781D7AA1DE0047BDBC /* checkbox_nor@3x.png */; };
+		36514A7D1D7AA1DE0047BDBC /* checkbox_pay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36514A791D7AA1DE0047BDBC /* checkbox_pay@2x.png */; };
+		36514A7E1D7AA1DE0047BDBC /* checkbox_pay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36514A7A1D7AA1DE0047BDBC /* checkbox_pay@3x.png */; };
 		367830011D1D372C00D294DD /* NSObject+modelConvertDic.m in Sources */ = {isa = PBXBuildFile; fileRef = 367830001D1D372C00D294DD /* NSObject+modelConvertDic.m */; };
 		367B39B21D0E614900443974 /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 367B39AE1D0E614900443974 /* FLAnimatedImage.m */; };
 		367B39B31D0E614900443974 /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 367B39B01D0E614900443974 /* FLAnimatedImageView.m */; };
@@ -155,6 +162,20 @@
 		36514A561D7A7A560047BDBC /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		36514A5F1D7A7A970047BDBC /* BlockButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockButton.h; sourceTree = "<group>"; };
 		36514A601D7A7A970047BDBC /* BlockButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockButton.m; sourceTree = "<group>"; };
+		36514A6D1D7A9CCC0047BDBC /* NoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteView.h; sourceTree = "<group>"; };
+		36514A6E1D7A9CCC0047BDBC /* NoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteView.m; sourceTree = "<group>"; };
+		36514A701D7A9E040047BDBC /* CommonMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonMode.h; sourceTree = "<group>"; };
+		36514A711D7A9E040047BDBC /* CommonMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonMode.m; sourceTree = "<group>"; };
+		36514A741D7AA0210047BDBC /* NoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteViewController.h; sourceTree = "<group>"; };
+		36514A751D7AA0210047BDBC /* NoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteViewController.m; sourceTree = "<group>"; };
+		36514A771D7AA1DE0047BDBC /* checkbox_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox_nor@2x.png"; sourceTree = "<group>"; };
+		36514A781D7AA1DE0047BDBC /* checkbox_nor@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox_nor@3x.png"; sourceTree = "<group>"; };
+		36514A791D7AA1DE0047BDBC /* checkbox_pay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox_pay@2x.png"; sourceTree = "<group>"; };
+		36514A7A1D7AA1DE0047BDBC /* checkbox_pay@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox_pay@3x.png"; sourceTree = "<group>"; };
+		36514A7F1D7AA3110047BDBC /* CommonHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonHeader.h; sourceTree = "<group>"; };
+		36514A801D7AA3390047BDBC /* MacroHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroHeader.h; sourceTree = "<group>"; };
+		36514A811D7AA3900047BDBC /* MayerPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MayerPrefixHeader.pch; sourceTree = "<group>"; };
+		36514A821D7AA4440047BDBC /* ThirdMacrosHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdMacrosHeader.h; sourceTree = "<group>"; };
 		36782FFF1D1D372C00D294DD /* NSObject+modelConvertDic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+modelConvertDic.h"; sourceTree = "<group>"; };
 		367830001D1D372C00D294DD /* NSObject+modelConvertDic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+modelConvertDic.m"; sourceTree = "<group>"; };
 		367B39AD1D0E614900443974 /* FLAnimatedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImage.h; sourceTree = "<group>"; };
@@ -225,6 +246,7 @@
 		365149F21D7A64640047BDBC /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				36514A731D7A9FF50047BDBC /* CreateNoteView */,
 				36514A021D7A74A40047BDBC /* CreateAnimatedView */,
 				365149FC1D7A65460047BDBC /* AnimatedImage */,
 				365149FB1D7A652E0047BDBC /* GetDeviceAllInfo */,
@@ -254,14 +276,14 @@
 		36514A021D7A74A40047BDBC /* CreateAnimatedView */ = {
 			isa = PBXGroup;
 			children = (
-				36514A061D7A75530047BDBC /* addcamera */,
+				36514A061D7A75530047BDBC /* addcamera_image */,
 				36514A031D7A74E00047BDBC /* CreateAnimatedViewController.h */,
 				36514A041D7A74E00047BDBC /* CreateAnimatedViewController.m */,
 			);
 			name = CreateAnimatedView;
 			sourceTree = "<group>";
 		};
-		36514A061D7A75530047BDBC /* addcamera */ = {
+		36514A061D7A75530047BDBC /* addcamera_image */ = {
 			isa = PBXGroup;
 			children = (
 				36514A071D7A75530047BDBC /* addcamera_loading10@2x.png */,
@@ -291,6 +313,7 @@
 				36514A1F1D7A75530047BDBC /* addcamera_loading9@2x.png */,
 				36514A201D7A75530047BDBC /* addcamera_loading9@3x.png */,
 			);
+			name = addcamera_image;
 			path = addcamera;
 			sourceTree = "<group>";
 		};
@@ -370,6 +393,58 @@
 			path = BlockButton;
 			sourceTree = "<group>";
 		};
+		36514A621D7A9AD80047BDBC /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				36514A631D7A9B010047BDBC /* NoteView */,
+			);
+			name = Module;
+			path = Example/Module;
+			sourceTree = "<group>";
+		};
+		36514A631D7A9B010047BDBC /* NoteView */ = {
+			isa = PBXGroup;
+			children = (
+				36514A6D1D7A9CCC0047BDBC /* NoteView.h */,
+				36514A6E1D7A9CCC0047BDBC /* NoteView.m */,
+				36514A701D7A9E040047BDBC /* CommonMode.h */,
+				36514A711D7A9E040047BDBC /* CommonMode.m */,
+				36514A771D7AA1DE0047BDBC /* checkbox_nor@2x.png */,
+				36514A781D7AA1DE0047BDBC /* checkbox_nor@3x.png */,
+				36514A791D7AA1DE0047BDBC /* checkbox_pay@2x.png */,
+				36514A7A1D7AA1DE0047BDBC /* checkbox_pay@3x.png */,
+			);
+			path = NoteView;
+			sourceTree = "<group>";
+		};
+		36514A641D7A9B1D0047BDBC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				36514A651D7A9B460047BDBC /* Macros */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		36514A651D7A9B460047BDBC /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				36514A811D7AA3900047BDBC /* MayerPrefixHeader.pch */,
+				36514A7F1D7AA3110047BDBC /* CommonHeader.h */,
+				36514A801D7AA3390047BDBC /* MacroHeader.h */,
+				36514A821D7AA4440047BDBC /* ThirdMacrosHeader.h */,
+			);
+			path = Macros;
+			sourceTree = "<group>";
+		};
+		36514A731D7A9FF50047BDBC /* CreateNoteView */ = {
+			isa = PBXGroup;
+			children = (
+				36514A741D7AA0210047BDBC /* NoteViewController.h */,
+				36514A751D7AA0210047BDBC /* NoteViewController.m */,
+			);
+			name = CreateNoteView;
+			sourceTree = "<group>";
+		};
 		367B39AC1D0E614900443974 /* FLAnimatedImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -410,8 +485,10 @@
 		36C8916D1D0CEAE100DC86E0 /* Example_Category */ = {
 			isa = PBXGroup;
 			children = (
+				36514A641D7A9B1D0047BDBC /* Common */,
 				36C891D71D0CEB6F00DC86E0 /* Venders */,
 				36C891851D0CEB0000DC86E0 /* Category */,
+				36514A621D7A9AD80047BDBC /* Module */,
 				365149F21D7A64640047BDBC /* Example */,
 				36C891711D0CEAE100DC86E0 /* AppDelegate.h */,
 				36C891721D0CEAE100DC86E0 /* AppDelegate.m */,
@@ -597,8 +674,10 @@
 				36C892251D0CEB9900DC86E0 /* findhome_dot@3x.png in Resources */,
 				36C8920C1D0CEB9900DC86E0 /* findhome_20160126203103xiuxianyule.png in Resources */,
 				36514A2C1D7A75530047BDBC /* addcamera_loading2@3x.png in Resources */,
+				36514A7C1D7AA1DE0047BDBC /* checkbox_nor@3x.png in Resources */,
 				36C892151D0CEB9900DC86E0 /* findhome_20160126203742aiche.png in Resources */,
 				36514A301D7A75530047BDBC /* addcamera_loading4@3x.png in Resources */,
+				36514A7E1D7AA1DE0047BDBC /* checkbox_pay@3x.png in Resources */,
 				36C8920D1D0CEB9900DC86E0 /* findhome_20160126203251waimai.png in Resources */,
 				36514A3A1D7A75530047BDBC /* addcamera_loading9@3x.png in Resources */,
 				367B39B71D0E622A00443974 /* rock.gif in Resources */,
@@ -606,12 +685,14 @@
 				36514A371D7A75530047BDBC /* addcamera_loading8@2x.png in Resources */,
 				36514A231D7A75530047BDBC /* addcamera_loading11@2x.png in Resources */,
 				36C892261D0CEB9900DC86E0 /* findhome_dot_pressed@2x.png in Resources */,
+				36514A7D1D7AA1DE0047BDBC /* checkbox_pay@2x.png in Resources */,
 				36514A351D7A75530047BDBC /* addcamera_loading7@2x.png in Resources */,
 				36514A2E1D7A75530047BDBC /* addcamera_loading3@3x.png in Resources */,
 				36C8921C1D0CEB9900DC86E0 /* findhome_20160126205135jingguan.png in Resources */,
 				365149F91D7A651B0047BDBC /* 启动页_1242x2208.png in Resources */,
 				36C892221D0CEB9900DC86E0 /* findhome_20160204184258rihanliaoli.png in Resources */,
 				36514A341D7A75530047BDBC /* addcamera_loading6@3x.png in Resources */,
+				36514A7B1D7AA1DE0047BDBC /* checkbox_nor@2x.png in Resources */,
 				36C8920B1D0CEB9900DC86E0 /* findhome_20160126202946liren.png in Resources */,
 				36C892271D0CEB9900DC86E0 /* findhome_dot_pressed@3x.png in Resources */,
 				36514A221D7A75530047BDBC /* addcamera_loading10@3x.png in Resources */,
@@ -655,6 +736,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36514A761D7AA0210047BDBC /* NoteViewController.m in Sources */,
 				36C891761D0CEAE100DC86E0 /* ViewController.m in Sources */,
 				36C891731D0CEAE100DC86E0 /* AppDelegate.m in Sources */,
 				367B39B31D0E614900443974 /* FLAnimatedImageView.m in Sources */,
@@ -664,6 +746,8 @@
 				365149F11D7A61560047BDBC /* README.md in Sources */,
 				36514A611D7A7A970047BDBC /* BlockButton.m in Sources */,
 				367830011D1D372C00D294DD /* NSObject+modelConvertDic.m in Sources */,
+				36514A6F1D7A9CCC0047BDBC /* NoteView.m in Sources */,
+				36514A721D7A9E040047BDBC /* CommonMode.m in Sources */,
 				36514A4C1D7A799C0047BDBC /* UIImage+Rotate_Flip.m in Sources */,
 				36514A4A1D7A799C0047BDBC /* NSString+Additions.m in Sources */,
 				36514A4B1D7A799C0047BDBC /* UIControl+Additions.m in Sources */,
@@ -787,6 +871,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Example_Category/Common/Macros/MayerPrefixHeader.pch";
 				INFOPLIST_FILE = Example_Category/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -799,6 +885,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Example_Category/Common/Macros/MayerPrefixHeader.pch";
 				INFOPLIST_FILE = Example_Category/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -22,6 +22,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
++ (instancetype)appDelegate;
 
 @end
 

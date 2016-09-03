@@ -11,6 +11,7 @@
 #import "AnimatedImageViewController.h"
 #import "UIImage+Extend.h"
 #import "CreateAnimatedViewController.h"
+#import "NoteViewController.h"
 
 #define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
 //ImageView旋转状态枚举
@@ -65,12 +66,23 @@ static NSInteger i = 0;
     
 #pragma mark - Examples2
     
-    [self GetContendImageView];                 // 图片处理只拿到图片的一部分
-    [self setImageforUIView];                   // 给UIView设置图片
-    [self buildBarButtonItem];                  // 旋转动画
-    [self Screenshots];                         // 截屏
-    [self tableViewContentInset];               // 指定滚动条在scrollview的位置
-    [self testArraySum];                        // array快速求总和, 最大值, 最小值和平均值
+//    [self GetContendImageView];                 // 图片处理只拿到图片的一部分
+//    [self setImageforUIView];                   // 给UIView设置图片
+//    [self buildBarButtonItem];                  // 旋转动画
+//    [self Screenshots];                         // 截屏
+//    [self tableViewContentInset];               // 指定滚动条在scrollview的位置
+//    [self testArraySum];                        // array快速求总和, 最大值, 最小值和平均值
+    
+#pragma mark - Examples3
+    
+    [self addNoteView];                         // NoteView组件化
+}
+
+#pragma mark - addNoteView
+- (void)addNoteView{
+    
+    NoteViewController *push = [[NoteViewController alloc] init];
+    [self.navigationController pushViewController:push animated:YES];
 }
 
 #pragma mark - array快速求总和, 最大值, 最小值和平均值

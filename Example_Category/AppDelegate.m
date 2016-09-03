@@ -15,6 +15,10 @@
 
 @implementation AppDelegate
 
++ (instancetype)appDelegate{
+    return (AppDelegate *)[UIApplication sharedApplication].delegate;
+}
+
 - (void)setupBarStyle {
     [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
     [[UINavigationBar appearance] setTintColor:[UIColor redColor]];//系统返回的箭头颜色定制
