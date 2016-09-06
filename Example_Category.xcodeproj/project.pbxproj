@@ -173,8 +173,8 @@
 		36514A8D1D7AB63D0047BDBC /* checkbox_nor@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox_nor@3x.png"; sourceTree = "<group>"; };
 		36514A8E1D7AB63D0047BDBC /* checkbox_pay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox_pay@2x.png"; sourceTree = "<group>"; };
 		36514A8F1D7AB63D0047BDBC /* checkbox_pay@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox_pay@3x.png"; sourceTree = "<group>"; };
-		36514A901D7AB63D0047BDBC /* CommonMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonMode.h; sourceTree = "<group>"; };
-		36514A911D7AB63D0047BDBC /* CommonMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonMode.m; sourceTree = "<group>"; };
+		36514A901D7AB63D0047BDBC /* CommonMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonMode.h; path = NoteView/CommonMode.h; sourceTree = "<group>"; };
+		36514A911D7AB63D0047BDBC /* CommonMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommonMode.m; path = NoteView/CommonMode.m; sourceTree = "<group>"; };
 		36514A921D7AB63D0047BDBC /* NoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteView.h; sourceTree = "<group>"; };
 		36514A931D7AB63D0047BDBC /* NoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteView.m; sourceTree = "<group>"; };
 		36514A9E1D7AB8EC0047BDBC /* OverviewStructureController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverviewStructureController1.h; sourceTree = "<group>"; };
@@ -428,6 +428,8 @@
 		36514A8A1D7AB63D0047BDBC /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				36514A901D7AB63D0047BDBC /* CommonMode.h */,
+				36514A911D7AB63D0047BDBC /* CommonMode.m */,
 				36514A8B1D7AB63D0047BDBC /* NoteView */,
 			);
 			path = Module;
@@ -440,8 +442,6 @@
 				36514A8D1D7AB63D0047BDBC /* checkbox_nor@3x.png */,
 				36514A8E1D7AB63D0047BDBC /* checkbox_pay@2x.png */,
 				36514A8F1D7AB63D0047BDBC /* checkbox_pay@3x.png */,
-				36514A901D7AB63D0047BDBC /* CommonMode.h */,
-				36514A911D7AB63D0047BDBC /* CommonMode.m */,
 				36514A921D7AB63D0047BDBC /* NoteView.h */,
 				36514A931D7AB63D0047BDBC /* NoteView.m */,
 			);
@@ -887,7 +887,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Example_Category/Common/Macros/MayerPrefixHeader.pch";
 				INFOPLIST_FILE = Example_Category/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.test.Example-Category";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -901,7 +901,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Example_Category/Common/Macros/MayerPrefixHeader.pch";
 				INFOPLIST_FILE = Example_Category/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.test.Example-Category";
 				PRODUCT_NAME = "$(TARGET_NAME)";

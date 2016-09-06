@@ -41,6 +41,54 @@ App迭代开发版本号的规则
 [self addNoteView];                         // NoteView组件化
 
 
+#pragma mark - iOS中nil 、NULL、 Nil 、NSNull
+
+nil，定义一个空的实例，指向OC中对象的空指针。
+
+    示例代码：
+    NSString *someString = nil;
+    NSURL *someURL = nil;
+    id someObject = nil;
+    if (anotherObject == nil) // do something
+
+    用法讲解：
+    　当对某个对象release 的同时最好把他们赋值为nil，这样可以确保安全性，如果不赋值nil，可能导致程序
+    崩溃.
+    　　    NSArray * array = [NSArray arrayWithObjects:@"test",@"test1" ,nil];
+    　　    [array release];
+    　　    
+    　　    if (array)
+    　　    {
+    　　　　　　//仅仅对数组release，并没有赋值为nil，在程序某个地方如果继续对数组操作，程序直接崩溃
+    　　        NSString * string = [array objectAtIndex:0];
+    　　        NSLog(@"%@",string);
+    　　    }
+
+NULL，NULL可以用在C语言的各种指针上。
+
+    #define __DARWIN_NULL 
+    #define__DARWIN_NULLConstants
+    示例代码：
+    int *pointerToInt = NULL;　　　　
+    char *pointerToChar = NULL;　　
+    struct TreeNode *rootNode = NULL;
+
+    用法讲解：
+    在Objective-C里，nil对象被设计来跟NULL空指针关联的。他们的区别就是nil是一个对象，而NULL只是一个
+    值。而且我们对于nil调用方法，不会产生crash或者抛出异常。
+
+Nil，定义一个空的类
+
+    示例代码：　　
+    Class someClass = Nil;　
+    Class anotherClass = [NSString class];
+
+NSNull，NSNull是一个类，它定义了一个单例对象用于表示集合对象的空值
+
+    集合对象无法包含nil作为其具体值，如NSArray、NSSet和NSDictionary。相应地，nil值用一个特定的对象
+    NSNull来表示。NSNull提供了一个单一实例用于表示对象属性中的的nil值。默认的实现方法中，
+    dictionaryWithValuesForKeys:和setValuesForKeysWithDictionary:自动地将        NSNull和nil相互转换，因此您的对象不需要进行NSNull的测试操作。
+
 
 
 
