@@ -38,8 +38,6 @@
     //白色背景Note框
     UIView *activeView =[[UIView alloc]init];
     [self addSubview:activeView];
-    activeView.layer.masksToBounds = YES;
-    activeView.layer.cornerRadius = 6.0f;
     activeView.backgroundColor = [UIColor whiteColor];
     
     UILabel *noteLable = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 250, 40)];
@@ -136,6 +134,15 @@
     activeView.frame = CGRectMake(35, 100, 250, CGRectGetMaxY(closeButton.frame));
     
     activeView.center = CGPointMake(self.bounds.size.width *0.5, self.bounds.size.height *0.5);
+//    // 实现1️⃣
+//    activeView.layer.masksToBounds = YES;
+//    activeView.layer.cornerRadius = 6.0f;
+    // 实现2️⃣
+    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:activeView.bounds byRoundingCorners:UIRectCornerAllCorners cornerRadii:CGSizeMake(6, 6)];
+    CAShapeLayer *masklayer = [[CAShapeLayer alloc] init];
+    masklayer.frame = activeView.bounds;
+    masklayer.path = maskPath.CGPath;
+    activeView.layer.mask = masklayer;
 }
 
 - (void)remindAction:(UIButton *)sender{

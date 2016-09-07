@@ -77,7 +77,7 @@ static NSInteger i = 0;
 #pragma mark - Examples3
     
     [self addNoteView];                         // NoteView组件化
-    [self OverviewStructure];                         //OverviewStructure
+//    [self OverviewStructure];                         //OverviewStructure
 }
 
 #pragma mark - OverviewStructure
@@ -280,6 +280,7 @@ static NSInteger i = 0;
     masklayer.frame = btn.bounds;
     masklayer.path = path.CGPath;//设置路径
     btn.layer.mask = masklayer;
+    
 }
 
 #pragma mark - 使用图片实现GIF动画
