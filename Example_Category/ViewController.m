@@ -116,6 +116,19 @@ static NSInteger i = 0;
 }
 
 #pragma mark - 指定滚动条在scrollview的位置
+/*
+ tableview刷新某个区域（section）或者某一行（row）
+ 
+ //一个section刷新
+     
+     NSIndexSet *indexSet=[[NSIndexSet alloc]initWithIndex:2];
+     [tableview reloadSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];
+
+ //一个cell刷新
+     
+     NSIndexPath *indexPath=[NSIndexPath indexPathForRow:3 inSection:0];
+     [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath,nil] withRowAnimation:UITableViewRowAnimationRight];
+ */
 - (void)tableViewContentInset{
 
     UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];

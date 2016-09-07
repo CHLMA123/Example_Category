@@ -91,6 +91,17 @@ NSNull，NSNull是一个类，它定义了一个单例对象用于表示集合�
 
 
 
+#pragma mark - tableview刷新某个区域（section）或者某一行（row）
+
+//一个section刷新
+
+NSIndexSet *indexSet=[[NSIndexSet alloc]initWithIndex:2];
+[tableview reloadSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];
+
+//一个cell刷新
+
+NSIndexPath *indexPath=[NSIndexPath indexPathForRow:3 inSection:0];
+[tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath,nil] withRowAnimation:UITableViewRowAnimationRight];
 
 
 

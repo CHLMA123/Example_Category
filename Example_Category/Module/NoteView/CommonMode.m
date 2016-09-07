@@ -54,6 +54,22 @@
     return statuseStrSize.width / widthSize +1;
 }
 
+/*
+ 有两种方法，希望可以有所帮助：
+ 
+ 一、使用NSString的方法：
+ 
+     1.字符串加百分号转义使用编码 (这个方法会把参数里面的东西转义)
+     NSString *str1 = [string stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+     
+     2.字符串替换百分号转义使用编码
+     NSString *str1 = [string stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+ 
+ 二、使用CFStringRef的方法：
+ 
+     url = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)url, nil, nil, kCFStringEncodingUTF8));
+ */
+
 //Unicode encode
 + (NSString *)encodeToPercentEscapeString: (NSString *) input
 {

@@ -32,6 +32,9 @@ typedef enum{
 
 + (int)getLineNumber:(NSString *)text andFontOfSize:(CGFloat)sizeFont andWidth:(CGFloat)widthSize andFontName:(FontName)type; // lineNum * 20
 
+/**
+ *  iOS中webView加载URL需要处理特殊字符
+ */
 + (NSString *)encodeToPercentEscapeString: (NSString *) input;
 
 + (NSString *)decodeFromPercentEscapeString: (NSString *) input;
