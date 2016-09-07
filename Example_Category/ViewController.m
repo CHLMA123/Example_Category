@@ -13,6 +13,7 @@
 #import "CreateAnimatedViewController.h"
 #import "NoteViewController.h"
 #import "OverviewStructureController1.h"
+#import "AVFoundationController.h"
 
 #define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
 //ImageView旋转状态枚举
@@ -76,8 +77,17 @@ static NSInteger i = 0;
     
 #pragma mark - Examples3
     
-    [self addNoteView];                         // NoteView组件化
+//    [self addNoteView];                         // NoteView组件化
 //    [self OverviewStructure];                         //OverviewStructure
+    [self OverviewOfAVFoundation];                    //OverviewOfAVFoundation
+}
+
+
+#pragma mark - OverviewStructure
+- (void)OverviewOfAVFoundation{
+    
+    AVFoundationController *push = [[AVFoundationController alloc] init];
+    [self.navigationController pushViewController:push animated:YES];
 }
 
 #pragma mark - OverviewStructure

@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3606A8C01D7FA4FC00DDF3EF /* AVFoundationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3606A8BF1D7FA4FC00DDF3EF /* AVFoundationController.m */; };
+		3606A8C31D7FA6BB00DDF3EF /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3606A8C21D7FA6BB00DDF3EF /* QRCodeViewController.m */; };
+		3606A8C61D7FABF200DDF3EF /* contact_scanframe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3606A8C41D7FABF200DDF3EF /* contact_scanframe@2x.png */; };
+		3606A8C71D7FABF200DDF3EF /* contact_scanframe@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3606A8C51D7FABF200DDF3EF /* contact_scanframe@3x.png */; };
+		3606A8C91D7FAC0F00DDF3EF /* line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3606A8C81D7FAC0F00DDF3EF /* line@2x.png */; };
+		3606A8D41D7FACB200DDF3EF /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3606A8CC1D7FACB200DDF3EF /* ALView+PureLayout.m */; };
+		3606A8D51D7FACB200DDF3EF /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3606A8CE1D7FACB200DDF3EF /* NSArray+PureLayout.m */; };
+		3606A8D61D7FACB200DDF3EF /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3606A8D01D7FACB200DDF3EF /* NSLayoutConstraint+PureLayout.m */; };
+		3606A8D81D7FF95200DDF3EF /* prefsIndex.png in Resources */ = {isa = PBXBuildFile; fileRef = 3606A8D71D7FF95200DDF3EF /* prefsIndex.png */; };
 		365149EF1D7A60330047BDBC /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 365149EE1D7A60330047BDBC /* README.md */; };
 		365149F11D7A61560047BDBC /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 365149F01D7A61560047BDBC /* README.md */; };
 		365149F51D7A64640047BDBC /* AnimatedImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 365149F41D7A64640047BDBC /* AnimatedImageViewController.m */; };
@@ -114,6 +123,23 @@
 		3606A8BA1D7FA20E00DDF3EF /* APIStringMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIStringMacros.h; sourceTree = "<group>"; };
 		3606A8BB1D7FA24800DDF3EF /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		3606A8BC1D7FA31900DDF3EF /* UserBehaviorMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserBehaviorMacros.h; sourceTree = "<group>"; };
+		3606A8BE1D7FA4FC00DDF3EF /* AVFoundationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVFoundationController.h; sourceTree = "<group>"; };
+		3606A8BF1D7FA4FC00DDF3EF /* AVFoundationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVFoundationController.m; sourceTree = "<group>"; };
+		3606A8C11D7FA6BB00DDF3EF /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
+		3606A8C21D7FA6BB00DDF3EF /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
+		3606A8C41D7FABF200DDF3EF /* contact_scanframe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contact_scanframe@2x.png"; sourceTree = "<group>"; };
+		3606A8C51D7FABF200DDF3EF /* contact_scanframe@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contact_scanframe@3x.png"; sourceTree = "<group>"; };
+		3606A8C81D7FAC0F00DDF3EF /* line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "line@2x.png"; sourceTree = "<group>"; };
+		3606A8CB1D7FACB200DDF3EF /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALView+PureLayout.h"; sourceTree = "<group>"; };
+		3606A8CC1D7FACB200DDF3EF /* ALView+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALView+PureLayout.m"; sourceTree = "<group>"; };
+		3606A8CD1D7FACB200DDF3EF /* NSArray+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+PureLayout.h"; sourceTree = "<group>"; };
+		3606A8CE1D7FACB200DDF3EF /* NSArray+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+PureLayout.m"; sourceTree = "<group>"; };
+		3606A8CF1D7FACB200DDF3EF /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
+		3606A8D01D7FACB200DDF3EF /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
+		3606A8D11D7FACB200DDF3EF /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PureLayout+Internal.h"; sourceTree = "<group>"; };
+		3606A8D21D7FACB200DDF3EF /* PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayout.h; sourceTree = "<group>"; };
+		3606A8D31D7FACB200DDF3EF /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayoutDefines.h; sourceTree = "<group>"; };
+		3606A8D71D7FF95200DDF3EF /* prefsIndex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = prefsIndex.png; sourceTree = "<group>"; };
 		365149EE1D7A60330047BDBC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		365149F01D7A61560047BDBC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		365149F31D7A64640047BDBC /* AnimatedImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedImageViewController.h; sourceTree = "<group>"; };
@@ -250,9 +276,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3606A8BD1D7FA4D800DDF3EF /* OverviewOfAVFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				3606A8CA1D7FACB200DDF3EF /* PureLayout */,
+				3606A8BE1D7FA4FC00DDF3EF /* AVFoundationController.h */,
+				3606A8BF1D7FA4FC00DDF3EF /* AVFoundationController.m */,
+				3606A8C11D7FA6BB00DDF3EF /* QRCodeViewController.h */,
+				3606A8C21D7FA6BB00DDF3EF /* QRCodeViewController.m */,
+				3606A8C81D7FAC0F00DDF3EF /* line@2x.png */,
+				3606A8C41D7FABF200DDF3EF /* contact_scanframe@2x.png */,
+				3606A8C51D7FABF200DDF3EF /* contact_scanframe@3x.png */,
+				3606A8D71D7FF95200DDF3EF /* prefsIndex.png */,
+			);
+			name = OverviewOfAVFoundation;
+			sourceTree = "<group>";
+		};
+		3606A8CA1D7FACB200DDF3EF /* PureLayout */ = {
+			isa = PBXGroup;
+			children = (
+				3606A8CB1D7FACB200DDF3EF /* ALView+PureLayout.h */,
+				3606A8CC1D7FACB200DDF3EF /* ALView+PureLayout.m */,
+				3606A8CD1D7FACB200DDF3EF /* NSArray+PureLayout.h */,
+				3606A8CE1D7FACB200DDF3EF /* NSArray+PureLayout.m */,
+				3606A8CF1D7FACB200DDF3EF /* NSLayoutConstraint+PureLayout.h */,
+				3606A8D01D7FACB200DDF3EF /* NSLayoutConstraint+PureLayout.m */,
+				3606A8D11D7FACB200DDF3EF /* PureLayout+Internal.h */,
+				3606A8D21D7FACB200DDF3EF /* PureLayout.h */,
+				3606A8D31D7FACB200DDF3EF /* PureLayoutDefines.h */,
+			);
+			path = PureLayout;
+			sourceTree = "<group>";
+		};
 		365149F21D7A64640047BDBC /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				3606A8BD1D7FA4D800DDF3EF /* OverviewOfAVFoundation */,
 				36514A9A1D7AB7D20047BDBC /* OverviewOfStructure */,
 				36514A731D7A9FF50047BDBC /* CreateNoteView */,
 				36514A021D7A74A40047BDBC /* CreateAnimatedView */,
@@ -677,6 +736,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36C892081D0CEB9900DC86E0 /* findhome_1455525720807.png in Resources */,
+				3606A8C71D7FABF200DDF3EF /* contact_scanframe@3x.png in Resources */,
 				36C892111D0CEB9900DC86E0 /* findhome_20160126203542ktv.png in Resources */,
 				36C8920E1D0CEB9900DC86E0 /* findhome_20160126203337jiudian.png in Resources */,
 				36C892161D0CEB9900DC86E0 /* findhome_20160126203812daojia.png in Resources */,
@@ -715,6 +775,7 @@
 				36514A941D7AB63D0047BDBC /* checkbox_nor@2x.png in Resources */,
 				36C8920B1D0CEB9900DC86E0 /* findhome_20160126202946liren.png in Resources */,
 				36C892271D0CEB9900DC86E0 /* findhome_dot_pressed@3x.png in Resources */,
+				3606A8C91D7FAC0F00DDF3EF /* line@2x.png in Resources */,
 				36514A221D7A75530047BDBC /* addcamera_loading10@3x.png in Resources */,
 				36514A271D7A75530047BDBC /* addcamera_loading13@2x.png in Resources */,
 				36C892241D0CEB9900DC86E0 /* findhome_dot@2x.png in Resources */,
@@ -722,6 +783,7 @@
 				36C8920F1D0CEB9900DC86E0 /* findhome_20160126203416jipiao.png in Resources */,
 				36514A331D7A75530047BDBC /* addcamera_loading6@2x.png in Resources */,
 				36514A211D7A75530047BDBC /* addcamera_loading10@2x.png in Resources */,
+				3606A8C61D7FABF200DDF3EF /* contact_scanframe@2x.png in Resources */,
 				36C8921B1D0CEB9900DC86E0 /* findhome_20160126204327yiliao.png in Resources */,
 				36C892091D0CEB9900DC86E0 /* findhome_20160126194705meishi.png in Resources */,
 				36514A291D7A75530047BDBC /* addcamera_loading1@2x.png in Resources */,
@@ -740,6 +802,7 @@
 				36C892171D0CEB9900DC86E0 /* findhome_20160126203830jiehun.png in Resources */,
 				36C892201D0CEB9900DC86E0 /* findhome_20160204173331xiaochikuaican.png in Resources */,
 				36514A281D7A75530047BDBC /* addcamera_loading13@3x.png in Resources */,
+				3606A8D81D7FF95200DDF3EF /* prefsIndex.png in Resources */,
 				36514A2B1D7A75530047BDBC /* addcamera_loading2@2x.png in Resources */,
 				36C8921A1D0CEB9900DC86E0 /* findhome_20160126204107yanchu.png in Resources */,
 				36C892121D0CEB9900DC86E0 /* findhome_20160126203617jianshen.png in Resources */,
@@ -759,6 +822,7 @@
 				36514A761D7AA0210047BDBC /* NoteViewController.m in Sources */,
 				36C891761D0CEAE100DC86E0 /* ViewController.m in Sources */,
 				36514AA01D7AB8EC0047BDBC /* OverviewStructureController1.m in Sources */,
+				3606A8D61D7FACB200DDF3EF /* NSLayoutConstraint+PureLayout.m in Sources */,
 				36C891731D0CEAE100DC86E0 /* AppDelegate.m in Sources */,
 				367B39B31D0E614900443974 /* FLAnimatedImageView.m in Sources */,
 				36514A981D7AB63D0047BDBC /* CommonMode.m in Sources */,
@@ -769,6 +833,7 @@
 				365149F11D7A61560047BDBC /* README.md in Sources */,
 				36514A611D7A7A970047BDBC /* BlockButton.m in Sources */,
 				367830011D1D372C00D294DD /* NSObject+modelConvertDic.m in Sources */,
+				3606A8D41D7FACB200DDF3EF /* ALView+PureLayout.m in Sources */,
 				36514A4C1D7A799C0047BDBC /* UIImage+Rotate_Flip.m in Sources */,
 				36514A4A1D7A799C0047BDBC /* NSString+Additions.m in Sources */,
 				36514A4B1D7A799C0047BDBC /* UIControl+Additions.m in Sources */,
@@ -776,11 +841,14 @@
 				36514A051D7A74E00047BDBC /* CreateAnimatedViewController.m in Sources */,
 				36514A581D7A7A560047BDBC /* MBProgressHUD.m in Sources */,
 				36514A4E1D7A799C0047BDBC /* UIView+Extend.m in Sources */,
+				3606A8D51D7FACB200DDF3EF /* NSArray+PureLayout.m in Sources */,
+				3606A8C31D7FA6BB00DDF3EF /* QRCodeViewController.m in Sources */,
 				36514A4D1D7A799C0047BDBC /* UIScreen+Additions.m in Sources */,
 				36514A591D7A7A560047BDBC /* UIView+Toast.m in Sources */,
 				36C891DE1D0CEB6F00DC86E0 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				365149EF1D7A60330047BDBC /* README.md in Sources */,
 				36514A571D7A7A560047BDBC /* MBProgressHUD+Extend.m in Sources */,
+				3606A8C01D7FA4FC00DDF3EF /* AVFoundationController.m in Sources */,
 				36514A011D7A6C8A0047BDBC /* README.md in Sources */,
 				365149FA1D7A651B0047BDBC /* GetDeviceAllInfo.m in Sources */,
 			);
