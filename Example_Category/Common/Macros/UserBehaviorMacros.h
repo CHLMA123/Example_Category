@@ -1,15 +1,14 @@
 //
-//  MacroHeader.h
+//  UserBehaviorMacros.h
 //  Example_Category
 //
-//  Created by MCL on 16/9/3.
+//  Created by MCL on 16/9/7.
 //  Copyright © 2016年 MCL. All rights reserved.
 //
 
-#ifndef MacroHeader_h
-#define MacroHeader_h
+#ifndef UserBehaviorMacros_h
+#define UserBehaviorMacros_h
 
-#pragma mark -
 
 /**
  *  1 block self
@@ -101,4 +100,7 @@
 #define showModelContent(model) [AssistantTool dictionaryFromModel:model]
 
 
-#endif /* MacroHeader_h */
+
+
+
+#endif /* UserBehaviorMacros_h */

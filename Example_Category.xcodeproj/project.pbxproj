@@ -107,6 +107,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3606A8B61D7FA10C00DDF3EF /* DimensMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DimensMacros.h; sourceTree = "<group>"; };
+		3606A8B71D7FA14700DDF3EF /* PathMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathMacros.h; sourceTree = "<group>"; };
+		3606A8B81D7FA18600DDF3EF /* UtilsMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilsMacros.h; sourceTree = "<group>"; };
+		3606A8B91D7FA1E300DDF3EF /* NotificationMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationMacros.h; sourceTree = "<group>"; };
+		3606A8BA1D7FA20E00DDF3EF /* APIStringMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIStringMacros.h; sourceTree = "<group>"; };
+		3606A8BB1D7FA24800DDF3EF /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		3606A8BC1D7FA31900DDF3EF /* UserBehaviorMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserBehaviorMacros.h; sourceTree = "<group>"; };
 		365149EE1D7A60330047BDBC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		365149F01D7A61560047BDBC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		365149F31D7A64640047BDBC /* AnimatedImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedImageViewController.h; sourceTree = "<group>"; };
@@ -165,10 +172,7 @@
 		36514A601D7A7A970047BDBC /* BlockButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockButton.m; sourceTree = "<group>"; };
 		36514A741D7AA0210047BDBC /* NoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteViewController.h; sourceTree = "<group>"; };
 		36514A751D7AA0210047BDBC /* NoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteViewController.m; sourceTree = "<group>"; };
-		36514A7F1D7AA3110047BDBC /* CommonHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonHeader.h; sourceTree = "<group>"; };
-		36514A801D7AA3390047BDBC /* MacroHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroHeader.h; sourceTree = "<group>"; };
 		36514A811D7AA3900047BDBC /* MayerPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MayerPrefixHeader.pch; sourceTree = "<group>"; };
-		36514A821D7AA4440047BDBC /* ThirdMacrosHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdMacrosHeader.h; sourceTree = "<group>"; };
 		36514A8C1D7AB63D0047BDBC /* checkbox_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox_nor@2x.png"; sourceTree = "<group>"; };
 		36514A8D1D7AB63D0047BDBC /* checkbox_nor@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox_nor@3x.png"; sourceTree = "<group>"; };
 		36514A8E1D7AB63D0047BDBC /* checkbox_pay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox_pay@2x.png"; sourceTree = "<group>"; };
@@ -409,9 +413,13 @@
 			isa = PBXGroup;
 			children = (
 				36514A811D7AA3900047BDBC /* MayerPrefixHeader.pch */,
-				36514A7F1D7AA3110047BDBC /* CommonHeader.h */,
-				36514A801D7AA3390047BDBC /* MacroHeader.h */,
-				36514A821D7AA4440047BDBC /* ThirdMacrosHeader.h */,
+				3606A8BB1D7FA24800DDF3EF /* Macros.h */,
+				3606A8B71D7FA14700DDF3EF /* PathMacros.h */,
+				3606A8B81D7FA18600DDF3EF /* UtilsMacros.h */,
+				3606A8B61D7FA10C00DDF3EF /* DimensMacros.h */,
+				3606A8BA1D7FA20E00DDF3EF /* APIStringMacros.h */,
+				3606A8B91D7FA1E300DDF3EF /* NotificationMacros.h */,
+				3606A8BC1D7FA31900DDF3EF /* UserBehaviorMacros.h */,
 			);
 			path = Macros;
 			sourceTree = "<group>";

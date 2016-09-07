@@ -1,16 +1,17 @@
 //
-//  CommonHeader.h
+//  UtilsMacros.h
 //  Example_Category
 //
-//  Created by MCL on 16/9/3.
+//  Created by MCL on 16/9/7.
 //  Copyright © 2016年 MCL. All rights reserved.
 //
 
-#ifndef CommonHeader_h
-#define CommonHeader_h
+#ifndef UtilsMacros_h
+#define UtilsMacros_h
 
-#import "MacroHeader.h"
-#import "ThirdMacrosHeader.h"
+/**
+ *  工具类的宏
+ */
 
 #define SharedAppDelegate       ((AppDelegate *)[[UIApplication sharedApplication] delegate])
 
@@ -20,43 +21,10 @@
 
 #define ScrollHight 31
 
-/**
- *  获取屏幕 宽度、高度
- */
+#define IsNilOrNull(_ref)   (((_ref) == nil) || ([(_ref) isEqual:[NSNull null]]))
 
-#define SCREEN_WIDTH    ([UIScreen mainScreen].bounds.size.width)
-
-#define SCREEN_HEIGHT   ([UIScreen mainScreen].bounds.size.height)
-
-
-
-// iPad & iPhone
-#define kISiPad         (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-#define kIS_iPhone      (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
-
-#define IS_IPHONE_4     (kIS_iPhone && SCREEN_HEIGHT == 480.0)
-#define IS_IPHONE_5     (kIS_iPhone && SCREEN_HEIGHT == 568.0)
-#define IS_IPHONE_6     (kIS_iPhone && SCREEN_HEIGHT == 667.0)
-#define IS_IPHONE_6p    (kIS_iPhone && SCREEN_HEIGHT == 736.0)
-
-//针对IOS8添加  ios8横屏时  width跟height调转
-#define SCREEN_Min      MIN(SCREEN_WIDTH,SCREEN_HEIGHT)
-#define SCREEN_Max      MAX(SCREEN_WIDTH,SCREEN_HEIGHT)
-
-//获取系统版本
-#define IOS_VERSION     [[[UIDevice currentDevice] systemVersion] floatValue]
-#define VersionLocation [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
-
-//获取当前语言
-#define Language        IsChinese ? @"CHS" : @"ENU"
-
-#define CurrentLanguage ([[NSLocale preferredLanguages] objectAtIndex:0])
-
-#define IsChinese       [CurrentLanguage rangeOfString:@"zh-Hans"].length// 简体zh-Hans
-
-#define FSLocalizedString(key) (([CurrentLanguage rangeOfString:@"zh-Hans"].length || [CurrentLanguage rangeOfString:@"de"].length || [CurrentLanguage rangeOfString:@"fr"].length || [CurrentLanguage rangeOfString:@"es"].length)?([[NSBundle mainBundle] localizedStringForKey:(key) value:@"" table:nil]):([[NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"en" ofType:@"lproj"]] localizedStringForKey:key value:@"" table:nil]))
-
-#define IsOrientationLandscape  ([UIDevice currentDevice].orientation == UIDeviceOrientationLandscapeLeft || [UIDevice currentDevice].orientation == UIDeviceOrientationLandscapeRight)
+//获取系统时间戳
+#define getCurentTime [NSString stringWithFormat:@"%ld", (long)[[NSDate date] timeIntervalSince1970]]
 
 /*
  * 工程字体
@@ -96,4 +64,5 @@
 #define RGB_LightRed        [[UIColor redColor] colorWithAlphaComponent:0.25];
 #define RGB_LightOrange     [[UIColor orangeColor] colorWithAlphaComponent:0.25];
 
-#endif /* CommonHeader_h */
+
+#endif /* UtilsMacros_h */
