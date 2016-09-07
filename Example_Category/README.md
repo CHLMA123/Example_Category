@@ -40,6 +40,9 @@ App迭代开发版本号的规则
 
 [self addNoteView];                         // NoteView组件化
 [self OverviewOfAVFoundation];              //OverviewOfAVFoundation & iOS从App跳转至系统设置菜单各功能项
+[self SingletonUITest];                     // Objective-c单例模式详解
+
+
 
 #pragma mark - iOS中nil 、NULL、 Nil 、NSNull
 

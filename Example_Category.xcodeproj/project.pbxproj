@@ -18,6 +18,7 @@
 		3606A8D81D7FF95200DDF3EF /* prefsIndex.png in Resources */ = {isa = PBXBuildFile; fileRef = 3606A8D71D7FF95200DDF3EF /* prefsIndex.png */; };
 		3606A8DE1D8005F800DDF3EF /* MovieFileController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3606A8DD1D8005F800DDF3EF /* MovieFileController.m */; };
 		3606A8E01D800BAA00DDF3EF /* AVFoundation.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3606A8DF1D800BAA00DDF3EF /* AVFoundation.jpg */; };
+		3606A8E81D80194700DDF3EF /* SingleClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3606A8E71D80194700DDF3EF /* SingleClass.m */; };
 		365149EF1D7A60330047BDBC /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 365149EE1D7A60330047BDBC /* README.md */; };
 		365149F11D7A61560047BDBC /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 365149F01D7A61560047BDBC /* README.md */; };
 		365149F51D7A64640047BDBC /* AnimatedImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 365149F41D7A64640047BDBC /* AnimatedImageViewController.m */; };
@@ -145,6 +146,8 @@
 		3606A8DC1D8005F800DDF3EF /* MovieFileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieFileController.h; sourceTree = "<group>"; };
 		3606A8DD1D8005F800DDF3EF /* MovieFileController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieFileController.m; sourceTree = "<group>"; };
 		3606A8DF1D800BAA00DDF3EF /* AVFoundation.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AVFoundation.jpg; sourceTree = "<group>"; };
+		3606A8E61D80194700DDF3EF /* SingleClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleClass.h; sourceTree = "<group>"; };
+		3606A8E71D80194700DDF3EF /* SingleClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleClass.m; sourceTree = "<group>"; };
 		365149EE1D7A60330047BDBC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		365149F01D7A61560047BDBC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		365149F31D7A64640047BDBC /* AnimatedImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedImageViewController.h; sourceTree = "<group>"; };
@@ -314,6 +317,15 @@
 				3606A8D31D7FACB200DDF3EF /* PureLayoutDefines.h */,
 			);
 			path = PureLayout;
+			sourceTree = "<group>";
+		};
+		3606A8E21D8018FC00DDF3EF /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				3606A8E61D80194700DDF3EF /* SingleClass.h */,
+				3606A8E71D80194700DDF3EF /* SingleClass.m */,
+			);
+			path = Singleton;
 			sourceTree = "<group>";
 		};
 		365149F21D7A64640047BDBC /* Example */ = {
@@ -503,6 +515,7 @@
 		36514A8A1D7AB63D0047BDBC /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				3606A8E21D8018FC00DDF3EF /* Singleton */,
 				36514A901D7AB63D0047BDBC /* CommonMode.h */,
 				36514A911D7AB63D0047BDBC /* CommonMode.m */,
 				36514A8B1D7AB63D0047BDBC /* NoteView */,
@@ -843,6 +856,7 @@
 				365149F11D7A61560047BDBC /* README.md in Sources */,
 				36514A611D7A7A970047BDBC /* BlockButton.m in Sources */,
 				367830011D1D372C00D294DD /* NSObject+modelConvertDic.m in Sources */,
+				3606A8E81D80194700DDF3EF /* SingleClass.m in Sources */,
 				3606A8D41D7FACB200DDF3EF /* ALView+PureLayout.m in Sources */,
 				36514A4C1D7A799C0047BDBC /* UIImage+Rotate_Flip.m in Sources */,
 				36514A4A1D7A799C0047BDBC /* NSString+Additions.m in Sources */,

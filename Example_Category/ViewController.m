@@ -14,6 +14,7 @@
 #import "NoteViewController.h"
 #import "OverviewStructureController1.h"
 #import "AVFoundationController.h"
+#import "SingleClass.h"
 
 #define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
 //ImageView旋转状态枚举
@@ -78,8 +79,37 @@ static NSInteger i = 0;
 #pragma mark - Examples3
     
 //    [self addNoteView];                         // NoteView组件化
-//    [self OverviewStructure];                         //OverviewStructure
-    [self OverviewOfAVFoundation];                    //OverviewOfAVFoundation & iOS从App跳转至系统设置菜单各功能项
+//    [self OverviewStructure];                   //OverviewStructure
+//    [self OverviewOfAVFoundation];              //OverviewOfAVFoundation & iOS从App跳转至系统设置菜单各功能项
+    [self SingletonUITest];                     // Objective-c单例模式详解
+}
+
+#pragma mark - Objective-c单例模式详解
+- (void)SingletonUITest{
+    
+    NSLog(@"开始《《《");
+    SingleClass *obj1 = [SingleClass shareInstance] ;
+    NSLog(@"obj1 = %@.", obj1) ;
+    
+    SingleClass *obj2 = [SingleClass shareInstance] ;
+    NSLog(@"obj2 = %@.", obj2) ;
+    
+    SingleClass *obj3 = [[SingleClass alloc] init] ;
+    NSLog(@"obj3 = %@.", obj3) ;
+    
+    SingleClass* obj4 = [[SingleClass alloc] init] ;
+    NSLog(@"obj4 = %@.", [obj4 copy]) ;
+    
+    NSLog(@"结束》》》");
+    
+    /*
+     2016-09-07 17:55:11.601 Example_Category[3267:638012] 开始《《《
+     2016-09-07 17:55:11.605 Example_Category[3267:638012] obj1 = <SingleClass: 0x16586be0; frame = (0 0; 0 0); layer = <CALayer: 0x165565a0>>.
+     2016-09-07 17:55:11.605 Example_Category[3267:638012] obj2 = <SingleClass: 0x16586be0; frame = (0 0; 0 0); layer = <CALayer: 0x165565a0>>.
+     2016-09-07 17:55:11.606 Example_Category[3267:638012] obj3 = <SingleClass: 0x16586be0; frame = (0 0; 0 0); layer = <CALayer: 0x165565a0>>.
+     2016-09-07 17:55:11.606 Example_Category[3267:638012] obj4 = <SingleClass: 0x16586be0; frame = (0 0; 0 0); layer = <CALayer: 0x165565a0>>.
+     2016-09-07 17:55:11.606 Example_Category[3267:638012] 结束》》》
+     */
 }
 
 
