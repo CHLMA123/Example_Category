@@ -79,7 +79,7 @@ static NSInteger i = 0;
     
 //    [self addNoteView];                         // NoteView组件化
 //    [self OverviewStructure];                         //OverviewStructure
-    [self OverviewOfAVFoundation];                    //OverviewOfAVFoundation
+    [self OverviewOfAVFoundation];                    //OverviewOfAVFoundation & iOS从App跳转至系统设置菜单各功能项
 }
 
 

@@ -39,7 +39,7 @@ App迭代开发版本号的规则
 #pragma mark - Examples3
 
 [self addNoteView];                         // NoteView组件化
-
+[self OverviewOfAVFoundation];              //OverviewOfAVFoundation & iOS从App跳转至系统设置菜单各功能项
 
 #pragma mark - iOS中nil 、NULL、 Nil 、NSNull
 
