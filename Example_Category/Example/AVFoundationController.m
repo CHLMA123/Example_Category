@@ -8,6 +8,7 @@
 
 #import "AVFoundationController.h"
 #import "QRCodeViewController.h"
+#import "MovieFileController.h"
 
 @interface AVFoundationController ()
 
@@ -58,7 +59,7 @@
 
 - (void)videoButtonAction{
     
-    QRCodeViewController *vc = [[QRCodeViewController alloc] init];
+    MovieFileController *vc = [[MovieFileController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
     
 }
@@ -76,18 +77,18 @@
 - (void)wifiButtonAction{
     
 //    //打开应用的设置
-//    NSURL *url = [NSURL URLWithString:@"prefs:root=com.test.Example-Category"];
+    NSURL *url = [NSURL URLWithString:@"prefs:root=com.test.Example-Category"];
 //    if (IOS_VERSION > 8.0) {
 //        
 //        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
 //    }
     
-    NSURL *url = [NSURL URLWithString:@"prefs:root=WIFI"];
+//    NSURL *url = [NSURL URLWithString:@"prefs:root=WIFI"];
     if ([[UIApplication sharedApplication] canOpenURL:url])
     {
         [[UIApplication sharedApplication] openURL:url];
     }
-    
+    return;
 }
 
 /*

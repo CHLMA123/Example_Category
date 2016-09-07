@@ -130,7 +130,10 @@
         // Input
         _input = [AVCaptureDeviceInput deviceInputWithDevice:self.device error:nil];
         
-        // Output
+        /*
+         // Output
+         为了分析视频流,我们需要为output设置delegate,并且指定delegate方法在哪个线程被调用。需要主要的是,线程必须是串行的,确保视频帧按序到达。
+         */
         _output = [[AVCaptureMetadataOutput alloc]init];
         //设置代理 在主线程里刷新
         [_output setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
