@@ -63,7 +63,7 @@ static NSInteger i = 0;
     
 //    [self testDictonaryAction];                 // testDictonaryAction
 //    [self pushAnimatedImage];                   // AnimatedImageViewController gif动画加载
-//    [self cutCircleImageAction];                // iOS开发中设置圆角的几种方法
+    [self cutCircleImageAction];                // iOS开发中设置圆角的几种方法
 //    [self createAnimatedImage];                 // 使用图片实现GIF动画
 //    [self createButtonRectCorner];              // 控件的局部圆角问题: 图层蒙版(一个button或者label，只要右边的两个角圆角，或者只要一个圆角)。
     
@@ -81,7 +81,7 @@ static NSInteger i = 0;
 //    [self addNoteView];                         // NoteView组件化
 //    [self OverviewStructure];                   //OverviewStructure
 //    [self OverviewOfAVFoundation];              //OverviewOfAVFoundation & iOS从App跳转至系统设置菜单各功能项
-    [self SingletonUITest];                     // Objective-c单例模式详解
+//    [self SingletonUITest];                     // Objective-c单例模式详解
 }
 
 #pragma mark - Objective-c单例模式详解
@@ -346,14 +346,18 @@ static NSInteger i = 0;
 #pragma mark - iOS开发中设置圆角的几种方法
 - (void)cutCircleImageAction{
     
-    // method1 强烈建议摒弃 因为使用图层过量会有卡顿现象, 特别是弄圆角或者阴影会很卡
-    UIImageView *imageView = [[UIImageView alloc] init];
-    imageView.layer.cornerRadius = 20;
-    imageView.layer.masksToBounds = YES;
+//    // method1 强烈建议摒弃 因为使用图层过量会有卡顿现象, 特别是弄圆角或者阴影会很卡
+//    UIImageView *imageView = [[UIImageView alloc] init];
+//    imageView.layer.cornerRadius = 20;
+//    imageView.layer.masksToBounds = YES;
     
     // method2 用绘图来做 /** 设置圆形图片(放到分类中使用) */
     UIImage *image = [[UIImage imageNamed:@"Default@3x"] cutCircleImage];
-    imageView.image = image;
+    UIImageView *imageView2 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, image.size.width, image.size.width)];
+    [imageView2 setImage:image];
+    [self.view addSubview:imageView2];
+    imageView2.center = self.view.center;
+    
 }
 
 #pragma mark - gif动画加载

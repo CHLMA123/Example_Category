@@ -19,6 +19,7 @@
 		3606A8DE1D8005F800DDF3EF /* MovieFileController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3606A8DD1D8005F800DDF3EF /* MovieFileController.m */; };
 		3606A8E01D800BAA00DDF3EF /* AVFoundation.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3606A8DF1D800BAA00DDF3EF /* AVFoundation.jpg */; };
 		3606A8E81D80194700DDF3EF /* SingleClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3606A8E71D80194700DDF3EF /* SingleClass.m */; };
+		3608B8051D82581100A5F15F /* asassds.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3608B8031D82581100A5F15F /* asassds.gif */; };
 		365149EF1D7A60330047BDBC /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 365149EE1D7A60330047BDBC /* README.md */; };
 		365149F11D7A61560047BDBC /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 365149F01D7A61560047BDBC /* README.md */; };
 		365149F51D7A64640047BDBC /* AnimatedImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 365149F41D7A64640047BDBC /* AnimatedImageViewController.m */; };
@@ -55,7 +56,6 @@
 		36514A3A1D7A75530047BDBC /* addcamera_loading9@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36514A201D7A75530047BDBC /* addcamera_loading9@3x.png */; };
 		36514A4A1D7A799C0047BDBC /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 36514A3D1D7A799C0047BDBC /* NSString+Additions.m */; };
 		36514A4B1D7A799C0047BDBC /* UIControl+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 36514A401D7A799C0047BDBC /* UIControl+Additions.m */; };
-		36514A4C1D7A799C0047BDBC /* UIImage+Rotate_Flip.m in Sources */ = {isa = PBXBuildFile; fileRef = 36514A431D7A799C0047BDBC /* UIImage+Rotate_Flip.m */; };
 		36514A4D1D7A799C0047BDBC /* UIScreen+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 36514A461D7A799C0047BDBC /* UIScreen+Additions.m */; };
 		36514A4E1D7A799C0047BDBC /* UIView+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 36514A491D7A799C0047BDBC /* UIView+Extend.m */; };
 		36514A571D7A7A560047BDBC /* MBProgressHUD+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 36514A511D7A7A560047BDBC /* MBProgressHUD+Extend.m */; };
@@ -148,6 +148,7 @@
 		3606A8DF1D800BAA00DDF3EF /* AVFoundation.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AVFoundation.jpg; sourceTree = "<group>"; };
 		3606A8E61D80194700DDF3EF /* SingleClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleClass.h; sourceTree = "<group>"; };
 		3606A8E71D80194700DDF3EF /* SingleClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleClass.m; sourceTree = "<group>"; };
+		3608B8031D82581100A5F15F /* asassds.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = asassds.gif; sourceTree = "<group>"; };
 		365149EE1D7A60330047BDBC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		365149F01D7A61560047BDBC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		365149F31D7A64640047BDBC /* AnimatedImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedImageViewController.h; sourceTree = "<group>"; };
@@ -190,8 +191,6 @@
 		36514A3D1D7A799C0047BDBC /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 		36514A3F1D7A799C0047BDBC /* UIControl+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+Additions.h"; sourceTree = "<group>"; };
 		36514A401D7A799C0047BDBC /* UIControl+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+Additions.m"; sourceTree = "<group>"; };
-		36514A421D7A799C0047BDBC /* UIImage+Rotate_Flip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Rotate_Flip.h"; sourceTree = "<group>"; };
-		36514A431D7A799C0047BDBC /* UIImage+Rotate_Flip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Rotate_Flip.m"; sourceTree = "<group>"; };
 		36514A451D7A799C0047BDBC /* UIScreen+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+Additions.h"; sourceTree = "<group>"; };
 		36514A461D7A799C0047BDBC /* UIScreen+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+Additions.m"; sourceTree = "<group>"; };
 		36514A481D7A799C0047BDBC /* UIView+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extend.h"; sourceTree = "<group>"; };
@@ -427,8 +426,7 @@
 			children = (
 				365149FD1D7A68280047BDBC /* UIImage+Extend.h */,
 				365149FE1D7A68280047BDBC /* UIImage+Extend.m */,
-				36514A421D7A799C0047BDBC /* UIImage+Rotate_Flip.h */,
-				36514A431D7A799C0047BDBC /* UIImage+Rotate_Flip.m */,
+				3608B8031D82581100A5F15F /* asassds.gif */,
 			);
 			path = UIImage;
 			sourceTree = "<group>";
@@ -515,9 +513,9 @@
 		36514A8A1D7AB63D0047BDBC /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				3606A8E21D8018FC00DDF3EF /* Singleton */,
 				36514A901D7AB63D0047BDBC /* CommonMode.h */,
 				36514A911D7AB63D0047BDBC /* CommonMode.m */,
+				3606A8E21D8018FC00DDF3EF /* Singleton */,
 				36514A8B1D7AB63D0047BDBC /* NoteView */,
 			);
 			path = Module;
@@ -813,6 +811,7 @@
 				36C8917B1D0CEAE100DC86E0 /* Assets.xcassets in Resources */,
 				367B39B41D0E614900443974 /* Info.plist in Resources */,
 				36C8920A1D0CEB9900DC86E0 /* findhome_20160126202805dianying.png in Resources */,
+				3608B8051D82581100A5F15F /* asassds.gif in Resources */,
 				36514A2F1D7A75530047BDBC /* addcamera_loading4@2x.png in Resources */,
 				36514A2A1D7A75530047BDBC /* addcamera_loading1@3x.png in Resources */,
 				36514A391D7A75530047BDBC /* addcamera_loading9@2x.png in Resources */,
@@ -858,7 +857,6 @@
 				367830011D1D372C00D294DD /* NSObject+modelConvertDic.m in Sources */,
 				3606A8E81D80194700DDF3EF /* SingleClass.m in Sources */,
 				3606A8D41D7FACB200DDF3EF /* ALView+PureLayout.m in Sources */,
-				36514A4C1D7A799C0047BDBC /* UIImage+Rotate_Flip.m in Sources */,
 				36514A4A1D7A799C0047BDBC /* NSString+Additions.m in Sources */,
 				36514A4B1D7A799C0047BDBC /* UIControl+Additions.m in Sources */,
 				365149FF1D7A68280047BDBC /* UIImage+Extend.m in Sources */,
