@@ -75,6 +75,9 @@
 		367B39B31D0E614900443974 /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 367B39B01D0E614900443974 /* FLAnimatedImageView.m */; };
 		367B39B41D0E614900443974 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 367B39B11D0E614900443974 /* Info.plist */; };
 		367B39B71D0E622A00443974 /* rock.gif in Resources */ = {isa = PBXBuildFile; fileRef = 367B39B61D0E622A00443974 /* rock.gif */; };
+		3692B3501D8FBF6300D884CF /* UIButton+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 3692B34F1D8FBF6300D884CF /* UIButton+Extend.m */; };
+		3692B3531D8FC10E00D884CF /* CheckBox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3692B3511D8FC10E00D884CF /* CheckBox@2x.png */; };
+		3692B3541D8FC10E00D884CF /* CheckBoxSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3692B3521D8FC10E00D884CF /* CheckBoxSelected@2x.png */; };
 		36C891701D0CEAE100DC86E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C8916F1D0CEAE100DC86E0 /* main.m */; };
 		36C891731D0CEAE100DC86E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C891721D0CEAE100DC86E0 /* AppDelegate.m */; };
 		36C891761D0CEAE100DC86E0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C891751D0CEAE100DC86E0 /* ViewController.m */; };
@@ -224,6 +227,10 @@
 		367B39B01D0E614900443974 /* FLAnimatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImageView.m; sourceTree = "<group>"; };
 		367B39B11D0E614900443974 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		367B39B61D0E622A00443974 /* rock.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = rock.gif; sourceTree = "<group>"; };
+		3692B34E1D8FBF6300D884CF /* UIButton+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Extend.h"; sourceTree = "<group>"; };
+		3692B34F1D8FBF6300D884CF /* UIButton+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Extend.m"; sourceTree = "<group>"; };
+		3692B3511D8FC10E00D884CF /* CheckBox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CheckBox@2x.png"; sourceTree = "<group>"; };
+		3692B3521D8FC10E00D884CF /* CheckBoxSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CheckBoxSelected@2x.png"; sourceTree = "<group>"; };
 		36C8916B1D0CEAE100DC86E0 /* Example_Category.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example_Category.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36C8916F1D0CEAE100DC86E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		36C891711D0CEAE100DC86E0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -564,6 +571,17 @@
 			path = "test-gifs";
 			sourceTree = "<group>";
 		};
+		3692B34D1D8FBF4700D884CF /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				3692B3511D8FC10E00D884CF /* CheckBox@2x.png */,
+				3692B3521D8FC10E00D884CF /* CheckBoxSelected@2x.png */,
+				3692B34E1D8FBF6300D884CF /* UIButton+Extend.h */,
+				3692B34F1D8FBF6300D884CF /* UIButton+Extend.m */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
 		36C891621D0CEAE100DC86E0 = {
 			isa = PBXGroup;
 			children = (
@@ -615,6 +633,7 @@
 		36C891851D0CEB0000DC86E0 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				3692B34D1D8FBF4700D884CF /* UIButton */,
 				36514A3B1D7A799C0047BDBC /* NSString */,
 				36514A3E1D7A799C0047BDBC /* UIControl */,
 				36514A411D7A799C0047BDBC /* UIImage */,
@@ -768,6 +787,7 @@
 				36C892141D0CEB9900DC86E0 /* findhome_20160126203720gouwu.png in Resources */,
 				36514A361D7A75530047BDBC /* addcamera_loading7@3x.png in Resources */,
 				36C8921D1D0CEB9900DC86E0 /* findhome_20160126205426shenghuofuwu.png in Resources */,
+				3692B3541D8FC10E00D884CF /* CheckBoxSelected@2x.png in Resources */,
 				36514A251D7A75530047BDBC /* addcamera_loading12@2x.png in Resources */,
 				36C892131D0CEB9900DC86E0 /* findhome_20160126203648dujia.png in Resources */,
 				36C892251D0CEB9900DC86E0 /* findhome_dot@3x.png in Resources */,
@@ -809,6 +829,7 @@
 				36514A291D7A75530047BDBC /* addcamera_loading1@2x.png in Resources */,
 				36C892231D0CEB9900DC86E0 /* findhome_20160223203656xiawucha.png in Resources */,
 				36C8917B1D0CEAE100DC86E0 /* Assets.xcassets in Resources */,
+				3692B3531D8FC10E00D884CF /* CheckBox@2x.png in Resources */,
 				367B39B41D0E614900443974 /* Info.plist in Resources */,
 				36C8920A1D0CEB9900DC86E0 /* findhome_20160126202805dianying.png in Resources */,
 				3608B8051D82581100A5F15F /* asassds.gif in Resources */,
@@ -865,6 +886,7 @@
 				36514A4E1D7A799C0047BDBC /* UIView+Extend.m in Sources */,
 				3606A8D51D7FACB200DDF3EF /* NSArray+PureLayout.m in Sources */,
 				3606A8C31D7FA6BB00DDF3EF /* QRCodeViewController.m in Sources */,
+				3692B3501D8FBF6300D884CF /* UIButton+Extend.m in Sources */,
 				36514A4D1D7A799C0047BDBC /* UIScreen+Additions.m in Sources */,
 				36514A591D7A7A560047BDBC /* UIView+Toast.m in Sources */,
 				36C891DE1D0CEB6F00DC86E0 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,

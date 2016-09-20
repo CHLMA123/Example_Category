@@ -15,6 +15,7 @@
 #import "OverviewStructureController1.h"
 #import "AVFoundationController.h"
 #import "SingleClass.h"
+#import "UIButton+Extend.h"
 
 #define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
 //ImageView旋转状态枚举
@@ -25,7 +26,7 @@ typedef NS_ENUM(NSInteger, RotateState) {
 
 static NSInteger i = 0;
 
-@interface ViewController ()
+@interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 {
     CGFloat imageviewAngle;  /// 旋转角度
     UIImageView *imageView;  /// 旋转ImageView
@@ -63,7 +64,7 @@ static NSInteger i = 0;
     
 //    [self testDictonaryAction];                 // testDictonaryAction
 //    [self pushAnimatedImage];                   // AnimatedImageViewController gif动画加载
-    [self cutCircleImageAction];                // iOS开发中设置圆角的几种方法
+//    [self cutCircleImageAction];                // iOS开发中设置圆角的几种方法
 //    [self createAnimatedImage];                 // 使用图片实现GIF动画
 //    [self createButtonRectCorner];              // 控件的局部圆角问题: 图层蒙版(一个button或者label，只要右边的两个角圆角，或者只要一个圆角)。
     
@@ -73,7 +74,7 @@ static NSInteger i = 0;
 //    [self setImageforUIView];                   // 给UIView设置图片
 //    [self buildBarButtonItem];                  // 旋转动画
 //    [self Screenshots];                         // 截屏
-//    [self tableViewContentInset];               // 指定滚动条在scrollview的位置
+    [self tableViewContentInset];               // 指定滚动条在scrollview的位置
 //    [self testArraySum];                        // array快速求总和, 最大值, 最小值和平均值
     
 #pragma mark - Examples3
@@ -82,7 +83,19 @@ static NSInteger i = 0;
 //    [self OverviewStructure];                   //OverviewStructure
 //    [self OverviewOfAVFoundation];              //OverviewOfAVFoundation & iOS从App跳转至系统设置菜单各功能项
 //    [self SingletonUITest];                     // Objective-c单例模式详解
+//    [self createButtonView];                    // 左右结构的button fsKeepPasswordButton
 }
+
+#pragma mark - 
+- (void)createButtonView{
+    
+    UIButton *fsKeepPasswordButton = [UIButton fsKeepPasswordButton];
+    fsKeepPasswordButton.backgroundColor = [UIColor lightGrayColor];
+    fsKeepPasswordButton.frame = CGRectMake(0, 0, 200, 45);
+    fsKeepPasswordButton.center = self.view.center;
+    [self.view addSubview:fsKeepPasswordButton];
+}
+
 
 #pragma mark - Objective-c单例模式详解
 - (void)SingletonUITest{
@@ -167,7 +180,37 @@ static NSInteger i = 0;
     //指定滚动条在scrollview的位置
     tableView.scrollIndicatorInsets = tableView.contentInset;
     tableView.backgroundColor = [[UIColor purpleColor] colorWithAlphaComponent:0.25];
+    tableView.delegate = self;
+    tableView.dataSource = self;
     [self.view addSubview:tableView];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 9;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *idf = @"123";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:idf];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:idf];
+    }
+    cell.textLabel.text = [NSString stringWithFormat:@"%d",indexPath.row];
+    cell.textLabel.textColor = [UIColor blackColor];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(nonnull UITableViewCell *)cell forRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
+    //修改UITableviewCell的分割线距离通常需要修改separatorInset属性的top, left, bottom, right：
+    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
+        [cell setSeparatorInset:UIEdgeInsetsMake(0, 15, 0, 15)];
+    }
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+        [cell setSeparatorInset:UIEdgeInsetsMake(0, 15, 0, 15)];
+    }
+    if ([cell respondsToSelector:@selector(setPreservesSuperviewLayoutMargins:)]) {
+        [cell setPreservesSuperviewLayoutMargins:NO];
+    }
 }
 
 #pragma mark - 截屏
