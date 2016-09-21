@@ -16,6 +16,7 @@
 #import "AVFoundationController.h"
 #import "SingleClass.h"
 #import "UIButton+Extend.h"
+#import "NSString+Extend.h"
 
 #define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
 //ImageView旋转状态枚举
@@ -74,7 +75,7 @@ static NSInteger i = 0;
 //    [self setImageforUIView];                   // 给UIView设置图片
 //    [self buildBarButtonItem];                  // 旋转动画
 //    [self Screenshots];                         // 截屏
-    [self tableViewContentInset];               // 指定滚动条在scrollview的位置
+//    [self tableViewContentInset];               // 指定滚动条在scrollview的位置
 //    [self testArraySum];                        // array快速求总和, 最大值, 最小值和平均值
     
 #pragma mark - Examples3
@@ -84,9 +85,16 @@ static NSInteger i = 0;
 //    [self OverviewOfAVFoundation];              //OverviewOfAVFoundation & iOS从App跳转至系统设置菜单各功能项
 //    [self SingletonUITest];                     // Objective-c单例模式详解
 //    [self createButtonView];                    // 左右结构的button fsKeepPasswordButton
+    
+//    NSString *str =@"sbk-@126.com";//验证结果: 正则表达式不包含“-”符号的
+//    str = [str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+//    BOOL b = [str isValidSMTPServer];
+//    NSLog(@"%d", b);
 }
 
-#pragma mark - 
+
+
+#pragma mark - createButtonView
 - (void)createButtonView{
     
     UIButton *fsKeepPasswordButton = [UIButton fsKeepPasswordButton];
@@ -95,7 +103,6 @@ static NSInteger i = 0;
     fsKeepPasswordButton.center = self.view.center;
     [self.view addSubview:fsKeepPasswordButton];
 }
-
 
 #pragma mark - Objective-c单例模式详解
 - (void)SingletonUITest{

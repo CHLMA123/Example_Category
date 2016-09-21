@@ -13,7 +13,12 @@
  *  工具类的宏
  */
 
+//一些缩写
 #define SharedAppDelegate       ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+#define kApplication            [UIApplication sharedApplication]
+#define kKeyWindow              [UIApplication sharedApplication].keyWindow
+#define kUserDefaults           [NSUserDefaults standardUserDefaults]
+#define kNotificationCenter     [NSNotificationCenter defaultCenter]
 
 #define GetImageByName(x)       [UIImage imageNamed:x]
 
@@ -22,6 +27,18 @@
 #define ScrollHight 31
 
 #define IsNilOrNull(_ref)   (((_ref) == nil) || ([(_ref) isEqual:[NSNull null]]))
+
+//字符串是否为空
+#define kStringIsEmpty(str) ([str isKindOfClass:[NSNull class]] || str == nil || [str length] < 1 ? YES : NO )
+//数组是否为空
+#define kArrayIsEmpty(array) (array == nil || [array isKindOfClass:[NSNull class]] || array.count == 0)
+//字典是否为空
+#define kDictIsEmpty(dic) (dic == nil || [dic isKindOfClass:[NSNull class]] || dic.allKeys == 0)
+//是否是空对象
+#define kObjectIsEmpty(_object) (_object == nil \
+|| [_object isKindOfClass:[NSNull class]] \
+|| ([_object respondsToSelector:@selector(length)] && [(NSData *)_object length] == 0) \
+|| ([_object respondsToSelector:@selector(count)] && [(NSArray *)_object count] == 0))
 
 //获取系统时间戳
 #define getCurentTime [NSString stringWithFormat:@"%ld", (long)[[NSDate date] timeIntervalSince1970]]

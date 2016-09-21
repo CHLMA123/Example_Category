@@ -20,6 +20,7 @@
 		3606A8E01D800BAA00DDF3EF /* AVFoundation.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3606A8DF1D800BAA00DDF3EF /* AVFoundation.jpg */; };
 		3606A8E81D80194700DDF3EF /* SingleClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3606A8E71D80194700DDF3EF /* SingleClass.m */; };
 		3608B8051D82581100A5F15F /* asassds.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3608B8031D82581100A5F15F /* asassds.gif */; };
+		3638ABD41D921A58000BE8DA /* NSString+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 3638ABD31D921A58000BE8DA /* NSString+Extend.m */; };
 		365149EF1D7A60330047BDBC /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 365149EE1D7A60330047BDBC /* README.md */; };
 		365149F11D7A61560047BDBC /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 365149F01D7A61560047BDBC /* README.md */; };
 		365149F51D7A64640047BDBC /* AnimatedImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 365149F41D7A64640047BDBC /* AnimatedImageViewController.m */; };
@@ -152,6 +153,8 @@
 		3606A8E61D80194700DDF3EF /* SingleClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleClass.h; sourceTree = "<group>"; };
 		3606A8E71D80194700DDF3EF /* SingleClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleClass.m; sourceTree = "<group>"; };
 		3608B8031D82581100A5F15F /* asassds.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = asassds.gif; sourceTree = "<group>"; };
+		3638ABD21D921A58000BE8DA /* NSString+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extend.h"; sourceTree = "<group>"; };
+		3638ABD31D921A58000BE8DA /* NSString+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extend.m"; sourceTree = "<group>"; };
 		365149EE1D7A60330047BDBC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		365149F01D7A61560047BDBC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		365149F31D7A64640047BDBC /* AnimatedImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedImageViewController.h; sourceTree = "<group>"; };
@@ -413,6 +416,8 @@
 		36514A3B1D7A799C0047BDBC /* NSString */ = {
 			isa = PBXGroup;
 			children = (
+				3638ABD21D921A58000BE8DA /* NSString+Extend.h */,
+				3638ABD31D921A58000BE8DA /* NSString+Extend.m */,
 				36514A3C1D7A799C0047BDBC /* NSString+Additions.h */,
 				36514A3D1D7A799C0047BDBC /* NSString+Additions.m */,
 			);
@@ -865,6 +870,7 @@
 				36C891761D0CEAE100DC86E0 /* ViewController.m in Sources */,
 				36514AA01D7AB8EC0047BDBC /* OverviewStructureController1.m in Sources */,
 				3606A8D61D7FACB200DDF3EF /* NSLayoutConstraint+PureLayout.m in Sources */,
+				3638ABD41D921A58000BE8DA /* NSString+Extend.m in Sources */,
 				36C891731D0CEAE100DC86E0 /* AppDelegate.m in Sources */,
 				367B39B31D0E614900443974 /* FLAnimatedImageView.m in Sources */,
 				36514A981D7AB63D0047BDBC /* CommonMode.m in Sources */,
