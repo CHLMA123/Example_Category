@@ -43,6 +43,9 @@ App迭代开发版本号的规则
 [self SingletonUITest];                     // Objective-c单例模式详解
 [self createButtonView];                    // 左右结构的button fsKeepPasswordButton
 
+[[UIScreen mainScreen]setBrightness:0.5];   //点亮手机屏幕 取值范围从0.0到1.0
+[self OverviewSimplePing];                  // OverviewSimplePing
+
 
 #pragma mark - iOS中nil 、NULL、 Nil 、NSNull
 
