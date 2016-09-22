@@ -89,10 +89,10 @@ static NSInteger i = 0;
     [self OverviewSimplePing];                  // OverviewSimplePing
 //    [self OverviewSimplePing2];                 // OverviewSimplePing
     
-//    NSString *str =@"sbk-@126.com";//验证结果: 正则表达式不包含“-”符号的
-//    str = [str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-//    BOOL b = [str isValidSMTPServer];
-//    NSLog(@"%d", b);
+    NSString *str =@"sbk-@126.com";//验证结果: 正则表达式不包含“-”符号的
+    str = [str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    BOOL b = [str isValidSMTPServer];
+    NSLog(@"%d", b);
 }
 
 #pragma mark -

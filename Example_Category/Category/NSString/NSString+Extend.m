@@ -19,7 +19,8 @@
 }
 
 - (BOOL)isValidSMTPServer{
-    NSString *smtpServer = @"^[A-Za-z0-9@-_.]+$";
+    NSString *smtpServer = @"^\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\.\\w+([-.]\\w+)*$";
+    //@"^[A-Za-z0-9[@-_.]+$";
     return [self RegexCheck:smtpServer];
 }
 

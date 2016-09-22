@@ -77,6 +77,7 @@
 		36514A991D7AB63D0047BDBC /* NoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36514A931D7AB63D0047BDBC /* NoteView.m */; };
 		365A6BBA1D93B17A00C35595 /* SimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = 365A6BB91D93B17A00C35595 /* SimplePing.m */; };
 		365A6BBD1D93B1B600C35595 /* DebugPingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 365A6BBC1D93B1B600C35595 /* DebugPingViewController.m */; };
+		365A6BC11D93C52A00C35595 /* RegularUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 365A6BC01D93C52A00C35595 /* RegularUtils.m */; };
 		367830011D1D372C00D294DD /* NSObject+modelConvertDic.m in Sources */ = {isa = PBXBuildFile; fileRef = 367830001D1D372C00D294DD /* NSObject+modelConvertDic.m */; };
 		367B39B21D0E614900443974 /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 367B39AE1D0E614900443974 /* FLAnimatedImage.m */; };
 		367B39B31D0E614900443974 /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 367B39B01D0E614900443974 /* FLAnimatedImageView.m */; };
@@ -240,6 +241,8 @@
 		365A6BB91D93B17A00C35595 /* SimplePing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePing.m; sourceTree = "<group>"; };
 		365A6BBB1D93B1B600C35595 /* DebugPingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugPingViewController.h; sourceTree = "<group>"; };
 		365A6BBC1D93B1B600C35595 /* DebugPingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugPingViewController.m; sourceTree = "<group>"; };
+		365A6BBF1D93C52A00C35595 /* RegularUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegularUtils.h; sourceTree = "<group>"; };
+		365A6BC01D93C52A00C35595 /* RegularUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegularUtils.m; sourceTree = "<group>"; };
 		36782FFF1D1D372C00D294DD /* NSObject+modelConvertDic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+modelConvertDic.h"; sourceTree = "<group>"; };
 		367830001D1D372C00D294DD /* NSObject+modelConvertDic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+modelConvertDic.m"; sourceTree = "<group>"; };
 		367B39AD1D0E614900443974 /* FLAnimatedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImage.h; sourceTree = "<group>"; };
@@ -470,6 +473,7 @@
 		365149F21D7A64640047BDBC /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				365A6BBE1D93C52A00C35595 /* RegularUtils */,
 				3638AC031D9286DE000BE8DA /* AnimatedImage */,
 				3638AC061D9286DE000BE8DA /* CreateAnimatedView */,
 				3638AC241D9286DE000BE8DA /* CreateNoteView */,
@@ -615,6 +619,15 @@
 			);
 			name = Common;
 			path = Mine/Common;
+			sourceTree = "<group>";
+		};
+		365A6BBE1D93C52A00C35595 /* RegularUtils */ = {
+			isa = PBXGroup;
+			children = (
+				365A6BBF1D93C52A00C35595 /* RegularUtils.h */,
+				365A6BC01D93C52A00C35595 /* RegularUtils.m */,
+			);
+			path = RegularUtils;
 			sourceTree = "<group>";
 		};
 		367B39AC1D0E614900443974 /* FLAnimatedImage */ = {
@@ -961,6 +974,7 @@
 				3638AC001D928544000BE8DA /* NSArray+PureLayout.m in Sources */,
 				36514A4E1D7A799C0047BDBC /* UIView+Extend.m in Sources */,
 				3692B3501D8FBF6300D884CF /* UIButton+Extend.m in Sources */,
+				365A6BC11D93C52A00C35595 /* RegularUtils.m in Sources */,
 				3638AC4A1D9286DE000BE8DA /* NoteViewController.m in Sources */,
 				3638AC501D92871C000BE8DA /* UIImage+Extend.m in Sources */,
 				36514A4D1D7A799C0047BDBC /* UIScreen+Additions.m in Sources */,
