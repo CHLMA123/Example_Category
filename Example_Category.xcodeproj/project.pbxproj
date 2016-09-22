@@ -54,13 +54,9 @@
 		3638AC4C1D9286DE000BE8DA /* 启动页_1242x2208.png in Resources */ = {isa = PBXBuildFile; fileRef = 3638AC2A1D9286DE000BE8DA /* 启动页_1242x2208.png */; };
 		3638AC4D1D9286DE000BE8DA /* OverviewStructureController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 3638AC2D1D9286DE000BE8DA /* OverviewStructureController1.m */; };
 		3638AC501D92871C000BE8DA /* UIImage+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 3638AC4F1D92871C000BE8DA /* UIImage+Extend.m */; };
-		3638AC6A1D928EB7000BE8DA /* SimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = 3638AC631D928EB7000BE8DA /* SimplePing.m */; };
-		3638AC6B1D928EB7000BE8DA /* DebugPingServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 3638AC651D928EB7000BE8DA /* DebugPingServices.m */; };
-		3638AC6C1D928EB7000BE8DA /* DebugPingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3638AC671D928EB7000BE8DA /* DebugPingViewController.m */; };
-		3638AC6D1D928EB7000BE8DA /* DebugTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3638AC691D928EB7000BE8DA /* DebugTextView.m */; };
 		3638AC781D928ED1000BE8DA /* STSimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = 3638AC711D928ED1000BE8DA /* STSimplePing.m */; };
 		3638AC791D928ED1000BE8DA /* STDDebugPingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3638AC731D928ED1000BE8DA /* STDDebugPingViewController.m */; };
-		3638AC7A1D928ED1000BE8DA /* STDebugFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3638AC751D928ED1000BE8DA /* STDebugFoundation.m */; };
+		3638AC7A1D928ED1000BE8DA /* STDebugTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3638AC751D928ED1000BE8DA /* STDebugTextView.m */; };
 		3638AC7B1D928ED1000BE8DA /* STDPingServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 3638AC771D928ED1000BE8DA /* STDPingServices.m */; };
 		365149EF1D7A60330047BDBC /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 365149EE1D7A60330047BDBC /* README.md */; };
 		365149F11D7A61560047BDBC /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 365149F01D7A61560047BDBC /* README.md */; };
@@ -79,6 +75,8 @@
 		36514A971D7AB63D0047BDBC /* checkbox_pay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36514A8F1D7AB63D0047BDBC /* checkbox_pay@3x.png */; };
 		36514A981D7AB63D0047BDBC /* CommonMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 36514A911D7AB63D0047BDBC /* CommonMode.m */; };
 		36514A991D7AB63D0047BDBC /* NoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36514A931D7AB63D0047BDBC /* NoteView.m */; };
+		365A6BBA1D93B17A00C35595 /* SimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = 365A6BB91D93B17A00C35595 /* SimplePing.m */; };
+		365A6BBD1D93B1B600C35595 /* DebugPingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 365A6BBC1D93B1B600C35595 /* DebugPingViewController.m */; };
 		367830011D1D372C00D294DD /* NSObject+modelConvertDic.m in Sources */ = {isa = PBXBuildFile; fileRef = 367830001D1D372C00D294DD /* NSObject+modelConvertDic.m */; };
 		367B39B21D0E614900443974 /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 367B39AE1D0E614900443974 /* FLAnimatedImage.m */; };
 		367B39B31D0E614900443974 /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 367B39B01D0E614900443974 /* FLAnimatedImageView.m */; };
@@ -202,20 +200,12 @@
 		3638AC2D1D9286DE000BE8DA /* OverviewStructureController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverviewStructureController1.m; sourceTree = "<group>"; };
 		3638AC4E1D92871C000BE8DA /* UIImage+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extend.h"; sourceTree = "<group>"; };
 		3638AC4F1D92871C000BE8DA /* UIImage+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extend.m"; sourceTree = "<group>"; };
-		3638AC621D928EB7000BE8DA /* SimplePing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePing.h; sourceTree = "<group>"; };
-		3638AC631D928EB7000BE8DA /* SimplePing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePing.m; sourceTree = "<group>"; };
-		3638AC641D928EB7000BE8DA /* DebugPingServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugPingServices.h; sourceTree = "<group>"; };
-		3638AC651D928EB7000BE8DA /* DebugPingServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugPingServices.m; sourceTree = "<group>"; };
-		3638AC661D928EB7000BE8DA /* DebugPingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugPingViewController.h; sourceTree = "<group>"; };
-		3638AC671D928EB7000BE8DA /* DebugPingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugPingViewController.m; sourceTree = "<group>"; };
-		3638AC681D928EB7000BE8DA /* DebugTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugTextView.h; sourceTree = "<group>"; };
-		3638AC691D928EB7000BE8DA /* DebugTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugTextView.m; sourceTree = "<group>"; };
 		3638AC701D928ED1000BE8DA /* STSimplePing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSimplePing.h; sourceTree = "<group>"; };
 		3638AC711D928ED1000BE8DA /* STSimplePing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSimplePing.m; sourceTree = "<group>"; };
 		3638AC721D928ED1000BE8DA /* STDDebugPingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDDebugPingViewController.h; sourceTree = "<group>"; };
 		3638AC731D928ED1000BE8DA /* STDDebugPingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDDebugPingViewController.m; sourceTree = "<group>"; };
-		3638AC741D928ED1000BE8DA /* STDebugFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDebugFoundation.h; sourceTree = "<group>"; };
-		3638AC751D928ED1000BE8DA /* STDebugFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDebugFoundation.m; sourceTree = "<group>"; };
+		3638AC741D928ED1000BE8DA /* STDebugTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDebugTextView.h; sourceTree = "<group>"; };
+		3638AC751D928ED1000BE8DA /* STDebugTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDebugTextView.m; sourceTree = "<group>"; };
 		3638AC761D928ED1000BE8DA /* STDPingServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDPingServices.h; sourceTree = "<group>"; };
 		3638AC771D928ED1000BE8DA /* STDPingServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDPingServices.m; sourceTree = "<group>"; };
 		365149EE1D7A60330047BDBC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -246,6 +236,10 @@
 		36514A911D7AB63D0047BDBC /* CommonMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommonMode.m; path = NoteView/CommonMode.m; sourceTree = "<group>"; };
 		36514A921D7AB63D0047BDBC /* NoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteView.h; sourceTree = "<group>"; };
 		36514A931D7AB63D0047BDBC /* NoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteView.m; sourceTree = "<group>"; };
+		365A6BB81D93B17A00C35595 /* SimplePing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePing.h; sourceTree = "<group>"; };
+		365A6BB91D93B17A00C35595 /* SimplePing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePing.m; sourceTree = "<group>"; };
+		365A6BBB1D93B1B600C35595 /* DebugPingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugPingViewController.h; sourceTree = "<group>"; };
+		365A6BBC1D93B1B600C35595 /* DebugPingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugPingViewController.m; sourceTree = "<group>"; };
 		36782FFF1D1D372C00D294DD /* NSObject+modelConvertDic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+modelConvertDic.h"; sourceTree = "<group>"; };
 		367830001D1D372C00D294DD /* NSObject+modelConvertDic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+modelConvertDic.m"; sourceTree = "<group>"; };
 		367B39AD1D0E614900443974 /* FLAnimatedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImage.h; sourceTree = "<group>"; };
@@ -329,8 +323,8 @@
 		3638ABDA1D928459000BE8DA /* OverviewSimplePing */ = {
 			isa = PBXGroup;
 			children = (
+				365A6BB71D93B17A00C35595 /* Common */,
 				3638AC6E1D928ED1000BE8DA /* Classes */,
-				3638AC601D928EB7000BE8DA /* Mine */,
 			);
 			path = OverviewSimplePing;
 			sourceTree = "<group>";
@@ -450,37 +444,14 @@
 			path = OverviewOfStructure;
 			sourceTree = "<group>";
 		};
-		3638AC601D928EB7000BE8DA /* Mine */ = {
-			isa = PBXGroup;
-			children = (
-				3638AC611D928EB7000BE8DA /* Common */,
-				3638AC661D928EB7000BE8DA /* DebugPingViewController.h */,
-				3638AC671D928EB7000BE8DA /* DebugPingViewController.m */,
-				3638AC641D928EB7000BE8DA /* DebugPingServices.h */,
-				3638AC651D928EB7000BE8DA /* DebugPingServices.m */,
-				3638AC681D928EB7000BE8DA /* DebugTextView.h */,
-				3638AC691D928EB7000BE8DA /* DebugTextView.m */,
-			);
-			path = Mine;
-			sourceTree = "<group>";
-		};
-		3638AC611D928EB7000BE8DA /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				3638AC621D928EB7000BE8DA /* SimplePing.h */,
-				3638AC631D928EB7000BE8DA /* SimplePing.m */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
 		3638AC6E1D928ED1000BE8DA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				3638AC6F1D928ED1000BE8DA /* PingTester */,
 				3638AC721D928ED1000BE8DA /* STDDebugPingViewController.h */,
 				3638AC731D928ED1000BE8DA /* STDDebugPingViewController.m */,
-				3638AC741D928ED1000BE8DA /* STDebugFoundation.h */,
-				3638AC751D928ED1000BE8DA /* STDebugFoundation.m */,
+				3638AC741D928ED1000BE8DA /* STDebugTextView.h */,
+				3638AC751D928ED1000BE8DA /* STDebugTextView.m */,
 				3638AC761D928ED1000BE8DA /* STDPingServices.h */,
 				3638AC771D928ED1000BE8DA /* STDPingServices.m */,
 			);
@@ -632,6 +603,18 @@
 				36514A931D7AB63D0047BDBC /* NoteView.m */,
 			);
 			path = NoteView;
+			sourceTree = "<group>";
+		};
+		365A6BB71D93B17A00C35595 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				365A6BB81D93B17A00C35595 /* SimplePing.h */,
+				365A6BB91D93B17A00C35595 /* SimplePing.m */,
+				365A6BBB1D93B1B600C35595 /* DebugPingViewController.h */,
+				365A6BBC1D93B1B600C35595 /* DebugPingViewController.m */,
+			);
+			name = Common;
+			path = Mine/Common;
 			sourceTree = "<group>";
 		};
 		367B39AC1D0E614900443974 /* FLAnimatedImage */ = {
@@ -831,6 +814,7 @@
 				TargetAttributes = {
 					36C8916A1D0CEAE100DC86E0 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = U9UA74RVD8;
 					};
 				};
 			};
@@ -945,6 +929,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				365A6BBD1D93B1B600C35595 /* DebugPingViewController.m in Sources */,
 				3638AC7B1D928ED1000BE8DA /* STDPingServices.m in Sources */,
 				36C891761D0CEAE100DC86E0 /* ViewController.m in Sources */,
 				3638AC2E1D9286DE000BE8DA /* AnimatedImageViewController.m in Sources */,
@@ -957,10 +942,9 @@
 				367B39B31D0E614900443974 /* FLAnimatedImageView.m in Sources */,
 				36514A981D7AB63D0047BDBC /* CommonMode.m in Sources */,
 				367B39B21D0E614900443974 /* FLAnimatedImage.m in Sources */,
-				3638AC7A1D928ED1000BE8DA /* STDebugFoundation.m in Sources */,
+				3638AC7A1D928ED1000BE8DA /* STDebugTextView.m in Sources */,
 				36514A991D7AB63D0047BDBC /* NoteView.m in Sources */,
 				36C891701D0CEAE100DC86E0 /* main.m in Sources */,
-				3638AC6D1D928EB7000BE8DA /* DebugTextView.m in Sources */,
 				365149F11D7A61560047BDBC /* README.md in Sources */,
 				36514A611D7A7A970047BDBC /* BlockButton.m in Sources */,
 				3638AC781D928ED1000BE8DA /* STSimplePing.m in Sources */,
@@ -969,18 +953,16 @@
 				367830011D1D372C00D294DD /* NSObject+modelConvertDic.m in Sources */,
 				3606A8E81D80194700DDF3EF /* SingleClass.m in Sources */,
 				36514A4A1D7A799C0047BDBC /* NSString+Additions.m in Sources */,
+				365A6BBA1D93B17A00C35595 /* SimplePing.m in Sources */,
 				36514A4B1D7A799C0047BDBC /* UIControl+Additions.m in Sources */,
 				3638AC021D928544000BE8DA /* QRCodeViewController.m in Sources */,
-				3638AC6A1D928EB7000BE8DA /* SimplePing.m in Sources */,
 				3638AC011D928544000BE8DA /* NSLayoutConstraint+PureLayout.m in Sources */,
 				36514A581D7A7A560047BDBC /* MBProgressHUD.m in Sources */,
 				3638AC001D928544000BE8DA /* NSArray+PureLayout.m in Sources */,
 				36514A4E1D7A799C0047BDBC /* UIView+Extend.m in Sources */,
 				3692B3501D8FBF6300D884CF /* UIButton+Extend.m in Sources */,
 				3638AC4A1D9286DE000BE8DA /* NoteViewController.m in Sources */,
-				3638AC6B1D928EB7000BE8DA /* DebugPingServices.m in Sources */,
 				3638AC501D92871C000BE8DA /* UIImage+Extend.m in Sources */,
-				3638AC6C1D928EB7000BE8DA /* DebugPingViewController.m in Sources */,
 				36514A4D1D7A799C0047BDBC /* UIScreen+Additions.m in Sources */,
 				3638AC791D928ED1000BE8DA /* STDDebugPingViewController.m in Sources */,
 				36514A591D7A7A560047BDBC /* UIView+Toast.m in Sources */,
@@ -1097,6 +1079,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = U9UA74RVD8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Example_Category/Common/Macros/MayerPrefixHeader.pch";
 				INFOPLIST_FILE = Example_Category/Info.plist;
@@ -1111,6 +1094,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = U9UA74RVD8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Example_Category/Common/Macros/MayerPrefixHeader.pch";
 				INFOPLIST_FILE = Example_Category/Info.plist;

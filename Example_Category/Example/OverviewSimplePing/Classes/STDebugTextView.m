@@ -1,14 +1,14 @@
 //
-//  DebugTextView.m
-//  Example_Category
+//  STDebugFoundation.m
+//  STKitDemo
 //
-//  Created by MCL on 16/9/21.
-//  Copyright © 2016年 MCL. All rights reserved.
+//  Created by SunJiangting on 15-3-9.
+//  Copyright (c) 2015年 SunJiangting. All rights reserved.
 //
 
-#import "DebugTextView.h"
+#import "STDebugTextView.h"
 
-@implementation DebugTextView
+@implementation STDebugTextView
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -44,13 +44,5 @@
     NSString *selectorName = NSStringFromSelector(action);
     return [selectorName hasPrefix:@"copy"] || [selectorName hasPrefix:@"select"];
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
 @end

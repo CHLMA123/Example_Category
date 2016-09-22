@@ -6,6 +6,8 @@
 //  Copyright (c) 2015年 SunJiangting. All rights reserved.
 //
 
+//  https://github.com/lovesunstar/STPingTest
+
 #import <UIKit/UIKit.h>
 
 @interface STDDebugPingViewController : UIViewController

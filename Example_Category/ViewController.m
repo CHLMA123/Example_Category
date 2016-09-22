@@ -17,9 +17,8 @@
 #import "SingleClass.h"
 #import "UIButton+Extend.h"
 #import "NSString+Extend.h"
-#import "SimplePing.h"
-#import "DebugPingViewController.h"
 #import "STDDebugPingViewController.h"
+#import "DebugPingViewController.h"
 
 #define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
 //ImageView旋转状态枚举
@@ -30,15 +29,12 @@ typedef NS_ENUM(NSInteger, RotateState) {
 
 static NSInteger i = 0;
 
-@interface ViewController ()<UITableViewDelegate, UITableViewDataSource, SimplePingDelegate>
+@interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 {
     CGFloat imageviewAngle;  /// 旋转角度
     UIImageView *imageView;  /// 旋转ImageView
     RotateState rotateState; /// 旋转状态
-    
     UIImageView *screenshotsImageView;  /// 截屏
-    
-    SimplePing *ping;
 }
 
 @end
@@ -91,6 +87,7 @@ static NSInteger i = 0;
 //    [self SingletonUITest];                     // Objective-c单例模式详解
 //    [self createButtonView];                    // 左右结构的button fsKeepPasswordButton
     [self OverviewSimplePing];                  // OverviewSimplePing
+//    [self OverviewSimplePing2];                 // OverviewSimplePing
     
 //    NSString *str =@"sbk-@126.com";//验证结果: 正则表达式不包含“-”符号的
 //    str = [str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
@@ -104,57 +101,14 @@ static NSInteger i = 0;
 - (void)OverviewSimplePing{
     
     STDDebugPingViewController *push = [[STDDebugPingViewController alloc] init];
-//    DebugPingViewController *push = [[DebugPingViewController alloc] init];
     [self.navigationController pushViewController:push animated:YES];
 }
 
-//- (void)pingWiFiTest{
-//
-//    ping = [[SimplePing alloc] initWithHostName:@"https://api.mycloudipc.com"];
-//    ping.delegate = self;
-//    ping.addressStyle = SimplePingAddressStyleAny;
-//    [ping start];
-//}
-//
-///**
-// *  start成功，也就是准备工作做完后的回调
-// */
-//- (void)simplePing:(SimplePing *)pinger didStartWithAddress:(NSData *)address{
-//
-//    // 发送测试报文数据
-//    [pinger sendPingWithData:nil];
-//}
-//
-//- (void)simplePing:(SimplePing *)pinger didFailWithError:(NSError *)error{
-//
-//    NSLog(@"didFailWithError");
-//    
-//    [pinger stop];
-//}
-//
-//// 发送测试报文成功的回调方法
-//- (void)simplePing:(SimplePing *)pinger didSendPacket:(NSData *)packet sequenceNumber:(uint16_t)sequenceNumber{
-//    
-//    NSLog(@"#%u sent", sequenceNumber);
-//}
-//
-////发送测试报文失败的回调方法
-//- (void)simplePing:(SimplePing *)pinger didFailToSendPacket:(NSData *)packet sequenceNumber:(uint16_t)sequenceNumber error:(NSError *)error{
-//    
-//    NSLog(@"#%u send failed: %@", sequenceNumber, error);
-//}
-//
-//// 接收到ping的地址所返回的数据报文回调方法
-//- (void)simplePing:(SimplePing *)pinger didReceivePingResponsePacket:(NSData *)packet sequenceNumber:(uint16_t)sequenceNumber{
-//    
-//    NSLog(@"#%u received, size=%zu", sequenceNumber, (unsigned long)packet.length);
-//}
-//
-//- (void)simplePing:(SimplePing *)pinger didReceiveUnexpectedPacket:(NSData *)packet{
-//    
-//    NSLog(@"#%s",__func__);
-//}
-
+- (void)OverviewSimplePing2{
+    
+    DebugPingViewController *push = [[DebugPingViewController alloc] init];
+    [self.navigationController pushViewController:push animated:YES];
+}
 
 #pragma mark - createButtonView
 - (void)createButtonView{

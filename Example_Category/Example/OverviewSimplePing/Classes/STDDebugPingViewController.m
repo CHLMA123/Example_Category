@@ -7,7 +7,7 @@
 //
 
 #import "STDDebugPingViewController.h"
-#import "STDebugFoundation.h"
+#import "STDebugTextView.h"
 #import "STDPingServices.h"
 
 @interface STDDebugPingViewController ()
@@ -59,7 +59,7 @@
 }
 
 - (void)_pingActionFired:(UIButton *)button {
-    //    [SimplePingHelper ping:self.textField.text target:self sel:@selector(_pingCallback:)];
+    
     [self.textField resignFirstResponder];
     if (button.tag == 10001) {
         __weak STDDebugPingViewController *weakSelf = self;
