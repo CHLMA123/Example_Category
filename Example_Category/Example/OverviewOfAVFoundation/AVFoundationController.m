@@ -10,6 +10,9 @@
 #import "QRCodeViewController.h"
 #import "MovieFileController.h"
 
+#import "QRCodeCreateViewController.h"
+#import "XJQRCodeViewController.h"
+
 @interface AVFoundationController ()
 
 @end
@@ -59,8 +62,40 @@
 
 - (void)videoButtonAction{
     
-    MovieFileController *vc = [[MovieFileController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+//    MovieFileController *vc = [[MovieFileController alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
+    
+    NSInteger indexPath = 0;
+    switch (indexPath) {
+            
+        case 0: {
+            
+            QRCodeCreateViewController *codeVC = [[QRCodeCreateViewController alloc] init];
+            codeVC.isHaveLogo = NO;
+            [self.navigationController pushViewController:codeVC animated:YES];
+            
+        }
+            break;
+        case 1: {
+            
+            QRCodeCreateViewController *codeVC = [[QRCodeCreateViewController alloc] init];
+            codeVC.isHaveLogo = YES;
+            [self.navigationController pushViewController:codeVC animated:YES];
+            
+        }
+            break;
+        case 2: {
+            
+            XJQRCodeViewController *QRCodeVC = [[XJQRCodeViewController alloc] init];
+            [self.navigationController pushViewController:QRCodeVC animated:YES];
+            
+        }
+            break;
+            
+        default:
+            break;
+    }
+
     
 }
 

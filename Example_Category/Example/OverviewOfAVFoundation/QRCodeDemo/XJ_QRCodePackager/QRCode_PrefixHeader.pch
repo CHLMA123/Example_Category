@@ -1,0 +1,37 @@
+//
+//  QRCode_PrefixHeader.pch
+//  QRCodeDemo
+//
+//  Created by puxj on 16/9/13.
+//  Copyright © 2016年 bcinfo. All rights reserved.
+//
+
+#ifndef QRCode_PrefixHeader_pch
+#define QRCode_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+
+#define IOS8UP ([[UIDevice currentDevice].systemVersion floatValue] >= 8)
+
+#define RGB(a,b,c) [UIColor colorWithRed:(a/255.0) green:(b/255.0) blue:(c/255.0) alpha:1.0]
+
+//获取当前设备的尺寸
+#define ScreenWidth   [[UIScreen mainScreen] bounds].size.width
+#define ScreenHeight  [[UIScreen mainScreen] bounds].size.height
+#define ScreenSize    [[UIScreen mainScreen] bounds].size
+
+
+#ifdef __OBJC__
+
+#import "SystemFunctions.h"
+#import "UIFont+MyFont.h"
+#import "UIView+Frame.h"
+#import "QRCoderHeader.h"
+#import "BaseViewController.h"
+
+#endif
+
+#endif /* QRCode_PrefixHeader_pch */

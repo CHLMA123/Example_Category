@@ -13,6 +13,9 @@
  *  定义尺寸类的宏
  */
 
+//以iphone5s,iphone5为基础 坐标都以iphone5s,iphone5为基准 进行代码的适配
+#define ratio         [[UIScreen mainScreen] bounds].size.width/320.0
+
 //状态栏高度
 #define STATUS_BAR_HEIGHT 20
 //NavBar高度
