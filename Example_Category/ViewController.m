@@ -9,16 +9,15 @@
 #import "ViewController.h"
 #import "GetDeviceAllInfo.h"
 #import "AnimatedImageViewController.h"
-#import "UIImage+Extend.h"
 #import "CreateAnimatedViewController.h"
 #import "NoteViewController.h"
 #import "OverviewStructureController1.h"
 #import "AVFoundationController.h"
 #import "SingleClass.h"
-#import "UIButton+Extend.h"
-#import "NSString+Extend.h"
 #import "STDDebugPingViewController.h"
 #import "DebugPingViewController.h"
+#import "OverviewNSDateController.h"
+#import "RegularViewController.h"
 
 #define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
 //ImageView旋转状态枚举
@@ -52,51 +51,62 @@ static NSInteger i = 0;
     
 #pragma mark - Examples
     
-//    [self familyNameAction];                    // 获取设备中的所有字体
-//    [self waterMarkImageAction];                // 图片加水印
-//    [self NSRecursiveLockAction];               // 递归锁使用
-//    [self getWIFINameAction];                   // wifiName
-//    [self getContentTypeOfImage];               // 判断是否为gif/png图片的正确姿势
+//    [self familyNameAction];                    // 1获取设备中的所有字体
+//    [self waterMarkImageAction];                // 2图片加水印
+//    [self NSRecursiveLockAction];               // 3递归锁使用
+//    [self getWIFINameAction];                   // 4wifiName
+//    [self getContentTypeOfImage];               // 5判断是否为gif/png图片的正确姿势
     
-//    [self getstartOfToday];                     // 凌晨时间获取
-//    [self otherNSStringTestAction];             // NSString使用stringWithFormat拼接的相关知识
-//    [self getCurrentTimeZone];                  // getCurrentTimeZone
-//    [self compareStringTest];                   // compareStringTest
-//    [self blockTestAction];                     // block 可以作为参数传递
+//    [self getstartOfToday];                     // 6凌晨时间获取
+//    [self otherNSStringTestAction];             // 7NSString使用stringWithFormat拼接的相关知识
+//    [self getCurrentTimeZone];                  // 8getCurrentTimeZone
+//    [self compareStringTest];                   // 9compareStringTest
+//    [self blockTestAction];                     // 10block 可以作为参数传递
     
-//    [self testDictonaryAction];                 // testDictonaryAction
-//    [self pushAnimatedImage];                   // AnimatedImageViewController gif动画加载
-//    [self cutCircleImageAction];                // iOS开发中设置圆角的几种方法
-//    [self createAnimatedImage];                 // 使用图片实现GIF动画
-//    [self createButtonRectCorner];              // 控件的局部圆角问题: 图层蒙版(一个button或者label，只要右边的两个角圆角，或者只要一个圆角)。
+//    [self testDictonaryAction];                 // 11testDictonaryAction
+//    [self pushAnimatedImage];                   // 12AnimatedImageViewController gif动画加载
+//    [self cutCircleImageAction];                // 13iOS开发中设置圆角的几种方法
+//    [self createAnimatedImage];                 // 14使用图片实现GIF动画
+//    [self createButtonRectCorner];              // 15控件的局部圆角问题: 图层蒙版(一个button或者label，只要右边的两个角圆角，或者只要一个圆角)。
     
 #pragma mark - Examples2
     
-//    [self GetContendImageView];                 // 图片处理只拿到图片的一部分
-//    [self setImageforUIView];                   // 给UIView设置图片
-//    [self buildBarButtonItem];                  // 旋转动画
-//    [self Screenshots];                         // 截屏
-//    [self tableViewContentInset];               // 指定滚动条在scrollview的位置
-//    [self testArraySum];                        // array快速求总和, 最大值, 最小值和平均值
+//    [self GetContendImageView];                 // 16图片处理只拿到图片的一部分
+//    [self setImageforUIView];                   // 17给UIView设置图片
+//    [self buildBarButtonItem];                  // 18旋转动画
+//    [self Screenshots];                         // 19截屏
+//    [self tableViewContentInset];               // 20指定滚动条在scrollview的位置
+//    [self testArraySum];                        // 21array快速求总和, 最大值, 最小值和平均值
     
 #pragma mark - Examples3
     
-//    [self addNoteView];                         // NoteView组件化
-//    [self OverviewStructure];                   //OverviewStructure
-//    [self OverviewOfAVFoundation];              //OverviewOfAVFoundation & iOS从App跳转至系统设置菜单各功能项
-//    [self SingletonUITest];                     // Objective-c单例模式详解
-//    [self createButtonView];                    // 左右结构的button fsKeepPasswordButton
-    [self OverviewSimplePing];                  // OverviewSimplePing
-//    [self OverviewSimplePing2];                 // OverviewSimplePing
-    
-    NSString *str =@"sbk-@126.com";//验证结果: 正则表达式不包含“-”符号的
-    str = [str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    BOOL b = [str isValidSMTPServer];
-    NSLog(@"%d", b);
+//    [self addNoteView];                         // 22NoteView组件化
+//    [self OverviewStructure];                   // 23OverviewStructure
+//    [self OverviewOfAVFoundation];              // 24OverviewOfAVFoundation & iOS从App跳转至系统设置菜单各功能项
+//    [self SingletonUITest];                     // 25Objective-c单例模式详解
+//    [self createButtonView];                    // 26左右结构的button fsKeepPasswordButton
+//    [self OverviewSimplePing];                  // 27OverviewSimplePing
+//    [self OverviewSimplePing2];                 // 28OverviewSimplePing
+
+//    [self OverviewNSDate];                      // 29OverviewNSDate
+    [self OverviewRegularExpression];           // 30OverviewRegularExpression
 }
 
-#pragma mark -
 
+
+#pragma mark - OverviewNSDate
+- (void)OverviewRegularExpression{
+    
+    RegularViewController *push = [[RegularViewController alloc] init];
+    [self.navigationController pushViewController:push animated:YES];
+}
+
+#pragma mark - OverviewNSDate
+- (void)OverviewNSDate{
+    
+    OverviewNSDateController *push = [[OverviewNSDateController alloc] init];
+    [self.navigationController pushViewController:push animated:YES];
+}
 #pragma mark - OverviewSimplePing
 - (void)OverviewSimplePing{
     
