@@ -22,7 +22,7 @@
 #import "STDDebugPingViewController.h"
 
 #define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
-//ImageView旋转状态枚举
+//ImageView旋转状态枚举 NSEN
 typedef NS_ENUM(NSInteger, RotateState) {
     RotateStateStop,
     RotateStateRunning,
@@ -87,10 +87,10 @@ static NSInteger i = 0;
     
 //    [self addNoteView];                         // NoteView组件化
 //    [self OverviewStructure];                   //OverviewStructure
-//    [self OverviewOfAVFoundation];              //OverviewOfAVFoundation & iOS从App跳转至系统设置菜单各功能项
+    [self OverviewOfAVFoundation];              //OverviewOfAVFoundation & iOS从App跳转至系统设置菜单各功能项
 //    [self SingletonUITest];                     // Objective-c单例模式详解
 //    [self createButtonView];                    // 左右结构的button fsKeepPasswordButton
-    [self OverviewSimplePing];                  // OverviewSimplePing
+//    [self OverviewSimplePing];                  // OverviewSimplePing
     
 //    NSString *str =@"sbk-@126.com";//验证结果: 正则表达式不包含“-”符号的
 //    str = [str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];

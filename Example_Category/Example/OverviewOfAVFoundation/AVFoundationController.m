@@ -25,7 +25,7 @@
     scanBtn.frame = CGRectMake((SCREEN_WIDTH - 200)/2, 100, 200, 44);
     [scanBtn setTitle:@"SCAN" forState:UIControlStateNormal];
     [scanBtn setTitleColor:RGB_Black forState:UIControlStateNormal];
-    [scanBtn addTarget:self action:@selector(videoButtonAction) forControlEvents:UIControlEventTouchUpInside];
+    [scanBtn addTarget:self action:@selector(scanButtonAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:scanBtn];
     
     UIButton *VideoBtn = [UIButton buttonWithType:UIButtonTypeCustom]
