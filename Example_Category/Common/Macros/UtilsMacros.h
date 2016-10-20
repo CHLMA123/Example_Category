@@ -12,40 +12,91 @@
 /**
  *  工具类的宏
  */
+// Get weak reference object.
+#define kWeakObject(object) __weak __typeof(object) weakObject = object;
 
-//一些缩写
-#define SharedAppDelegate       ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+//// Get weak reference object.
+//#define kWeak(caller, object) __weak __typeof(object) caller = object;
+
+// Get strong reference object.
+#define kStrongObject(object) __strong __typedef(object) strongObject = object;
+
+// Get dispatch_get_main_queue()
+#define kMainThread (dispatch_get_main_queue())
+
+// Get default dispatch_get_global_queue
+#define kGlobalThread dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+
+// Radians convert to degress.
+#define kRadiansToDegrees(radians) ((radians) * (180.0 / M_PI))
+
+// Degrees convert to randians.
+#define kDegreesToRadians(angle) ((angle) / 180.0 * M_PI)
+
+// Fast to get iOS system version
+#define kiOSVersion ([UIDevice currentDevice].systemVersion.floatValue)
+
+// More fast way to get app delegate
+#define SharedAppDelegate ((AppDelegate *)[[UIApplication  sharedApplication] delegate])
+
 #define kApplication            [UIApplication sharedApplication]
+
 #define kKeyWindow              [UIApplication sharedApplication].keyWindow
-#define kUserDefaults           [NSUserDefaults standardUserDefaults]
-#define kNotificationCenter     [NSNotificationCenter defaultCenter]
 
-#define GetImageByName(x)       [UIImage imageNamed:x]
+#pragma mark - Load Image
 
-#define MIGUOBackgroundColor    RGBCOLOR(229, 229, 229)
+// More easy way to load an image.
+#define kImage(Name) ([UIImage imageNamed:Name])
 
-#define ScrollHight 31
+// More easy to load an image from file.
+#define kImageOfFile(Name) ([UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:Name ofType:nil]])
 
-#define IsNilOrNull(_ref)   (((_ref) == nil) || ([(_ref) isEqual:[NSNull null]]))
+#pragma mark - System Singletons
 
-//字符串是否为空
-#define kStringIsEmpty(str) ([str isKindOfClass:[NSNull class]] || str == nil || [str length] < 1 ? YES : NO )
-//数组是否为空
-#define kArrayIsEmpty(array) (array == nil || [array isKindOfClass:[NSNull class]] || array.count == 0)
-//字典是否为空
-#define kDictIsEmpty(dic) (dic == nil || [dic isKindOfClass:[NSNull class]] || dic.allKeys == 0)
-//是否是空对象
-#define kObjectIsEmpty(_object) (_object == nil \
-|| [_object isKindOfClass:[NSNull class]] \
-|| ([_object respondsToSelector:@selector(length)] && [(NSData *)_object length] == 0) \
-|| ([_object respondsToSelector:@selector(count)] && [(NSArray *)_object count] == 0))
+// More easy way to get user default object.
+#define kUserDefaults [NSUserDefaults standardUserDefaults]
+
+// More easy way to get NSNotificationCenter object.
+#define kNotificationCenter  [NSNotificationCenter defaultCenter]
+
+// More easy way to get [NSFileManager defaultManager]
+#define kFileManager [NSFileManager defaultManager]
+
+// More easy way to post a notification from notification center.
+#define kPostNotificationWithName(notificationName) \
+[kNotificationCenter postNotificationName:notificationName object:nil userInfo:nil]
+
+// More easy way to post a notification with user info from notification center.
+#define kPostNotificationWithNameAndUserInfo(notificationName, userInfo) \
+[kNotificationCenter postNotificationName:notificationName object:nil userInfo:userInfo]
+
+#pragma mark - Judge
+
+// Judge whether it is an empty string.//字符串是否为空
+#define kIsEmptyString(s) (s == nil || [s isKindOfClass:[NSNull class]] || ([s isKindOfClass:[NSString class]] && s.length == 0))
+
+// Judge whether it is a nil or null object.//是否是空对象
+#define kIsEmptyObject(obj) (obj == nil || [obj isKindOfClass:[NSNull class]])
+
+// Judge whether it is a vaid dictionary.//字典是否为空
+#define kIsDictionary(objDict) (objDict != nil && [objDict isKindOfClass:[NSDictionary class]])
+
+// Judge whether it is a valid array.//数组是否为空
+#define kIsArray(objArray) (objArray != nil && [objArray isKindOfClass:[NSArray class]])
 
 //获取系统时间戳
 #define getCurentTime [NSString stringWithFormat:@"%ld", (long)[[NSDate date] timeIntervalSince1970]]
 
+//////////////////////////////////////////////////////////////////////////
 /*
  * 工程字体
  */
+#pragma mark - Load Font
+// Generate font with size
+#define kFontWithSize(size) [UIFont systemFontOfSize:size]
+
+// Generate bold font with size.
+#define kBoldFontWithSize(size) [UIFont boldSystemFontOfSize:size]
 
 #define SysFontOfSize_20    [UIFont systemFontOfSize:20.0]
 #define SysFontOfSize_18    [UIFont systemFontOfSize:18.0]
@@ -62,7 +113,7 @@
 /*
  *工程颜色
  */
-
+#pragma mark - Generate Color
 // rgb颜色转换（16进制->10进制）
 #define UIColorFromHEX(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 

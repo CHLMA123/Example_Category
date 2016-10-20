@@ -10,6 +10,9 @@
 #import "QRCodeViewController.h"
 #import "MovieFileController.h"
 
+#import "QRCodeCreateViewController.h"
+#import "XJQRCodeViewController.h"
+
 @interface AVFoundationController ()
 
 @end
@@ -22,7 +25,7 @@
     
     UIButton *scanBtn = [UIButton buttonWithType:UIButtonTypeCustom]
     ;
-    scanBtn.frame = CGRectMake((SCREEN_WIDTH - 200)/2, 100, 200, 44);
+    scanBtn.frame = CGRectMake((kScreenWidth - 200)/2, 100, 200, 44);
     [scanBtn setTitle:@"SCAN" forState:UIControlStateNormal];
     [scanBtn setTitleColor:RGB_Black forState:UIControlStateNormal];
     [scanBtn addTarget:self action:@selector(scanButtonAction) forControlEvents:UIControlEventTouchUpInside];
@@ -30,7 +33,7 @@
     
     UIButton *VideoBtn = [UIButton buttonWithType:UIButtonTypeCustom]
     ;
-    VideoBtn.frame = CGRectMake((SCREEN_WIDTH - 200)/2, CGRectGetMaxY(scanBtn.frame) + 20, 200, 44);
+    VideoBtn.frame = CGRectMake((kScreenWidth - 200)/2, CGRectGetMaxY(scanBtn.frame) + 20, 200, 44);
     [VideoBtn setTitle:@"RECORD" forState:UIControlStateNormal];
     [VideoBtn setTitleColor:RGB_Black forState:UIControlStateNormal];
     [VideoBtn addTarget:self action:@selector(videoButtonAction) forControlEvents:UIControlEventTouchUpInside];
@@ -38,7 +41,7 @@
     
     UIButton *settingBtn = [UIButton buttonWithType:UIButtonTypeCustom]
     ;
-    settingBtn.frame = CGRectMake((SCREEN_WIDTH - 200)/2, CGRectGetMaxY(VideoBtn.frame) + 20, 200, 44);
+    settingBtn.frame = CGRectMake((kScreenWidth - 200)/2, CGRectGetMaxY(VideoBtn.frame) + 20, 200, 44);
     [settingBtn setTitle:@"SETTING Wi-Fi" forState:UIControlStateNormal];
     [settingBtn setTitleColor:RGB_Black forState:UIControlStateNormal];
     [settingBtn addTarget:self action:@selector(wifiButtonAction) forControlEvents:UIControlEventTouchUpInside];
@@ -59,8 +62,40 @@
 
 - (void)videoButtonAction{
     
-    MovieFileController *vc = [[MovieFileController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+//    MovieFileController *vc = [[MovieFileController alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
+    
+    NSInteger indexPath = 0;
+    switch (indexPath) {
+            
+        case 0: {
+            
+            QRCodeCreateViewController *codeVC = [[QRCodeCreateViewController alloc] init];
+            codeVC.isHaveLogo = NO;
+            [self.navigationController pushViewController:codeVC animated:YES];
+            
+        }
+            break;
+        case 1: {
+            
+            QRCodeCreateViewController *codeVC = [[QRCodeCreateViewController alloc] init];
+            codeVC.isHaveLogo = YES;
+            [self.navigationController pushViewController:codeVC animated:YES];
+            
+        }
+            break;
+        case 2: {
+            
+            XJQRCodeViewController *QRCodeVC = [[XJQRCodeViewController alloc] init];
+            [self.navigationController pushViewController:QRCodeVC animated:YES];
+            
+        }
+            break;
+            
+        default:
+            break;
+    }
+
     
 }
 

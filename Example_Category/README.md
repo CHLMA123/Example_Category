@@ -45,6 +45,9 @@ App迭代开发版本号的规则
 
 [[UIScreen mainScreen]setBrightness:0.5];   //点亮手机屏幕 取值范围从0.0到1.0
 [self OverviewSimplePing];                  // OverviewSimplePing
+[self OverviewSimplePing2];                 // 28OverviewSimplePing
+[self OverviewNSDate];                      // 29OverviewNSDate
+[self OverviewRegularExpression];           // 30OverviewRegularExpression
 
 
 #pragma mark - iOS中nil 、NULL、 Nil 、NSNull

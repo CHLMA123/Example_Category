@@ -13,6 +13,9 @@
  *  定义尺寸类的宏
  */
 
+//以iphone5s,iphone5为基础 坐标都以iphone5s,iphone5为基准 进行代码的适配
+#define ratio         [[UIScreen mainScreen] bounds].size.width/320.0
+
 //状态栏高度
 #define STATUS_BAR_HEIGHT 20
 //NavBar高度
@@ -23,18 +26,33 @@
 /**
  *  获取屏幕 宽度、高度
  */
-#define SCREEN_RECT ([UIScreen mainScreen].bounds)
+#pragma mark - Device Frame
+// Get the screen's height.
+#define kScreenHeight ([UIScreen mainScreen].bounds.size.height)
 
-#define SCREEN_WIDTH    ([UIScreen mainScreen].bounds.size.width)
+// Get the screen's width.
+#define kScreenWidth ([UIScreen mainScreen].bounds.size.width)
 
-#define SCREEN_HEIGHT   ([UIScreen mainScreen].bounds.size.height)
+// Get the screen's bounds.
+#define kScreenBounds ([UIScreen mainScreen].bounds)
 
 #define CONTENT_HEIGHT (SCREEN_HEIGHT - NAVIGATION_BAR_HEIGHT - STATUS_BAR_HEIGHT)
 
-
 // iPad & iPhone
-#define kISiPad         (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+// Judge whether the device it is ipad.
+#define kIsiPad \
+([[UIDevice currentDevice] respondsToSelector:@selector(userInterfaceIdiom)]\
+&& [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+
 #define kIS_iPhone      (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+
+// Judge whether current orientation is landscape.
+#define kIsLandscape (UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]))
+
+#define IsOrientationLandscape  ([UIDevice currentDevice].orientation == UIDeviceOrientationLandscapeLeft || [UIDevice currentDevice].orientation == UIDeviceOrientationLandscapeRight)
+
+#define IsPortrait ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait || [UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown)
+
 
 #define IS_IPHONE_4     (kIS_iPhone && SCREEN_HEIGHT == 480.0)
 #define IS_IPHONE_5     (kIS_iPhone && SCREEN_HEIGHT == 568.0)
@@ -60,12 +78,6 @@
 #define IsChinese       [CurrentLanguage rangeOfString:@"zh-Hans"].length// 简体zh-Hans
 
 #define FSLocalizedString(key) (([CurrentLanguage rangeOfString:@"zh-Hans"].length || [CurrentLanguage rangeOfString:@"de"].length || [CurrentLanguage rangeOfString:@"fr"].length || [CurrentLanguage rangeOfString:@"es"].length)?([[NSBundle mainBundle] localizedStringForKey:(key) value:@"" table:nil]):([[NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"en" ofType:@"lproj"]] localizedStringForKey:key value:@"" table:nil]))
-
-#define IsOrientationLandscape  ([UIDevice currentDevice].orientation == UIDeviceOrientationLandscapeLeft || [UIDevice currentDevice].orientation == UIDeviceOrientationLandscapeRight)
-
-#define IsPortrait ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait || [UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown)
-
-
 
 
 #endif /* DimensMacros_h */

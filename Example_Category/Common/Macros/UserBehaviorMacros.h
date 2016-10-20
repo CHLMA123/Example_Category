@@ -9,6 +9,9 @@
 #ifndef UserBehaviorMacros_h
 #define UserBehaviorMacros_h
 
+#define MIGUOBackgroundColor    RGBCOLOR(229, 229, 229)
+
+#define ScrollHight 31
 
 /**
  *  1 block self

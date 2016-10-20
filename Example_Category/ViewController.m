@@ -9,17 +9,15 @@
 #import "ViewController.h"
 #import "GetDeviceAllInfo.h"
 #import "AnimatedImageViewController.h"
-#import "UIImage+Extend.h"
 #import "CreateAnimatedViewController.h"
 #import "NoteViewController.h"
 #import "OverviewStructureController1.h"
 #import "AVFoundationController.h"
 #import "SingleClass.h"
-#import "UIButton+Extend.h"
-#import "NSString+Extend.h"
-#import "SimplePing.h"
-#import "DebugPingViewController.h"
 #import "STDDebugPingViewController.h"
+#import "DebugPingViewController.h"
+#import "OverviewNSDateController.h"
+#import "RegularViewController.h"
 
 #define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
 //ImageView旋转状态枚举 NSEN
@@ -30,15 +28,12 @@ typedef NS_ENUM(NSInteger, RotateState) {
 
 static NSInteger i = 0;
 
-@interface ViewController ()<UITableViewDelegate, UITableViewDataSource, SimplePingDelegate>
+@interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 {
     CGFloat imageviewAngle;  /// 旋转角度
     UIImageView *imageView;  /// 旋转ImageView
     RotateState rotateState; /// 旋转状态
-    
     UIImageView *screenshotsImageView;  /// 截屏
-    
-    SimplePing *ping;
 }
 
 @end
@@ -56,105 +51,75 @@ static NSInteger i = 0;
     
 #pragma mark - Examples
     
-//    [self familyNameAction];                    // 获取设备中的所有字体
-//    [self waterMarkImageAction];                // 图片加水印
-//    [self NSRecursiveLockAction];               // 递归锁使用
-//    [self getWIFINameAction];                   // wifiName
-//    [self getContentTypeOfImage];               // 判断是否为gif/png图片的正确姿势
+//    [self familyNameAction];                    // 1 获取设备中的所有字体
+//    [self waterMarkImageAction];                // 2 图片加水印
+//    [self NSRecursiveLockAction];               // 3 递归锁使用
+//    [self getWIFINameAction];                   // 4 wifiName
+//    [self getContentTypeOfImage];               // 5 判断是否为gif/png图片的正确姿势
     
-//    [self getstartOfToday];                     // 凌晨时间获取
-//    [self otherNSStringTestAction];             // NSString使用stringWithFormat拼接的相关知识
-//    [self getCurrentTimeZone];                  // getCurrentTimeZone
-//    [self compareStringTest];                   // compareStringTest
-//    [self blockTestAction];                     // block 可以作为参数传递
+//    [self getstartOfToday];                     // 6 凌晨时间获取
+//    [self otherNSStringTestAction];             // 7 NSString使用stringWithFormat拼接的相关知识
+//    [self getCurrentTimeZone];                  // 8 getCurrentTimeZone
+//    [self compareStringTest];                   // 9 compareStringTest
+//    [self blockTestAction];                     // 10 block 可以作为参数传递
     
-//    [self testDictonaryAction];                 // testDictonaryAction
-//    [self pushAnimatedImage];                   // AnimatedImageViewController gif动画加载
-//    [self cutCircleImageAction];                // iOS开发中设置圆角的几种方法
-//    [self createAnimatedImage];                 // 使用图片实现GIF动画
-//    [self createButtonRectCorner];              // 控件的局部圆角问题: 图层蒙版(一个button或者label，只要右边的两个角圆角，或者只要一个圆角)。
+//    [self testDictonaryAction];                 // 11 testDictonaryAction
+//    [self pushAnimatedImage];                   // 12 AnimatedImageViewController gif动画加载
+//    [self cutCircleImageAction];                // 13 iOS开发中设置圆角的几种方法
+//    [self createAnimatedImage];                 // 14 使用图片实现GIF动画
+//    [self createButtonRectCorner];              // 15 控件的局部圆角问题: 图层蒙版(一个button或者label，只要右边的两个角圆角，或者只要一个圆角)。
     
 #pragma mark - Examples2
     
-//    [self GetContendImageView];                 // 图片处理只拿到图片的一部分
-//    [self setImageforUIView];                   // 给UIView设置图片
-//    [self buildBarButtonItem];                  // 旋转动画
-//    [self Screenshots];                         // 截屏
-//    [self tableViewContentInset];               // 指定滚动条在scrollview的位置
-//    [self testArraySum];                        // array快速求总和, 最大值, 最小值和平均值
+//    [self GetContendImageView];                 // 16 图片处理只拿到图片的一部分
+//    [self setImageforUIView];                   // 17 给UIView设置图片
+//    [self buildBarButtonItem];                  // 18 旋转动画
+//    [self Screenshots];                         // 19 截屏
+//    [self tableViewContentInset];               // 20 指定滚动条在scrollview的位置
+//    [self testArraySum];                        // 21 array快速求总和, 最大值, 最小值和平均值
     
 #pragma mark - Examples3
     
-//    [self addNoteView];                         // NoteView组件化
-//    [self OverviewStructure];                   //OverviewStructure
-    [self OverviewOfAVFoundation];              //OverviewOfAVFoundation & iOS从App跳转至系统设置菜单各功能项
-//    [self SingletonUITest];                     // Objective-c单例模式详解
-//    [self createButtonView];                    // 左右结构的button fsKeepPasswordButton
-//    [self OverviewSimplePing];                  // OverviewSimplePing
-    
-//    NSString *str =@"sbk-@126.com";//验证结果: 正则表达式不包含“-”符号的
-//    str = [str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-//    BOOL b = [str isValidSMTPServer];
-//    NSLog(@"%d", b);
+//    [self addNoteView];                         // 22 NoteView组件化
+//    [self OverviewStructure];                   // 23 OverviewStructure
+//    [self OverviewOfAVFoundation];              // 24 OverviewOfAVFoundation & iOS从App跳转至系统设置菜单各功能项
+//    [self SingletonUITest];                     // 25 Objective-c单例模式详解
+//    [self createButtonView];                    // 26 左右结构的button fsKeepPasswordButton
+//    [self OverviewSimplePing];                  // 27 OverviewSimplePing
+//    [self OverviewSimplePing2];                 // 28 OverviewSimplePing
+
+//    [self OverviewNSDate];                      // 29 OverviewNSDate
+//    [self OverviewRegularExpression];           // 30 OverviewRegularExpression
+
 }
 
-#pragma mark -
 
+
+#pragma mark - OverviewNSDate
+- (void)OverviewRegularExpression{
+    
+    RegularViewController *push = [[RegularViewController alloc] init];
+    [self.navigationController pushViewController:push animated:YES];
+}
+
+#pragma mark - OverviewNSDate
+- (void)OverviewNSDate{
+    
+    OverviewNSDateController *push = [[OverviewNSDateController alloc] init];
+    [self.navigationController pushViewController:push animated:YES];
+}
 #pragma mark - OverviewSimplePing
 - (void)OverviewSimplePing{
     
     STDDebugPingViewController *push = [[STDDebugPingViewController alloc] init];
-//    DebugPingViewController *push = [[DebugPingViewController alloc] init];
     [self.navigationController pushViewController:push animated:YES];
 }
 
-//- (void)pingWiFiTest{
-//
-//    ping = [[SimplePing alloc] initWithHostName:@"https://api.mycloudipc.com"];
-//    ping.delegate = self;
-//    ping.addressStyle = SimplePingAddressStyleAny;
-//    [ping start];
-//}
-//
-///**
-// *  start成功，也就是准备工作做完后的回调
-// */
-//- (void)simplePing:(SimplePing *)pinger didStartWithAddress:(NSData *)address{
-//
-//    // 发送测试报文数据
-//    [pinger sendPingWithData:nil];
-//}
-//
-//- (void)simplePing:(SimplePing *)pinger didFailWithError:(NSError *)error{
-//
-//    NSLog(@"didFailWithError");
-//    
-//    [pinger stop];
-//}
-//
-//// 发送测试报文成功的回调方法
-//- (void)simplePing:(SimplePing *)pinger didSendPacket:(NSData *)packet sequenceNumber:(uint16_t)sequenceNumber{
-//    
-//    NSLog(@"#%u sent", sequenceNumber);
-//}
-//
-////发送测试报文失败的回调方法
-//- (void)simplePing:(SimplePing *)pinger didFailToSendPacket:(NSData *)packet sequenceNumber:(uint16_t)sequenceNumber error:(NSError *)error{
-//    
-//    NSLog(@"#%u send failed: %@", sequenceNumber, error);
-//}
-//
-//// 接收到ping的地址所返回的数据报文回调方法
-//- (void)simplePing:(SimplePing *)pinger didReceivePingResponsePacket:(NSData *)packet sequenceNumber:(uint16_t)sequenceNumber{
-//    
-//    NSLog(@"#%u received, size=%zu", sequenceNumber, (unsigned long)packet.length);
-//}
-//
-//- (void)simplePing:(SimplePing *)pinger didReceiveUnexpectedPacket:(NSData *)packet{
-//    
-//    NSLog(@"#%s",__func__);
-//}
-
+- (void)OverviewSimplePing2{
+    
+    DebugPingViewController *push = [[DebugPingViewController alloc] init];
+    [self.navigationController pushViewController:push animated:YES];
+}
 
 #pragma mark - createButtonView
 - (void)createButtonView{
