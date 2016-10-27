@@ -74,7 +74,7 @@ static NSInteger i = 0;
 //    [self GetContendImageView];                 // 16 图片处理只拿到图片的一部分
 //    [self setImageforUIView];                   // 17 给UIView设置图片
 //    [self buildBarButtonItem];                  // 18 旋转动画
-//    [self Screenshots];                         // 19 截屏
+    [self Screenshots];                         // 19 截屏
 //    [self tableViewContentInset];               // 20 指定滚动条在scrollview的位置
 //    [self testArraySum];                        // 21 array快速求总和, 最大值, 最小值和平均值
     
@@ -88,9 +88,12 @@ static NSInteger i = 0;
 //    [self OverviewSimplePing];                  // 27 OverviewSimplePing
 //    [self OverviewSimplePing2];                 // 28 OverviewSimplePing
 
-    [self OverviewNSDate];                      // 29 OverviewNSDate
+//    [self OverviewNSDate];                      // 29 OverviewNSDate
 //    [self OverviewRegularExpression];           // 30 OverviewRegularExpression
 
+    NSString *string = @"0";
+    NSLog(@"...longLongValue...: %lld", [string longLongValue]);
+    //2016-10-26 14:08:24.263 Example_Category[3864:1116044] ...longLongValue...: 0
 }
 
 
