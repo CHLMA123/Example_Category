@@ -95,10 +95,11 @@ static NSInteger i = 0;
 //    //2016-10-26 14:08:24.263 Example_Category[3864:1116044] ...longLongValue...: 0
     
     #pragma mark - Examples (31 - 45)
-    [self attributeTextTapAction];              // 31 attributeTextTapAction
+    [self attributeTextTapAction];              // 31 attributeTextTapAction/计算label的Size的方法总结
 }
 
-#pragma mark - 一行代码添加文本点击事件
+#pragma mark -  label中的文字添加点击事件 + 计算label的Size的方法总结
+// https://github.com/lyb5834/YBAttributeTextTapAction
 - (void)attributeTextTapAction{
 
     AttributeTextTapController *vc = [[AttributeTextTapController alloc] init];

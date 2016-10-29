@@ -19,13 +19,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     UILabel *lable = [[UILabel alloc] init];
-    lable.frame = CGRectMake(10, 100, kScreenWidth, 200);
-    lable.numberOfLines = 0;
+    lable.backgroundColor = [UIColor redColor];
     [self.view addSubview:lable];
     
     NSString *reasonstring = [NSString stringWithFormat:@"%@\n%@",
                               @"Failed to fine camera information.",
                               @"There has been problem registering the camera. Please send an email to ipcamreset@yale.co.uk including a photo of the sticker on the back of your camera, with the MAC ID clearly visible, and we will reset the connection."];
+    CGSize textsize = [self sizeWithText:reasonstring font:[UIFont systemFontOfSize:17] maxWidth:kScreenWidth - 20];
+    lable.frame = CGRectMake(10, 100, kScreenWidth - 20, textsize.height);
+    lable.numberOfLines = 0;
+    
     NSMutableAttributedString *content = [[NSMutableAttributedString alloc] initWithString:reasonstring];
     // 设置行高，默认是0
     NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
@@ -57,6 +60,29 @@
 //    [self.reasonLabel addGestureRecognizer:tapGesture];
 }
 
+#pragma mark - 计算label的Size的方法总结
+// a sizeWithAttributes:方法 适用于不换行的情况,宽度不受限制的情况
+//- (CGSize)sizeWithText:(NSString *)text font:(UIFont *)font
+//{
+//    NSMutableDictionary *attrDict = [NSMutableDictionary dictionary];
+//    attrDict[NSFontAttributeName] = font;
+//    return [text sizeWithAttributes:attrDict];
+//}
+
+// b boundingRectWithSize:方法,适用于换行的情况,同时适用于不换行的情况,为了兼容两者,代码如下:
+/// 根据指定文本和字体计算尺寸
+- (CGSize)sizeWithText:(NSString *)text font:(UIFont *)font
+{
+    return [self sizeWithText:text font:font maxWidth:MAXFLOAT];
+}
+/// 根据指定文本,字体和最大宽度计算尺寸
+- (CGSize)sizeWithText:(NSString *)text font:(UIFont *)font maxWidth:(CGFloat)width
+{
+    NSMutableDictionary *attrDict = [NSMutableDictionary dictionary];
+    attrDict[NSFontAttributeName] = font;
+    CGSize size = [text boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:attrDict context:nil].size;
+    return size;
+}
 /**
  *  YBAttributeTapActionDelegate
  *
