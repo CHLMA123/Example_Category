@@ -100,6 +100,9 @@
 		36C39DDF1D94CED800DC1381 /* OverviewNSDateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C39DDE1D94CED800DC1381 /* OverviewNSDateController.m */; };
 		36C39DE21D94CF2B00DC1381 /* RegularViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C39DE11D94CF2B00DC1381 /* RegularViewController.m */; };
 		36C39DE61D9510E600DC1381 /* NSDate+HYBHelperKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C39DE51D9510E600DC1381 /* NSDate+HYBHelperKit.m */; };
+		36C41C211DC494F500438593 /* UILabel+YBAttributeTextTapAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C41C201DC494F500438593 /* UILabel+YBAttributeTextTapAction.m */; };
+		36C41C241DC495AF00438593 /* AttributeTextTapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C41C231DC495AF00438593 /* AttributeTextTapController.m */; };
+		36C41C261DC49A9100438593 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 36C41C251DC49A9100438593 /* README.md */; };
 		36C891701D0CEAE100DC86E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C8916F1D0CEAE100DC86E0 /* main.m */; };
 		36C891731D0CEAE100DC86E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C891721D0CEAE100DC86E0 /* AppDelegate.m */; };
 		36C891761D0CEAE100DC86E0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C891751D0CEAE100DC86E0 /* ViewController.m */; };
@@ -298,6 +301,11 @@
 		36C39DE31D94D56F00DC1381 /* MHelperUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHelperUIKit.h; sourceTree = "<group>"; };
 		36C39DE41D9510E600DC1381 /* NSDate+HYBHelperKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+HYBHelperKit.h"; sourceTree = "<group>"; };
 		36C39DE51D9510E600DC1381 /* NSDate+HYBHelperKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+HYBHelperKit.m"; sourceTree = "<group>"; };
+		36C41C1F1DC494F500438593 /* UILabel+YBAttributeTextTapAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+YBAttributeTextTapAction.h"; sourceTree = "<group>"; };
+		36C41C201DC494F500438593 /* UILabel+YBAttributeTextTapAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+YBAttributeTextTapAction.m"; sourceTree = "<group>"; };
+		36C41C221DC495AF00438593 /* AttributeTextTapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttributeTextTapController.h; sourceTree = "<group>"; };
+		36C41C231DC495AF00438593 /* AttributeTextTapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributeTextTapController.m; sourceTree = "<group>"; };
+		36C41C251DC49A9100438593 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		36C8916B1D0CEAE100DC86E0 /* Example_Category.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example_Category.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36C8916F1D0CEAE100DC86E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		36C891711D0CEAE100DC86E0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -527,6 +535,7 @@
 		365149F21D7A64640047BDBC /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				36C41C1A1DC493E600438593 /* AttributeTextTapAction */,
 				36C39DDC1D94CEC800DC1381 /* OverviewNSDate */,
 				365A6BBE1D93C52A00C35595 /* RegularUtils */,
 				3638AC031D9286DE000BE8DA /* AnimatedImage */,
@@ -777,6 +786,26 @@
 				36C39DDE1D94CED800DC1381 /* OverviewNSDateController.m */,
 			);
 			path = OverviewNSDate;
+			sourceTree = "<group>";
+		};
+		36C41C1A1DC493E600438593 /* AttributeTextTapAction */ = {
+			isa = PBXGroup;
+			children = (
+				36C41C1E1DC494F500438593 /* YBAttributeTextTapAction */,
+				36C41C221DC495AF00438593 /* AttributeTextTapController.h */,
+				36C41C231DC495AF00438593 /* AttributeTextTapController.m */,
+			);
+			path = AttributeTextTapAction;
+			sourceTree = "<group>";
+		};
+		36C41C1E1DC494F500438593 /* YBAttributeTextTapAction */ = {
+			isa = PBXGroup;
+			children = (
+				36C41C251DC49A9100438593 /* README.md */,
+				36C41C1F1DC494F500438593 /* UILabel+YBAttributeTextTapAction.h */,
+				36C41C201DC494F500438593 /* UILabel+YBAttributeTextTapAction.m */,
+			);
+			path = YBAttributeTextTapAction;
 			sourceTree = "<group>";
 		};
 		36C891621D0CEAE100DC86E0 = {
@@ -1063,6 +1092,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36C41C211DC494F500438593 /* UILabel+YBAttributeTextTapAction.m in Sources */,
 				365A6BBD1D93B1B600C35595 /* DebugPingViewController.m in Sources */,
 				3638AC7B1D928ED1000BE8DA /* STDPingServices.m in Sources */,
 				36C1DDA41D9801AD00D642D4 /* XJQRCodeViewController.m in Sources */,
@@ -1104,11 +1134,13 @@
 				36514A581D7A7A560047BDBC /* MBProgressHUD.m in Sources */,
 				36C39DE61D9510E600DC1381 /* NSDate+HYBHelperKit.m in Sources */,
 				3638AC001D928544000BE8DA /* NSArray+PureLayout.m in Sources */,
+				36C41C261DC49A9100438593 /* README.md in Sources */,
 				36514A4E1D7A799C0047BDBC /* UIView+Extend.m in Sources */,
 				36472A081DC1EE980063909D /* README.md in Sources */,
 				3692B3501D8FBF6300D884CF /* UIButton+Extend.m in Sources */,
 				365A6BC11D93C52A00C35595 /* RegularUtils.m in Sources */,
 				3638AC4A1D9286DE000BE8DA /* NoteViewController.m in Sources */,
+				36C41C241DC495AF00438593 /* AttributeTextTapController.m in Sources */,
 				36C39DE21D94CF2B00DC1381 /* RegularViewController.m in Sources */,
 				3638AC501D92871C000BE8DA /* UIImage+Extend.m in Sources */,
 				36514A4D1D7A799C0047BDBC /* UIScreen+Additions.m in Sources */,

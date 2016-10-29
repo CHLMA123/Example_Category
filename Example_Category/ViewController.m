@@ -18,6 +18,7 @@
 #import "DebugPingViewController.h"
 #import "OverviewNSDateController.h"
 #import "RegularViewController.h"
+#import "AttributeTextTapController.h"
 
 #define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
 //ImageView旋转状态枚举 NSEN
@@ -49,7 +50,7 @@ static NSInteger i = 0;
     //    [self.view addSubview:view];
     //    view.backgroundColor = [UIColor redColor];
     
-#pragma mark - Examples
+#pragma mark - Examples (1 - 15)
     
 //    [self familyNameAction];                    // 1 获取设备中的所有字体
 //    [self waterMarkImageAction];                // 2 图片加水印
@@ -69,34 +70,40 @@ static NSInteger i = 0;
 //    [self createAnimatedImage];                 // 14 使用图片实现GIF动画
 //    [self createButtonRectCorner];              // 15 控件的局部圆角问题: 图层蒙版(一个button或者label，只要右边的两个角圆角，或者只要一个圆角)。
     
-#pragma mark - Examples2
+#pragma mark - Examples (16 - 30)
     
 //    [self GetContendImageView];                 // 16 图片处理只拿到图片的一部分
 //    [self setImageforUIView];                   // 17 给UIView设置图片
 //    [self buildBarButtonItem];                  // 18 旋转动画
-    [self Screenshots];                         // 19 截屏
+//    [self Screenshots];                         // 19 截屏
 //    [self tableViewContentInset];               // 20 指定滚动条在scrollview的位置
+    
 //    [self testArraySum];                        // 21 array快速求总和, 最大值, 最小值和平均值
-    
-#pragma mark - Examples3
-    
 //    [self addNoteView];                         // 22 NoteView组件化
 //    [self OverviewStructure];                   // 23 OverviewStructure
 //    [self OverviewOfAVFoundation];              // 24 OverviewOfAVFoundation & iOS从App跳转至系统设置菜单各功能项
 //    [self SingletonUITest];                     // 25 Objective-c单例模式详解
+    
 //    [self createButtonView];                    // 26 左右结构的button fsKeepPasswordButton
 //    [self OverviewSimplePing];                  // 27 OverviewSimplePing
 //    [self OverviewSimplePing2];                 // 28 OverviewSimplePing
-
 //    [self OverviewNSDate];                      // 29 OverviewNSDate
 //    [self OverviewRegularExpression];           // 30 OverviewRegularExpression
-
-    NSString *string = @"0";
-    NSLog(@"...longLongValue...: %lld", [string longLongValue]);
-    //2016-10-26 14:08:24.263 Example_Category[3864:1116044] ...longLongValue...: 0
+    
+//    NSString *string = @"0";
+//    NSLog(@"...longLongValue...: %lld", [string longLongValue]);
+//    //2016-10-26 14:08:24.263 Example_Category[3864:1116044] ...longLongValue...: 0
+    
+    #pragma mark - Examples (31 - 45)
+    [self attributeTextTapAction];              // 31 attributeTextTapAction
 }
 
+#pragma mark - 一行代码添加文本点击事件
+- (void)attributeTextTapAction{
 
+    AttributeTextTapController *vc = [[AttributeTextTapController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 #pragma mark - OverviewNSDate
 - (void)OverviewRegularExpression{
