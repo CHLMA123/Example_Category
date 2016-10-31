@@ -58,6 +58,8 @@
 		3638AC791D928ED1000BE8DA /* STDDebugPingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3638AC731D928ED1000BE8DA /* STDDebugPingViewController.m */; };
 		3638AC7A1D928ED1000BE8DA /* STDebugTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3638AC751D928ED1000BE8DA /* STDebugTextView.m */; };
 		3638AC7B1D928ED1000BE8DA /* STDPingServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 3638AC771D928ED1000BE8DA /* STDPingServices.m */; };
+		3645A36A1DC6E03200042806 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 3645A3671DC6E03200042806 /* README.md */; };
+		3645A36B1DC6E03200042806 /* UIViewController+Swizzled.m in Sources */ = {isa = PBXBuildFile; fileRef = 3645A3691DC6E03200042806 /* UIViewController+Swizzled.m */; };
 		36472A061DC1EE870063909D /* UICountingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36472A051DC1EE870063909D /* UICountingLabel.m */; };
 		36472A081DC1EE980063909D /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 36472A071DC1EE980063909D /* README.md */; };
 		365149EF1D7A60330047BDBC /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 365149EE1D7A60330047BDBC /* README.md */; };
@@ -144,6 +146,7 @@
 		36C892261D0CEB9900DC86E0 /* findhome_dot_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36C892041D0CEB9900DC86E0 /* findhome_dot_pressed@2x.png */; };
 		36C892271D0CEB9900DC86E0 /* findhome_dot_pressed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36C892051D0CEB9900DC86E0 /* findhome_dot_pressed@3x.png */; };
 		36C892281D0CEB9900DC86E0 /* findhome_more.png in Resources */ = {isa = PBXBuildFile; fileRef = 36C892061D0CEB9900DC86E0 /* findhome_more.png */; };
+		36E159401DC6E57D00E4C10C /* MYLogManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E1593F1DC6E57D00E4C10C /* MYLogManger.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -226,6 +229,9 @@
 		3638AC751D928ED1000BE8DA /* STDebugTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDebugTextView.m; sourceTree = "<group>"; };
 		3638AC761D928ED1000BE8DA /* STDPingServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDPingServices.h; sourceTree = "<group>"; };
 		3638AC771D928ED1000BE8DA /* STDPingServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDPingServices.m; sourceTree = "<group>"; };
+		3645A3671DC6E03200042806 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3645A3681DC6E03200042806 /* UIViewController+Swizzled.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Swizzled.h"; sourceTree = "<group>"; };
+		3645A3691DC6E03200042806 /* UIViewController+Swizzled.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Swizzled.m"; sourceTree = "<group>"; };
 		36472A041DC1EE870063909D /* UICountingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICountingLabel.h; sourceTree = "<group>"; };
 		36472A051DC1EE870063909D /* UICountingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICountingLabel.m; sourceTree = "<group>"; };
 		36472A071DC1EE980063909D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -352,6 +358,8 @@
 		36C892041D0CEB9900DC86E0 /* findhome_dot_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "findhome_dot_pressed@2x.png"; sourceTree = "<group>"; };
 		36C892051D0CEB9900DC86E0 /* findhome_dot_pressed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "findhome_dot_pressed@3x.png"; sourceTree = "<group>"; };
 		36C892061D0CEB9900DC86E0 /* findhome_more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = findhome_more.png; sourceTree = "<group>"; };
+		36E1593E1DC6E57D00E4C10C /* MYLogManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYLogManger.h; sourceTree = "<group>"; };
+		36E1593F1DC6E57D00E4C10C /* MYLogManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYLogManger.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -522,6 +530,16 @@
 			path = PingTester;
 			sourceTree = "<group>";
 		};
+		3645A3661DC6E03200042806 /* UIViewController+Swizzled */ = {
+			isa = PBXGroup;
+			children = (
+				3645A3671DC6E03200042806 /* README.md */,
+				3645A3681DC6E03200042806 /* UIViewController+Swizzled.h */,
+				3645A3691DC6E03200042806 /* UIViewController+Swizzled.m */,
+			);
+			path = "UIViewController+Swizzled";
+			sourceTree = "<group>";
+		};
 		36472A031DC1EE6D0063909D /* UICountingLabel */ = {
 			isa = PBXGroup;
 			children = (
@@ -654,6 +672,7 @@
 			children = (
 				36514A901D7AB63D0047BDBC /* CommonMode.h */,
 				36514A911D7AB63D0047BDBC /* CommonMode.m */,
+				36E1593D1DC6E51900E4C10C /* LogMangager */,
 				3606A8E21D8018FC00DDF3EF /* Singleton */,
 				36514A8B1D7AB63D0047BDBC /* NoteView */,
 			);
@@ -801,9 +820,9 @@
 		36C41C1E1DC494F500438593 /* YBAttributeTextTapAction */ = {
 			isa = PBXGroup;
 			children = (
-				36C41C251DC49A9100438593 /* README.md */,
 				36C41C1F1DC494F500438593 /* UILabel+YBAttributeTextTapAction.h */,
 				36C41C201DC494F500438593 /* UILabel+YBAttributeTextTapAction.m */,
+				36C41C251DC49A9100438593 /* README.md */,
 			);
 			path = YBAttributeTextTapAction;
 			sourceTree = "<group>";
@@ -861,6 +880,7 @@
 			isa = PBXGroup;
 			children = (
 				36C39DE31D94D56F00DC1381 /* MHelperUIKit.h */,
+				3645A3661DC6E03200042806 /* UIViewController+Swizzled */,
 				3692B34D1D8FBF4700D884CF /* UIButton */,
 				36514A3B1D7A799C0047BDBC /* NSString */,
 				36514A3E1D7A799C0047BDBC /* UIControl */,
@@ -943,6 +963,15 @@
 				36C892061D0CEB9900DC86E0 /* findhome_more.png */,
 			);
 			path = DZDP_Home;
+			sourceTree = "<group>";
+		};
+		36E1593D1DC6E51900E4C10C /* LogMangager */ = {
+			isa = PBXGroup;
+			children = (
+				36E1593E1DC6E57D00E4C10C /* MYLogManger.h */,
+				36E1593F1DC6E57D00E4C10C /* MYLogManger.m */,
+			);
+			path = LogMangager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1116,6 +1145,7 @@
 				36C1DDA31D9801AD00D642D4 /* XJQRCodeModel.m in Sources */,
 				36C39DDF1D94CED800DC1381 /* OverviewNSDateController.m in Sources */,
 				3638AC7A1D928ED1000BE8DA /* STDebugTextView.m in Sources */,
+				3645A36A1DC6E03200042806 /* README.md in Sources */,
 				36514A991D7AB63D0047BDBC /* NoteView.m in Sources */,
 				36C891701D0CEAE100DC86E0 /* main.m in Sources */,
 				36C1DDA21D9801AD00D642D4 /* UIView+Frame.m in Sources */,
@@ -1129,6 +1159,7 @@
 				36514A4A1D7A799C0047BDBC /* NSString+Additions.m in Sources */,
 				365A6BBA1D93B17A00C35595 /* SimplePing.m in Sources */,
 				36514A4B1D7A799C0047BDBC /* UIControl+Additions.m in Sources */,
+				36E159401DC6E57D00E4C10C /* MYLogManger.m in Sources */,
 				3638AC021D928544000BE8DA /* QRCodeViewController.m in Sources */,
 				3638AC011D928544000BE8DA /* NSLayoutConstraint+PureLayout.m in Sources */,
 				36514A581D7A7A560047BDBC /* MBProgressHUD.m in Sources */,
@@ -1145,6 +1176,7 @@
 				3638AC501D92871C000BE8DA /* UIImage+Extend.m in Sources */,
 				36514A4D1D7A799C0047BDBC /* UIScreen+Additions.m in Sources */,
 				3638AC791D928ED1000BE8DA /* STDDebugPingViewController.m in Sources */,
+				3645A36B1DC6E03200042806 /* UIViewController+Swizzled.m in Sources */,
 				36514A591D7A7A560047BDBC /* UIView+Toast.m in Sources */,
 				36C891DE1D0CEB6F00DC86E0 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				365149EF1D7A60330047BDBC /* README.md in Sources */,

@@ -19,7 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     UILabel *lable = [[UILabel alloc] init];
-    lable.backgroundColor = [UIColor redColor];
+    // lable.backgroundColor = [UIColor redColor];
     [self.view addSubview:lable];
     
     NSString *reasonstring = [NSString stringWithFormat:@"%@\n%@",
