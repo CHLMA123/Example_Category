@@ -15,10 +15,11 @@
 #import "AVFoundationController.h"
 #import "SingleClass.h"
 #import "STDDebugPingViewController.h"
-#import "DebugPingViewController.h"
 #import "OverviewNSDateController.h"
 #import "RegularViewController.h"
 #import "AttributeTextTapController.h"
+
+#import "Reachability.h"
 
 #define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
 //ImageView旋转状态枚举 NSEN
@@ -37,6 +38,9 @@ static NSInteger i = 0;
     UIImageView *screenshotsImageView;  /// 截屏
 }
 
+@property (nonatomic, strong) Reachability *hostReachability;
+@property (nonatomic, strong) NSString *kReachableVia;
+
 @end
 
 @implementation ViewController
@@ -44,12 +48,13 @@ static NSInteger i = 0;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-    //    self.edgesForExtendedLayout = UIRectEdgeBottom;//当有导航栏时 设置该项 那么起点坐标从0.0开始 否则从0.64开始
-    //    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 100)];
-    //    [self.view addSubview:view];
-    //    view.backgroundColor = [UIColor redColor];
-    
+    /*
+     self.edgesForExtendedLayout = UIRectEdgeBottom;//当有导航栏时 设置该项 那么起点坐标从0.0开始 否则从0.64开始
+     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 100)];
+     [self.view addSubview:view];
+     view.backgroundColor = [UIColor redColor];
+     */
+    [self networkMonitoringAction];             // 0『iOS应用networkMonitoring』
 #pragma mark - Examples (1 - 15)
     
 //    [self familyNameAction];                    // 1 获取设备中的所有字体
@@ -95,7 +100,97 @@ static NSInteger i = 0;
 //    //2016-10-26 14:08:24.263 Example_Category[3864:1116044] ...longLongValue...: 0
     
     #pragma mark - Examples (31 - 45)
-    [self attributeTextTapAction];              // 31 attributeTextTapAction/计算label的Size的方法总结
+//    [self attributeTextTapAction];              // 31 attributeTextTapAction/计算label的Size的方法总结
+//    // Typical usage
+    [self openScheme:@"tweetbot://timeline"];   // 32『iOS应用间相互跳转』
+    
+}
+
+#pragma mark - reachability
+- (void)networkMonitoringAction{
+
+    // 监测网络情况
+    [[NSNotificationCenter defaultCenter] addObserver: self
+                                             selector: @selector(reachabilityChanged:)
+                                                 name: kReachabilityChangedNotification
+                                               object: nil];
+    NSString *remoteHostName = @"www.apple.com";
+    NSString *remoteHostLabelFormatString = NSLocalizedString(@"Remote Host: %@", @"Remote host label format string");
+    UILabel *remoteHostLabel = [[UILabel alloc] init];
+    remoteHostLabel.text = [NSString stringWithFormat:remoteHostLabelFormatString, remoteHostName];
+    self.hostReachability = [Reachability reachabilityWithHostName:remoteHostName];
+    [self.hostReachability startNotifier];
+
+}
+
+- (void)reachabilityChanged:(NSNotification *)no{
+    Reachability* curReach = [no object];
+    NSParameterAssert([curReach isKindOfClass: [Reachability class]]);
+    NetworkStatus status = [curReach currentReachabilityStatus];
+    switch (status)
+    {
+            
+        case NotReachable:
+            NSLog(@"====当前网络状态不可达=======");
+            //其他处理
+            self.kReachableVia = @"当前网络状态不可达";
+            break;
+            
+        case ReachableViaWiFi:
+            NSLog(@"====当前网络状态为Wifi=======");
+            self.kReachableVia = @"ReachableViaWiFi";
+            //其他处理
+            break;
+        case kReachableVia2G:
+            NSLog(@"====当前网络状态为2G=======");
+            self.kReachableVia = @"kReachableVia2G";
+            break;
+        case kReachableVia3G:
+            NSLog(@"====当前网络状态为3G=======");
+            //其他处理
+            self.kReachableVia = @"kReachableVia3G";
+            break;
+        case kRaeachableVia4G:
+            NSLog(@"====当前网络状态为4G=======");
+            self.kReachableVia = @"kRaeachableVia4G";
+            //其他处理
+            break;
+        default:
+            NSLog(@"你是外星来的吗？");
+            //其他处理
+            self.kReachableVia = @"你是外星来的吗？";
+            break;
+    }
+    
+    NSLog(@"### self.kReachableVia = %@", self.kReachableVia);
+}
+
+#pragma mark - 『iOS应用间相互跳转』
+- (void)openScheme:(NSString *)scheme {
+    UIApplication *application = [UIApplication sharedApplication];
+    NSURL *URL = [NSURL URLWithString:scheme];
+    
+    if ([application respondsToSelector:@selector(openURL:options:completionHandler:)]) {
+        /*
+         [application openURL:URL options:@{}
+         completionHandler:^(BOOL success) {
+         NSLog(@"Open %@: %d",scheme,success);
+         }];
+         */
+        
+        /*
+         UIApplication 头文件为options字典列出了一个key：
+         UIApplicationOpenURLOptionUniversalLinksOnly:如果这个要打开的URL有效，并且在应用中配置它布尔值为true（YES）时才可以打开，否则打不开。
+         为了覆盖默认行为，创建一个设置key值了True的字典作为参数传入：
+         设置它为true并打开URL：https://twitter.com/kharrison 时, 如果我并没有安装Twitter app那它就会失败，同时会调用safari来打开这个链接。
+         */
+        NSDictionary *options = @{UIApplicationOpenURLOptionUniversalLinksOnly : @YES};
+        [application openURL:URL options:options completionHandler:nil];
+        
+    } else {
+        BOOL success = [application openURL:URL];
+        NSLog(@"Open %@: %d",scheme,success);
+    }
 }
 
 #pragma mark -  label中的文字添加点击事件 + 计算label的Size的方法总结
@@ -123,12 +218,6 @@ static NSInteger i = 0;
 - (void)OverviewSimplePing{
     
     STDDebugPingViewController *push = [[STDDebugPingViewController alloc] init];
-    [self.navigationController pushViewController:push animated:YES];
-}
-
-- (void)OverviewSimplePing2{
-    
-    DebugPingViewController *push = [[DebugPingViewController alloc] init];
     [self.navigationController pushViewController:push animated:YES];
 }
 
@@ -753,6 +842,11 @@ static NSInteger i = 0;
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)dealloc{
+
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

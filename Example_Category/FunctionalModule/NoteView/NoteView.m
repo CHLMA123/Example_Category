@@ -154,7 +154,7 @@
 }
 
 - (void)NoteViewAction:(UIButton *)sender{
-    NSLog(@"--- NoteViewAction : %d", sender.tag);
+    NSLog(@"--- NoteViewAction : %ld", (long)sender.tag);
     sender.selected = !sender.selected;
     
     if (_noteViewDelegate && [_noteViewDelegate respondsToSelector:@selector(noteViewActionIndex:withRemindProperty:)])

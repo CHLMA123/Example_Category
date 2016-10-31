@@ -9,6 +9,7 @@ App迭代开发版本号的规则
 3.如果App需求功能大改, 更新量非常大, 那我们的版本号变为2.0.0, 需要叠加修改第一位数字, 清空其他数字为0
 */
 
+[self networkMonitoringAction];             // 0『iOS应用networkMonitoring』
 #pragma mark - Examples (1 - 15)
 
 [self familyNameAction];                    // 1 获取设备中的所有字体
