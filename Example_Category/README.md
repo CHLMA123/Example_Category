@@ -9,6 +9,29 @@ App迭代开发版本号的规则
 3.如果App需求功能大改, 更新量非常大, 那我们的版本号变为2.0.0, 需要叠加修改第一位数字, 清空其他数字为0
 */
 
+[/*
+    1. view的生命周期 —— 只要是View开头的都是View的生命周期方法 
+
+        loadView：第一次使用view的时候调用
+        viewDidLoad：控制器的view加载完成的时候调用
+        viewWillAppear：控制器的view即将显示的时候调用
+        viewDidAppear：控制器的view完全显示的时候调用
+        viewWillDisappear：控制器的view即将消失的时候调用
+        viewDidDisappear：控制器的view完全消失的时候调用
+        viewWillLayoutSubviews：控制器的view即将布局的时候调用
+        viewDidLayoutSubviews：控制器的view完全布局的时候调用
+        viewWillUnload：控制器的view即将销毁
+        viewDidUnload：控制器的view完全销毁
+
+    a. 处理过程
+
+    有内存警告 -> 调用didReceiveMemoryWarning方法 -> 判断控制器的View存不存在 -> 存在就判断能不能被释放(判断是不是正在显示在界面上) -> 能释放就调用ViewWillUnload -> 完全释放后就调用ViewDidUnload
+    b. 注意
+
+    内存警告处理时，ViewWillUnload和ViewDidUnload不一定被调用，因为这是系统自动判断的
+*/]
+
+
 [self networkMonitoringAction];             // 0『iOS应用networkMonitoring』
 #pragma mark - Examples (1 - 15)
 
@@ -48,6 +71,8 @@ App迭代开发版本号的规则
 
 #pragma mark - Examples (31 - 45)
 [self attributeTextTapAction];              // 31 attributeTextTapAction
+[self openScheme:@"tweetbot://timeline"];   // 32『iOS应用间相互跳转』
+[self LoadHtmlDocView];                     // 33 LoadHtmlDocView
 
 #pragma mark - iOS中nil 、NULL、 Nil 、NSNull
 

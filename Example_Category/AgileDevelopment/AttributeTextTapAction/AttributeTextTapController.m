@@ -8,8 +8,9 @@
 
 #import "AttributeTextTapController.h"
 #import "UILabel+YBAttributeTextTapAction.h"
+#import "UnderLineLabel.h"
 
-@interface AttributeTextTapController ()<YBAttributeTapActionDelegate>
+@interface AttributeTextTapController ()<YBAttributeTapActionDelegate, UnderLineLabelDelegate>
 
 @end
 
@@ -19,58 +20,73 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     UILabel *lable = [[UILabel alloc] init];
-    // lable.backgroundColor = [UIColor redColor];
     [self.view addSubview:lable];
-    
     NSString *reasonstring = [NSString stringWithFormat:@"%@\n%@",
                               @"Failed to fine camera information.",
-                              @"There has been problem registering the camera. Please send an email to ipcamreset@yale.co.uk including a photo of the sticker on the back of your camera, with the MAC ID clearly visible, and we will reset the connection."];
+                              @"This camera is already registered by another account, if you forget the old account, please send Email with your camera Mac sticker picture to ipcamreset@yale.co.uk"];
     CGSize textsize = [self sizeWithText:reasonstring font:[UIFont systemFontOfSize:17] maxWidth:kScreenWidth - 20];
-    lable.frame = CGRectMake(10, 100, kScreenWidth - 20, textsize.height);
+    lable.frame = CGRectMake(10, 65, kScreenWidth - 20, textsize.height * 2);
     lable.numberOfLines = 0;
     
     NSMutableAttributedString *content = [[NSMutableAttributedString alloc] initWithString:reasonstring];
-    // 设置行高，默认是0
     NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
-    style.lineSpacing = 0;
+    style.lineSpacing = 10;
     [content addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0, reasonstring.length)];
     NSRange underLineRange = [reasonstring rangeOfString:@"ipcamreset@yale.co.uk"];
-    [content addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleSingle] range:underLineRange];
-    [content addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:underLineRange];
+    NSDictionary * dict = @{
+                            NSUnderlineStyleAttributeName:[NSNumber numberWithInteger:NSUnderlineStyleThick],
+                            NSForegroundColorAttributeName:RGBCOLOR(253, 212, 9),
+                            NSFontAttributeName:[UIFont systemFontOfSize:19],
+                            };
+    [content setAttributes:dict range:underLineRange];
     lable.attributedText = content;
+    
+    //    //设置是否有点击效果，默认是YES
+    //    lable.enabledTapEffect = NO;
     
     // Method 1 用代理回调
     [lable yb_addAttributeTapActionWithStrings:@[@"ipcamreset@yale.co.uk"] delegate:self];
     
-    // Method 2 用block回调
-//        [lable yb_addAttributeTapActionWithStrings:@[@"ipcamreset@yale.co.uk"] tapClicked:^(NSString *string, NSRange range, NSInteger index) {
-//    
-//            NSString *message = [NSString stringWithFormat:@"点击了“%@”字符\nrange: %@\nindex: %ld",string,NSStringFromRange(range),(long)index];
-//            NSLog(@"点击了邮箱 %@", message);
-//            [self launchMailApp];
-//    
-//        }];
+//    // Method 2 用block回调
+//    [lable yb_addAttributeTapActionWithStrings:@[@"ipcamreset@yale.co.uk"] tapClicked:^(NSString *string, NSRange range, NSInteger index) {
+//        
+//        NSString *message = [NSString stringWithFormat:@"点击了“%@”字符\nrange: %@\nindex: %ld",string,NSStringFromRange(range),(long)index];
+//        NSLog(@"点击了邮箱 %@", message);
+//        [self launchMailApp];
+//        
+//    }];
     
-//    //设置是否有点击效果，默认是YES
-//    lable.enabledTapEffect = NO;
+    // 2. 重绘UILabel添加下划线
+    CGRect rect = CGRectMake(10, CGRectGetMaxY(lable.frame), kScreenWidth - 20, 200);
+    NSString *lblContent = @"This camera is already registered by another account, if you forget the old account, please send Email with your camera Mac sticker picture to ipcamreset@yale.co.uk" ;
+    NSString *attributeStr = @"ipcamreset@yale.co.uk";
+    UnderLineLabel *lable2 = [[UnderLineLabel alloc] initWithFrame:rect withLableText:lblContent withAttributedString:attributeStr];
+    lable2.font = [UIFont systemFontOfSize:17];
+    lable2.delegate = self;
+    [self.view addSubview:lable2];
     
-    // Method 3 伪方法 给整个lable加了点击事件
-//    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(launchMailApp:)];
-//    self.reasonLabel.userInteractionEnabled = YES;
-//    [self.reasonLabel addGestureRecognizer:tapGesture];
+//    UnderLineLabel*lable3 = [[UnderLineLabel alloc] initWithFrame:rect withLableText:lblContent withAttributedString:@""];
+//    lable3.font = [UIFont systemFontOfSize:17];
+//    lable3.delegate = self;
+//    [self.view addSubview:lable3];
 }
 
-#pragma mark - 计算label的Size的方法总结
-// a sizeWithAttributes:方法 适用于不换行的情况,宽度不受限制的情况
-//- (CGSize)sizeWithText:(NSString *)text font:(UIFont *)font
-//{
-//    NSMutableDictionary *attrDict = [NSMutableDictionary dictionary];
-//    attrDict[NSFontAttributeName] = font;
-//    return [text sizeWithAttributes:attrDict];
-//}
+#pragma mark - UnderLineLabelDelegate
+- (void)lineLabelClicked:(UnderLineLabel *)label{
 
-// b boundingRectWithSize:方法,适用于换行的情况,同时适用于不换行的情况,为了兼容两者,代码如下:
-/// 根据指定文本和字体计算尺寸
+    [self launchMailApp];
+}
+
+#pragma mark - 计算label的Size的方法
+/**
+ *  根据指定文本和字体计算尺寸
+ *
+ *  @param text  文本text
+ *  @param font  字体font
+ *
+ *  boundingRectWithSize:方法,适用于换行的情况,同时适用于不换行的情况,为了兼容两者,代码如下:
+ */
+
 - (CGSize)sizeWithText:(NSString *)text font:(UIFont *)font
 {
     return [self sizeWithText:text font:font maxWidth:MAXFLOAT];
@@ -83,6 +99,16 @@
     CGSize size = [text boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:attrDict context:nil].size;
     return size;
 }
+
+// a sizeWithAttributes:方法 适用于不换行的情况,宽度不受限制的情况
+//- (CGSize)sizeWithText:(NSString *)text font:(UIFont *)font
+//{
+//    NSMutableDictionary *attrDict = [NSMutableDictionary dictionary];
+//    attrDict[NSFontAttributeName] = font;
+//    return [text sizeWithAttributes:attrDict];
+//}
+
+#pragma mark - YBAttributeTapActionDelegate
 /**
  *  YBAttributeTapActionDelegate
  *

@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+body {
+  font-family: "Arial";
+  background: #FFFFFF;
+}
+article,
+aside,
+dialog,
+footer,
+header,
+section,
+footer,
+nav,
+figure,
+menu,
+img,
+a {
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+#container {
+  margin: 0 auto;
+  text-algin: center;
+}
+.top {
+  text-align: center;
+}
+.cont_f {
+  text-align: left;
+  line-height: 150%;
+  margin-left: 4.72222222%;
+  width: 92.36111111%;
+  margin-right: 4.16666667%;
+  color: #646464;
+}
+.main_2 {
+  margin-top: 6.25%;
+}
+.main_2 span,
+.main_3 span {
+  display: inline-block;
+}
+.conf_f_2 {
+  width: 6.66666667%;
+  margin: 0 1.38888889%;
+  vertical-align: middle;
+}
+.conf_f_3 {
+  width: 7.5%;
+  margin: 0 1.38888889%;
+  vertical-align: middle;
+}
+.conf_f_4 {
+  width: 7.77777778%;
+  margin: 0 1.38888889%;
+  vertical-align: middle;
+}
+.conf_f_5 {
+  width: 7.22222222%;
+  margin: 0 1.38888889%;
+  vertical-align: middle;
+}
+.way_1 {
+  margin-left: 4.72222222%;
+  margin-bottom: 1.5625%;
+}
+.way_2 {
+  margin-left: 4.72222222%;
+  margin-top: 1.5625%;
+  margin-bottom: 1.5625%;
+}
+.way_1 span,
+.way_2 span {
+  color: #ff7800;
+}
+.top-1 {
+  margin-top: 3.125%;
+}
+.top-2 {
+  margin-top: 3.125%;
+}
+.top-3 {
+  margin-top: 3.125%;
+  margin-bottom: 6.25%;
+}
+.top-4 {
+  margin-top: 7.8125%;
+  margin-bottom: 4.6875%;
+}
+.color_1 {
+  color: #969696;
+}
+.cont_f a {
+  text-decoration: underline;
+  color: #05afeb;
+}
+.fos_center {
+  text-align: center;
+  margin: 0 auto;
+}
+.fos_c {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 2.34375%;
+  margin-bottom: 15.625%;
+}
+@media screen and (max-width: 480px) {
+  .cont_f {
+    font-size: 14px;
+  }
+  .way_1,
+  .way_2 {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 640px) {
+  .cont_f {
+    font-size: 21px;
+  }
+  .way_1,
+  .way_2 {
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 960px) {
+  .cont_f {
+    font-size: 32px;
+  }
+  .way_1,
+  .way_2 {
+    font-size: 34px;
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 1200px) {
+  .cont_f {
+    font-size: 42px;
+  }
+  .way_1,
+  .way_2 {
+    font-size: 45px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .cont_f {
+    font-size: 53px;
+  }
+  .way_1,
+  .way_2 {
+    font-size: 56px;
+  }
+}
