@@ -31,6 +31,12 @@
 #define WEAKSELF typeof(self) __weak weakSelf = self;
 #define STRONGSELF typeof(weakSelf) __strong strongSelf = weakSelf;
 
+/*
+ __weak __typeof(self)weakSelf = self;
+ __strong __typeof(weakSelf)strongSelf = weakSelf;
+ */
+
+
 /**
  *  2 MRC和ARC混编设置方式
  */

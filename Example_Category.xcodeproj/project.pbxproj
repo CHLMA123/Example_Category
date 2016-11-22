@@ -88,7 +88,6 @@
 		36514A571D7A7A560047BDBC /* MBProgressHUD+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 36514A511D7A7A560047BDBC /* MBProgressHUD+Extend.m */; };
 		36514A581D7A7A560047BDBC /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 36514A531D7A7A560047BDBC /* MBProgressHUD.m */; };
 		36514A591D7A7A560047BDBC /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 36514A561D7A7A560047BDBC /* UIView+Toast.m */; };
-		36514A611D7A7A970047BDBC /* BlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 36514A601D7A7A970047BDBC /* BlockButton.m */; };
 		3674A9DA1DD1B6A5001CA94A /* Default@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3674A9B71DD1B6A5001CA94A /* Default@3x.png */; };
 		3674A9DB1DD1B6A5001CA94A /* findhome_1455525720807.png in Resources */ = {isa = PBXBuildFile; fileRef = 3674A9B91DD1B6A5001CA94A /* findhome_1455525720807.png */; };
 		3674A9DC1DD1B6A5001CA94A /* findhome_20160126194705meishi.png in Resources */ = {isa = PBXBuildFile; fileRef = 3674A9BA1DD1B6A5001CA94A /* findhome_20160126194705meishi.png */; };
@@ -314,8 +313,6 @@
 		36514A531D7A7A560047BDBC /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		36514A551D7A7A560047BDBC /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
 		36514A561D7A7A560047BDBC /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
-		36514A5F1D7A7A970047BDBC /* BlockButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockButton.h; sourceTree = "<group>"; };
-		36514A601D7A7A970047BDBC /* BlockButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockButton.m; sourceTree = "<group>"; };
 		36514A811D7AA3900047BDBC /* MayerPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MayerPrefixHeader.pch; path = Macros/MayerPrefixHeader.pch; sourceTree = "<group>"; };
 		3674A9B71DD1B6A5001CA94A /* Default@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@3x.png"; sourceTree = "<group>"; };
 		3674A9B91DD1B6A5001CA94A /* findhome_1455525720807.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = findhome_1455525720807.png; sourceTree = "<group>"; };
@@ -785,15 +782,6 @@
 			path = Toast;
 			sourceTree = "<group>";
 		};
-		36514A5E1D7A7A970047BDBC /* BlockButton */ = {
-			isa = PBXGroup;
-			children = (
-				36514A5F1D7A7A970047BDBC /* BlockButton.h */,
-				36514A601D7A7A970047BDBC /* BlockButton.m */,
-			);
-			path = BlockButton;
-			sourceTree = "<group>";
-		};
 		36514A641D7A9B1D0047BDBC /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -1048,7 +1036,6 @@
 			isa = PBXGroup;
 			children = (
 				36472A031DC1EE6D0063909D /* UICountingLabel */,
-				36514A5E1D7A7A970047BDBC /* BlockButton */,
 				36514A4F1D7A7A560047BDBC /* MBProgressHUD */,
 				36514A541D7A7A560047BDBC /* Toast */,
 				367B39AC1D0E614900443974 /* FLAnimatedImage */,
@@ -1309,7 +1296,6 @@
 				3619F9421DC6EBEE002FA72D /* NSLayoutConstraint+PureLayout.m in Sources */,
 				365149F11D7A61560047BDBC /* README.md in Sources */,
 				36E159561DC6E9FA00E4C10C /* CommonMode.m in Sources */,
-				36514A611D7A7A970047BDBC /* BlockButton.m in Sources */,
 				3619F9341DC6EBEE002FA72D /* NoteViewController.m in Sources */,
 				367830011D1D372C00D294DD /* NSObject+modelConvertDic.m in Sources */,
 				3619F9371DC6EBEE002FA72D /* NSDate+HYBHelperKit.m in Sources */,
