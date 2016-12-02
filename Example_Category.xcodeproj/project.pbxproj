@@ -72,6 +72,8 @@
 		3619F9541DC6EBEE002FA72D /* RegularViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3619F9141DC6EBEE002FA72D /* RegularViewController.m */; };
 		3638ABD41D921A58000BE8DA /* NSString+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 3638ABD31D921A58000BE8DA /* NSString+Extend.m */; };
 		3638AC501D92871C000BE8DA /* UIImage+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 3638AC4F1D92871C000BE8DA /* UIImage+Extend.m */; };
+		36457A1A1DEBB8FA00D23A55 /* CrashModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36457A171DEBB8FA00D23A55 /* CrashModel.m */; };
+		36457A1B1DEBB8FA00D23A55 /* CrashReport.m in Sources */ = {isa = PBXBuildFile; fileRef = 36457A191DEBB8FA00D23A55 /* CrashReport.m */; };
 		3645A36A1DC6E03200042806 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 3645A3671DC6E03200042806 /* README.md */; };
 		3645A36B1DC6E03200042806 /* UIViewController+Swizzled.m in Sources */ = {isa = PBXBuildFile; fileRef = 3645A3691DC6E03200042806 /* UIViewController+Swizzled.m */; };
 		36472A061DC1EE870063909D /* UICountingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36472A051DC1EE870063909D /* UICountingLabel.m */; };
@@ -287,6 +289,10 @@
 		3638ABD31D921A58000BE8DA /* NSString+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extend.m"; sourceTree = "<group>"; };
 		3638AC4E1D92871C000BE8DA /* UIImage+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extend.h"; sourceTree = "<group>"; };
 		3638AC4F1D92871C000BE8DA /* UIImage+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extend.m"; sourceTree = "<group>"; };
+		36457A161DEBB8FA00D23A55 /* CrashModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrashModel.h; sourceTree = "<group>"; };
+		36457A171DEBB8FA00D23A55 /* CrashModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrashModel.m; sourceTree = "<group>"; };
+		36457A181DEBB8FA00D23A55 /* CrashReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrashReport.h; sourceTree = "<group>"; };
+		36457A191DEBB8FA00D23A55 /* CrashReport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrashReport.m; sourceTree = "<group>"; };
 		3645A3671DC6E03200042806 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3645A3681DC6E03200042806 /* UIViewController+Swizzled.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Swizzled.h"; sourceTree = "<group>"; };
 		3645A3691DC6E03200042806 /* UIViewController+Swizzled.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Swizzled.m"; sourceTree = "<group>"; };
@@ -685,6 +691,17 @@
 			path = RegularUtils;
 			sourceTree = "<group>";
 		};
+		36457A151DEBB8FA00D23A55 /* CrashReport */ = {
+			isa = PBXGroup;
+			children = (
+				36457A161DEBB8FA00D23A55 /* CrashModel.h */,
+				36457A171DEBB8FA00D23A55 /* CrashModel.m */,
+				36457A181DEBB8FA00D23A55 /* CrashReport.h */,
+				36457A191DEBB8FA00D23A55 /* CrashReport.m */,
+			);
+			path = CrashReport;
+			sourceTree = "<group>";
+		};
 		3645A3661DC6E03200042806 /* UIViewController+Swizzled */ = {
 			isa = PBXGroup;
 			children = (
@@ -785,8 +802,9 @@
 		36514A641D7A9B1D0047BDBC /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				36514A811D7AA3900047BDBC /* MayerPrefixHeader.pch */,
+				36457A151DEBB8FA00D23A55 /* CrashReport */,
 				36514A651D7A9B460047BDBC /* Macros */,
+				36514A811D7AA3900047BDBC /* MayerPrefixHeader.pch */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1281,6 +1299,7 @@
 				36E159571DC6E9FA00E4C10C /* NoteView.m in Sources */,
 				3638ABD41D921A58000BE8DA /* NSString+Extend.m in Sources */,
 				3619F9351DC6EBEE002FA72D /* GetDeviceAllInfo.m in Sources */,
+				36457A1A1DEBB8FA00D23A55 /* CrashModel.m in Sources */,
 				36472A061DC1EE870063909D /* UICountingLabel.m in Sources */,
 				36C891731D0CEAE100DC86E0 /* AppDelegate.m in Sources */,
 				3619F9501DC6EBEE002FA72D /* STDPingServices.m in Sources */,
@@ -1332,6 +1351,7 @@
 				36C891DE1D0CEB6F00DC86E0 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				365149EF1D7A60330047BDBC /* README.md in Sources */,
 				36514A571D7A7A560047BDBC /* MBProgressHUD+Extend.m in Sources */,
+				36457A1B1DEBB8FA00D23A55 /* CrashReport.m in Sources */,
 				3619F93A1DC6EBEE002FA72D /* AVFoundationController.m in Sources */,
 				3619F9381DC6EBEE002FA72D /* OverviewNSDateController.m in Sources */,
 				36514A011D7A6C8A0047BDBC /* README.md in Sources */,

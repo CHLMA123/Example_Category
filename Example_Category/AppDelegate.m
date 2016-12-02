@@ -10,6 +10,7 @@
 #import "ViewController.h"
 #import "MYLogManger.h"
 #import "UIViewController+Swizzled.h"
+#import "CrashReport.h"
 
 @interface AppDelegate ()
 
@@ -48,6 +49,8 @@
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
+    
+    [[CrashReport sharedInstance] startUp];
     
     return YES;
 }
