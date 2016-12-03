@@ -14,6 +14,7 @@
 #import "NSString+Extend.h"
 #import "UIImage+Extend.h"
 #import "UIView+Extend.h"
+#import "UIColor+Hex.h"
 
 // Others
 #import "UIControl+Additions.h"
