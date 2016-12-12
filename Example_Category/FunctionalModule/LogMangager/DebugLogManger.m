@@ -6,20 +6,18 @@
 //  Copyright © 2016年 zengjia. All rights reserved.
 //
 
-#import "MYLogManger.h"
+#import "DebugLogManger.h"
 #import <UIKit/UIKit.h>
 
-@implementation MYLogManger
+@implementation DebugLogManger
 
 + (id)shareManger
 {
-    static MYLogManger *manger = nil;
+    static DebugLogManger *manger = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        
-        manger = [[self alloc] init];
+        manger = [[DebugLogManger alloc] init];
     });
-    
     return manger;
 }
 
@@ -45,18 +43,19 @@
     if([[device model] hasSuffix:@"Simulator"] && !_SimulatorOutput){
         return;
     }
-    //将NSlog打印信息保存到Document目录下的Log文件夹下
+    //将NSlog打印信息保存到Document目录下的DebugLog文件夹下
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *logDirectory = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"Log"];
+    NSString *logDirectory = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"DebugLog"];
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
     BOOL fileExists = [fileManager fileExistsAtPath:logDirectory];
     if (!fileExists) {
-        [fileManager createDirectoryAtPath:logDirectory  withIntermediateDirectories:YES attributes:nil error:nil];
+        [fileManager createDirectoryAtPath:logDirectory withIntermediateDirectories:YES attributes:nil error:nil];
     }
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    // ios应用在不同语言及区域的日期显示 在不同的语言环境下，应用展现出来的日期格式都是不一样的。例如英文的语言环境下，展现的日期January 27, 2014。而中文的语言环境下，展现的日期2014年1月27日。
     [formatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"]];
-    [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss:SS"]; //每次启动后都保存一个新的日志文件中
+    [formatter setDateFormat:@"yyyy-MM-dd-HHmmss"]; //每次启动后都保存一个新的日志文件中
     NSString *dateStr = [formatter stringFromDate:[NSDate date]];
     NSString *logFilePath = [logDirectory stringByAppendingFormat:@"/%@.log",dateStr];
     
@@ -69,6 +68,7 @@
     
     
 }
+
  void UncaughtExceptionHandler(NSException* exception)
 {
     NSString* name = [ exception name ];
@@ -80,18 +80,17 @@
         [ strSymbols appendString: item ];
         [ strSymbols appendString: @"\r\n" ];
     }
-    //将crash日志保存到Document目录下的Log文件夹下
+    //将crash日志保存到Document目录下的DebugLog文件夹下
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *logDirectory = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"Log"];
+    NSString *logDirectory = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"DebugLog"];
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
     if (![fileManager fileExistsAtPath:logDirectory]) {
         [fileManager createDirectoryAtPath:logDirectory  withIntermediateDirectories:YES attributes:nil error:nil];
     }
-    
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"]];
-    [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    [formatter setDateFormat:@"yyyy-MM-dd-HHmmss"];
     NSString *dateStr = [formatter stringFromDate:[NSDate date]];
     NSString *logFilePath = [logDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@_UncaughtException.log",dateStr]];
     NSString *crashString = [NSString stringWithFormat:@"<- %@ ->[ Uncaught Exception ]\r\nName: %@, Reason: %@\r\n[ Fe Symbols Start ]\r\n%@[ Fe Symbols End ]\r\n\r\n", dateStr, name, reason, strSymbols];

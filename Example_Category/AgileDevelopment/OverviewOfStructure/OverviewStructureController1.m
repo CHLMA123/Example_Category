@@ -133,6 +133,8 @@ void printf_struct_pointer(struct student *s)
      student : (*s).name = Tom, (*s).age = 11
      student : s->name = Tom, s->age = 11
      */
+    
+    NSLog(@"%@", [[NSArray array] objectAtIndex:5]);
 }
 
 - (void)didReceiveMemoryWarning {

@@ -10,17 +10,11 @@
 #import "GetDeviceAllInfo.h"
 #import "AnimatedImageViewController.h"
 #import "CreateAnimatedViewController.h"
-#import "NoteViewController.h"
-#import "OverviewStructureController1.h"
-#import "AVFoundationController.h"
-#import "SingleClass.h"
 #import "STDDebugPingViewController.h"
 #import "OverviewNSDateController.h"
 #import "RegularViewController.h"
-#import "AttributeTextTapController.h"
-#import "LoadHtmlDocController.h"
-#import "Reachability.h"
 #import "NSURLSessionController.h"
+
 
 #define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
 //ImageView旋转状态枚举 NSEN
@@ -39,9 +33,6 @@ static NSInteger i = 0;
     UIImageView *screenshotsImageView;  /// 截屏
 }
 
-@property (nonatomic, strong) Reachability *hostReachability;
-@property (nonatomic, strong) NSString *kReachableVia;
-
 @end
 
 @implementation ViewController
@@ -55,7 +46,6 @@ static NSInteger i = 0;
      [self.view addSubview:view];
      view.backgroundColor = [UIColor redColor];
      */
-    [self networkMonitoringAction];             // 0『iOS应用networkMonitoring』
 #pragma mark - Examples (1 - 15)
     
 //    [self familyNameAction];                    // 1 获取设备中的所有字体
@@ -85,10 +75,6 @@ static NSInteger i = 0;
 //    [self tableViewContentInset];               // 20 指定滚动条在scrollview的位置
     
 //    [self testArraySum];                        // 21 array快速求总和, 最大值, 最小值和平均值
-//    [self addNoteView];                         // 22 NoteView组件化
-//    [self OverviewStructure];                   // 23 OverviewStructure
-//    [self OverviewOfAVFoundation];              // 24 OverviewOfAVFoundation & iOS从App跳转至系统设置菜单各功能项
-//    [self SingletonUITest];                     // 25 Objective-c单例模式详解
     
 //    [self createButtonView];                    // 26 左右结构的button fsKeepPasswordButton
 //    [self OverviewSimplePing];                  // 27 OverviewSimplePing
@@ -100,27 +86,11 @@ static NSInteger i = 0;
 //    NSLog(@"...longLongValue...: %lld", [string longLongValue]);
 //    //2016-10-26 14:08:24.263 Example_Category[3864:1116044] ...longLongValue...: 0
     
-    #pragma mark - Examples (31 - 45)
-//    [self attributeTextTapAction];              // 31 attributeTextTapAction/计算label的Size的方法总结
-//    // Typical usage
+    #pragma mark - Examples (31 - 45)//    // Typical usage
 //    [self openScheme:@"tweetbot://timeline"];   // 32『iOS应用间相互跳转』
-//    [self LoadHtmlDocView];                     // 33 LoadHtmlDocView
-    [self LoadNSURLSessionRequest];             // 33 LoadNSURLSessionRequest
-}
-
-
-#pragma mark - NSURLSessionController
-- (void)LoadNSURLSessionRequest{
-
-    NSURLSessionController *push = [[NSURLSessionController alloc] init];
-    [self.navigationController pushViewController:push animated:YES];
-}
-
-#pragma mark - LoadHtmlDocView
-- (void)LoadHtmlDocView{
     
-    LoadHtmlDocController *push = [[LoadHtmlDocController alloc] init];
-    [self.navigationController pushViewController:push animated:YES];
+    NSString *str = @"-1";
+    NSLog(@"[str integerValue] = %ld", (long)[str integerValue]);
 }
 
 #pragma mark - 『iOS应用间相互跳转』
@@ -151,34 +121,6 @@ static NSInteger i = 0;
 //    }
 //}
 
-#pragma mark -  label中的文字添加点击事件 + 计算label的Size的方法总结
-// https://github.com/lyb5834/YBAttributeTextTapAction
-- (void)attributeTextTapAction{
-
-    AttributeTextTapController *vc = [[AttributeTextTapController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
-#pragma mark - OverviewNSDate
-- (void)OverviewRegularExpression{
-    
-    RegularViewController *push = [[RegularViewController alloc] init];
-    [self.navigationController pushViewController:push animated:YES];
-}
-
-#pragma mark - OverviewNSDate
-- (void)OverviewNSDate{
-    
-    OverviewNSDateController *push = [[OverviewNSDateController alloc] init];
-    [self.navigationController pushViewController:push animated:YES];
-}
-#pragma mark - OverviewSimplePing
-- (void)OverviewSimplePing{
-    
-    STDDebugPingViewController *push = [[STDDebugPingViewController alloc] init];
-    [self.navigationController pushViewController:push animated:YES];
-}
-
 #pragma mark - createButtonView
 - (void)createButtonView{
     
@@ -189,55 +131,8 @@ static NSInteger i = 0;
     [self.view addSubview:fsKeepPasswordButton];
 }
 
-#pragma mark - Objective-c单例模式详解
-- (void)SingletonUITest{
-    
-    NSLog(@"开始《《《");
-    SingleClass *obj1 = [SingleClass shareInstance] ;
-    NSLog(@"obj1 = %@.", obj1) ;
-    
-    SingleClass *obj2 = [SingleClass shareInstance] ;
-    NSLog(@"obj2 = %@.", obj2) ;
-    
-    SingleClass *obj3 = [[SingleClass alloc] init] ;
-    NSLog(@"obj3 = %@.", obj3) ;
-    
-    SingleClass* obj4 = [[SingleClass alloc] init] ;
-    NSLog(@"obj4 = %@.", [obj4 copy]) ;
-    
-    NSLog(@"结束》》》");
-    
-    /*
-     2016-09-07 17:55:11.601 Example_Category[3267:638012] 开始《《《
-     2016-09-07 17:55:11.605 Example_Category[3267:638012] obj1 = <SingleClass: 0x16586be0; frame = (0 0; 0 0); layer = <CALayer: 0x165565a0>>.
-     2016-09-07 17:55:11.605 Example_Category[3267:638012] obj2 = <SingleClass: 0x16586be0; frame = (0 0; 0 0); layer = <CALayer: 0x165565a0>>.
-     2016-09-07 17:55:11.606 Example_Category[3267:638012] obj3 = <SingleClass: 0x16586be0; frame = (0 0; 0 0); layer = <CALayer: 0x165565a0>>.
-     2016-09-07 17:55:11.606 Example_Category[3267:638012] obj4 = <SingleClass: 0x16586be0; frame = (0 0; 0 0); layer = <CALayer: 0x165565a0>>.
-     2016-09-07 17:55:11.606 Example_Category[3267:638012] 结束》》》
-     */
-}
 
 
-#pragma mark - OverviewStructure
-- (void)OverviewOfAVFoundation{
-    
-    AVFoundationController *push = [[AVFoundationController alloc] init];
-    [self.navigationController pushViewController:push animated:YES];
-}
-
-#pragma mark - OverviewStructure
-- (void)OverviewStructure{
-    
-    OverviewStructureController1 *push = [[OverviewStructureController1 alloc] init];
-    [self.navigationController pushViewController:push animated:YES];
-}
-
-#pragma mark - addNoteView
-- (void)addNoteView{
-    
-    NoteViewController *push = [[NoteViewController alloc] init];
-    [self.navigationController pushViewController:push animated:YES];
-}
 
 #pragma mark - array快速求总和, 最大值, 最小值和平均值
 - (void)testArraySum{
@@ -745,19 +640,19 @@ static NSInteger i = 0;
     UIImage *image = [UIImage imageNamed:@"启动页_1242x2208"];
     UIImage *waterImage = [self waterMarkImage:image withText:@"你好"];
     // 展示图片
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
-    imageView.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.8, 0.8);
-    imageView.image = waterImage;
-    [self.view addSubview:imageView];
+    UIImageView *imageV = [[UIImageView alloc] initWithFrame:self.view.bounds];
+    imageV.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.8, 0.8);
+    imageV.image = waterImage;
+    [self.view addSubview:imageV];
     UIImageWriteToSavedPhotosAlbum(waterImage, nil, nil, nil);  //保存图片至相册
     
     [UIView animateWithDuration:5 delay:1 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
-        imageView.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.25, 0.25);
+        imageV.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.25, 0.25);
         
     } completion:^(BOOL finished) {
         
-        imageView.transform = CGAffineTransformIdentity;
-        imageView.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.8, 0.8);
+        imageV.transform = CGAffineTransformIdentity;
+        imageV.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.8, 0.8);
     }];
 }
 
@@ -792,69 +687,7 @@ static NSInteger i = 0;
             NSLog(@"\t字体：%@",fontName);
         }
     }
-    
-    
 }
-
-#pragma mark - reachability
-- (void)networkMonitoringAction{
-    
-    // 监测网络情况
-    [[NSNotificationCenter defaultCenter] addObserver: self
-                                             selector: @selector(reachabilityChanged:)
-                                                 name: kReachabilityChangedNotification
-                                               object: nil];
-    NSString *remoteHostName = @"www.apple.com";
-    NSString *remoteHostLabelFormatString = NSLocalizedString(@"Remote Host: %@", @"Remote host label format string");
-    UILabel *remoteHostLabel = [[UILabel alloc] init];
-    remoteHostLabel.text = [NSString stringWithFormat:remoteHostLabelFormatString, remoteHostName];
-    self.hostReachability = [Reachability reachabilityWithHostName:remoteHostName];
-    [self.hostReachability startNotifier];
-    
-}
-
-- (void)reachabilityChanged:(NSNotification *)no{
-    Reachability* curReach = [no object];
-    NSParameterAssert([curReach isKindOfClass: [Reachability class]]);
-    NetworkStatus status = [curReach currentReachabilityStatus];
-    switch (status)
-    {
-            
-        case NotReachable:
-            NSLog(@"====当前网络状态不可达=======");
-            //其他处理
-            self.kReachableVia = @"当前网络状态不可达";
-            break;
-            
-        case ReachableViaWiFi:
-            NSLog(@"====当前网络状态为Wifi=======");
-            self.kReachableVia = @"ReachableViaWiFi";
-            //其他处理
-            break;
-        case kReachableVia2G:
-            NSLog(@"====当前网络状态为2G=======");
-            self.kReachableVia = @"kReachableVia2G";
-            break;
-        case kReachableVia3G:
-            NSLog(@"====当前网络状态为3G=======");
-            //其他处理
-            self.kReachableVia = @"kReachableVia3G";
-            break;
-        case kRaeachableVia4G:
-            NSLog(@"====当前网络状态为4G=======");
-            self.kReachableVia = @"kRaeachableVia4G";
-            //其他处理
-            break;
-        default:
-            NSLog(@"你是外星来的吗？");
-            //其他处理
-            self.kReachableVia = @"你是外星来的吗？";
-            break;
-    }
-    
-    NSLog(@"### self.kReachableVia = %@", self.kReachableVia);
-}
-
 
 #pragma mark -
 - (void)didReceiveMemoryWarning {

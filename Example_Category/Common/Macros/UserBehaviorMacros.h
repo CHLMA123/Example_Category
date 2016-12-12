@@ -57,14 +57,14 @@
 #ifdef DEBUG
 
 #define MSLog(...) NSLog(@"%s (%d) \n%@", __PRETTY_FUNCTION__, __LINE__, [NSString stringWithFormat:__VA_ARGS__])
-#define LOG_METHOD NSLog(@"%@/%@", NSStringFromClass([self class]), NSStringFromSelector(_cmd))
+//#define LOG_METHOD NSLog(@"%@/%@", NSStringFromClass([self class]), NSStringFromSelector(_cmd))
 #define COUNT(p) NSLog(@"%s(%d): count = %d\n", __func__, __LINE__, [p retainCount]);
 #define LOG_TRACE(x) do {printf x; putchar('\n'); fflush(stdout);} while (0)
 
 #else
 
 #define FSLog(...)
-#define LOG_METHOD
+//#define LOG_METHOD
 #define COUNT(p)
 #define LOG_TRACE(x)
 

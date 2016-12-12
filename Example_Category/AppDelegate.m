@@ -7,10 +7,10 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
-#import "MYLogManger.h"
-#import "UIViewController+Swizzled.h"
 #import "CrashReport.h"
+#import "DebugLogManger.h"
+#import "RootViewController.h"
+//#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,37 +21,31 @@
 + (instancetype)appDelegate{
     return (AppDelegate *)[UIApplication sharedApplication].delegate;
 }
-/*
- - (void)setupBarStyle {
+
+ - (void)setNavigationBarStyle{
  
- [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
- [[UINavigationBar appearance] setTintColor:[UIColor redColor]];//系统返回的箭头颜色定制
- [[UIBarButtonItem appearance] setTitleTextAttributes:@{
- NSForegroundColorAttributeName: [UIColor whiteColor],
- NSFontAttributeName: [UIFont systemFontOfSize:17]}
- forState:UIControlStateNormal];//返回UIBarButtonItem的文字
+     [[UINavigationBar appearance] setBarStyle:UIBarStyleDefault];
+     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];//NavBar返回箭头颜色
+     [[UINavigationBar appearance] setBarTintColor:[UIColor lightGrayColor]];//NavBar背景颜色
+     [[UIBarButtonItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],NSFontAttributeName: [UIFont systemFontOfSize:17]} forState:UIControlStateNormal];//NavBar字体颜色和大小
  }
- */
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    // 0 设置导航栏整体样式
-    // [self setupBarStyle];
-    // 1 To map the way inside an application
-    SWIZZ_IT
-    // 2 NSLog文件重定向
-    [MYLogManger shareManger]; // 连接xcode时可以从监视器中看日志 没连接时Log日志会输出到文件中
-    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-    ViewController *vc = [[ViewController alloc] init];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    RootViewController *rootVC = [[RootViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:rootVC];
+    // 设置导航栏整体样式
+    [self setNavigationBarStyle];
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
     
-    [[CrashReport sharedInstance] startUp];
-    
+    // APP发生异常时，打印当前堆栈信息
+    //[[CrashReport sharedInstance] startUp];
+    // NSLog文件重定向
+    [DebugLogManger shareManger]; // 连接xcode时可以从监视器中看日志 没连接时Log日志会输出到文件中
     return YES;
 }
 

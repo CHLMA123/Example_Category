@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MYLogManger : NSObject
+@interface DebugLogManger : NSObject
 
 /**
  *  NSLog文件重定向

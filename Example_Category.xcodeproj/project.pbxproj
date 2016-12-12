@@ -79,6 +79,9 @@
 		361A62F71DF258BC007050C2 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 361A62F01DF258BC007050C2 /* UIColor+Hex.m */; };
 		3638ABD41D921A58000BE8DA /* NSString+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 3638ABD31D921A58000BE8DA /* NSString+Extend.m */; };
 		3638AC501D92871C000BE8DA /* UIImage+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 3638AC4F1D92871C000BE8DA /* UIImage+Extend.m */; };
+		3639B9E51DFE79C90037010D /* MAPaoMaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3639B9E41DFE79C90037010D /* MAPaoMaView.m */; };
+		3639B9E81DFE7CE40037010D /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3639B9E71DFE7CE40037010D /* RootViewController.m */; };
+		3639B9EE1DFE93570037010D /* PaoMaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3639B9ED1DFE93570037010D /* PaoMaViewController.m */; };
 		36457A1A1DEBB8FA00D23A55 /* CrashModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36457A171DEBB8FA00D23A55 /* CrashModel.m */; };
 		36457A1B1DEBB8FA00D23A55 /* CrashReport.m in Sources */ = {isa = PBXBuildFile; fileRef = 36457A191DEBB8FA00D23A55 /* CrashReport.m */; };
 		3645A36A1DC6E03200042806 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 3645A3671DC6E03200042806 /* README.md */; };
@@ -177,7 +180,7 @@
 		36C8917B1D0CEAE100DC86E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36C8917A1D0CEAE100DC86E0 /* Assets.xcassets */; };
 		36C8917E1D0CEAE100DC86E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36C8917C1D0CEAE100DC86E0 /* LaunchScreen.storyboard */; };
 		36C891DE1D0CEB6F00DC86E0 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C891DA1D0CEB6F00DC86E0 /* UINavigationController+FDFullscreenPopGesture.m */; };
-		36E159511DC6E9FA00E4C10C /* MYLogManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E159441DC6E9FA00E4C10C /* MYLogManger.m */; };
+		36E159511DC6E9FA00E4C10C /* DebugLogManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E159441DC6E9FA00E4C10C /* DebugLogManger.m */; };
 		36E159521DC6E9FA00E4C10C /* checkbox_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36E159461DC6E9FA00E4C10C /* checkbox_nor@2x.png */; };
 		36E159531DC6E9FA00E4C10C /* checkbox_nor@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36E159471DC6E9FA00E4C10C /* checkbox_nor@3x.png */; };
 		36E159541DC6E9FA00E4C10C /* checkbox_pay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36E159481DC6E9FA00E4C10C /* checkbox_pay@2x.png */; };
@@ -304,6 +307,12 @@
 		3638ABD31D921A58000BE8DA /* NSString+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extend.m"; sourceTree = "<group>"; };
 		3638AC4E1D92871C000BE8DA /* UIImage+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extend.h"; sourceTree = "<group>"; };
 		3638AC4F1D92871C000BE8DA /* UIImage+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extend.m"; sourceTree = "<group>"; };
+		3639B9E31DFE79C90037010D /* MAPaoMaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAPaoMaView.h; sourceTree = "<group>"; };
+		3639B9E41DFE79C90037010D /* MAPaoMaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAPaoMaView.m; sourceTree = "<group>"; };
+		3639B9E61DFE7CE40037010D /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		3639B9E71DFE7CE40037010D /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		3639B9EC1DFE93570037010D /* PaoMaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaoMaViewController.h; sourceTree = "<group>"; };
+		3639B9ED1DFE93570037010D /* PaoMaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaoMaViewController.m; sourceTree = "<group>"; };
 		36457A161DEBB8FA00D23A55 /* CrashModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrashModel.h; sourceTree = "<group>"; };
 		36457A171DEBB8FA00D23A55 /* CrashModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrashModel.m; sourceTree = "<group>"; };
 		36457A181DEBB8FA00D23A55 /* CrashReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrashReport.h; sourceTree = "<group>"; };
@@ -428,8 +437,8 @@
 		36C8917F1D0CEAE100DC86E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36C891D91D0CEB6F00DC86E0 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		36C891DA1D0CEB6F00DC86E0 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
-		36E159431DC6E9FA00E4C10C /* MYLogManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYLogManger.h; sourceTree = "<group>"; };
-		36E159441DC6E9FA00E4C10C /* MYLogManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYLogManger.m; sourceTree = "<group>"; };
+		36E159431DC6E9FA00E4C10C /* DebugLogManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugLogManger.h; sourceTree = "<group>"; };
+		36E159441DC6E9FA00E4C10C /* DebugLogManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugLogManger.m; sourceTree = "<group>"; };
 		36E159461DC6E9FA00E4C10C /* checkbox_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox_nor@2x.png"; sourceTree = "<group>"; };
 		36E159471DC6E9FA00E4C10C /* checkbox_nor@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox_nor@3x.png"; sourceTree = "<group>"; };
 		36E159481DC6E9FA00E4C10C /* checkbox_pay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox_pay@2x.png"; sourceTree = "<group>"; };
@@ -458,6 +467,7 @@
 		3619F89D1DC6EBED002FA72D /* AgileDevelopment */ = {
 			isa = PBXGroup;
 			children = (
+				3639B9E21DFE79AF0037010D /* PaoMaView */,
 				3651012B1DD5BC6900A0AA27 /* NSURLSesstionView */,
 				3674A9AF1DD1B4B0001CA94A /* LoadHtmlDocView */,
 				368C55011DC72CFF0075B073 /* ReachabilityHelp */,
@@ -719,6 +729,17 @@
 				361A62EE1DF258BC007050C2 /* record_upArrow@3x.png */,
 			);
 			path = UIColor;
+			sourceTree = "<group>";
+		};
+		3639B9E21DFE79AF0037010D /* PaoMaView */ = {
+			isa = PBXGroup;
+			children = (
+				3639B9EC1DFE93570037010D /* PaoMaViewController.h */,
+				3639B9ED1DFE93570037010D /* PaoMaViewController.m */,
+				3639B9E31DFE79C90037010D /* MAPaoMaView.h */,
+				3639B9E41DFE79C90037010D /* MAPaoMaView.m */,
+			);
+			path = PaoMaView;
 			sourceTree = "<group>";
 		};
 		36457A151DEBB8FA00D23A55 /* CrashReport */ = {
@@ -1014,6 +1035,8 @@
 		36C891621D0CEAE100DC86E0 = {
 			isa = PBXGroup;
 			children = (
+				3639B9E61DFE7CE40037010D /* RootViewController.h */,
+				3639B9E71DFE7CE40037010D /* RootViewController.m */,
 				36C8916D1D0CEAE100DC86E0 /* Example_Category */,
 				36C8916C1D0CEAE100DC86E0 /* Products */,
 			);
@@ -1116,8 +1139,8 @@
 		36E159421DC6E9FA00E4C10C /* LogMangager */ = {
 			isa = PBXGroup;
 			children = (
-				36E159431DC6E9FA00E4C10C /* MYLogManger.h */,
-				36E159441DC6E9FA00E4C10C /* MYLogManger.m */,
+				36E159431DC6E9FA00E4C10C /* DebugLogManger.h */,
+				36E159441DC6E9FA00E4C10C /* DebugLogManger.m */,
 			);
 			path = LogMangager;
 			sourceTree = "<group>";
@@ -1356,12 +1379,14 @@
 				3619F9341DC6EBEE002FA72D /* NoteViewController.m in Sources */,
 				367830011D1D372C00D294DD /* NSObject+modelConvertDic.m in Sources */,
 				3619F9371DC6EBEE002FA72D /* NSDate+HYBHelperKit.m in Sources */,
+				3639B9EE1DFE93570037010D /* PaoMaViewController.m in Sources */,
 				36514A4A1D7A799C0047BDBC /* NSString+Additions.m in Sources */,
 				3619F94A1DC6EBEE002FA72D /* XJQRCodeViewController.m in Sources */,
 				3674AA651DD1BF70001CA94A /* LoadHtmlDocController.m in Sources */,
 				3619F9491DC6EBEE002FA72D /* XJQRCodeModel.m in Sources */,
 				3619F9471DC6EBEE002FA72D /* UIFont+MyFont.m in Sources */,
 				3619F9481DC6EBEE002FA72D /* UIView+Frame.m in Sources */,
+				3639B9E51DFE79C90037010D /* MAPaoMaView.m in Sources */,
 				36514A4B1D7A799C0047BDBC /* UIControl+Additions.m in Sources */,
 				3619F93E1DC6EBEE002FA72D /* MovieFileController.m in Sources */,
 				36E159581DC6E9FA00E4C10C /* SingleClass.m in Sources */,
@@ -1372,7 +1397,8 @@
 				36472A081DC1EE980063909D /* README.md in Sources */,
 				3619F94B1DC6EBEE002FA72D /* QRCodeViewController.m in Sources */,
 				3692B3501D8FBF6300D884CF /* UIButton+Extend.m in Sources */,
-				36E159511DC6E9FA00E4C10C /* MYLogManger.m in Sources */,
+				3639B9E81DFE7CE40037010D /* RootViewController.m in Sources */,
+				36E159511DC6E9FA00E4C10C /* DebugLogManger.m in Sources */,
 				3638AC501D92871C000BE8DA /* UIImage+Extend.m in Sources */,
 				3619F9531DC6EBEE002FA72D /* RegularUtils.m in Sources */,
 				36514A4D1D7A799C0047BDBC /* UIScreen+Additions.m in Sources */,

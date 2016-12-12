@@ -21,13 +21,27 @@
 + (void)log:(CrashModel *)crashModel {
     NSLog(@"%@", crashModel);
     
+    //将CrashReport.txt保存到Document目录下的DebugLog文件夹下
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *logDirectory = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"DebugLog"];
+    
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSString *filePath = [NSTemporaryDirectory() stringByAppendingPathComponent:@"CrashReport.txt"];
+    BOOL fileExists = [fileManager fileExistsAtPath:logDirectory];
+    if (!fileExists) {
+        [fileManager createDirectoryAtPath:logDirectory withIntermediateDirectories:YES attributes:nil error:nil];
+    }
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"]];
+    [formatter setDateFormat:@"yyyy-MM-dd-HHmmss"];
+    NSString *dateStr = [formatter stringFromDate:[NSDate date]];
+    NSString *filePath = [logDirectory stringByAppendingFormat:@"/%@_CrashReport.txt",dateStr];
     NSData *crashData = [[crashModel description] dataUsingEncoding:NSUTF8StringEncoding];
     
     if (![fileManager fileExistsAtPath:filePath]) {
+        
         [fileManager createFileAtPath:filePath contents:crashData attributes:nil];
-    } else {
+    }else{
+        
         NSFileHandle *fileHandle = [NSFileHandle fileHandleForUpdatingAtPath:filePath];
         [fileHandle seekToEndOfFile];
         [fileHandle writeData:crashData];
@@ -93,6 +107,7 @@ void CrashReportSignalHandler(int iSignal) {
 @implementation CrashReport
 
 + (instancetype)sharedInstance {
+    
     static CrashReport *manager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

@@ -32,7 +32,7 @@
 - (void)setUpNoteView{
     
     _noteView = [[NoteView alloc] init];
-    _noteView.frame = self.parentViewController.view.bounds;
+    _noteView.frame = [UIScreen mainScreen].bounds;
     _noteView.noteViewDelegate = self;
     [[AppDelegate appDelegate].window addSubview:_noteView];
     [_noteView setUpView];
