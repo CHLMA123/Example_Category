@@ -25,7 +25,7 @@
     
     UIButton *scanBtn = [UIButton buttonWithType:UIButtonTypeCustom]
     ;
-    scanBtn.frame = CGRectMake((kScreenWidth - 200)/2, 100, 200, 44);
+    scanBtn.frame = CGRectMake((SCREEN_WIDTH - 200)/2, 100, 200, 44);
     [scanBtn setTitle:@"SCAN" forState:UIControlStateNormal];
     [scanBtn setTitleColor:RGB_Black forState:UIControlStateNormal];
     [scanBtn addTarget:self action:@selector(scanButtonAction) forControlEvents:UIControlEventTouchUpInside];
@@ -33,7 +33,7 @@
     
     UIButton *VideoBtn = [UIButton buttonWithType:UIButtonTypeCustom]
     ;
-    VideoBtn.frame = CGRectMake((kScreenWidth - 200)/2, CGRectGetMaxY(scanBtn.frame) + 20, 200, 44);
+    VideoBtn.frame = CGRectMake((SCREEN_WIDTH - 200)/2, CGRectGetMaxY(scanBtn.frame) + 20, 200, 44);
     [VideoBtn setTitle:@"RECORD" forState:UIControlStateNormal];
     [VideoBtn setTitleColor:RGB_Black forState:UIControlStateNormal];
     [VideoBtn addTarget:self action:@selector(videoButtonAction) forControlEvents:UIControlEventTouchUpInside];
@@ -41,7 +41,7 @@
     
     UIButton *settingBtn = [UIButton buttonWithType:UIButtonTypeCustom]
     ;
-    settingBtn.frame = CGRectMake((kScreenWidth - 200)/2, CGRectGetMaxY(VideoBtn.frame) + 20, 200, 44);
+    settingBtn.frame = CGRectMake((SCREEN_WIDTH - 200)/2, CGRectGetMaxY(VideoBtn.frame) + 20, 200, 44);
     [settingBtn setTitle:@"SETTING Wi-Fi" forState:UIControlStateNormal];
     [settingBtn setTitleColor:RGB_Black forState:UIControlStateNormal];
     [settingBtn addTarget:self action:@selector(wifiButtonAction) forControlEvents:UIControlEventTouchUpInside];

@@ -48,7 +48,6 @@
             NSRange resultRange = [firstMatch rangeAtIndex:0];
             NSString *result=[self substringWithRange:resultRange];
             //输出结果
-            MSLog(@"%@",result);
             return YES;
         }
     }

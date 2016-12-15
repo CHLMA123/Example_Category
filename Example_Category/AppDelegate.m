@@ -42,10 +42,17 @@
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
     
-    // APP发生异常时，打印当前堆栈信息
-    //[[CrashReport sharedInstance] startUp];
+    
+#pragma mark - DebugInfo
     // NSLog文件重定向
     [DebugLogManger shareManger]; // 连接xcode时可以从监视器中看日志 没连接时Log日志会输出到文件中
+    // APP发生异常时，打印当前堆栈信息
+    //[[CrashReport sharedInstance] startUp];
+    
+    NSString *str = @"abcdef";
+    DebugLog(@"%@", str);
+    DebugLogMethod();
+    
     return YES;
 }
 

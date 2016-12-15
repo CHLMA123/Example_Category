@@ -15,9 +15,6 @@
 // Get weak reference object.
 #define kWeakObject(object) __weak __typeof(object) weakObject = object;
 
-//// Get weak reference object.
-//#define kWeak(caller, object) __weak __typeof(object) caller = object;
-
 // Get strong reference object.
 #define kStrongObject(object) __strong __typedef(object) strongObject = object;
 
@@ -37,12 +34,13 @@
 #define kiOSVersion ([UIDevice currentDevice].systemVersion.floatValue)
 
 // More fast way to get app delegate
-#define SharedAppDelegate ((AppDelegate *)[[UIApplication  sharedApplication] delegate])
+#define SharedAppDelegate ((AppDelegate *)[[UIApplication sharedApplication] delegate])
 
 #define kApplication            [UIApplication sharedApplication]
 
 #define kKeyWindow              [UIApplication sharedApplication].keyWindow
 
+/**---------------------------------Load Image-------------------------------*/
 #pragma mark - Load Image
 
 // More easy way to load an image.
@@ -51,6 +49,7 @@
 // More easy to load an image from file.
 #define kImageOfFile(Name) ([UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:Name ofType:nil]])
 
+/**---------------------------------System Singletons-------------------------------*/
 #pragma mark - System Singletons
 
 // More easy way to get user default object.
@@ -70,6 +69,7 @@
 #define kPostNotificationWithNameAndUserInfo(notificationName, userInfo) \
 [kNotificationCenter postNotificationName:notificationName object:nil userInfo:userInfo]
 
+/**---------------------------------Judge-------------------------------*/
 #pragma mark - Judge
 
 // Judge whether it is an empty string.//字符串是否为空
@@ -79,15 +79,14 @@
 #define kIsEmptyObject(obj) (obj == nil || [obj isKindOfClass:[NSNull class]])
 
 // Judge whether it is a vaid dictionary.//字典是否为空
-#define kIsDictionary(objDict) (objDict != nil && [objDict isKindOfClass:[NSDictionary class]])
+#define kIsVaidDictionary(objDict) (objDict != nil && [objDict isKindOfClass:[NSDictionary class]])
 
 // Judge whether it is a valid array.//数组是否为空
-#define kIsArray(objArray) (objArray != nil && [objArray isKindOfClass:[NSArray class]])
+#define kIsVaidArray(objArray) (objArray != nil && [objArray isKindOfClass:[NSArray class]])
 
-//获取系统时间戳
+//获取系统时间戳 (UTC)
 #define getCurentTime [NSString stringWithFormat:@"%ld", (long)[[NSDate date] timeIntervalSince1970]]
 
-//////////////////////////////////////////////////////////////////////////
 /*
  * 工程字体
  */

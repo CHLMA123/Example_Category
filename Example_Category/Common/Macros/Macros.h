@@ -13,20 +13,12 @@
  * iOS宏定义的使用与规范
  */
 
+#import "PathMacros.h"
 #import "UtilsMacros.h"
-
-#import "APIStringMacros.h"
-
+#import "DebugMacros.h"
 #import "DimensMacros.h"
 
+#import "APIStringMacros.h"
 #import "NotificationMacros.h"
-
-//#import "SharePlatformMacros.h"
-
-//#import "StringMacros.h"
-
-#import "UserBehaviorMacros.h"
-
-#import "PathMacros.h"
 
 #endif /* Macros_h */

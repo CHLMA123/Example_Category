@@ -73,8 +73,8 @@
     }
     hasCameraRight = YES;
     
-    _scanSize = CGSizeMake(kScreenWidth * 0.8, kScreenWidth * 0.8);
-    _scanRect = CGRectMake((kScreenWidth - _scanSize.width)/2, 100, _scanSize.width, _scanSize.height);
+    _scanSize = CGSizeMake(SCREEN_WIDTH * 0.8, SCREEN_WIDTH * 0.8);
+    _scanRect = CGRectMake((SCREEN_WIDTH - _scanSize.width)/2, 100, _scanSize.width, _scanSize.height);
     
     imageView = [[UIImageView alloc]initWithFrame:_scanRect];
     imageView.image = [UIImage imageNamed:@"contact_scanframe"];
@@ -160,7 +160,7 @@
          scanRectView.layer.borderWidth = 1;
          */
         
-        _output.rectOfInterest = CGRectMake(_scanRect.origin.y/kScreenHeight, _scanRect.origin.x/kScreenWidth, _scanRect.size.height/kScreenWidth, _scanRect.size.width/kScreenWidth);
+        _output.rectOfInterest = CGRectMake(_scanRect.origin.y/SCREEN_HEIGHT, _scanRect.origin.x/SCREEN_WIDTH, _scanRect.size.height/SCREEN_WIDTH, _scanRect.size.width/SCREEN_WIDTH);
         /**
          // Session
          *  AVCaptureSession 可以设置 sessionPreset 属性，这个决定了视频输入每一帧图像质量的大小。

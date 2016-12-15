@@ -12,7 +12,7 @@
 @implementation UIFont (MyFont)
 
 + (UIFont *)FontWithSize:(CGFloat)size {
-    CGFloat realSize = size * ratio;
+    CGFloat realSize = size * SCREEN_RATIO;
     return [UIFont systemFontOfSize:realSize];
 }
 

@@ -37,7 +37,7 @@
     if (!_imageView) {
         _imageView = [[UIImageView alloc]init];
         _imageView.bounds = CGRectMake(0, 0, 200, 200);
-        _imageView.center = CGPointMake(self.view.center.x, kScreenHeight-220);
+        _imageView.center = CGPointMake(self.view.center.x, SCREEN_HEIGHT-220);
     }
     return _imageView;
 }

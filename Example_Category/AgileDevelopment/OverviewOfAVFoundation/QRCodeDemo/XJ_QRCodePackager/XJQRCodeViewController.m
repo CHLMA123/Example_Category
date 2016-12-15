@@ -194,7 +194,7 @@
         [self.view.layer insertSublayer:previewLayer atIndex:0];
         
         //9.设置有效扫描区域，默认整个图层(很特别，1、要除以屏幕宽高比例，2、其中x和y、width和height分别互换位置)
-        CGRect rect = CGRectMake(kBgImgY/kScreenHeight, kBgImgX/kScreenWidth, kBgImgWidth/kScreenHeight, kBgImgWidth/kScreenWidth);
+        CGRect rect = CGRectMake(kBgImgY/SCREEN_HEIGHT, kBgImgX/SCREEN_WIDTH, kBgImgWidth/SCREEN_HEIGHT, kBgImgWidth/SCREEN_WIDTH);
         output.rectOfInterest = rect;
         
         //10.设置中空区域，即有效扫描区域(中间扫描区域透明度比周边要低的效果)

@@ -1,17 +1,13 @@
 //
-//  UserBehaviorMacros.h
+//  DebugMacros.h
 //  Example_Category
 //
-//  Created by MCL on 16/9/7.
+//  Created by MCL on 2016/12/15.
 //  Copyright © 2016年 MCL. All rights reserved.
 //
 
-#ifndef UserBehaviorMacros_h
-#define UserBehaviorMacros_h
-
-#define MIGUOBackgroundColor    RGBCOLOR(229, 229, 229)
-
-#define ScrollHight 31
+#ifndef DebugMacros_h
+#define DebugMacros_h
 
 /**
  *  1 block self
@@ -27,15 +23,6 @@
  // 宏定义之后的用法
  BLOCK_EXEC(completionBlock, arg1, arg2);
  */
-
-#define WEAKSELF typeof(self) __weak weakSelf = self;
-#define STRONGSELF typeof(weakSelf) __strong strongSelf = weakSelf;
-
-/*
- __weak __typeof(self)weakSelf = self;
- __strong __typeof(weakSelf)strongSelf = weakSelf;
- */
-
 
 /**
  *  2 MRC和ARC混编设置方式
@@ -55,19 +42,13 @@
  */
 
 #ifdef DEBUG
-
-#define MSLog(...) NSLog(@"%s (%d) \n%@", __PRETTY_FUNCTION__, __LINE__, [NSString stringWithFormat:__VA_ARGS__])
-//#define LOG_METHOD NSLog(@"%@/%@", NSStringFromClass([self class]), NSStringFromSelector(_cmd))
-#define COUNT(p) NSLog(@"%s(%d): count = %d\n", __func__, __LINE__, [p retainCount]);
-#define LOG_TRACE(x) do {printf x; putchar('\n'); fflush(stdout);} while (0)
-
+#define DebugLog(...)       NSLog(__VA_ARGS__)
+#define DebugLogMethod()    NSLog(@"%s (%d)", __PRETTY_FUNCTION__, __LINE__)
+//#define DebugLogMoreInfo(...)     NSLog(@"%s (%d): %@", __func__, __LINE__, [NSString stringWithFormat:__VA_ARGS__])
 #else
-
-#define FSLog(...)
-//#define LOG_METHOD
-#define COUNT(p)
-#define LOG_TRACE(x)
-
+#define DebugLog(...)
+#define DebugLogMethod()
+//#define DebugLogMoreInfo(...)
 #endif
 
 /**
@@ -102,14 +83,11 @@
  #define TARGET_IPHONE_SIMULATOR     0
  */
 
-/**
- *  6 showModelContent
- */
-
-#define showModelContent(model) [AssistantTool dictionaryFromModel:model]
-
-
+///**
+// *  6 showModelContent
+// */
+//
+//#define showModelContent(model) [AssistantTool dictionaryFromModel:model]
 
 
-
-#endif /* UserBehaviorMacros_h */
+#endif /* DebugMacros_h */

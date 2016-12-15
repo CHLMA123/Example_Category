@@ -24,8 +24,8 @@
     NSString *reasonstring = [NSString stringWithFormat:@"%@\n%@",
                               @"Failed to fine camera information.",
                               @"This camera is already registered by another account, if you forget the old account, please send Email with your camera Mac sticker picture to ipcamreset@yale.co.uk"];
-    CGSize textsize = [self sizeWithText:reasonstring font:[UIFont systemFontOfSize:17] maxWidth:kScreenWidth - 20];
-    lable.frame = CGRectMake(10, 65, kScreenWidth - 20, textsize.height * 2);
+    CGSize textsize = [self sizeWithText:reasonstring font:[UIFont systemFontOfSize:17] maxWidth:SCREEN_WIDTH - 20];
+    lable.frame = CGRectMake(10, 65, SCREEN_WIDTH - 20, textsize.height * 2);
     lable.numberOfLines = 0;
     
     NSMutableAttributedString *content = [[NSMutableAttributedString alloc] initWithString:reasonstring];
@@ -57,7 +57,7 @@
 //    }];
     
     // 2. 重绘UILabel添加下划线
-    CGRect rect = CGRectMake(10, CGRectGetMaxY(lable.frame), kScreenWidth - 20, 200);
+    CGRect rect = CGRectMake(10, CGRectGetMaxY(lable.frame), SCREEN_WIDTH - 20, 200);
     NSString *lblContent = @"This camera is already registered by another account, if you forget the old account, please send Email with your camera Mac sticker picture to ipcamreset@yale.co.uk" ;
     NSString *attributeStr = @"ipcamreset@yale.co.uk";
     UnderLineLabel *lable2 = [[UnderLineLabel alloc] initWithFrame:rect withLableText:lblContent withAttributedString:attributeStr];
