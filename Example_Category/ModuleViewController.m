@@ -6,7 +6,7 @@
 //  Copyright © 2016年 MCL. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ModuleViewController.h"
 #import "GetDeviceAllInfo.h"
 #import "AnimatedImageViewController.h"
 #import "CreateAnimatedViewController.h"
@@ -14,6 +14,8 @@
 #import "OverviewNSDateController.h"
 #import "RegularViewController.h"
 #import "NSURLSessionController.h"
+
+#import "ScreenShotsManager.h"
 
 
 #define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
@@ -25,7 +27,7 @@ typedef NS_ENUM(NSInteger, RotateState) {
 
 static NSInteger i = 0;
 
-@interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface ModuleViewController ()<UITableViewDelegate, UITableViewDataSource>
 {
     CGFloat imageviewAngle;  /// 旋转角度
     UIImageView *imageView;  /// 旋转ImageView
@@ -35,7 +37,7 @@ static NSInteger i = 0;
 
 @end
 
-@implementation ViewController
+@implementation ModuleViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -53,10 +55,10 @@ static NSInteger i = 0;
 //    [self NSRecursiveLockAction];               // 3 递归锁使用
 //    [self getWIFINameAction];                   // 4 wifiName
 //    [self getContentTypeOfImage];               // 5 判断是否为gif/png图片的正确姿势
-    
-//    [self getstartOfToday];                     // 6 凌晨时间获取
+
+    [self sizeToFitTest];             //6 UILable 根据文字内容进行大小设置 sizeThatFits和sizeToFit
 //    [self otherNSStringTestAction];             // 7 NSString使用stringWithFormat拼接的相关知识
-//    [self getCurrentTimeZone];                  // 8 getCurrentTimeZone
+    
 //    [self compareStringTest];                   // 9 compareStringTest
 //    [self blockTestAction];                     // 10 block 可以作为参数传递
     
@@ -71,16 +73,12 @@ static NSInteger i = 0;
 //    [self GetContendImageView];                 // 16 图片处理只拿到图片的一部分
 //    [self setImageforUIView];                   // 17 给UIView设置图片
 //    [self buildBarButtonItem];                  // 18 旋转动画
-//    [self Screenshots];                         // 19 截屏
+
 //    [self tableViewContentInset];               // 20 指定滚动条在scrollview的位置
     
 //    [self testArraySum];                        // 21 array快速求总和, 最大值, 最小值和平均值
     
 //    [self createButtonView];                    // 26 左右结构的button fsKeepPasswordButton
-//    [self OverviewSimplePing];                  // 27 OverviewSimplePing
-//    [self OverviewSimplePing2];                 // 28 OverviewSimplePing
-//    [self OverviewNSDate];                      // 29 OverviewNSDate
-//    [self OverviewRegularExpression];           // 30 OverviewRegularExpression
     
 //    NSString *string = @"0";
 //    NSLog(@"...longLongValue...: %lld", [string longLongValue]);
@@ -91,7 +89,10 @@ static NSInteger i = 0;
     
     NSString *str = @"-1";
     NSLog(@"[str integerValue] = %ld", (long)[str integerValue]);
+    
+    
 }
+
 
 #pragma mark - 『iOS应用间相互跳转』
 //- (void)openScheme:(NSString *)scheme {
@@ -130,9 +131,6 @@ static NSInteger i = 0;
     fsKeepPasswordButton.center = self.view.center;
     [self.view addSubview:fsKeepPasswordButton];
 }
-
-
-
 
 #pragma mark - array快速求总和, 最大值, 最小值和平均值
 - (void)testArraySum{
@@ -213,62 +211,11 @@ static NSInteger i = 0;
 
 - (void)ScreenshotsAction{
     
-    NSLog(@"%f", [UIScreen mainScreen].brightness);
-    [[UIScreen mainScreen]setBrightness:0.8];//点亮手机屏幕
+//    NSLog(@"%f", [UIScreen mainScreen].brightness);
+//    [[UIScreen mainScreen]setBrightness:0.8];//点亮手机屏幕
     
-    UIImage *image = [self makeImageWithView:self.view];
-    screenshotsImageView.image = image;
-    [self saveImageToPhotos:image];
-}
-
-- (UIImage *)makeImageWithView:(UIView *)view
-{
-    CGSize s = view.bounds.size;
-    // 下面方法，第一个参数表示区域大小。第二个参数表示是否是非透明的。如果需要显示半透明效果，需要传NO，否则传YES。第三个参数就是屏幕密度了，关键就是第三个参数。
-    
-    //    float scale = [[UIScreenmainScreen] scale];//得到设备的分辨率
-    //    scale = 1; 的时候是代表当前设备是320*480的分辨率（就是iphone4之前的设备）
-    //    scale = 2; 的时候是代表分辨率为640*960的分辨率
-    NSLog(@"%f",[UIScreen mainScreen].scale);
-    //绘图
-    UIGraphicsBeginImageContextWithOptions(s, NO, [UIScreen mainScreen].scale);
-    //渲染
-    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
-    //生产图片
-    UIImage*image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return image;
-}
-
-//保存图片到相框
-- (void)saveImageToPhotos:(UIImage *)savedImage
-
-{
-    //    image
-    //    要保存到用户设备中的图片
-    //    completionTarget
-    //    当保存完成后，回调方法所在的对象
-    //    completionSelector
-    //    当保存完成后，所调用的回调方法。 形式如下：
-    //    - (void) image: (UIImage *) image
-    //didFinishSavingWithError: (NSError *) error
-    //contextInfo: (void *) contextInfo;
-    //    contextInfo
-    //    可选的参数，保存了一个指向context数据的指针，它将传递给回调方法。
-    UIImageWriteToSavedPhotosAlbum(savedImage,self, @selector(image:didFinishSavingWithError:contextInfo:),NULL);
-    
-}
-
-- (void)image: (UIImage *) image didFinishSavingWithError: (NSError *) error contextInfo: (void *) contextInfo
-{
-    NSString *msg = nil ;
-    if(error != NULL){
-        msg = @"保存图片失败" ;
-    }else{
-        msg = @"保存图片成功" ;
-    }
-    NSLog(@"%@", msg);
-    
+    UIImage *image = [[ScreenShotsManager shareManager] makeScreenShots:self.view];
+    NSLog(@"%@", NSStringFromCGSize(image.size));
 }
 
 #pragma mark - 旋转动画
@@ -474,7 +421,6 @@ static NSInteger i = 0;
     
 }
 
-
 #pragma mark - compareStringTest
 - (void)compareStringTest{
     
@@ -485,20 +431,6 @@ static NSInteger i = 0;
     NSComparisonResult ret = [string1 compare:string2];
     NSComparisonResult ret1 = [string3 compare:string2];
     NSLog(@"-- 比较结果 ret = %ld ret1 = %ld", (long)ret , (long)ret1);
-}
-
-#pragma mark - getCurrentTimeZone
-- (void)getCurrentTimeZone{
-    
-    //手机时区获取 和夏令时有关
-    NSDate *sourceDate = [NSDate date];
-    NSTimeZone *sourcetimeZone =[NSTimeZone localTimeZone];
-    NSInteger srcGMTOffset = [sourcetimeZone secondsFromGMTForDate:sourceDate];
-    NSTimeInterval dstOffset = [sourcetimeZone daylightSavingTimeOffsetForDate:sourceDate];
-    NSInteger dstGMTOffset = srcGMTOffset - dstOffset;
-    NSLog(@"----- dstGMTOffset = %ld",(long)dstGMTOffset);//dstGMTOffset 是相对UTC时间的偏移值，如果是北京时间，那么dstGMTOffset = 288000, 即8h .
-    NSTimeZone *timeZone = [NSTimeZone timeZoneForSecondsFromGMT:dstGMTOffset];
-    NSLog(@"----- timeZone = %@",timeZone);
 }
 
 #pragma mark - stringWithFormat拼接的相关知识
@@ -536,19 +468,58 @@ static NSInteger i = 0;
     
 }
 
-#pragma mark - 凌晨时间获取
-- (void)getstartOfToday{
+#pragma mark - UILable 根据文字内容进行大小设置 sizeThatFits和sizeToFit
+/**
+ UILabel经常用到的方法
+ - (void)sizeToFit
+ - (CGSize)sizeThatFits:(CGSize)size
+ 解释如下：
+ 
+ sizeToFit会自动调用sizeThatFits方法；
+ 
+ sizeToFit不应该在子类中被重写，应该重写sizeThatFits
+ 
+ sizeThatFits传入的参数是receiver当前的size，返回一个适合的size
+ 
+ sizeToFit可以被手动直接调用
+ 
+ sizeToFit和sizeThatFits方法都没有递归，对subviews也不负责，只负责自己
+ */
+- (void)sizeToFitTest{
     
-    NSDate *nowDate = [NSDate date];
-    NSLog(@"nowDate : %@", nowDate);
+    NSString *str=@"左右结构，图片在左边，文字在右边。左右结构，图片在左边，文字在右边。";
     
-    NSDate *startOfToday = [[NSCalendar currentCalendar] startOfDayForDate:nowDate];
-    NSLog(@"startOfToday : %@", startOfToday);
+    UILabel *sizeLable = [[UILabel alloc] initWithFrame:CGRectMake(10, 65, 200, 30)];
+    [self.view addSubview:sizeLable];
+    sizeLable.text = str;
+    sizeLable.textColor=[UIColor whiteColor];
+    sizeLable.backgroundColor=[UIColor lightGrayColor];
+    sizeLable.textAlignment=NSTextAlignmentCenter;
+    sizeLable.numberOfLines = 0;
+    {
+        //调整当前view的大小自适应
+        //[sizeLable sizeToFit];//调整label的大小来适应文字
+    }
+    {
+        sizeLable.adjustsFontSizeToFitWidth = YES;//文本文字自适应大小
+        //sizeThatFits传入的参数是receiver当前的size，返回一个适合的size
+        [sizeLable sizeThatFits:CGSizeMake(100, 30)];
+    }
     
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDateComponents *components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:nowDate];
-    NSDate *previousDate = [calendar dateFromComponents:components];
-    NSLog(@"previousDate : %@", previousDate);
+    UILabel *notice=[[UILabel alloc]initWithFrame:CGRectMake(10, 100, 200, 30)];
+    [self.view addSubview:notice];
+    notice.text=str;
+    notice.textColor=[UIColor whiteColor];
+    notice.backgroundColor=[UIColor lightGrayColor];
+    notice.textAlignment=NSTextAlignmentCenter;
+    //文本文字自适应大小
+    notice.adjustsFontSizeToFitWidth = YES;
+    //使用sizeThatFit计算lable大小
+    CGSize sizeThatFit=[notice sizeThatFits:CGSizeZero];
+    //重新指定frame
+    notice.frame=CGRectMake(0, 0, sizeThatFit.width, sizeThatFit.height);
+    notice.center = CGPointMake(self.view.bounds.size.width/2, 200);
+    
 }
 
 #pragma mark - 判断是否为gif/png图片的正确姿势
@@ -602,7 +573,7 @@ static NSInteger i = 0;
 }
 
 #pragma mark - 递归锁使用
-#warning 参考博客地址：http://www.cocoachina.com/ios/20150513/11808.html
+//#warning 参考博客地址：http://www.cocoachina.com/ios/20150513/11808.html
 - (void)NSRecursiveLockAction {
     //递归锁使用
     NSRecursiveLock *lock =[[NSRecursiveLock alloc] init];

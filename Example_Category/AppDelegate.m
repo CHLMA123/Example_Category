@@ -10,7 +10,6 @@
 #import "CrashReport.h"
 #import "DebugLogManger.h"
 #import "RootViewController.h"
-//#import "ViewController.h"
 
 @interface AppDelegate ()
 

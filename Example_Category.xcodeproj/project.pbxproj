@@ -87,6 +87,7 @@
 		3645A36B1DC6E03200042806 /* UIViewController+Swizzled.m in Sources */ = {isa = PBXBuildFile; fileRef = 3645A3691DC6E03200042806 /* UIViewController+Swizzled.m */; };
 		36472A061DC1EE870063909D /* UICountingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36472A051DC1EE870063909D /* UICountingLabel.m */; };
 		36472A081DC1EE980063909D /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 36472A071DC1EE980063909D /* README.md */; };
+		364BD9701E05190B00516CF5 /* ScreenShotsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BD96F1E05190B00516CF5 /* ScreenShotsManager.m */; };
 		3651012E1DD5BC9C00A0AA27 /* NSURLSessionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3651012D1DD5BC9C00A0AA27 /* NSURLSessionController.m */; };
 		365101301DD5C14A00A0AA27 /* URL加载框架.png in Resources */ = {isa = PBXBuildFile; fileRef = 3651012F1DD5C14A00A0AA27 /* URL加载框架.png */; };
 		365149EF1D7A60330047BDBC /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 365149EE1D7A60330047BDBC /* README.md */; };
@@ -174,7 +175,7 @@
 		36C1DD881D98012F00D642D4 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C1DD871D98012F00D642D4 /* BaseViewController.m */; };
 		36C891701D0CEAE100DC86E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C8916F1D0CEAE100DC86E0 /* main.m */; };
 		36C891731D0CEAE100DC86E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C891721D0CEAE100DC86E0 /* AppDelegate.m */; };
-		36C891761D0CEAE100DC86E0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C891751D0CEAE100DC86E0 /* ViewController.m */; };
+		36C891761D0CEAE100DC86E0 /* ModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C891751D0CEAE100DC86E0 /* ModuleViewController.m */; };
 		36C891791D0CEAE100DC86E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36C891771D0CEAE100DC86E0 /* Main.storyboard */; };
 		36C8917B1D0CEAE100DC86E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36C8917A1D0CEAE100DC86E0 /* Assets.xcassets */; };
 		36C8917E1D0CEAE100DC86E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36C8917C1D0CEAE100DC86E0 /* LaunchScreen.storyboard */; };
@@ -320,6 +321,8 @@
 		36472A041DC1EE870063909D /* UICountingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICountingLabel.h; sourceTree = "<group>"; };
 		36472A051DC1EE870063909D /* UICountingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICountingLabel.m; sourceTree = "<group>"; };
 		36472A071DC1EE980063909D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		364BD96E1E05190B00516CF5 /* ScreenShotsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenShotsManager.h; sourceTree = "<group>"; };
+		364BD96F1E05190B00516CF5 /* ScreenShotsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreenShotsManager.m; sourceTree = "<group>"; };
 		3651012C1DD5BC9C00A0AA27 /* NSURLSessionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLSessionController.h; sourceTree = "<group>"; };
 		3651012D1DD5BC9C00A0AA27 /* NSURLSessionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLSessionController.m; sourceTree = "<group>"; };
 		3651012F1DD5C14A00A0AA27 /* URL加载框架.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "URL加载框架.png"; sourceTree = "<group>"; };
@@ -426,8 +429,8 @@
 		36C8916F1D0CEAE100DC86E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		36C891711D0CEAE100DC86E0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		36C891721D0CEAE100DC86E0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		36C891741D0CEAE100DC86E0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		36C891751D0CEAE100DC86E0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		36C891741D0CEAE100DC86E0 /* ModuleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModuleViewController.h; sourceTree = "<group>"; };
+		36C891751D0CEAE100DC86E0 /* ModuleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModuleViewController.m; sourceTree = "<group>"; };
 		36C891781D0CEAE100DC86E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		36C8917A1D0CEAE100DC86E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36C8917D1D0CEAE100DC86E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -773,6 +776,15 @@
 			path = UICountingLabel;
 			sourceTree = "<group>";
 		};
+		364BD96D1E0518F600516CF5 /* ScreenShots */ = {
+			isa = PBXGroup;
+			children = (
+				364BD96E1E05190B00516CF5 /* ScreenShotsManager.h */,
+				364BD96F1E05190B00516CF5 /* ScreenShotsManager.m */,
+			);
+			path = ScreenShots;
+			sourceTree = "<group>";
+		};
 		3651012B1DD5BC6900A0AA27 /* NSURLSesstionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1062,8 +1074,8 @@
 				36E8D9E31E029057006A2711 /* RootViewController.h */,
 				36E8D9E41E029057006A2711 /* RootViewController.m */,
 				36514A001D7A6C8A0047BDBC /* README.md */,
-				36C891741D0CEAE100DC86E0 /* ViewController.h */,
-				36C891751D0CEAE100DC86E0 /* ViewController.m */,
+				36C891741D0CEAE100DC86E0 /* ModuleViewController.h */,
+				36C891751D0CEAE100DC86E0 /* ModuleViewController.m */,
 				36C8916E1D0CEAE100DC86E0 /* Supporting Files */,
 			);
 			path = Example_Category;
@@ -1129,6 +1141,7 @@
 		36E159411DC6E9FA00E4C10C /* FunctionalModule */ = {
 			isa = PBXGroup;
 			children = (
+				364BD96D1E0518F600516CF5 /* ScreenShots */,
 				36E159421DC6E9FA00E4C10C /* LogMangager */,
 				36E159451DC6E9FA00E4C10C /* NoteView */,
 				36E1594E1DC6E9FA00E4C10C /* Singleton */,
@@ -1350,7 +1363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36C891761D0CEAE100DC86E0 /* ViewController.m in Sources */,
+				36C891761D0CEAE100DC86E0 /* ModuleViewController.m in Sources */,
 				36C1DD881D98012F00D642D4 /* BaseViewController.m in Sources */,
 				36E8D9E51E029057006A2711 /* RootViewController.m in Sources */,
 				3619F94F1DC6EBEE002FA72D /* STDebugTextView.m in Sources */,
@@ -1419,6 +1432,7 @@
 				3619F93A1DC6EBEE002FA72D /* AVFoundationController.m in Sources */,
 				3619F9381DC6EBEE002FA72D /* OverviewNSDateController.m in Sources */,
 				36514A011D7A6C8A0047BDBC /* README.md in Sources */,
+				364BD9701E05190B00516CF5 /* ScreenShotsManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

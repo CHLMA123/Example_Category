@@ -8,6 +8,7 @@
 
 #import "RootViewController.h"
 #import "Reachability.h"
+#import "ModuleViewController.h"
 #import "LoadHtmlDocController.h"
 #import "AttributeTextTapController.h"
 #import "SingleClass.h"
@@ -55,7 +56,8 @@
     [self networkMonitoringAction];             // 0『iOS应用networkMonitoring』
     
     NSMutableArray *mArr = [[NSMutableArray alloc] init];
-    // 0 ~ 10
+    // 0 ~ 9
+    [mArr addObject:@"LoadModuleView"];
     [mArr addObject:@"LoadHtmlDocView"];
     [mArr addObject:@"attributeTextTapAction"];
     [mArr addObject:@"overviewSingletonMode"];
@@ -65,8 +67,8 @@
     [mArr addObject:@"overviewPaoMaView"];
     [mArr addObject:@"LoadNSURLSessionRequest"];
     [mArr addObject:@"overviewSimplePing"];
+    // 10 ~ ..
     [mArr addObject:@"overviewNSDate"];
-    // 11 ~ 20
     [mArr addObject:@"OverviewRegularExpression"];
     self.datasource = mArr;
 }
@@ -74,29 +76,31 @@
 - (void)responseCellAction:(NSIndexPath *)indexpath{
 
     switch (indexpath.row) {
-        case 0:{ [self LoadHtmlDocView]; }
+        case 0:{ [self LoadModuleView]; }
             break;
-        case 1:{ [self attributeTextTapAction]; }
+        case 1:{ [self LoadHtmlDocView]; }
             break;
-        case 2:{ [self overviewSingletonMode]; }
+        case 2:{ [self attributeTextTapAction]; }
             break;
-        case 3:{ [self overviewAVFoundation]; }
+        case 3:{ [self overviewSingletonMode]; }
             break;
-        case 4:{ [self overviewStructure]; }
+        case 4:{ [self overviewAVFoundation]; }
             break;
-        case 5:{ [self overviewNoteView]; }
+        case 5:{ [self overviewStructure]; }
             break;
-        case 6:{ [self overviewPaoMaView]; }
+        case 6:{ [self overviewNoteView]; }
             break;
-        case 7:{ [self LoadNSURLSessionRequest]; }
+        case 7:{ [self overviewPaoMaView]; }
             break;
-        case 8:{ [self overviewSimplePing]; }
+        case 8:{ [self LoadNSURLSessionRequest]; }
             break;
-        case 9:{ [self overviewNSDate]; }
+        case 9:{ [self overviewSimplePing]; }
             break;
-        case 10:{ [self OverviewRegularExpression]; }
+        case 10:{ [self overviewNSDate]; }
             break;
-//        case 11:{}
+        case 11:{ [self OverviewRegularExpression]; }
+            break;
+//        case 12:{}
 //            break;
             
         default:
@@ -210,6 +214,14 @@
 - (void)LoadHtmlDocView{
     
     LoadHtmlDocController *vc = [[LoadHtmlDocController alloc] init];
+    vc.view.backgroundColor = [UIColor whiteColor];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+#pragma mark - LoadModuleView
+- (void)LoadModuleView{
+    
+    ModuleViewController *vc = [[ModuleViewController alloc] init];
     vc.view.backgroundColor = [UIColor whiteColor];
     [self.navigationController pushViewController:vc animated:YES];
 }

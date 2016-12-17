@@ -17,12 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self setupData];
-    
+    [self setupData];           //Other
 }
 
 - (void)setupData{
     
+//    [self getstartOfToday];//凌晨时间获取
 //    [self setupData0];// NSDate初始化
 //    [self setupData1];// NSDate与NSString的转换
 //    [self setupDate2];// NSTimeInterval 是一个以秒为单位的时间片。
@@ -30,6 +30,22 @@
 //    [self setupDate4];// NSDateComponents获取
     [self setupDate5];// NSDateFormatter格式化参数
     [self setupDate6];
+    
+}
+
+#pragma mark - 凌晨时间获取
+- (void)getstartOfToday{
+    
+    NSDate *nowDate = [NSDate date];
+    NSLog(@"nowDate : %@", nowDate);
+    
+    NSDate *startOfToday = [[NSCalendar currentCalendar] startOfDayForDate:nowDate];
+    NSLog(@"startOfToday : %@", startOfToday);
+    
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:nowDate];
+    NSDate *previousDate = [calendar dateFromComponents:components];
+    NSLog(@"previousDate : %@", previousDate);
 }
 
 #pragma mark - NSDate初始化
@@ -110,6 +126,7 @@
 #pragma mark - NSTimeZone
 - (void)setupDate3{
     
+    //手机时区获取 和夏令时有关
     NSTimeZone *syszone = [NSTimeZone systemTimeZone];
     NSTimeZone *localzone = [NSTimeZone localTimeZone];
     NSTimeZone *defaltzone = [NSTimeZone defaultTimeZone];
