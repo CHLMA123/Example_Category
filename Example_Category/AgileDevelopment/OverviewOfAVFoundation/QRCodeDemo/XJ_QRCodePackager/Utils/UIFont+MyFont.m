@@ -7,7 +7,6 @@
 //
 
 #import "UIFont+MyFont.h"
-#import "UIView+Frame.h"
 
 @implementation UIFont (MyFont)
 

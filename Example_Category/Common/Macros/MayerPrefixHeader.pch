@@ -19,11 +19,13 @@
 #endif
 
 #import "AppDelegate.h"
-#import "UIView+Extend.h"
+#import "UIView+LayoutMethods.h"
+#import "UIView+HandyAutoLayout.h"
+
+#import "UIView+Toast.h"
 
 #import "MBProgressHUD.h"
 #import "MBProgressHUD+Extend.h"
-#import "UIView+Toast.h"
 
 //#import "Masonry.h"
 //#import "MJRefresh.h"
