@@ -43,6 +43,15 @@
     self.view.backgroundColor = RGBCOLOR(48.f, 48.f, 64.f);
     [self setupData];
     [self setupView];
+    
+    //[self lldbDebugTest];
+}
+
+- (void)lldbDebugTest{
+    static NSInteger i = 0;
+    while (1) {
+        NSLog(@"%ld", (long)i++);
+    }
 }
 
 #pragma mark - Private Methods

@@ -10,6 +10,7 @@
 #import "CrashReport.h"
 #import "DebugLogManger.h"
 #import "RootViewController.h"
+#import "TimeIntervalManager.h"
 
 @interface AppDelegate ()
 
@@ -31,7 +32,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+    [[TimeIntervalManager shareManager] beginInterval];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     RootViewController *rootVC = [[RootViewController alloc] init];
@@ -51,7 +52,7 @@
     NSString *str = @"abcdef";
     DebugLog(@"%@", str);
     DebugLogMethod();
-    
+    [[TimeIntervalManager shareManager] endIntervalWithTip:@"Application FinishLaunching..."];
     return YES;
 }
 

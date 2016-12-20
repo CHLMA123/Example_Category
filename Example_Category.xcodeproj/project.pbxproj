@@ -101,6 +101,7 @@
 		36514A571D7A7A560047BDBC /* MBProgressHUD+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 36514A511D7A7A560047BDBC /* MBProgressHUD+Extend.m */; };
 		36514A581D7A7A560047BDBC /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 36514A531D7A7A560047BDBC /* MBProgressHUD.m */; };
 		36514A591D7A7A560047BDBC /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 36514A561D7A7A560047BDBC /* UIView+Toast.m */; };
+		365DA5531E0935F300F67443 /* TimeIntervalManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 365DA5521E0935F300F67443 /* TimeIntervalManager.m */; };
 		3674A9DA1DD1B6A5001CA94A /* Default@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3674A9B71DD1B6A5001CA94A /* Default@3x.png */; };
 		3674A9DB1DD1B6A5001CA94A /* findhome_1455525720807.png in Resources */ = {isa = PBXBuildFile; fileRef = 3674A9B91DD1B6A5001CA94A /* findhome_1455525720807.png */; };
 		3674A9DC1DD1B6A5001CA94A /* findhome_20160126194705meishi.png in Resources */ = {isa = PBXBuildFile; fileRef = 3674A9BA1DD1B6A5001CA94A /* findhome_20160126194705meishi.png */; };
@@ -346,6 +347,8 @@
 		36514A551D7A7A560047BDBC /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
 		36514A561D7A7A560047BDBC /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		36514A811D7AA3900047BDBC /* MayerPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MayerPrefixHeader.pch; path = Macros/MayerPrefixHeader.pch; sourceTree = "<group>"; };
+		365DA5511E0935F300F67443 /* TimeIntervalManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeIntervalManager.h; sourceTree = "<group>"; };
+		365DA5521E0935F300F67443 /* TimeIntervalManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeIntervalManager.m; sourceTree = "<group>"; };
 		3674A9B71DD1B6A5001CA94A /* Default@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@3x.png"; sourceTree = "<group>"; };
 		3674A9B91DD1B6A5001CA94A /* findhome_1455525720807.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = findhome_1455525720807.png; sourceTree = "<group>"; };
 		3674A9BA1DD1B6A5001CA94A /* findhome_20160126194705meishi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = findhome_20160126194705meishi.png; sourceTree = "<group>"; };
@@ -899,6 +902,15 @@
 			path = Macros;
 			sourceTree = "<group>";
 		};
+		365DA5501E0935E600F67443 /* TimeInterval */ = {
+			isa = PBXGroup;
+			children = (
+				365DA5511E0935F300F67443 /* TimeIntervalManager.h */,
+				365DA5521E0935F300F67443 /* TimeIntervalManager.m */,
+			);
+			path = TimeInterval;
+			sourceTree = "<group>";
+		};
 		3674A9AF1DD1B4B0001CA94A /* LoadHtmlDocView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1153,6 +1165,7 @@
 		36E159411DC6E9FA00E4C10C /* FunctionalModule */ = {
 			isa = PBXGroup;
 			children = (
+				365DA5501E0935E600F67443 /* TimeInterval */,
 				364BD96D1E0518F600516CF5 /* ScreenShots */,
 				36E159421DC6E9FA00E4C10C /* LogMangager */,
 				36E159451DC6E9FA00E4C10C /* NoteView */,
@@ -1438,6 +1451,7 @@
 				3619F9541DC6EBEE002FA72D /* RegularViewController.m in Sources */,
 				3619F9451DC6EBEE002FA72D /* QRCodeCreateViewController.m in Sources */,
 				3619F9441DC6EBEE002FA72D /* PageViewController.m in Sources */,
+				365DA5531E0935F300F67443 /* TimeIntervalManager.m in Sources */,
 				36C891DE1D0CEB6F00DC86E0 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				365149EF1D7A60330047BDBC /* README.md in Sources */,
 				36514A571D7A7A560047BDBC /* MBProgressHUD+Extend.m in Sources */,
