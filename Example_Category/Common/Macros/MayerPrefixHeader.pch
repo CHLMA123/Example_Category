@@ -16,6 +16,7 @@
 #import <Foundation/Foundation.h>
 #import "Macros.h"
 #import "MHelperUIKit.h"
+#import "AFNetworking.h"
 #endif
 
 #import "AppDelegate.h"
