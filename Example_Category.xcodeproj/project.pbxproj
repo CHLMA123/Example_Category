@@ -15,6 +15,21 @@
 		361A62F51DF258BC007050C2 /* record_upArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 361A62ED1DF258BC007050C2 /* record_upArrow@2x.png */; };
 		361A62F61DF258BC007050C2 /* record_upArrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 361A62EE1DF258BC007050C2 /* record_upArrow@3x.png */; };
 		361A62F71DF258BC007050C2 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 361A62F01DF258BC007050C2 /* UIColor+Hex.m */; };
+		362DF5861E0BAF6500260F15 /* CalendarDateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 362DF57D1E0BAF6500260F15 /* CalendarDateCell.m */; };
+		362DF5871E0BAF6500260F15 /* CalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 362DF57F1E0BAF6500260F15 /* CalendarView.m */; };
+		362DF5881E0BAF6500260F15 /* CalendarWeekCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 362DF5811E0BAF6500260F15 /* CalendarWeekCell.m */; };
+		362DF5891E0BAF6500260F15 /* DatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 362DF5831E0BAF6500260F15 /* DatePickerView.m */; };
+		362DF58A1E0BAF6500260F15 /* NSDate+Calendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 362DF5851E0BAF6500260F15 /* NSDate+Calendar.m */; };
+		362DF5A41E0BAFA500260F15 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 362DF58C1E0BAFA500260F15 /* Info.plist */; };
+		362DF5A51E0BAFA500260F15 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 362DF58E1E0BAFA500260F15 /* MASCompositeConstraint.m */; };
+		362DF5A61E0BAFA500260F15 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 362DF5911E0BAFA500260F15 /* MASConstraint.m */; };
+		362DF5A71E0BAFA500260F15 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 362DF5931E0BAFA500260F15 /* MASConstraintMaker.m */; };
+		362DF5A81E0BAFA500260F15 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 362DF5951E0BAFA500260F15 /* MASLayoutConstraint.m */; };
+		362DF5A91E0BAFA500260F15 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 362DF5991E0BAFA500260F15 /* MASViewAttribute.m */; };
+		362DF5AA1E0BAFA500260F15 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 362DF59B1E0BAFA500260F15 /* MASViewConstraint.m */; };
+		362DF5AB1E0BAFA500260F15 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 362DF59D1E0BAFA500260F15 /* NSArray+MASAdditions.m */; };
+		362DF5AC1E0BAFA500260F15 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 362DF5A01E0BAFA500260F15 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		362DF5AD1E0BAFA500260F15 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 362DF5A21E0BAFA500260F15 /* View+MASAdditions.m */; };
 		3638ABD41D921A58000BE8DA /* NSString+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 3638ABD31D921A58000BE8DA /* NSString+Extend.m */; };
 		3638AC501D92871C000BE8DA /* UIImage+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 3638AC4F1D92871C000BE8DA /* UIImage+Extend.m */; };
 		3645A36A1DC6E03200042806 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 3645A3671DC6E03200042806 /* README.md */; };
@@ -210,6 +225,40 @@
 		361A62EE1DF258BC007050C2 /* record_upArrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "record_upArrow@3x.png"; sourceTree = "<group>"; };
 		361A62EF1DF258BC007050C2 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		361A62F01DF258BC007050C2 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		362DF57C1E0BAF6500260F15 /* CalendarDateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarDateCell.h; sourceTree = "<group>"; };
+		362DF57D1E0BAF6500260F15 /* CalendarDateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarDateCell.m; sourceTree = "<group>"; };
+		362DF57E1E0BAF6500260F15 /* CalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarView.h; sourceTree = "<group>"; };
+		362DF57F1E0BAF6500260F15 /* CalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarView.m; sourceTree = "<group>"; };
+		362DF5801E0BAF6500260F15 /* CalendarWeekCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarWeekCell.h; sourceTree = "<group>"; };
+		362DF5811E0BAF6500260F15 /* CalendarWeekCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarWeekCell.m; sourceTree = "<group>"; };
+		362DF5821E0BAF6500260F15 /* DatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerView.h; sourceTree = "<group>"; };
+		362DF5831E0BAF6500260F15 /* DatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerView.m; sourceTree = "<group>"; };
+		362DF5841E0BAF6500260F15 /* NSDate+Calendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Calendar.h"; sourceTree = "<group>"; };
+		362DF5851E0BAF6500260F15 /* NSDate+Calendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Calendar.m"; sourceTree = "<group>"; };
+		362DF58C1E0BAFA500260F15 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		362DF58D1E0BAFA500260F15 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
+		362DF58E1E0BAFA500260F15 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
+		362DF58F1E0BAFA500260F15 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
+		362DF5901E0BAFA500260F15 /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
+		362DF5911E0BAFA500260F15 /* MASConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
+		362DF5921E0BAFA500260F15 /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
+		362DF5931E0BAFA500260F15 /* MASConstraintMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
+		362DF5941E0BAFA500260F15 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
+		362DF5951E0BAFA500260F15 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
+		362DF5961E0BAFA500260F15 /* Masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
+		362DF5971E0BAFA500260F15 /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
+		362DF5981E0BAFA500260F15 /* MASViewAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
+		362DF5991E0BAFA500260F15 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		362DF59A1E0BAFA500260F15 /* MASViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
+		362DF59B1E0BAFA500260F15 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
+		362DF59C1E0BAFA500260F15 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		362DF59D1E0BAFA500260F15 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		362DF59E1E0BAFA500260F15 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		362DF59F1E0BAFA500260F15 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		362DF5A01E0BAFA500260F15 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		362DF5A11E0BAFA500260F15 /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
+		362DF5A21E0BAFA500260F15 /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
+		362DF5A31E0BAFA500260F15 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		3638ABD21D921A58000BE8DA /* NSString+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extend.h"; sourceTree = "<group>"; };
 		3638ABD31D921A58000BE8DA /* NSString+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extend.m"; sourceTree = "<group>"; };
 		3638AC4E1D92871C000BE8DA /* UIImage+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extend.h"; sourceTree = "<group>"; };
@@ -487,6 +536,54 @@
 			path = UIColor;
 			sourceTree = "<group>";
 		};
+		362DF57B1E0BAF6500260F15 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				362DF57E1E0BAF6500260F15 /* CalendarView.h */,
+				362DF57F1E0BAF6500260F15 /* CalendarView.m */,
+				362DF57C1E0BAF6500260F15 /* CalendarDateCell.h */,
+				362DF57D1E0BAF6500260F15 /* CalendarDateCell.m */,
+				362DF5801E0BAF6500260F15 /* CalendarWeekCell.h */,
+				362DF5811E0BAF6500260F15 /* CalendarWeekCell.m */,
+				362DF5821E0BAF6500260F15 /* DatePickerView.h */,
+				362DF5831E0BAF6500260F15 /* DatePickerView.m */,
+				362DF5841E0BAF6500260F15 /* NSDate+Calendar.h */,
+				362DF5851E0BAF6500260F15 /* NSDate+Calendar.m */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		362DF58B1E0BAFA500260F15 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				362DF58C1E0BAFA500260F15 /* Info.plist */,
+				362DF58D1E0BAFA500260F15 /* MASCompositeConstraint.h */,
+				362DF58E1E0BAFA500260F15 /* MASCompositeConstraint.m */,
+				362DF58F1E0BAFA500260F15 /* MASConstraint+Private.h */,
+				362DF5901E0BAFA500260F15 /* MASConstraint.h */,
+				362DF5911E0BAFA500260F15 /* MASConstraint.m */,
+				362DF5921E0BAFA500260F15 /* MASConstraintMaker.h */,
+				362DF5931E0BAFA500260F15 /* MASConstraintMaker.m */,
+				362DF5941E0BAFA500260F15 /* MASLayoutConstraint.h */,
+				362DF5951E0BAFA500260F15 /* MASLayoutConstraint.m */,
+				362DF5961E0BAFA500260F15 /* Masonry.h */,
+				362DF5971E0BAFA500260F15 /* MASUtilities.h */,
+				362DF5981E0BAFA500260F15 /* MASViewAttribute.h */,
+				362DF5991E0BAFA500260F15 /* MASViewAttribute.m */,
+				362DF59A1E0BAFA500260F15 /* MASViewConstraint.h */,
+				362DF59B1E0BAFA500260F15 /* MASViewConstraint.m */,
+				362DF59C1E0BAFA500260F15 /* NSArray+MASAdditions.h */,
+				362DF59D1E0BAFA500260F15 /* NSArray+MASAdditions.m */,
+				362DF59E1E0BAFA500260F15 /* NSArray+MASShorthandAdditions.h */,
+				362DF59F1E0BAFA500260F15 /* NSLayoutConstraint+MASDebugAdditions.h */,
+				362DF5A01E0BAFA500260F15 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				362DF5A11E0BAFA500260F15 /* View+MASAdditions.h */,
+				362DF5A21E0BAFA500260F15 /* View+MASAdditions.m */,
+				362DF5A31E0BAFA500260F15 /* View+MASShorthandAdditions.h */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
 		3645A3661DC6E03200042806 /* UIViewController+Swizzled */ = {
 			isa = PBXGroup;
 			children = (
@@ -716,6 +813,7 @@
 		36C891D71D0CEB6F00DC86E0 /* Venders */ = {
 			isa = PBXGroup;
 			children = (
+				362DF58B1E0BAFA500260F15 /* Masonry */,
 				36472A031DC1EE6D0063909D /* UICountingLabel */,
 				36514A4F1D7A7A560047BDBC /* MBProgressHUD */,
 				367B39AC1D0E614900443974 /* FLAnimatedImage */,
@@ -796,6 +894,7 @@
 		36E49BAA1E0A4EB700F4F0FF /* FunctionalModule */ = {
 			isa = PBXGroup;
 			children = (
+				362DF57B1E0BAF6500260F15 /* Calendar */,
 				36E49CD21E0A504700F4F0FF /* NoteView */,
 				36E49CDB1E0A504700F4F0FF /* Singleton */,
 				36E49BAB1E0A4EB700F4F0FF /* AnimatedImage */,
@@ -1394,6 +1493,7 @@
 				3608B8051D82581100A5F15F /* asassds.gif in Resources */,
 				36E49C9A1E0A4EB700F4F0FF /* app_4.png in Resources */,
 				36E49BA91E0A4EA600F4F0FF /* URL加载框架.png in Resources */,
+				362DF5A41E0BAFA500260F15 /* Info.plist in Resources */,
 				36E49C791E0A4EB700F4F0FF /* addcamera_loading5@3x.png in Resources */,
 				36E49C781E0A4EB700F4F0FF /* addcamera_loading5@2x.png in Resources */,
 				36E49B951E0A4EA600F4F0FF /* findhome_20160126203742aiche.png in Resources */,
@@ -1417,25 +1517,33 @@
 				36E49C821E0A4EB700F4F0FF /* CreateAnimatedViewController.m in Sources */,
 				36C1DD881D98012F00D642D4 /* BaseViewController.m in Sources */,
 				36E8D9E51E029057006A2711 /* RootViewController.m in Sources */,
+				362DF5A51E0BAFA500260F15 /* MASCompositeConstraint.m in Sources */,
 				3638ABD41D921A58000BE8DA /* NSString+Extend.m in Sources */,
 				36E49CBC1E0A4EB700F4F0FF /* PaoMaViewController.m in Sources */,
+				362DF58A1E0BAF6500260F15 /* NSDate+Calendar.m in Sources */,
 				36472A061DC1EE870063909D /* UICountingLabel.m in Sources */,
 				36C891731D0CEAE100DC86E0 /* AppDelegate.m in Sources */,
 				36E49CB41E0A4EB700F4F0FF /* XJQRCodeViewController.m in Sources */,
 				367B39B31D0E614900443974 /* FLAnimatedImageView.m in Sources */,
 				36E49CB11E0A4EB700F4F0FF /* SystemFunctions.m in Sources */,
+				362DF5AC1E0BAFA500260F15 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				362DF5A61E0BAFA500260F15 /* MASConstraint.m in Sources */,
 				36E49C641E0A4EB700F4F0FF /* AttributeTextTapController.m in Sources */,
 				36E49C671E0A4EB700F4F0FF /* UILabel+YBAttributeTextTapAction.m in Sources */,
+				362DF5A81E0BAFA500260F15 /* MASLayoutConstraint.m in Sources */,
 				36E49CAB1E0A4EB700F4F0FF /* ALView+PureLayout.m in Sources */,
 				36E49C841E0A4EB700F4F0FF /* GetDeviceAllInfo.m in Sources */,
 				367B39B21D0E614900443974 /* FLAnimatedImage.m in Sources */,
 				36E49CA31E0A4EB700F4F0FF /* OverviewNSDateController.m in Sources */,
 				36E49C831E0A4EB700F4F0FF /* NoteViewController.m in Sources */,
+				362DF5A71E0BAFA500260F15 /* MASConstraintMaker.m in Sources */,
 				361A62F71DF258BC007050C2 /* UIColor+Hex.m in Sources */,
 				36E49CA91E0A4EB700F4F0FF /* MovieFileController.m in Sources */,
+				362DF5A91E0BAFA500260F15 /* MASViewAttribute.m in Sources */,
 				3645A36A1DC6E03200042806 /* README.md in Sources */,
 				36E49CB71E0A4EB700F4F0FF /* STSimplePing.m in Sources */,
 				36C891701D0CEAE100DC86E0 /* main.m in Sources */,
+				362DF5881E0BAF6500260F15 /* CalendarWeekCell.m in Sources */,
 				36E49CA01E0A4EB700F4F0FF /* LoadHtmlDocController.m in Sources */,
 				36E49CE41E0A504700F4F0FF /* SingleClass.m in Sources */,
 				36E49CAC1E0A4EB700F4F0FF /* NSArray+PureLayout.m in Sources */,
@@ -1461,7 +1569,9 @@
 				364BD9801E052DAC00516CF5 /* UIView+HandyAutoLayout.m in Sources */,
 				36E49CB31E0A4EB700F4F0FF /* XJQRCodeModel.m in Sources */,
 				36E49CAD1E0A4EB700F4F0FF /* NSLayoutConstraint+PureLayout.m in Sources */,
+				362DF5AD1E0BAFA500260F15 /* View+MASAdditions.m in Sources */,
 				36E49CB81E0A4EB700F4F0FF /* STDDebugPingViewController.m in Sources */,
+				362DF5AB1E0BAFA500260F15 /* NSArray+MASAdditions.m in Sources */,
 				36E49CB51E0A4EB700F4F0FF /* QRCodeViewController.m in Sources */,
 				36514A4D1D7A799C0047BDBC /* UIScreen+Additions.m in Sources */,
 				364BD97F1E052DAC00516CF5 /* README.md in Sources */,
@@ -1474,13 +1584,17 @@
 				36E49CBE1E0A4EB800F4F0FF /* ReadMe.md in Sources */,
 				365149EF1D7A60330047BDBC /* README.md in Sources */,
 				36E49CE21E0A504700F4F0FF /* CommonMode.m in Sources */,
+				362DF5891E0BAF6500260F15 /* DatePickerView.m in Sources */,
+				362DF5AA1E0BAFA500260F15 /* MASViewConstraint.m in Sources */,
 				36514A571D7A7A560047BDBC /* MBProgressHUD+Extend.m in Sources */,
 				36E49CBA1E0A4EB700F4F0FF /* STDPingServices.m in Sources */,
 				36E49CCA1E0A4EB800F4F0FF /* TimeIntervalManager.m in Sources */,
 				36E49CB01E0A4EB700F4F0FF /* QRCodeCreateViewController.m in Sources */,
 				36E49CBF1E0A4EB800F4F0FF /* RegularUtils.m in Sources */,
+				362DF5871E0BAF6500260F15 /* CalendarView.m in Sources */,
 				36E49C621E0A4EB700F4F0FF /* AnimatedImageViewController.m in Sources */,
 				36E49CA51E0A4EB700F4F0FF /* AVFoundationController.m in Sources */,
+				362DF5861E0BAF6500260F15 /* CalendarDateCell.m in Sources */,
 				36514A011D7A6C8A0047BDBC /* README.md in Sources */,
 				36E49C651E0A4EB700F4F0FF /* UnderLineLabel.m in Sources */,
 				36E49CE31E0A504700F4F0FF /* NoteView.m in Sources */,
