@@ -21,11 +21,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self setupView];
-    
 }
 
 - (void)setupView {
     _paoma = [[MAPaoMaView alloc]initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, 50) withTitle:@"全场卖两块，买啥都两块，两块钱，你买不了吃亏，两块钱，你买不了上当，真正的物有所值。拿啥啥便宜 买啥啥不贵，都两块，买啥都两块，全场卖两块，随便挑，随便选，都两块～～ "];
+//    _paoma = [[MAPaoMaView alloc]initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, 50) withTitle:@"全场卖两块,都两块～～ "];
     [self.view addSubview:_paoma];
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];

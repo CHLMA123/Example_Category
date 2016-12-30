@@ -62,7 +62,6 @@
             behindLabel.backgroundColor = [UIColor orangeColor];
             [labelArray addObject:behindLabel];
             [showContentView addSubview:behindLabel];
-            [self doAnimation];
         }
     }
     return self;
@@ -82,6 +81,10 @@
 
 - (void)doAnimation
 {
+    if (isStop) {//如果退出当前PAOMAVIEW所在界面，那么停止递归，否则内存消耗很大
+        return;
+    }
+    
     //UIViewAnimationOptionCurveLinear是为了让lable做匀速动画
     [UIView animateWithDuration:time delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
         
@@ -123,6 +126,10 @@
 
 - (void)start
 {
+    if (labelArray.count < 2) {//要显示的文本没有超出屏幕范围，就不做滚动显示。
+        return;
+    }
+    
     UILabel *lableOne = labelArray[0];
     [self resumeLayer:lableOne.layer];
     
@@ -130,11 +137,16 @@
     [self resumeLayer:lableTwo.layer];
     
     isStop = NO;
+    [self doAnimation];
     
 }
 
 - (void)stop
 {
+    if (labelArray.count < 2) {
+        return;
+    }
+    
     UILabel *lableOne = labelArray[0];
     [self pauseLayer:lableOne.layer];
     
