@@ -20,10 +20,16 @@
 #import "STDDebugPingViewController.h"
 #import "OverviewNSDateController.h"
 #import "RegularViewController.h"
+#import "SGNetObserver.h"
+#import "WebViewController.h"
+
+#import "XTPopView.h"
 
 #define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
 
-@interface RootViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface RootViewController ()<UITableViewDelegate, UITableViewDataSource, XTPopViewDelegate>
+
+@property (nonatomic, strong) UIButton      *customRNavBtn;
 
 @property (nonatomic, strong) Reachability  *hostReachability;
 @property (nonatomic, strong) NSString      *hostReachTag;
@@ -41,10 +47,25 @@
     // Do any additional setup after loading the view.
     self.title = @"Demo";
     self.view.backgroundColor = RGBCOLOR(48.f, 48.f, 64.f);
+    
+    [self initNavView];
+    
     [self setupData];
     [self setupView];
     
+    //[self networkMonitoringAction];             // 0『iOS应用networkMonitoring』
+    SGNetObserver *oberver = [SGNetObserver defultObsever];
+    [oberver startNotifier];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkStatusChanged:) name:SGReachabilityChangedNotification object:nil];
     //[self lldbDebugTest];
+}
+
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:SGReachabilityChangedNotification object:nil];
+}
+
+- (void)networkStatusChanged:(NSNotification *)notify{
+    NSLog(@"notify-------%@",notify.userInfo);
 }
 
 - (void)lldbDebugTest{
@@ -61,8 +82,6 @@
 }
 
 - (void)setupData{
-
-    [self networkMonitoringAction];             // 0『iOS应用networkMonitoring』
     
     NSMutableArray *mArr = [[NSMutableArray alloc] init];
     // 0 ~ 9
@@ -79,6 +98,7 @@
     // 10 ~ ..
     [mArr addObject:@"overviewNSDate"];
     [mArr addObject:@"OverviewRegularExpression"];
+    [mArr addObject:@"BackBarWebBrowser"];
     self.datasource = mArr;
 }
 
@@ -109,15 +129,73 @@
             break;
         case 11:{ [self OverviewRegularExpression]; }
             break;
-//        case 12:{}
-//            break;
+        case 12:{ [self BackBarWebBrowser]; }
+            break;
             
         default:
             break;
     }
 }
 
+#pragma mark ----------------------------initNavView---------------------------------------
+- (void)initNavView{
+    
+    _customRNavBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    _customRNavBtn.frame = CGRectMake(0, 0, 40, 40);
+    [_customRNavBtn setTitle:@"➕" forState:UIControlStateNormal];
+    [_customRNavBtn addTarget:self action:@selector(mCustomRNavBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *btn = [[UIBarButtonItem alloc] initWithCustomView:_customRNavBtn];
+    self.navigationItem.rightBarButtonItem = btn;
+}
+
+- (void)mCustomRNavBtnClick:(UIButton *)btn{
+    
+    CGPoint point = CGPointMake(_customRNavBtn.center.x,_customRNavBtn.frame.origin.y + 64);
+    XTPopView *view1 = [[XTPopView alloc] initWithOrigin:point Width:130 Height:40 * 4 Type:XTTypeOfUpRight Color:[UIColor colorWithRed:0.2737 green:0.2737 blue:0.2737 alpha:1.0]];
+    view1.dataArray = @[@"11111",@"22222", @"33333", @"44444"];
+    view1.images = @[@"发起群聊",@"添加朋友", @"扫一扫", @"付款"];
+    view1.fontSize = 13;
+    view1.row_height = 40;
+    view1.titleTextColor = [UIColor whiteColor];
+    view1.delegate = self;
+    [view1 popView];
+}
+- (void)selectIndexPathRow:(NSInteger)index
+{
+    switch (index) {
+        case 0:
+        {
+            NSLog(@"Click 0 ......");
+        }
+            break;
+        case 1:
+        {
+            NSLog(@"Clikc 1 ......");
+        }
+            break;
+        case 2:
+        {
+            NSLog(@"Clikc 2 ......");
+        }
+            break;
+        case 3:
+        {
+            NSLog(@"Clikc 3 ......");
+        }
+            break;
+        default:
+            break;
+    }
+}
 #pragma mark ------------------------------------------------------------------------
+
+#pragma mark - BackBarWebBrowser
+- (void)BackBarWebBrowser{
+    
+    WebViewController *push = [[WebViewController alloc] init];
+    push.view.backgroundColor = [UIColor whiteColor];
+    [self.navigationController pushViewController:push animated:YES];
+}
 
 #pragma mark - OverviewNSDate
 - (void)OverviewRegularExpression{
@@ -238,62 +316,62 @@
 #pragma mark - reachability
 - (void)networkMonitoringAction{
     
-    // 监测网络情况
-    [[NSNotificationCenter defaultCenter] addObserver: self
-                                             selector: @selector(reachabilityChanged:)
-                                                 name: kReachabilityChangedNotification
-                                               object: nil];
-    NSString *remoteHostName = @"www.apple.com";
-    NSString *remoteHostLabelFormatString = NSLocalizedString(@"Remote Host: %@", @"Remote host label format string");
-    UILabel *remoteHostLabel = [[UILabel alloc] init];
-    remoteHostLabel.text = [NSString stringWithFormat:remoteHostLabelFormatString, remoteHostName];
-    self.hostReachability = [Reachability reachabilityWithHostName:remoteHostName];
-    [self.hostReachability startNotifier];
+//    // 监测网络情况
+//    [[NSNotificationCenter defaultCenter] addObserver: self
+//                                             selector: @selector(reachabilityChanged:)
+//                                                 name: kReachabilityChangedNotification
+//                                               object: nil];
+//    NSString *remoteHostName = @"www.apple.com";
+//    NSString *remoteHostLabelFormatString = NSLocalizedString(@"Remote Host: %@", @"Remote host label format string");
+//    UILabel *remoteHostLabel = [[UILabel alloc] init];
+//    remoteHostLabel.text = [NSString stringWithFormat:remoteHostLabelFormatString, remoteHostName];
+//    self.hostReachability = [Reachability reachabilityWithHostName:remoteHostName];
+//    [self.hostReachability startNotifier];
     
 }
 
-- (void)reachabilityChanged:(NSNotification *)no{
-    Reachability* curReach = [no object];
-    NSParameterAssert([curReach isKindOfClass: [Reachability class]]);
-    NetworkStatus status = [curReach currentReachabilityStatus];
-    switch (status)
-    {
-            
-        case NotReachable:
-            NSLog(@"====当前网络状态不可达=======");
-            //其他处理
-            self.hostReachTag = @"当前网络状态不可达";
-            break;
-            
-        case ReachableViaWiFi:
-            NSLog(@"====当前网络状态为Wifi=======");
-            self.hostReachTag = @"ReachableViaWiFi";
-            //其他处理
-            break;
-        case kReachableVia2G:
-            NSLog(@"====当前网络状态为2G=======");
-            self.hostReachTag = @"kReachableVia2G";
-            break;
-        case kReachableVia3G:
-            NSLog(@"====当前网络状态为3G=======");
-            //其他处理
-            self.hostReachTag = @"kReachableVia3G";
-            break;
-        case kRaeachableVia4G:
-            NSLog(@"====当前网络状态为4G=======");
-            self.hostReachTag = @"kRaeachableVia4G";
-            //其他处理
-            break;
-        default:
-            NSLog(@"你是外星来的吗？");
-            //其他处理
-            self.hostReachTag = @"你是外星来的吗？";
-            break;
-    }
-    
-    NSLog(@"### self.hostReachTag = %@", self.hostReachTag);
-}
-
+//- (void)reachabilityChanged:(NSNotification *)no{
+//    Reachability* curReach = [no object];
+//    NSParameterAssert([curReach isKindOfClass: [Reachability class]]);
+//    NetworkStatus status = [curReach currentReachabilityStatus];
+//    switch (status)
+//    {
+//            
+//        case NotReachable:
+//            NSLog(@"====当前网络状态不可达=======");
+//            //其他处理
+//            self.hostReachTag = @"当前网络状态不可达";
+//            break;
+//            
+//        case ReachableViaWiFi:
+//            NSLog(@"====当前网络状态为Wifi=======");
+//            self.hostReachTag = @"ReachableViaWiFi";
+//            //其他处理
+//            break;
+//        case kReachableVia2G:
+//            NSLog(@"====当前网络状态为2G=======");
+//            self.hostReachTag = @"kReachableVia2G";
+//            break;
+//        case kReachableVia3G:
+//            NSLog(@"====当前网络状态为3G=======");
+//            //其他处理
+//            self.hostReachTag = @"kReachableVia3G";
+//            break;
+//        case kRaeachableVia4G:
+//            NSLog(@"====当前网络状态为4G=======");
+//            self.hostReachTag = @"kRaeachableVia4G";
+//            //其他处理
+//            break;
+//        default:
+//            NSLog(@"你是外星来的吗？");
+//            //其他处理
+//            self.hostReachTag = @"你是外星来的吗？";
+//            break;
+//    }
+//    
+//    NSLog(@"### self.hostReachTag = %@", self.hostReachTag);
+//}
+//
 #pragma mark ------------------------------------------------------------------------
 
 #pragma mark - UITableViewDataSource && UITableViewDelegate
