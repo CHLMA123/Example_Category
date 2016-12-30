@@ -24,6 +24,10 @@
 #import "WebViewController.h"
 
 #import "XTPopView.h"
+#import "UITapImageView.h"
+
+#import "LocationViewController.h"
+#import "KeyChainViewController.h"
 
 #define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
 
@@ -76,67 +80,6 @@
 }
 
 #pragma mark - Private Methods
-- (void)setupView{
-    
-    [self.view addSubview:self.tableview];
-}
-
-- (void)setupData{
-    
-    NSMutableArray *mArr = [[NSMutableArray alloc] init];
-    // 0 ~ 9
-    [mArr addObject:@"LoadModuleView"];
-    [mArr addObject:@"LoadHtmlDocView"];
-    [mArr addObject:@"attributeTextTapAction"];
-    [mArr addObject:@"overviewSingletonMode"];
-    [mArr addObject:@"overviewAVFoundation"];
-    [mArr addObject:@"overviewStructure"];
-    [mArr addObject:@"overviewNoteView"];
-    [mArr addObject:@"overviewPaoMaView"];
-    [mArr addObject:@"LoadNSURLSessionRequest"];
-    [mArr addObject:@"overviewSimplePing"];
-    // 10 ~ ..
-    [mArr addObject:@"overviewNSDate"];
-    [mArr addObject:@"OverviewRegularExpression"];
-    [mArr addObject:@"BackBarWebBrowser"];
-    self.datasource = mArr;
-}
-
-- (void)responseCellAction:(NSIndexPath *)indexpath{
-
-    switch (indexpath.row) {
-        case 0:{ [self LoadModuleView]; }
-            break;
-        case 1:{ [self LoadHtmlDocView]; }
-            break;
-        case 2:{ [self attributeTextTapAction]; }
-            break;
-        case 3:{ [self overviewSingletonMode]; }
-            break;
-        case 4:{ [self overviewAVFoundation]; }
-            break;
-        case 5:{ [self overviewStructure]; }
-            break;
-        case 6:{ [self overviewNoteView]; }
-            break;
-        case 7:{ [self overviewPaoMaView]; }
-            break;
-        case 8:{ [self LoadNSURLSessionRequest]; }
-            break;
-        case 9:{ [self overviewSimplePing]; }
-            break;
-        case 10:{ [self overviewNSDate]; }
-            break;
-        case 11:{ [self OverviewRegularExpression]; }
-            break;
-        case 12:{ [self BackBarWebBrowser]; }
-            break;
-            
-        default:
-            break;
-    }
-}
-
 #pragma mark ----------------------------initNavView---------------------------------------
 - (void)initNavView{
     
@@ -144,8 +87,18 @@
     _customRNavBtn.frame = CGRectMake(0, 0, 40, 40);
     [_customRNavBtn setTitle:@"➕" forState:UIControlStateNormal];
     [_customRNavBtn addTarget:self action:@selector(mCustomRNavBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *btn = [[UIBarButtonItem alloc] initWithCustomView:_customRNavBtn];
-    self.navigationItem.rightBarButtonItem = btn;
+    UIBarButtonItem *RNavBtn = [[UIBarButtonItem alloc] initWithCustomView:_customRNavBtn];
+    //    self.navigationItem.rightBarButtonItem = btn;
+    
+    UITapImageView *tapImgV = [[UITapImageView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
+    tapImgV.image = [UIImage imageNamed:@"添加朋友"];
+    [tapImgV addTapBlock:^(id obj) {
+        
+        NSLog(@"添加朋友被点击了。。。");
+    }];
+    UIBarButtonItem *RNavBtn2 = [[UIBarButtonItem alloc] initWithCustomView:tapImgV];
+    
+    self.navigationItem.rightBarButtonItems = @[RNavBtn, RNavBtn2];
 }
 
 - (void)mCustomRNavBtnClick:(UIButton *)btn{
@@ -187,7 +140,96 @@
             break;
     }
 }
+
+- (void)setupView{
+    
+    [self.view addSubview:self.tableview];
+}
+
+- (void)setupData{
+    
+    NSMutableArray *mArr = [[NSMutableArray alloc] init];
+    // 0 ~ 4
+    [mArr addObject:@"LoadModuleView"];
+    [mArr addObject:@"LoadHtmlDocView"];
+    [mArr addObject:@"attributeTextTapAction"];
+    [mArr addObject:@"overviewSingletonMode"];
+    [mArr addObject:@"overviewAVFoundation"];
+    // 5 ~ 9
+    [mArr addObject:@"overviewStructure"];
+    [mArr addObject:@"overviewNoteView"];
+    [mArr addObject:@"overviewPaoMaView"];
+    [mArr addObject:@"LoadNSURLSessionRequest"];
+    [mArr addObject:@"overviewSimplePing"];
+    // 10 ~ 14
+    [mArr addObject:@"overviewNSDate"];
+    [mArr addObject:@"OverviewRegularExpression"];
+    [mArr addObject:@"BackBarWebBrowser"];
+    [mArr addObject:@"LocationView"];
+    [mArr addObject:@"KeyChainView"];
+    
+    // 15 ~ 19
+    
+    
+    self.datasource = mArr;
+}
+
+- (void)responseCellAction:(NSIndexPath *)indexpath{
+
+    switch (indexpath.row) {
+        case 0:{ [self LoadModuleView]; }
+            break;
+        case 1:{ [self LoadHtmlDocView]; }
+            break;
+        case 2:{ [self attributeTextTapAction]; }
+            break;
+        case 3:{ [self overviewSingletonMode]; }
+            break;
+        case 4:{ [self overviewAVFoundation]; }
+            break;
+        case 5:{ [self overviewStructure]; }
+            break;
+        case 6:{ [self overviewNoteView]; }
+            break;
+        case 7:{ [self overviewPaoMaView]; }
+            break;
+        case 8:{ [self LoadNSURLSessionRequest]; }
+            break;
+        case 9:{ [self overviewSimplePing]; }
+            break;
+        case 10:{ [self overviewNSDate]; }
+            break;
+        case 11:{ [self OverviewRegularExpression]; }
+            break;
+        case 12:{ [self BackBarWebBrowser]; }
+            break;
+        case 13:{ [self LocationView]; }
+            break;
+        case 14:{ [self KeyChainView]; }
+            break;
+            
+        default:
+            break;
+    }
+}
+
 #pragma mark ------------------------------------------------------------------------
+
+#pragma mark - KeyChainView
+- (void)KeyChainView{
+    
+    KeyChainViewController *push = [[KeyChainViewController alloc] init];
+    push.view.backgroundColor = [UIColor whiteColor];
+    [self.navigationController pushViewController:push animated:YES];
+}
+
+#pragma mark - LocationView
+- (void)LocationView{
+    
+    LocationViewController *push = [[LocationViewController alloc] init];
+    push.view.backgroundColor = [UIColor whiteColor];
+    [self.navigationController pushViewController:push animated:YES];
+}
 
 #pragma mark - BackBarWebBrowser
 - (void)BackBarWebBrowser{
