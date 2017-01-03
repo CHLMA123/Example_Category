@@ -54,8 +54,6 @@
     
     //清除UIWebView的缓存
     [[NSURLCache sharedURLCache] removeAllCachedResponses];
-    
-    
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.url] cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:10.0]];
 }
 
