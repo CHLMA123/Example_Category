@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <style type="text/css">
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        .contenter{
+          background-color: rgb(240,240,240);
+          font-family:Tahoma, Helvetica, Arial;
+        }
+        td{
+        font-size: 15px;
+        }
+        .left_{
+        color: rgb(100,100,100);
+        text-align: right;
+        }
+        .right_{
+        color: rgb(150,150,150);
+        padding-left: 10px;
+        text-align: left;
+        }
+        .last{
+        margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body class="contenter">
+     <div style="margin-left: 15px;margin-right: 15px;">
+       <div align="center" style="margin-top: 50px;">
+           <img src="config_fail.png" width="36px" height="36px;">
+           <p style="color: rgb(255,55,50);padding-top:5px;">The coupon code has expired.</p>
+       </div>
+       <div style="background-color: white;margin-top: 30px;">
+           <table style="margin: auto;">
+              <tr>
+                  <td class="left_" style="padding-top: 15px;">Coupon Code:</td>
+                  <td id="couponcodestr" class="right_" style="padding-top: 15px;">12345678</td>
+              </tr>
+              <tr>
+                  <td class="left_">Cloud Server Plan:</td>
+                  <td id="servicestr" class="right_">7-day video history</td>
+              </tr>
+<!--              <tr>-->
+<!--                  <td class="left_" style="padding-bottom: 15px;">Cost:</td>-->
+<!--                  <td id="coststr" class="right_" style="padding-bottom: 15px;">$49.99</td>-->
+<!--              </tr>-->
+           </table>
+       </div>
+     </div>
+</body>
+</html>

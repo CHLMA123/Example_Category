@@ -28,6 +28,7 @@
 
 #import "LocationViewController.h"
 #import "KeyChainViewController.h"
+#import "JS_OC_ControlViewController.h"
 
 #define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
 
@@ -72,6 +73,9 @@
     NSLog(@"notify-------%@",notify.userInfo);
 }
 
+/**
+ lldbDebugTest
+ */
 - (void)lldbDebugTest{
     static NSInteger i = 0;
     while (1) {
@@ -169,7 +173,7 @@
     [mArr addObject:@"KeyChainView"];
     
     // 15 ~ 19
-    
+    [mArr addObject:@"JS_OC_Control"];
     
     self.datasource = mArr;
 }
@@ -187,6 +191,7 @@
             break;
         case 4:{ [self overviewAVFoundation]; }
             break;
+            
         case 5:{ [self overviewStructure]; }
             break;
         case 6:{ [self overviewNoteView]; }
@@ -197,6 +202,7 @@
             break;
         case 9:{ [self overviewSimplePing]; }
             break;
+            
         case 10:{ [self overviewNSDate]; }
             break;
         case 11:{ [self OverviewRegularExpression]; }
@@ -208,12 +214,22 @@
         case 14:{ [self KeyChainView]; }
             break;
             
+        case 15:{ [self JS_OC_Control]; }
+            break;
+            
         default:
             break;
     }
 }
 
 #pragma mark ------------------------------------------------------------------------
+
+#pragma mark - JS_OC_Control
+- (void)JS_OC_Control{
+    
+    JS_OC_ControlViewController *push = [[JS_OC_ControlViewController alloc] init];
+    [self.navigationController pushViewController:push animated:YES];
+}
 
 #pragma mark - KeyChainView
 - (void)KeyChainView{

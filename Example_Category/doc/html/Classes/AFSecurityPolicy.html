@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>AFSecurityPolicy Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">Example_Category </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">mayer</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/SSLPinningMode">SSLPinningMode</option>
+		
+		<option value="//api/name/allowInvalidCertificates">allowInvalidCertificates</option>
+		
+		<option value="//api/name/pinnedCertificates">pinnedCertificates</option>
+		
+		<option value="//api/name/validatesDomainName">validatesDomainName</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/certificatesInBundle:">+ certificatesInBundle:</option>
+		
+		<option value="//api/name/defaultPolicy">+ defaultPolicy</option>
+		
+		<option value="//api/name/policyWithPinningMode:">+ policyWithPinningMode:</option>
+		
+		<option value="//api/name/policyWithPinningMode:withPinnedCertificates:">+ policyWithPinningMode:withPinnedCertificates:</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/evaluateServerTrust:forDomain:">- evaluateServerTrust:forDomain:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">AFSecurityPolicy Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Conforms to</th>
+	<td>NSCopying<br />NSSecureCoding</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>AFSecurityPolicy.h<br />AFSecurityPolicy.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p><code>AFSecurityPolicy</code> evaluates server trust against pinned X.509 certificates and public keys over secure connections.</p>
+
+<p>Adding pinned SSL certificates to your app helps prevent man-in-the-middle attacks and other vulnerabilities. Applications dealing with sensitive customer data or financial information are strongly encouraged to route all communication over an HTTPS connection with SSL pinning configured and enabled.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						<h2 class="task-title">Other Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/SSLPinningMode" title="SSLPinningMode"></a>
+	<h3 class="method-title"><code><a href="#//api/name/SSLPinningMode">&nbsp;&nbsp;SSLPinningMode</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The criteria by which server trust should be evaluated against the pinned SSL certificates. Defaults to <code>AFSSLPinningModeNone</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic, assign) AFSSLPinningMode SSLPinningMode</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The criteria by which server trust should be evaluated against the pinned SSL certificates. Defaults to <code>AFSSLPinningModeNone</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFSecurityPolicy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pinnedCertificates" title="pinnedCertificates"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pinnedCertificates">&nbsp;&nbsp;pinnedCertificates</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The certificates used to evaluate server trust according to the SSL pinning mode.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, nullable) NSSet&lt;NSData*&gt; *pinnedCertificates</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The certificates used to evaluate server trust according to the SSL pinning mode.</p>
+
+<p>  By default, this property is set to any (<code>.cer</code>) certificates included in the target compiling AFNetworking. Note that if you are using AFNetworking as embedded framework, no certificates will be pinned by default. Use <code>certificatesInBundle</code> to load certificates from your target, and then create a new policy by calling <code>policyWithPinningMode:withPinnedCertificates</code>.</p>
+
+<p>Note that if pinning is enabled, <a href="#//api/name/evaluateServerTrust:forDomain:"><code>evaluateServerTrust:forDomain:</code></a> will return true if any pinned certificate matches.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFSecurityPolicy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/allowInvalidCertificates" title="allowInvalidCertificates"></a>
+	<h3 class="method-title"><code><a href="#//api/name/allowInvalidCertificates">&nbsp;&nbsp;allowInvalidCertificates</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether or not to trust servers with an invalid or expired SSL certificates. Defaults to <code>NO</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL allowInvalidCertificates</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Whether or not to trust servers with an invalid or expired SSL certificates. Defaults to <code>NO</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFSecurityPolicy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/validatesDomainName" title="validatesDomainName"></a>
+	<h3 class="method-title"><code><a href="#//api/name/validatesDomainName">&nbsp;&nbsp;validatesDomainName</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether or not to validate the domain name in the certificate&rsquo;s CN field. Defaults to <code>YES</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL validatesDomainName</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Whether or not to validate the domain name in the certificate&rsquo;s CN field. Defaults to <code>YES</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFSecurityPolicy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Getting Certificates from the Bundle" name="task_Getting Certificates from the Bundle"></a>
+						<h2 class="task-title">Getting Certificates from the Bundle</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/certificatesInBundle:" title="certificatesInBundle:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/certificatesInBundle:">+&nbsp;certificatesInBundle:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns any certificates included in the bundle. If you are using AFNetworking as an embedded framework, you must use this method to find the certificates you have included in your app bundle, and use them when creating your security policy by calling <code>policyWithPinningMode:withPinnedCertificates</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSSet&lt;NSData*&gt; *)certificatesInBundle:(NSBundle *)<em>bundle</em></code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The certificates included in the given bundle.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Returns any certificates included in the bundle. If you are using AFNetworking as an embedded framework, you must use this method to find the certificates you have included in your app bundle, and use them when creating your security policy by calling <code>policyWithPinningMode:withPinnedCertificates</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFSecurityPolicy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Getting Specific Security Policies" name="task_Getting Specific Security Policies"></a>
+						<h2 class="task-title">Getting Specific Security Policies</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/defaultPolicy" title="defaultPolicy"></a>
+	<h3 class="method-title"><code><a href="#//api/name/defaultPolicy">+&nbsp;defaultPolicy</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the shared default security policy, which does not allow invalid certificates, validates domain name, and does not validate against pinned certificates or public keys.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)defaultPolicy</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The default security policy.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Returns the shared default security policy, which does not allow invalid certificates, validates domain name, and does not validate against pinned certificates or public keys.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFSecurityPolicy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Initialization" name="task_Initialization"></a>
+						<h2 class="task-title">Initialization</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/policyWithPinningMode:" title="policyWithPinningMode:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/policyWithPinningMode:">+&nbsp;policyWithPinningMode:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates and returns a security policy with the specified pinning mode.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)policyWithPinningMode:(AFSSLPinningMode)<em>pinningMode</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pinningMode</code></th>
+						<td><p>The SSL pinning mode.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A new security policy.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Creates and returns a security policy with the specified pinning mode.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFSecurityPolicy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/policyWithPinningMode:withPinnedCertificates:" title="policyWithPinningMode:withPinnedCertificates:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/policyWithPinningMode:withPinnedCertificates:">+&nbsp;policyWithPinningMode:withPinnedCertificates:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates and returns a security policy with the specified pinning mode.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)policyWithPinningMode:(AFSSLPinningMode)<em>pinningMode</em> withPinnedCertificates:(NSSet&lt;NSData*&gt; *)<em>pinnedCertificates</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pinningMode</code></th>
+						<td><p>The SSL pinning mode.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pinnedCertificates</code></th>
+						<td><p>The certificates to pin against.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A new security policy.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Creates and returns a security policy with the specified pinning mode.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFSecurityPolicy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Evaluating Server Trust" name="task_Evaluating Server Trust"></a>
+						<h2 class="task-title">Evaluating Server Trust</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/evaluateServerTrust:forDomain:" title="evaluateServerTrust:forDomain:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/evaluateServerTrust:forDomain:">&ndash;&nbsp;evaluateServerTrust:forDomain:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether or not the specified server trust should be accepted, based on the security policy.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)evaluateServerTrust:(SecTrustRef)<em>serverTrust</em> forDomain:(nullable NSString *)<em>domain</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>serverTrust</code></th>
+						<td><p>The X.509 certificate trust of the server.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>domain</code></th>
+						<td><p>The domain of serverTrust. If <code>nil</code>, the domain will not be validated.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Whether or not to trust the server.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Whether or not the specified server trust should be accepted, based on the security policy.</p>
+
+<p>This method should be used when responding to an authentication challenge from a server.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFSecurityPolicy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 mayer. All rights reserved. Updated: 2017-01-07</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

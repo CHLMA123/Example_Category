@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <style type="text/css">
+    *{
+        margin:0;
+        padding:0;
+    }
+    .bodycontent{
+        background-color: rgb(240,240,240);
+        font-family: arial;
+    }
+    .left_{
+        font-size: 15px;
+        color: rgb(100,100,100);
+        text-align: right;
+    }
+    .right_{
+        font-size: 15px;
+        color: rgb(150,150,150);
+        padding-left: 10px;
+        text-align: left;
+    }
+    </style>
+</head>
+<body class="bodycontent">
+    <div style="margin-left: 10px;margin-right: 10px;">
+        <div align="center" style="margin-top: 50px;">
+        <img id="sucessImg" src="config_ok.png" width="36px" height="36px">
+        <p style="color: rgb(100,100,100);">The code had been activated.</p>
+        </div>
+
+       <div style="margin-top: 30px;" align="center">
+           <table style="background-color: white;width: 100%" align="center">
+               <tr>
+                   <td class="left_" style="padding-top: 10px;">Coupon Code:</td>
+                   <td class="right_" style="padding-top: 10px;" id="couponcodestr">1234555</td>
+               </tr>
+               <tr>
+                   <td class="left_">Cloud Service:</td>
+                   <td class="right_" id="servicestr">7-day video history</td>
+               </tr>
+<!--               <tr>-->
+<!--                   <td class="left_">Cost:</td>-->
+<!--                   <td class="right_" id="coststr">$49.99</td>-->
+<!--               </tr>-->
+               <tr>
+                   <td class="left_" style="padding-bottom: 10px;">Valid:</td>
+                   <td class="right_" style="padding-bottom: 10px;" id="validstr">09/12/2016-10/12/2016</td>
+               </tr>
+           </table>
+       </div>
+    </div>
+</body>
+</html>

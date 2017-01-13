@@ -12,6 +12,8 @@
 #import "RootViewController.h"
 #import "TimeIntervalManager.h"
 
+//#import <JSPatchPlatform/JSPatch.h>
+
 @interface AppDelegate ()
 
 @end
@@ -53,6 +55,11 @@
     DebugLog(@"%@", str);
     DebugLogMethod();
     [[TimeIntervalManager shareManager] endIntervalWithTip:@"Application FinishLaunching..."];
+    
+//    [JSPatch startWithAppKey:@"8cb0eec5166c6a22"];
+//    [JSPatch sync];
+//     [JSPatch testScriptInBundle]; // 测试时将main.js放入本地
+    
     return YES;
 }
 

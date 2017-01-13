@@ -32,6 +32,32 @@ App迭代开发版本号的规则
 */]
 
 
+/* 
+appledoc的使用：
+1.在终端中使用
+    a 打开终端，进入项目所在目录，使用如下命令即可：
+    MACHUNLEIdeMacBook-Pro:Example_Category machunlei$ cd Example_Category/
+    MACHUNLEIdeMacBook-Pro:Example_Category machunlei$ appledoc --output ./doc --project-name Example_Category --project-company mayer --company-id 029 .
+
+    appledoc 会扫描当前路径下的所有文件，然后生成好文档放到 doc 目录下。
+    编译出的Docset
+    默认会放在~/Library/Developer/Shared/Documentation/DocSets路径下，里面包含html的文档。首先显示生成的Docset的包内容，然后在Contents/Resources/Documents路径下，双击打开里面的index.html可以在浏览器中查看文档了。
+
+    并且生成的Docset已经安装到Xcode中。重启Xcode后，在Help—Documentation and API Reference菜单下也可以看到生成的文档
+
+    b 如果不想生成Docset，而是想生成html，就需要加一个--no-create-docset，这里我使用命令：
+    MACHUNLEIdeMacBook-Pro:Example_Category machunlei$ appledoc --no-create-docset --output ./doc --project-name Example_Category --project-company mayer --company-id 029 .
+    则会在doc目录下生成一个html文件夹，也是双击里面的index.html就可以在浏览器中查看文档了。
+
+
+2.在Xcode里使用
+    2.1 首先创建一个Aggregate类型的Target，取名Document
+    2.2 选择Build Phases，点击左边的小加号，选择New Run Script Phase，建好了以后打开刚刚建立的Run Script，在框里输入命令，命令与终端一样，这里我们输入：
+        appledoc --output ./doc --project-name Example_Category --project-company mayer --company-id 029 .
+    2.3 然后点左上角选择Document，编译一下，成功后文档就生成在doc目录下了。
+*/
+
+
 [self networkMonitoringAction];             // 0『iOS应用networkMonitoring』
 #pragma mark - Examples (1 - 15)
 

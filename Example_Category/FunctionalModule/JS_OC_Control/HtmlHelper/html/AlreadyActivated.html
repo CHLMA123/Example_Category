@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="err.css">
+    <style type="text/css">
+    	
+    	 *{
+	     margin:0;
+	     padding: 0;
+		 }
+
+		td{
+		    font-size: 15px;
+		    margin-top: 15px;
+		}
+		td.leftclass
+		{
+		    color: rgb(100,100,100);
+		    text-align: right;
+		}
+		td.rightclass
+		{
+		    color: rgb(150,150,150);
+		    text-align: left;
+		    padding-left: 10px;
+		}
+		p.note{
+		    color: rgb(150,150,150);
+		    font-size: 15px;
+		    text-align: left;
+		}
+
+    </style>
+</head>
+<body style="background-color: rgb(240,240,240);font-family:Tahoma, Helvetica, Arial;">
+    <div style="margin-top: 50px;" align="center">
+      <img id="errorImg" src="config_fail.png" width="36" height="36">
+      <p style="color: rgb(255,55,50);text-align: center; font-size: 16px;margin-top: 10px;">The coupon code has been used.</p>
+    </div>
+    <div style="background-color: white; margin-top: 30px;margin-left: 15px;margin-right: 15px;">
+          <table style="margin: auto;">
+              <tr>
+                  <td class="leftclass" style="padding-top: 15px;">Coupon Code:</td>
+                  <td id="couponcodestr" class="rightclass" style="padding-top: 15px;">12345678</td>
+              </tr>
+              <tr>
+                  <td class="leftclass">Cloud Server Plan:</td>
+                  <td id="servicestr" class="rightclass">7-day video history</td>
+              </tr>
+<!--              <tr>-->
+<!--                  <td class="leftclass" style="padding-bottom: 15px;">Cost:</td>-->
+<!--                  <td id="coststr" class="rightclass" style="padding-bottom: 15px;">$49.99</td>-->
+<!--              </tr>-->
+          </table>
+    </div>
+    <div style="margin-left: 15px;margin-right: 15px;">
+         <!--<p style="color: rgb(150,150,150); padding-top: 20px;">Note:</p>
+         <!--<p class="note">Your camera had already activated this coupon code.</p>
+         <!--<p class="note">You can use this coupon code for another Foscam camera.</p>-->
+         
+    </div>
+    </body>
+</html>

@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/machunlei/Library/Developer/Shared/Documentation/DocSets/029.Example_Category.docset
+Time: 2017-01-07 03:18:18 +0000

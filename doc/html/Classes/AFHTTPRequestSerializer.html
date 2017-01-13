@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>AFHTTPRequestSerializer Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">Example_Category </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">mayer</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/HTTPMethodsEncodingParametersInURI">HTTPMethodsEncodingParametersInURI</option>
+		
+		<option value="//api/name/HTTPRequestHeaders">HTTPRequestHeaders</option>
+		
+		<option value="//api/name/HTTPShouldHandleCookies">HTTPShouldHandleCookies</option>
+		
+		<option value="//api/name/HTTPShouldUsePipelining">HTTPShouldUsePipelining</option>
+		
+		<option value="//api/name/allowsCellularAccess">allowsCellularAccess</option>
+		
+		<option value="//api/name/cachePolicy">cachePolicy</option>
+		
+		<option value="//api/name/networkServiceType">networkServiceType</option>
+		
+		<option value="//api/name/stringEncoding">stringEncoding</option>
+		
+		<option value="//api/name/timeoutInterval">timeoutInterval</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/serializer">+ serializer</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/clearAuthorizationHeader">- clearAuthorizationHeader</option>
+		
+		<option value="//api/name/multipartFormRequestWithMethod:URLString:parameters:constructingBodyWithBlock:error:">- multipartFormRequestWithMethod:URLString:parameters:constructingBodyWithBlock:error:</option>
+		
+		<option value="//api/name/requestBySerializingRequest:withParameters:error:">- requestBySerializingRequest:withParameters:error:</option>
+		
+		<option value="//api/name/requestWithMethod:URLString:parameters:error:">- requestWithMethod:URLString:parameters:error:</option>
+		
+		<option value="//api/name/requestWithMultipartFormRequest:writingStreamContentsToFile:completionHandler:">- requestWithMultipartFormRequest:writingStreamContentsToFile:completionHandler:</option>
+		
+		<option value="//api/name/setAuthorizationHeaderFieldWithUsername:password:">- setAuthorizationHeaderFieldWithUsername:password:</option>
+		
+		<option value="//api/name/setQueryStringSerializationWithBlock:">- setQueryStringSerializationWithBlock:</option>
+		
+		<option value="//api/name/setQueryStringSerializationWithStyle:">- setQueryStringSerializationWithStyle:</option>
+		
+		<option value="//api/name/setValue:forHTTPHeaderField:">- setValue:forHTTPHeaderField:</option>
+		
+		<option value="//api/name/valueForHTTPHeaderField:">- valueForHTTPHeaderField:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">AFHTTPRequestSerializer Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Conforms to</th>
+	<td><a href="../Protocols/AFURLRequestSerialization.html">AFURLRequestSerialization</a></td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>AFURLRequestSerialization.h<br />AFURLRequestSerialization.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p><code>AFHTTPRequestSerializer</code> conforms to the <a href="../Protocols/AFURLRequestSerialization.html"><code>AFURLRequestSerialization</code></a> &amp; <a href="../Protocols/AFURLResponseSerialization.html"><code>AFURLResponseSerialization</code></a> protocols, offering a concrete base implementation of query string / URL form-encoded parameter serialization and default request headers, as well as response status code and content type validation.</p>
+
+<p>Any request or response <a href="#//api/name/serializer">serializer</a> dealing with HTTP is encouraged to subclass <code>AFHTTPRequestSerializer</code> in order to ensure consistent default behavior.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						<h2 class="task-title">Other Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/stringEncoding" title="stringEncoding"></a>
+	<h3 class="method-title"><code><a href="#//api/name/stringEncoding">&nbsp;&nbsp;stringEncoding</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The string encoding used to serialize parameters. <code>NSUTF8StringEncoding</code> by default.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSStringEncoding stringEncoding</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The string encoding used to serialize parameters. <code>NSUTF8StringEncoding</code> by default.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFURLRequestSerialization.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/allowsCellularAccess" title="allowsCellularAccess"></a>
+	<h3 class="method-title"><code><a href="#//api/name/allowsCellularAccess">&nbsp;&nbsp;allowsCellularAccess</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether created requests can use the device’s cellular radio (if present). <code>YES</code> by default.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL allowsCellularAccess</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Whether created requests can use the device’s cellular radio (if present). <code>YES</code> by default.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p>NSMutableURLRequest <a href="#//api/name/allowsCellularAccess">@property allowsCellularAccess</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFURLRequestSerialization.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cachePolicy" title="cachePolicy"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cachePolicy">&nbsp;&nbsp;cachePolicy</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The cache policy of created requests. <code>NSURLRequestUseProtocolCachePolicy</code> by default.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSURLRequestCachePolicy cachePolicy</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The cache policy of created requests. <code>NSURLRequestUseProtocolCachePolicy</code> by default.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p>NSMutableURLRequest <a href="#//api/name/cachePolicy">@property cachePolicy</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFURLRequestSerialization.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/HTTPShouldHandleCookies" title="HTTPShouldHandleCookies"></a>
+	<h3 class="method-title"><code><a href="#//api/name/HTTPShouldHandleCookies">&nbsp;&nbsp;HTTPShouldHandleCookies</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether created requests should use the default cookie handling. <code>YES</code> by default.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL HTTPShouldHandleCookies</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Whether created requests should use the default cookie handling. <code>YES</code> by default.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p>NSMutableURLRequest <a href="#//api/name/HTTPShouldHandleCookies">@property HTTPShouldHandleCookies</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFURLRequestSerialization.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/HTTPShouldUsePipelining" title="HTTPShouldUsePipelining"></a>
+	<h3 class="method-title"><code><a href="#//api/name/HTTPShouldUsePipelining">&nbsp;&nbsp;HTTPShouldUsePipelining</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether created requests can continue transmitting data before receiving a response from an earlier transmission. <code>NO</code> by default</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL HTTPShouldUsePipelining</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Whether created requests can continue transmitting data before receiving a response from an earlier transmission. <code>NO</code> by default</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p>NSMutableURLRequest <a href="#//api/name/HTTPShouldUsePipelining">@property HTTPShouldUsePipelining</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFURLRequestSerialization.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/networkServiceType" title="networkServiceType"></a>
+	<h3 class="method-title"><code><a href="#//api/name/networkServiceType">&nbsp;&nbsp;networkServiceType</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The network service type for created requests. <code>NSURLNetworkServiceTypeDefault</code> by default.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSURLRequestNetworkServiceType networkServiceType</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The network service type for created requests. <code>NSURLNetworkServiceTypeDefault</code> by default.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p>NSMutableURLRequest <a href="#//api/name/networkServiceType">@property networkServiceType</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFURLRequestSerialization.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/timeoutInterval" title="timeoutInterval"></a>
+	<h3 class="method-title"><code><a href="#//api/name/timeoutInterval">&nbsp;&nbsp;timeoutInterval</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The timeout interval, in seconds, for created requests. The default timeout interval is 60 seconds.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSTimeInterval timeoutInterval</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The timeout interval, in seconds, for created requests. The default timeout interval is 60 seconds.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p>NSMutableURLRequest <a href="#//api/name/timeoutInterval">@property timeoutInterval</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFURLRequestSerialization.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Configuring HTTP Request Headers" name="task_Configuring HTTP Request Headers"></a>
+						<h2 class="task-title">Configuring HTTP Request Headers</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/HTTPRequestHeaders" title="HTTPRequestHeaders"></a>
+	<h3 class="method-title"><code><a href="#//api/name/HTTPRequestHeaders">&nbsp;&nbsp;HTTPRequestHeaders</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Default HTTP header field values to be applied to serialized requests. By default, these include the following:</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic, strong) NSDictionary&lt;NSString*NSString*&gt; *HTTPRequestHeaders</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Default HTTP header field values to be applied to serialized requests. By default, these include the following:</p>
+
+<ul>
+<li><code>Accept-Language</code> with the contents of <code>NSLocale +preferredLanguages</code></li>
+<li><code>User-Agent</code> with the contents of various bundle identifiers and OS designations</li>
+</ul>
+<p>To add or remove default request headers, use <a href="#//api/name/setValue:forHTTPHeaderField:"><code>setValue:forHTTPHeaderField:</code></a>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFURLRequestSerialization.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/serializer" title="serializer"></a>
+	<h3 class="method-title"><code><a href="#//api/name/serializer">+&nbsp;serializer</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates and returns a serializer with default configuration.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)serializer</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Creates and returns a serializer with default configuration.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFURLRequestSerialization.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setValue:forHTTPHeaderField:" title="setValue:forHTTPHeaderField:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setValue:forHTTPHeaderField:">&ndash;&nbsp;setValue:forHTTPHeaderField:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sets the value for the HTTP headers set in request objects made by the HTTP client. If <code>nil</code>, removes the existing value for that header.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setValue:(nullable NSString *)<em>value</em> forHTTPHeaderField:(NSString *)<em>field</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>value</code></th>
+						<td><p>The value set as default for the specified header, or <code>nil</code></p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>field</code></th>
+						<td><p>The HTTP header to set a default value for</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Sets the value for the HTTP headers set in request objects made by the HTTP client. If <code>nil</code>, removes the existing value for that header.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFURLRequestSerialization.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/valueForHTTPHeaderField:" title="valueForHTTPHeaderField:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/valueForHTTPHeaderField:">&ndash;&nbsp;valueForHTTPHeaderField:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the value for the HTTP headers set in the request <a href="#//api/name/serializer">serializer</a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nullable NSString *)valueForHTTPHeaderField:(NSString *)<em>field</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>field</code></th>
+						<td><p>The HTTP header to retrieve the default value for</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The value set as default for the specified header, or <code>nil</code></p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Returns the value for the HTTP headers set in the request <a href="#//api/name/serializer">serializer</a>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFURLRequestSerialization.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setAuthorizationHeaderFieldWithUsername:password:" title="setAuthorizationHeaderFieldWithUsername:password:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setAuthorizationHeaderFieldWithUsername:password:">&ndash;&nbsp;setAuthorizationHeaderFieldWithUsername:password:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sets the &ldquo;Authorization&rdquo; HTTP header set in request objects made by the HTTP client to a basic authentication value with Base64-encoded username and password. This overwrites any existing value for this header.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setAuthorizationHeaderFieldWithUsername:(NSString *)<em>username</em> password:(NSString *)<em>password</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>username</code></th>
+						<td><p>The HTTP basic auth username</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>password</code></th>
+						<td><p>The HTTP basic auth password</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Sets the &ldquo;Authorization&rdquo; HTTP header set in request objects made by the HTTP client to a basic authentication value with Base64-encoded username and password. This overwrites any existing value for this header.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFURLRequestSerialization.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/clearAuthorizationHeader" title="clearAuthorizationHeader"></a>
+	<h3 class="method-title"><code><a href="#//api/name/clearAuthorizationHeader">&ndash;&nbsp;clearAuthorizationHeader</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Clears any existing value for the &ldquo;Authorization&rdquo; HTTP header.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)clearAuthorizationHeader</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Clears any existing value for the &ldquo;Authorization&rdquo; HTTP header.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFURLRequestSerialization.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Configuring Query String Parameter Serialization" name="task_Configuring Query String Parameter Serialization"></a>
+						<h2 class="task-title">Configuring Query String Parameter Serialization</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/HTTPMethodsEncodingParametersInURI" title="HTTPMethodsEncodingParametersInURI"></a>
+	<h3 class="method-title"><code><a href="#//api/name/HTTPMethodsEncodingParametersInURI">&nbsp;&nbsp;HTTPMethodsEncodingParametersInURI</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>HTTP methods for which serialized requests will encode parameters as a query string. <code>GET</code>, <code>HEAD</code>, and <code>DELETE</code> by default.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSSet&lt;NSString*&gt; *HTTPMethodsEncodingParametersInURI</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>HTTP methods for which serialized requests will encode parameters as a query string. <code>GET</code>, <code>HEAD</code>, and <code>DELETE</code> by default.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFURLRequestSerialization.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setQueryStringSerializationWithStyle:" title="setQueryStringSerializationWithStyle:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setQueryStringSerializationWithStyle:">&ndash;&nbsp;setQueryStringSerializationWithStyle:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set the method of query string serialization according to one of the pre-defined styles.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setQueryStringSerializationWithStyle:(AFHTTPRequestQueryStringSerializationStyle)<em>style</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>style</code></th>
+						<td><p>The serialization style.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Set the method of query string serialization according to one of the pre-defined styles.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../Constants/AFHTTPRequestQueryStringSerializationStyle.html">AFHTTPRequestQueryStringSerializationStyle</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFURLRequestSerialization.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setQueryStringSerializationWithBlock:" title="setQueryStringSerializationWithBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setQueryStringSerializationWithBlock:">&ndash;&nbsp;setQueryStringSerializationWithBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set the a custom method of query string serialization according to the specified block.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setQueryStringSerializationWithBlock:(nullable NSString *( ^ ) ( NSURLRequest *request , id parameters , NSError *__autoreleasing *error ))<em>block</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>block</code></th>
+						<td><p>A block that defines a process of encoding parameters into a query string. This block returns the query string and takes three arguments: the request, the parameters to encode, and the error that occurred when attempting to encode parameters for the given request.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Set the a custom method of query string serialization according to the specified block.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFURLRequestSerialization.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Creating Request Objects" name="task_Creating Request Objects"></a>
+						<h2 class="task-title">Creating Request Objects</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/requestWithMethod:URLString:parameters:error:" title="requestWithMethod:URLString:parameters:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/requestWithMethod:URLString:parameters:error:">&ndash;&nbsp;requestWithMethod:URLString:parameters:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates an <code>NSMutableURLRequest</code> object with the specified HTTP method and URL string.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSMutableURLRequest *)requestWithMethod:(NSString *)<em>method</em> URLString:(NSString *)<em>URLString</em> parameters:(nullable id)<em>parameters</em> error:(NSError *_Nullable __autoreleasing *)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>method</code></th>
+						<td><p>The HTTP method for the request, such as <code>GET</code>, <code>POST</code>, <code>PUT</code>, or <code>DELETE</code>. This parameter must not be <code>nil</code>.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>URLString</code></th>
+						<td><p>The URL string used to create the request URL.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>parameters</code></th>
+						<td><p>The parameters to be either set as a query string for <code>GET</code> requests, or the request HTTP body.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>The error that occurred while constructing the request.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An <code>NSMutableURLRequest</code> object.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Creates an <code>NSMutableURLRequest</code> object with the specified HTTP method and URL string.</p>
+
+<p>If the HTTP method is <code>GET</code>, <code>HEAD</code>, or <code>DELETE</code>, the parameters will be used to construct a url-encoded query string that is appended to the request&rsquo;s URL. Otherwise, the parameters will be encoded according to the value of the <code>parameterEncoding</code> property, and set as the request body.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFURLRequestSerialization.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/multipartFormRequestWithMethod:URLString:parameters:constructingBodyWithBlock:error:" title="multipartFormRequestWithMethod:URLString:parameters:constructingBodyWithBlock:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/multipartFormRequestWithMethod:URLString:parameters:constructingBodyWithBlock:error:">&ndash;&nbsp;multipartFormRequestWithMethod:URLString:parameters:constructingBodyWithBlock:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates an <code>NSMutableURLRequest</code> object with the specified HTTP method and URLString, and constructs a <code>multipart/form-data</code> HTTP body, using the specified parameters and multipart form data block. See <a href="http://www.w3.org/TR/html4/interact/forms.html">http://www.w3.org/TR/html4/interact/forms.html</a>#h-17.13.4.2</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSMutableURLRequest *)multipartFormRequestWithMethod:(NSString *)<em>method</em> URLString:(NSString *)<em>URLString</em> parameters:(nullable NSDictionary&lt;NSString*,id&gt; *)<em>parameters</em> constructingBodyWithBlock:(nullable void ( ^ ) ( id&lt;AFMultipartFormData&gt; formData ))<em>block</em> error:(NSError *_Nullable __autoreleasing *)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>method</code></th>
+						<td><p>The HTTP method for the request. This parameter must not be <code>GET</code> or <code>HEAD</code>, or <code>nil</code>.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>URLString</code></th>
+						<td><p>The URL string used to create the request URL.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>parameters</code></th>
+						<td><p>The parameters to be encoded and set in the request HTTP body.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>block</code></th>
+						<td><p>A block that takes a single argument and appends data to the HTTP body. The block argument is an object adopting the <a href="../Protocols/AFMultipartFormData.html"><code>AFMultipartFormData</code></a> protocol.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>The error that occurred while constructing the request.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An <code>NSMutableURLRequest</code> object</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Creates an <code>NSMutableURLRequest</code> object with the specified HTTP method and URLString, and constructs a <code>multipart/form-data</code> HTTP body, using the specified parameters and multipart form data block. See <a href="http://www.w3.org/TR/html4/interact/forms.html">http://www.w3.org/TR/html4/interact/forms.html</a>#h-17.13.4.2</p>
+
+<p>Multipart form requests are automatically streamed, reading files directly from disk along with in-memory data in a single HTTP body. The resulting <code>NSMutableURLRequest</code> object has an <code>HTTPBodyStream</code> property, so refrain from setting <code>HTTPBodyStream</code> or <code>HTTPBody</code> on this request object, as it will clear out the multipart form body stream.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFURLRequestSerialization.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/requestWithMultipartFormRequest:writingStreamContentsToFile:completionHandler:" title="requestWithMultipartFormRequest:writingStreamContentsToFile:completionHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/requestWithMultipartFormRequest:writingStreamContentsToFile:completionHandler:">&ndash;&nbsp;requestWithMultipartFormRequest:writingStreamContentsToFile:completionHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates an <code>NSMutableURLRequest</code> by removing the <code>HTTPBodyStream</code> from a request, and asynchronously writing its contents into the specified file, invoking the completion handler when finished.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSMutableURLRequest *)requestWithMultipartFormRequest:(NSURLRequest *)<em>request</em> writingStreamContentsToFile:(NSURL *)<em>fileURL</em> completionHandler:(nullable void ( ^ ) ( NSError *_Nullable error ))<em>handler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>request</code></th>
+						<td><p>The multipart form request. The <code>HTTPBodyStream</code> property of <code>request</code> must not be <code>nil</code>.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>fileURL</code></th>
+						<td><p>The file URL to write multipart form contents to.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>handler</code></th>
+						<td><p>A handler block to execute.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Creates an <code>NSMutableURLRequest</code> by removing the <code>HTTPBodyStream</code> from a request, and asynchronously writing its contents into the specified file, invoking the completion handler when finished.</p><p>There is a bug in <code>NSURLSessionTask</code> that causes requests to not send a <code>Content-Length</code> header when streaming contents from an HTTP body, which is notably problematic when interacting with the Amazon S3 webservice. As a workaround, this method takes a request constructed with <a href="#//api/name/multipartFormRequestWithMethod:URLString:parameters:constructingBodyWithBlock:error:"><code>multipartFormRequestWithMethod:URLString:parameters:constructingBodyWithBlock:error:</code></a>, or any other request with an <code>HTTPBodyStream</code>, writes the contents to the specified file and returns a copy of the original request with the <code>HTTPBodyStream</code> property set to <code>nil</code>. From here, the file can either be passed to <code></code>AFURLSessionManager<code> -uploadTaskWithRequest:fromFile:progress:completionHandler:</code>, or have its contents read into an <code>NSData</code> that&rsquo;s assigned to the <code>HTTPBody</code> property of the request.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="https://github.com/AFNetworking/AFNetworking/issues/1398">https://github.com/AFNetworking/AFNetworking/issues/1398</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFURLRequestSerialization.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						
+						<h2 class="task-title">Other Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/requestBySerializingRequest:withParameters:error:" title="requestBySerializingRequest:withParameters:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/requestBySerializingRequest:withParameters:error:">&ndash;&nbsp;requestBySerializingRequest:withParameters:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns a request with the specified parameters encoded into a copy of the original request.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSURLRequest *)requestBySerializingRequest:(NSURLRequest *)<em>request</em> withParameters:(id)<em>parameters</em> error:(NSError *__autoreleasing *)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>request</code></th>
+						<td><p>The original request.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>parameters</code></th>
+						<td><p>The parameters to be encoded.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>The error that occurred while attempting to encode the request parameters.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A serialized request.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Returns a request with the specified parameters encoded into a copy of the original request.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFURLRequestSerialization.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 mayer. All rights reserved. Updated: 2017-01-07</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <style type="text/css">
+    *{
+        margin:0;
+        padding:0;
+    }
+    .contener{
+        background-color: rgb(240,240,240);
+        font-family:Tahoma, Helvetica, Arial;
+    }
+    .mainDiv{
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+    }
+    li{
+        font-size: 16px;
+
+    }
+    .tips_main{
+        color: rgb(100,100,100);
+        padding-top: 15px;
+    }
+    .redfont{
+        color: red;
+        font-size: 16px;
+        padding-top: 19px;
+    }
+    .tips_sub{
+        color: rgb(150,150,150);
+       padding-top: 8px;
+    }
+    </style>
+</head>
+<body class="contener">
+     <div class="mainDiv">
+        <div style="margin-top: 50px;">
+           <img id="errorImg" src="config_fail.png" width="36px" height="36px">
+        </div>
+        <ul style="list-style-type: none;margin-top:0px;">
+            <li class="tips_main"> Activated failed </li>
+            <li id="failreason"  class="redfont">Network.</li>
+            <li id="failtips" class="tips_sub">Please try again later.</li>
+        </ul>
+     </div>
+</body>
+</html>

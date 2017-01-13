@@ -17,11 +17,13 @@
  3.如果App需求功能大改, 更新量非常大, 那我们的版本号变为2.0.0, 需要叠加修改第一位数字, 清空其他数字为0
  */
 
-
+/// 类的描述
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-
+/// 属性的描述
 @property (strong, nonatomic) UIWindow *window;
-
+/**
+ appDelegate 方法
+ */
 + (instancetype)appDelegate;
 
 @end

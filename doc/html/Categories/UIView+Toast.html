@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>UIView(Toast) Category Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">Example_Category </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">mayer</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/hideToastActivity">- hideToastActivity</option>
+		
+		<option value="//api/name/makeToast:">- makeToast:</option>
+		
+		<option value="//api/name/makeToast:duration:position:">- makeToast:duration:position:</option>
+		
+		<option value="//api/name/makeToast:duration:position:style:">- makeToast:duration:position:style:</option>
+		
+		<option value="//api/name/makeToast:duration:position:title:image:style:completion:">- makeToast:duration:position:title:image:style:completion:</option>
+		
+		<option value="//api/name/makeToastActivity:">- makeToastActivity:</option>
+		
+		<option value="//api/name/showToast:">- showToast:</option>
+		
+		<option value="//api/name/showToast:duration:position:completion:">- showToast:duration:position:completion:</option>
+		
+		<option value="//api/name/toastViewForMessage:title:image:style:">- toastViewForMessage:title:image:style:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">UIView(Toast) Category Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Declared in</th>
+	<td>UIView+Toast.h<br />UIView+Toast.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Toast is an Objective-C category that adds toast notifications to the UIView
+object class. It is intended to be simple, lightweight, and easy to use. Most
+toast notifications can be triggered with a single line of code.</p>
+
+<p>The <a href="#//api/name/makeToast:"><code>makeToast:</code></a> methods create a new view and then display it as toast.</p>
+
+<p>The <a href="#//api/name/showToast:"><code>showToast:</code></a> methods display any view as toast.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/makeToast:" title="makeToast:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/makeToast:">&ndash;&nbsp;makeToast:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates and presents a new toast view with a message and displays it with the
+default duration and position. Styled using the shared style.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)makeToast:(NSString *)<em>message</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>message</code></th>
+						<td><p>The message to be displayed</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Creates and presents a new toast view with a message and displays it with the
+default duration and position. Styled using the shared style.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">UIView+Toast.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/makeToast:duration:position:" title="makeToast:duration:position:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/makeToast:duration:position:">&ndash;&nbsp;makeToast:duration:position:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates and presents a new toast view with a message. Duration and position
+can be set explicitly. Styled using the shared style.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)makeToast:(NSString *)<em>message</em> duration:(NSTimeInterval)<em>duration</em> position:(id)<em>position</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>message</code></th>
+						<td><p>The message to be displayed</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>duration</code></th>
+						<td><p>The toast duration</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>position</code></th>
+						<td><p>The toast&rsquo;s center point. Can be one of the predefined CSToastPosition
+                 constants or a <code>CGPoint</code> wrapped in an <code>NSValue</code> object.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Creates and presents a new toast view with a message. Duration and position
+can be set explicitly. Styled using the shared style.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">UIView+Toast.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/makeToast:duration:position:style:" title="makeToast:duration:position:style:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/makeToast:duration:position:style:">&ndash;&nbsp;makeToast:duration:position:style:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates and presents a new toast view with a message. Duration, position, and
+style can be set explicitly.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)makeToast:(NSString *)<em>message</em> duration:(NSTimeInterval)<em>duration</em> position:(id)<em>position</em> style:(CSToastStyle *)<em>style</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>message</code></th>
+						<td><p>The message to be displayed</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>duration</code></th>
+						<td><p>The toast duration</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>position</code></th>
+						<td><p>The toast&rsquo;s center point. Can be one of the predefined CSToastPosition
+constants or a <code>CGPoint</code> wrapped in an <code>NSValue</code> object.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>style</code></th>
+						<td><p>The style. The shared style will be used when nil</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Creates and presents a new toast view with a message. Duration, position, and
+style can be set explicitly.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">UIView+Toast.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/makeToast:duration:position:title:image:style:completion:" title="makeToast:duration:position:title:image:style:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/makeToast:duration:position:title:image:style:completion:">&ndash;&nbsp;makeToast:duration:position:title:image:style:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates and presents a new toast view with a message, title, and image. Duration,
+position, and style can be set explicitly. The completion block executes when the
+toast view completes. <code>didTap</code> will be <code>YES</code> if the toast view was dismissed from
+a tap.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)makeToast:(NSString *)<em>message</em> duration:(NSTimeInterval)<em>duration</em> position:(id)<em>position</em> title:(NSString *)<em>title</em> image:(UIImage *)<em>image</em> style:(CSToastStyle *)<em>style</em> completion:(void ( ^ ) ( BOOL didTap ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>message</code></th>
+						<td><p>The message to be displayed</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>duration</code></th>
+						<td><p>The toast duration</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>position</code></th>
+						<td><p>The toast&rsquo;s center point. Can be one of the predefined CSToastPosition
+                 constants or a <code>CGPoint</code> wrapped in an <code>NSValue</code> object.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>title</code></th>
+						<td><p>The title</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>image</code></th>
+						<td><p>The image</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>style</code></th>
+						<td><p>The style. The shared style will be used when nil</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>The completion block, executed after the toast view disappears.
+                   didTap will be <code>YES</code> if the toast view was dismissed from a tap.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Creates and presents a new toast view with a message, title, and image. Duration,
+position, and style can be set explicitly. The completion block executes when the
+toast view completes. <code>didTap</code> will be <code>YES</code> if the toast view was dismissed from
+a tap.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">UIView+Toast.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/toastViewForMessage:title:image:style:" title="toastViewForMessage:title:image:style:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/toastViewForMessage:title:image:style:">&ndash;&nbsp;toastViewForMessage:title:image:style:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates a new toast view with any combination of message, title, and image.
+The look and feel is configured via the style. Unlike the <a href="#//api/name/makeToast:"><code>makeToast:</code></a> methods,
+this method does not present the toast view automatically. One of the <a href="#//api/name/showToast:">showToast:</a>
+methods must be used to present the resulting view.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (UIView *)toastViewForMessage:(NSString *)<em>message</em> title:(NSString *)<em>title</em> image:(UIImage *)<em>image</em> style:(CSToastStyle *)<em>style</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>message</code></th>
+						<td><p>The message to be displayed</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>title</code></th>
+						<td><p>The title</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>image</code></th>
+						<td><p>The image</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>style</code></th>
+						<td><p>The style. The shared style will be used when nil</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The newly created toast view</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Creates a new toast view with any combination of message, title, and image.
+The look and feel is configured via the style. Unlike the <a href="#//api/name/makeToast:"><code>makeToast:</code></a> methods,
+this method does not present the toast view automatically. One of the <a href="#//api/name/showToast:">showToast:</a>
+methods must be used to present the resulting view.</p><div class="warning"><p><strong>Warning:</strong> if message, title, and image are all nil, this method will return nil.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">UIView+Toast.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/makeToastActivity:" title="makeToastActivity:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/makeToastActivity:">&ndash;&nbsp;makeToastActivity:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates and displays a new toast activity indicator view at a specified position.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)makeToastActivity:(id)<em>position</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>position</code></th>
+						<td><p>The toast&rsquo;s center point. Can be one of the predefined CSToastPosition
+                 constants or a <code>CGPoint</code> wrapped in an <code>NSValue</code> object.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Creates and displays a new toast activity indicator view at a specified position.</p><div class="warning"><p><strong>Warning:</strong> Only one toast activity indicator view can be presented per superview. Subsequent
+calls to <code>makeToastActivity:</code> will be ignored until <a href="#//api/name/hideToastActivity">hideToastActivity</a> is called.</p></div><div class="warning"><p><strong>Warning:</strong> <code>makeToastActivity:</code> works independently of the <a href="#//api/name/showToast:">showToast:</a> methods. Toast activity
+views can be presented and dismissed while toast views are being displayed. <code>makeToastActivity:</code>
+has no effect on the queueing behavior of the <a href="#//api/name/showToast:">showToast:</a> methods.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">UIView+Toast.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/hideToastActivity" title="hideToastActivity"></a>
+	<h3 class="method-title"><code><a href="#//api/name/hideToastActivity">&ndash;&nbsp;hideToastActivity</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Dismisses the active toast activity indicator view.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)hideToastActivity</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Dismisses the active toast activity indicator view.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">UIView+Toast.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/showToast:" title="showToast:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showToast:">&ndash;&nbsp;showToast:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Displays any view as toast using the default duration and position.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)showToast:(UIView *)<em>toast</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>toast</code></th>
+						<td><p>The view to be displayed as toast</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Displays any view as toast using the default duration and position.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">UIView+Toast.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/showToast:duration:position:completion:" title="showToast:duration:position:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showToast:duration:position:completion:">&ndash;&nbsp;showToast:duration:position:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Displays any view as toast at a provided position and duration. The completion block
+executes when the toast view completes. <code>didTap</code> will be <code>YES</code> if the toast view was
+dismissed from a tap.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)showToast:(UIView *)<em>toast</em> duration:(NSTimeInterval)<em>duration</em> position:(id)<em>position</em> completion:(void ( ^ ) ( BOOL didTap ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>toast</code></th>
+						<td><p>The view to be displayed as toast</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>duration</code></th>
+						<td><p>The notification duration</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>position</code></th>
+						<td><p>The toast&rsquo;s center point. Can be one of the predefined CSToastPosition
+                 constants or a <code>CGPoint</code> wrapped in an <code>NSValue</code> object.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>The completion block, executed after the toast view disappears.
+                   didTap will be <code>YES</code> if the toast view was dismissed from a tap.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Displays any view as toast at a provided position and duration. The completion block
+executes when the toast view completes. <code>didTap</code> will be <code>YES</code> if the toast view was
+dismissed from a tap.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">UIView+Toast.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 mayer. All rights reserved. Updated: 2017-01-07</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

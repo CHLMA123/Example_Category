@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>CSToastManager Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">Example_Category </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">mayer</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/defaultDuration">+ defaultDuration</option>
+		
+		<option value="//api/name/defaultPosition">+ defaultPosition</option>
+		
+		<option value="//api/name/isQueueEnabled">+ isQueueEnabled</option>
+		
+		<option value="//api/name/isTapToDismissEnabled">+ isTapToDismissEnabled</option>
+		
+		<option value="//api/name/setDefaultDuration:">+ setDefaultDuration:</option>
+		
+		<option value="//api/name/setDefaultPosition:">+ setDefaultPosition:</option>
+		
+		<option value="//api/name/setQueueEnabled:">+ setQueueEnabled:</option>
+		
+		<option value="//api/name/setSharedStyle:">+ setSharedStyle:</option>
+		
+		<option value="//api/name/setTapToDismissEnabled:">+ setTapToDismissEnabled:</option>
+		
+		<option value="//api/name/sharedStyle">+ sharedStyle</option>
+		
+	</optgroup>
+	
+
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">CSToastManager Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>UIView+Toast.h<br />UIView+Toast.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p><code>CSToastManager</code> provides general configuration options for all toast
+notifications. Backed by a singleton instance.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/setSharedStyle:" title="setSharedStyle:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setSharedStyle:">+&nbsp;setSharedStyle:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sets the shared style on the singleton. The shared style is used whenever
+a <code>makeToast:</code> method (or <code>toastViewForMessage:title:image:style:</code>) is called
+with with a nil style. By default, this is set to <a href="../Classes/CSToastStyle.html"><code>CSToastStyle</code></a>&rsquo;s default
+style.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)setSharedStyle:(CSToastStyle *)<em>sharedStyle</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Sets the shared style on the singleton. The shared style is used whenever
+a <code>makeToast:</code> method (or <code>toastViewForMessage:title:image:style:</code>) is called
+with with a nil style. By default, this is set to <a href="../Classes/CSToastStyle.html"><code>CSToastStyle</code></a>&rsquo;s default
+style.</p>
+
+<p>@param <a href="#//api/name/sharedStyle">sharedStyle</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">UIView+Toast.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sharedStyle" title="sharedStyle"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sharedStyle">+&nbsp;sharedStyle</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Gets the shared style from the singlton. By default, this is
+<a href="../Classes/CSToastStyle.html"><code>CSToastStyle</code></a>&rsquo;s default style.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (CSToastStyle *)sharedStyle</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>the shared style</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Gets the shared style from the singlton. By default, this is
+<a href="../Classes/CSToastStyle.html"><code>CSToastStyle</code></a>&rsquo;s default style.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">UIView+Toast.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setTapToDismissEnabled:" title="setTapToDismissEnabled:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setTapToDismissEnabled:">+&nbsp;setTapToDismissEnabled:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Enables or disables tap to dismiss on toast views. Default is <code>YES</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)setTapToDismissEnabled:(BOOL)<em>tapToDismissEnabled</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Enables or disables tap to dismiss on toast views. Default is <code>YES</code>.</p>
+
+<p>@param allowTapToDismiss</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">UIView+Toast.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isTapToDismissEnabled" title="isTapToDismissEnabled"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isTapToDismissEnabled">+&nbsp;isTapToDismissEnabled</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns <code>YES</code> if tap to dismiss is enabled, otherwise <code>NO</code>.
+Default is <code>YES</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (BOOL)isTapToDismissEnabled</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>BOOL</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Returns <code>YES</code> if tap to dismiss is enabled, otherwise <code>NO</code>.
+Default is <code>YES</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">UIView+Toast.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setQueueEnabled:" title="setQueueEnabled:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setQueueEnabled:">+&nbsp;setQueueEnabled:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Enables or disables queueing behavior for toast views. When <code>YES</code>,
+toast views will appear one after the other. When <code>NO</code>, multiple Toast
+views will appear at the same time (potentially overlapping depending
+on their positions). This has no effect on the toast activity view,
+which operates independently of normal toast views. Default is <code>YES</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)setQueueEnabled:(BOOL)<em>queueEnabled</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Enables or disables queueing behavior for toast views. When <code>YES</code>,
+toast views will appear one after the other. When <code>NO</code>, multiple Toast
+views will appear at the same time (potentially overlapping depending
+on their positions). This has no effect on the toast activity view,
+which operates independently of normal toast views. Default is <code>YES</code>.</p>
+
+<p>@param <a href="#//api/name/queueEnabled">queueEnabled</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">UIView+Toast.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isQueueEnabled" title="isQueueEnabled"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isQueueEnabled">+&nbsp;isQueueEnabled</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns <code>YES</code> if the queue is enabled, otherwise <code>NO</code>.
+Default is <code>YES</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (BOOL)isQueueEnabled</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>BOOL</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Returns <code>YES</code> if the queue is enabled, otherwise <code>NO</code>.
+Default is <code>YES</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">UIView+Toast.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setDefaultDuration:" title="setDefaultDuration:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setDefaultDuration:">+&nbsp;setDefaultDuration:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sets the default duration. Used for the <code>makeToast:</code> and
+<code>showToast:</code> methods that don&rsquo;t require an explicit duration.
+Default is 3.0.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)setDefaultDuration:(NSTimeInterval)<em>duration</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>duration</code></th>
+						<td><p>The toast duration</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Sets the default duration. Used for the <code>makeToast:</code> and
+<code>showToast:</code> methods that don&rsquo;t require an explicit duration.
+Default is 3.0.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">UIView+Toast.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/defaultDuration" title="defaultDuration"></a>
+	<h3 class="method-title"><code><a href="#//api/name/defaultDuration">+&nbsp;defaultDuration</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the default duration. Default is 3.0.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSTimeInterval)defaultDuration</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>duration The toast duration</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Returns the default duration. Default is 3.0.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">UIView+Toast.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setDefaultPosition:" title="setDefaultPosition:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setDefaultPosition:">+&nbsp;setDefaultPosition:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sets the default position. Used for the <code>makeToast:</code> and
+<code>showToast:</code> methods that don&rsquo;t require an explicit position.
+Default is <code>CSToastPositionBottom</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)setDefaultPosition:(id)<em>position</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>position</code></th>
+						<td><p>The default center point. Can be one of the predefined
+CSToastPosition constants or a <code>CGPoint</code> wrapped in an <code>NSValue</code> object.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Sets the default position. Used for the <code>makeToast:</code> and
+<code>showToast:</code> methods that don&rsquo;t require an explicit position.
+Default is <code>CSToastPositionBottom</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">UIView+Toast.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/defaultPosition" title="defaultPosition"></a>
+	<h3 class="method-title"><code><a href="#//api/name/defaultPosition">+&nbsp;defaultPosition</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the default toast position. Default is <code>CSToastPositionBottom</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (id)defaultPosition</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>position The default center point. Will be one of the predefined
+CSToastPosition constants or a <code>CGPoint</code> wrapped in an <code>NSValue</code> object.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Returns the default toast position. Default is <code>CSToastPositionBottom</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">UIView+Toast.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 mayer. All rights reserved. Updated: 2017-01-07</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

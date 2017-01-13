@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Document.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>Example_Category.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>362211E11E2097E700E58D76</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>36C8916A1D0CEAE100DC86E0</key>
 		<dict>
 			<key>primary</key>
