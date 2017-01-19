@@ -29,11 +29,17 @@ typedef NS_ENUM(NSInteger, CrashTypes) {
 /**
  崩溃原因
  */
-@property (nonatomic, copy) NSString *reason;
+@property (nonatomic, strong) NSString *reason;
+
+
+/**
+ ExceptionName
+ */
+@property (nonatomic, strong) NSString *name;
 
 /**
  崩溃堆栈信息
  */
-@property (nonatomic, copy) NSString *stackSymbols;
+@property (nonatomic, strong) NSString *stackSymbols;
 
 @end

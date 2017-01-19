@@ -20,8 +20,24 @@
 
 + (void)log:(CrashModel *)crashModel {
     NSLog(@"%@", crashModel);
+    NSString *content = [NSString stringWithFormat:@"========异常错误报告========\nname:%@\nreason:\n%@\ncallStackSymbols:\n%@",crashModel.name, crashModel.reason, crashModel.stackSymbols];
+    NSLog(@"%@", content);
     
-    //将CrashReport.txt保存到Document目录下的DebugLog文件夹下
+    
+    /**
+     *  1 把异常崩溃信息发送至开发者邮件
+     */
+    NSMutableString *mailUrl = [NSMutableString string];
+    [mailUrl appendString:@"mailto:877544586@qq.com"];
+    [mailUrl appendString:@"?subject=程序异常崩溃，请配合发送异常报告，谢谢合作！"];
+    [mailUrl appendFormat:@"&body=%@", content];
+    // 打开地址
+    NSString *mailPath = [mailUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:mailPath]];
+    
+    /**
+     *  2 把异常崩溃信息保存到CrashReport.txt,保存到Document目录下的DebugLog文件夹下
+     */
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *logDirectory = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"DebugLog"];
     
@@ -62,10 +78,13 @@ void CrashReportUncaughtExceptionHandler(NSException *exception) {
     if (exceptionCount > UncaughtExceptionMaximum) {
         return ;
     }
-    
-    CrashModel *crashModel = [CrashModel new];
-    crashModel.type = CrashException;
-    crashModel.reason = [exception reason];
+    /**
+     *  获取异常崩溃信息: 填充CrashModel
+     */
+    CrashModel *crashModel  = [CrashModel new];
+    crashModel.type         = CrashException;
+    crashModel.reason       = [exception reason];
+    crashModel.name         = [exception name];
     crashModel.stackSymbols = [[exception callStackSymbols] componentsJoinedByString:@"\n"];
     
     [CrashLogger log:crashModel];
@@ -81,9 +100,10 @@ void CrashReportSignalHandler(int iSignal) {
         return ;
     }
     
-    CrashModel *crashModel = [CrashModel new];
-    crashModel.type = CrashSignal;
-    crashModel.reason = [NSString stringWithFormat:@"%d", iSignal];
+    CrashModel *crashModel  = [CrashModel new];
+    crashModel.type         = CrashSignal;
+    crashModel.name         = @"CrashReportSignalHandler";
+    crashModel.reason       = [NSString stringWithFormat:@"%d", iSignal];
     crashModel.stackSymbols = [[NSThread callStackSymbols] componentsJoinedByString:@"\n"];
     
     [CrashLogger log:crashModel];

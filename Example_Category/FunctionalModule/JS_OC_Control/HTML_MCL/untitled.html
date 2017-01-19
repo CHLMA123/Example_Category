@@ -2,8 +2,8 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<title>2017年1月11日</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>百度一下，你就知道 | 注册邀请码获取方式</title>
 	<!--这是一个注释，注释在浏览器中不会显示-->
 	<style type="text/css">
 		*{
@@ -22,18 +22,135 @@
 		}
 	</style>
 	<link rel="stylesheet" type="text/css" href="mystyle.css">
+
+
+	<!--JavaScript可以直接在HTML输出,它使HTML页面具有更强的动态和交互性,最常用于图片操作、表单验证以及内容动态更新。-->
+	<!--class为html元素定义一个或多个类名（classname）(类名从样式文件引入)-->
+	<!--id 定义元素的唯一id-->
+	<!--style 规定元素的行内样式（inline style）-->
+
+	<script type="text/javascript">
+	function docwritefunction(){
+		document.write(Date());
+	}
+	</script>
+
+	<script>
+	function displayDate(){
+		// document.getElementById("demo").innerHTML=Date();
+
+		// x=document.getElementById("demo1");  // 找到元素
+		// x.innerHTML=Date();    // 改变内容
+		// x.style.color="#ff0000";           //改变样式
+
+		window.alert(Math.random());//H5 0-1的随机数
+
+		// document.write("<p>您只能在 HTML 输出中使用 document.write。如果您在文档加载后使用该方法，会覆盖整个文档。</p>");
+		}
+	</script>
+
+	<script>
+	function myFunction()
+	{
+		var x=document.getElementById("demo2").value;
+		if(x==""||isNaN(x))
+		{
+			alert("不是数字");
+		}
+	}
+	</script>
+
+	<script>
+	function changeImage(){
+		element=document.getElementById('myimage')
+		if (element.src.match("bulbon"))
+ 		{
+  			element.src="/images/pic_bulboff.gif";
+  		}else{
+  			element.src="/images/pic_bulbon.gif";
+  		}
+	}
+	</script>
+
+	<script>
+	function enterRow(){
+		document.getElementById("demo3").innerHTML=("你好 \
+		世界!");
+	}
+	</script>
+
+	<script>
+	function myFunction1(name,job){
+	    alert("Welcome " + name + ", the " + job);
+	}
+	</script>
+
 </head>
 <body>
-	<script type="text/javascript">
-		<!--JavaScript可以直接在HTML输出,它使HTML页面具有更强的动态和交互性,最常用于图片操作、表单验证以及内容动态更新。-->
-		<!--class为html元素定义一个或多个类名（classname）(类名从样式文件引入)-->
-		<!--id 定义元素的唯一id-->
-		<!--style 规定元素的行内样式（inline style）-->
-		document.write("<p>初次练习，请多多指教。</p>");
-	</script>
-	<button type="button" onclick="myTapfunction()">Tap Me!</button>
+	
+	<br><br>
+	<h2>JavaScript 对大小写敏感。</h2>
 	<p style="color:blue;margin-left:20px;text-align: left;">内联样式-在HTML元素中使用"style"属性。</p>
 	<p class="contentStyle">内部样式表-在HTML文档头部head区域使用style元素来包含CSS</p>
 	<p class="paragraph">外部引用-使用外部CSS文件</p>
+	<button type="button" onclick="docwritefunction()">document.write()!</button>
+	<br><br>
+	
+	<h2>我的第一个 JavaScript 程序</h2>
+	<p id="demo1">JavaScript 能改变 HTML 元素的内容。</p>
+	<button type="button" onclick="displayDate()">displayDate()</button>
+	<br><br>
+
+	<h2>我的第二个 JavaScript 程序</h2>
+	<p>请输入数字。如果输入值不是数字，浏览器会弹出提示框。</p>
+	<input id="demo2" type="text">
+	<button type="button" onclick="myFunction()">JavaScript：验证输入</button>
+	<br><br>
+
+	<h2>我的第三个 JavaScript 程序</h2>
+	<img id="myimage" onclick="changeImage()" src="/images/pic_bulboff.gif" width="100" height="180">
+	<p>点击灯泡就可以打开或关闭这盏灯</p>
+	<br><br>
+
+	<h2>我的第四个 JavaScript 程序</h2>
+	<p id="demo3">JavaScript 会忽略多余的空格。您可以向脚本添加空格，来提高其可读性。可以在文本字符串中使用反斜杠对代码行进行换行。</p>
+	<button type="button" onclick="enterRow()">对代码行进行折行你好世界!</button>
+	<br><br>
+
+	<p>点击这个按钮，来调用带参数的函数。</p>
+	<button onclick="myFunction1('Harry Potter','Wizard')">点击这里</button>
+	<br><br>
+
+	<p id="p1">Hello World!</p>
+	<p id="p2">Hello World!</p>
+	<script>
+	document.getElementById("p2").style.color="blue";
+	document.getElementById("p2").style.fontFamily="Arial";
+	document.getElementById("p2").style.fontSize="larger";
+	</script>
+	<p>以上段落通过脚本修改。</p>
+	<br><br>
+
+	<h1 id="id1">我的标题 1</h1>
+	<button type="button"
+	onclick="document.getElementById('id1').style.color='red'">
+	点我!
+	</button>
+	<br><br>
+
+	<h1 onclick="this.innerHTML='Ooops!'">点击文本!</h1>
+	<br><br>
+
+	<div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color:#D94A38;width:120px;height:20px;padding:40px;">Mouse Over Me</div>
+	<script>
+	function mOver(obj){
+		obj.innerHTML="Thank You"
+	}
+	function mOut(obj){
+		obj.innerHTML="Mouse Over Me"
+	}
+	</script>
+
+
 </body>
 </html>

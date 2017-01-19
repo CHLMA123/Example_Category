@@ -1,15 +1,25 @@
 # Example_Category
 
-App迭代开发版本号的规则
-/*
+[/** MAC 电脑如果新建txt文本文档:
+
+第一:  打开: 文本编辑 -- 新建  (此时默认的新建格式是rtf格式的)
+第二:  shift⇧+command⌘+T  这样rtf格式的文本就变为txt格式的了
+*/]
+
+[/** App迭代开发版本号的规则
+
 1 如果修复Bug或者优化功能, 我们只修改叠加第三位数字, 其他不变
 
 2.如果有了新的需求, 在原来的基础上增加了一个新功能, 那么我们的版本号变为1.1.0, 需要清空第三位数字为0, 来叠加修改第二位数字
 
 3.如果App需求功能大改, 更新量非常大, 那我们的版本号变为2.0.0, 需要叠加修改第一位数字, 清空其他数字为0
-*/
 
-[/*
+为什么发布之前要屏蔽NSLog?(在Release版本下禁止输出NSLog内容)
+1、NSLog 消耗系统资源(暴力调试)
+2、输出数据可能暴露app保密数据
+*/]
+
+[/**
     1. view的生命周期 —— 只要是View开头的都是View的生命周期方法 
 
         loadView：第一次使用view的时候调用
@@ -32,8 +42,8 @@ App迭代开发版本号的规则
 */]
 
 
-/* 
-appledoc的使用：
+[/** appledoc的使用：
+
 1.在终端中使用
     a 打开终端，进入项目所在目录，使用如下命令即可：
     MACHUNLEIdeMacBook-Pro:Example_Category machunlei$ cd Example_Category/
@@ -55,8 +65,39 @@ appledoc的使用：
     2.2 选择Build Phases，点击左边的小加号，选择New Run Script Phase，建好了以后打开刚刚建立的Run Script，在框里输入命令，命令与终端一样，这里我们输入：
         appledoc --output ./doc --project-name Example_Category --project-company mayer --company-id 029 .
     2.3 然后点左上角选择Document，编译一下，成功后文档就生成在doc目录下了。
-*/
+*/]
 
+[/** Xcode 左边导航栏中，类文件后面的标记“A”,"M","?"……等符号的含义:
+
+"M" = Locally modified   
+"U" = Updated in repository 
+"A" = Locally added   
+"D" = Locally deleted   
+"I" = Ignored 
+"R" = Replaced in the repository 
+“–” "=" The contents of the folder have mixed status; display the contents to see individual status 
+"?" = Not under source control 
+
+'A'  新增
+'D'  删除
+'M'  修改
+'R'  替代
+'C'  冲突
+'I'  忽略
+'?'  未受控
+'!'  丢失，一般是将受控文件直接删除导致
+
+这些标记跟你使用的代码托管工具或者xcode自带的svn代码托管工具有关，怎样消除：
+
+1、代码中 某文件后面有 “M” 标记，表示该文件已被修改，需要 commit.
+（右键该文件 -> source control -> commit selected file...）
+2、代码中 某文件后面有 “A” 标记，表示该文件是新添加的，已受SVN管理，需要 commit.
+（右键该文件 -> source control -> commit selected file...）
+3、代码中 某文件后面有 “?” 标记，表示该文件是新添加的，并且脱离了SVN的管理，首先需要add，然后 commit.
+（右键该文件 -> source control -> Add，这样该文件的标记就变为 “A”，然后在 commit）
+4、代码中 某文件后面有 “D” 标记，表示该文件在服务器上已被删除，这时update的话，可删除本地的文件。
+5、代码中 某文件后面有 “C” 标记，表示该文件与服务器的文件冲突。
+*/]
 
 [self networkMonitoringAction];             // 0『iOS应用networkMonitoring』
 #pragma mark - Examples (1 - 15)
