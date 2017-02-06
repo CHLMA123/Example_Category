@@ -2,34 +2,31 @@
 
 [/** 1 MAC 电脑如果新建txt文本文档:
 
-第一:  打开: 文本编辑 -- 新建  (此时默认的新建格式是rtf格式的)
-第二:  shift⇧+command⌘+T  这样rtf格式的文本就变为txt格式的了
+    第一:  打开: 文本编辑 -- 新建  (此时默认的新建格式是rtf格式的)
+    第二:  shift⇧+command⌘+T  这样rtf格式的文本就变为txt格式的了
 */]
 
 
 [/** 2 实现iOS语言本地化/国际化
-App名称本地化
 
-代码中字符串本地化
-
-多人开发情况下的字符串本地化
-
-图片本地化（两种方式两种方式）
-
-查看/切换本地语言
+    App名称本地化
+    代码中字符串本地化
+    多人开发情况下的字符串本地化
+    图片本地化（两种方式两种方式）
+    查看/切换本地语言
 */]
 
 [/** 3 App迭代开发版本号的规则
 
-1 如果修复Bug或者优化功能, 我们只修改叠加第三位数字, 其他不变
+    1> 如果修复Bug或者优化功能, 我们只修改叠加第三位数字, 其他不变
 
-2.如果有了新的需求, 在原来的基础上增加了一个新功能, 那么我们的版本号变为1.1.0, 需要清空第三位数字为0, 来叠加修改第二位数字
+    2> 如果有了新的需求, 在原来的基础上增加了一个新功能, 那么我们的版本号变为1.1.0, 需要清空第三位数字为0, 来叠加修改第二位数字
 
-3.如果App需求功能大改, 更新量非常大, 那我们的版本号变为2.0.0, 需要叠加修改第一位数字, 清空其他数字为0
+    3> 如果App需求功能大改, 更新量非常大, 那我们的版本号变为2.0.0, 需要叠加修改第一位数字, 清空其他数字为0
 
-为什么发布之前要屏蔽NSLog?(在Release版本下禁止输出NSLog内容)
-1、NSLog 消耗系统资源(暴力调试)
-2、输出数据可能暴露app保密数据
+    为什么发布之前要屏蔽NSLog?(在Release版本下禁止输出NSLog内容)
+    1> NSLog 消耗系统资源(暴力调试)
+    2> 输出数据可能暴露app保密数据
 */]
 
 [/**
@@ -48,94 +45,94 @@ App名称本地化
 
     a. 处理过程
 
-    有内存警告 -> 调用didReceiveMemoryWarning方法 -> 判断控制器的View存不存在 -> 存在就判断能不能被释放(判断是不是正在显示在界面上) -> 能释放就调用ViewWillUnload -> 完全释放后就调用ViewDidUnload
+        有内存警告 -> 调用didReceiveMemoryWarning方法 -> 判断控制器的View存不存在 -> 存在就判断能不能被释放(判断是不是正在显示在界面上) -> 能释放就调用ViewWillUnload -> 完全释放后就调用ViewDidUnload
     b. 注意
 
-    内存警告处理时，ViewWillUnload和ViewDidUnload不一定被调用，因为这是系统自动判断的
+        内存警告处理时，ViewWillUnload和ViewDidUnload不一定被调用，因为这是系统自动判断的
 */]
 
 
 [/** 5 iOS Crash 总结
 
-    NSInvalidArgumentException 异常：
+    a. NSInvalidArgumentException 异常：
 
-    1> NSDictionary插入nil的对象。NSMutableDictionary也是同样的道理。
-    2> NSJSONSerialization序列化的时候，传入data为nil。
-    3> an unrecognized selector 无法识别的方法
+        1> NSDictionary插入nil的对象。NSMutableDictionary也是同样的道理。
+        2> NSJSONSerialization序列化的时候，传入data为nil。
+        3> an unrecognized selector 无法识别的方法
 
-    SIGSEGV 异常：（SIGSEGV是当SEGV发生的时候，让代码终止的标识。当去访问没有被开辟的内存或者已经被释放的内存时，就会发生这样的异常。另外，在低内存的时候，也可能会产生这样的异常。）
+    b. SIGSEGV 异常：（SIGSEGV是当SEGV发生的时候，让代码终止的标识。当去访问没有被开辟的内存或者已经被释放的内存时，就会发生这样的异常。另外，在低内存的时候，也可能会产生这样的异常。）
     
-    1> 在使用C语言对象的时候，一定要记得在不使用的时候给释放掉，ARC并不能释放掉这块内存。
+        1> 在使用C语言对象的时候，一定要记得在不使用的时候给释放掉，ARC并不能释放掉这块内存。
 
-    NSRangeException 异常:
+    c. NSRangeException 异常:
     
-    经常碰到的越界异常有两种，一种是数组越界，一种字符串截取越界.怎么解决呢？
+        经常碰到的越界异常有两种，一种是数组越界，一种字符串截取越界.怎么解决呢？
 
-    方案一：在对数组取数据的时候，要判断一下数组的长度大于取的index，这个要在平时写代码的时候给规范起来。同样在对字符串进行截取的时候，也需要做类似的判断。但现实的情况是，有时我们会忘了写这样的逻辑判断，就会有潜在的崩溃问题。如何做一下统一的判断呢？即使开发人员忘了写这样的逻辑判断也不会造成崩溃，从框架层面来杜绝这类的崩溃，方案二给出了答案。
+        方案一：在对数组取数据的时候，要判断一下数组的长度大于取的index，这个要在平时写代码的时候给规范起来。同样在对字符串进行截取的时候，也需要做类似的判断。但现实的情况是，有时我们会忘了写这样的逻辑判断，就会有潜在的崩溃问题。如何做一下统一的判断呢？即使开发人员忘了写这样的逻辑判断也不会造成崩溃，从框架层面来杜绝这类的崩溃，方案二给出了答案。
 
-    方案二：利用runtime的Swizzle Method特性，可以实现从框架层面杜绝这类的崩溃问题，这样做的好处有两点：
+        方案二：利用runtime的Swizzle Method特性，可以实现从框架层面杜绝这类的崩溃问题，这样做的好处有两点：
 
-    开发人员忘了写判断越界的逻辑，也不会造成app的崩溃，对开发人员来说是透明的。
+        开发人员忘了写判断越界的逻辑，也不会造成app的崩溃，对开发人员来说是透明的。
 
-    不需要修改现有的代码，对现有代码的侵入性降低到最低，不需要添加大量重复的逻辑判断代码。
+        不需要修改现有的代码，对现有代码的侵入性降低到最低，不需要添加大量重复的逻辑判断代码。
 
 */]
 
-[/** appledoc的使用：
+[/** 6 appledoc的使用：
 
-1.在终端中使用
-    a 打开终端，进入项目所在目录，使用如下命令即可：
-    MACHUNLEIdeMacBook-Pro:Example_Category machunlei$ cd Example_Category/
-    MACHUNLEIdeMacBook-Pro:Example_Category machunlei$ appledoc --output ./doc --project-name Example_Category --project-company mayer --company-id 029 .
+    1.在终端中使用
+        a 打开终端，进入项目所在目录，使用如下命令即可：
+        MACHUNLEIdeMacBook-Pro:Example_Category machunlei$ cd Example_Category/
+        MACHUNLEIdeMacBook-Pro:Example_Category machunlei$ appledoc --output ./doc --project-name Example_Category --project-company mayer --company-id 029 .
 
-    appledoc 会扫描当前路径下的所有文件，然后生成好文档放到 doc 目录下。
-    编译出的Docset
-    默认会放在~/Library/Developer/Shared/Documentation/DocSets路径下，里面包含html的文档。首先显示生成的Docset的包内容，然后在Contents/Resources/Documents路径下，双击打开里面的index.html可以在浏览器中查看文档了。
+        appledoc 会扫描当前路径下的所有文件，然后生成好文档放到 doc 目录下。
+        编译出的Docset
+        默认会放在~/Library/Developer/Shared/Documentation/DocSets路径下，里面包含html的文档。首先显示生成的Docset的包内容，然后在Contents/Resources/Documents路径下，双击打开里面的index.html可以在浏览器中查看文档了。
 
-    并且生成的Docset已经安装到Xcode中。重启Xcode后，在Help—Documentation and API Reference菜单下也可以看到生成的文档
+        并且生成的Docset已经安装到Xcode中。重启Xcode后，在Help—Documentation and API Reference菜单下也可以看到生成的文档
 
-    b 如果不想生成Docset，而是想生成html，就需要加一个--no-create-docset，这里我使用命令：
-    MACHUNLEIdeMacBook-Pro:Example_Category machunlei$ appledoc --no-create-docset --output ./doc --project-name Example_Category --project-company mayer --company-id 029 .
-    则会在doc目录下生成一个html文件夹，也是双击里面的index.html就可以在浏览器中查看文档了。
+        b 如果不想生成Docset，而是想生成html，就需要加一个--no-create-docset，这里我使用命令：
+        MACHUNLEIdeMacBook-Pro:Example_Category machunlei$ appledoc --no-create-docset --output ./doc --project-name Example_Category --project-company mayer --company-id 029 .
+        则会在doc目录下生成一个html文件夹，也是双击里面的index.html就可以在浏览器中查看文档了。
 
 
-2.在Xcode里使用
-    2.1 首先创建一个Aggregate类型的Target，取名Document
-    2.2 选择Build Phases，点击左边的小加号，选择New Run Script Phase，建好了以后打开刚刚建立的Run Script，在框里输入命令，命令与终端一样，这里我们输入：
-        appledoc --output ./doc --project-name Example_Category --project-company mayer --company-id 029 .
-    2.3 然后点左上角选择Document，编译一下，成功后文档就生成在doc目录下了。
+    2.在Xcode里使用
+        2.1 首先创建一个Aggregate类型的Target，取名Document
+        2.2 选择Build Phases，点击左边的小加号，选择New Run Script Phase，建好了以后打开刚刚建立的Run Script，在框里输入命令，命令与终端一样，这里我们输入：
+            appledoc --output ./doc --project-name Example_Category --project-company mayer --company-id 029 .
+        2.3 然后点左上角选择Document，编译一下，成功后文档就生成在doc目录下了。
 */]
 
-[/** Xcode 左边导航栏中，类文件后面的标记“A”,"M","?"……等符号的含义:
+[/** 7 Xcode 左边导航栏中，类文件后面的标记“A”,"M","?"……等符号的含义:
 
-"M" = Locally modified   
-"U" = Updated in repository 
-"A" = Locally added   
-"D" = Locally deleted   
-"I" = Ignored 
-"R" = Replaced in the repository 
-“–” "=" The contents of the folder have mixed status; display the contents to see individual status 
-"?" = Not under source control 
+    "M" = Locally modified   
+    "U" = Updated in repository 
+    "A" = Locally added   
+    "D" = Locally deleted   
+    "I" = Ignored 
+    "R" = Replaced in the repository 
+    “–” "=" The contents of the folder have mixed status; display the contents to see individual status 
+    "?" = Not under source control 
 
-'A'  新增
-'D'  删除
-'M'  修改
-'R'  替代
-'C'  冲突
-'I'  忽略
-'?'  未受控
-'!'  丢失，一般是将受控文件直接删除导致
+    'A'  新增
+    'D'  删除
+    'M'  修改
+    'R'  替代
+    'C'  冲突
+    'I'  忽略
+    '?'  未受控
+    '!'  丢失，一般是将受控文件直接删除导致
 
-这些标记跟你使用的代码托管工具或者xcode自带的svn代码托管工具有关，怎样消除：
+    这些标记跟你使用的代码托管工具或者xcode自带的svn代码托管工具有关，怎样消除：
 
-1、代码中 某文件后面有 “M” 标记，表示该文件已被修改，需要 commit.
-（右键该文件 -> source control -> commit selected file...）
-2、代码中 某文件后面有 “A” 标记，表示该文件是新添加的，已受SVN管理，需要 commit.
-（右键该文件 -> source control -> commit selected file...）
-3、代码中 某文件后面有 “?” 标记，表示该文件是新添加的，并且脱离了SVN的管理，首先需要add，然后 commit.
-（右键该文件 -> source control -> Add，这样该文件的标记就变为 “A”，然后在 commit）
-4、代码中 某文件后面有 “D” 标记，表示该文件在服务器上已被删除，这时update的话，可删除本地的文件。
-5、代码中 某文件后面有 “C” 标记，表示该文件与服务器的文件冲突。
+    1、代码中 某文件后面有 “M” 标记，表示该文件已被修改，需要 commit.
+    （右键该文件 -> source control -> commit selected file...）
+    2、代码中 某文件后面有 “A” 标记，表示该文件是新添加的，已受SVN管理，需要 commit.
+    （右键该文件 -> source control -> commit selected file...）
+    3、代码中 某文件后面有 “?” 标记，表示该文件是新添加的，并且脱离了SVN的管理，首先需要add，然后 commit.
+    （右键该文件 -> source control -> Add，这样该文件的标记就变为 “A”，然后在 commit）
+    4、代码中 某文件后面有 “D” 标记，表示该文件在服务器上已被删除，这时update的话，可删除本地的文件。
+    5、代码中 某文件后面有 “C” 标记，表示该文件与服务器的文件冲突。
 */]
 
 [self networkMonitoringAction];             // 0『iOS应用networkMonitoring』
