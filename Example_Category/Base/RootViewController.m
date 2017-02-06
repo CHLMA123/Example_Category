@@ -63,6 +63,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkStatusChanged:) name:SGReachabilityChangedNotification object:nil];
     //[self lldbDebugTest];
     //[self testLocalizedString];
+    
 }
 
 - (void)dealloc{
@@ -84,6 +85,24 @@
     //本地化字符串文件table
     NSString *navTitle = NSLocalizedString(@"LocalizableString", nil);
     [_customRNavBtn setTitle:navTitle forState:UIControlStateNormal];
+}
+
+- (void)testGCDFlowing{
+
+    /*
+     对于重度磁盘I/O依赖的后台任务，如果对实时性要求不高，放到DISPATCH_QUEUE_PRIORITY_BACKGROUND Queue中是个好习惯，对系统更友好。
+     实际上I/O Throttle还分为好几种，有Disk I/O Throttle，Memory I/O Throttle，和Network I/O Throttle。语义类似只不过场景不同。
+     */
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        
+        NSLog(@"iOS编程中throttle那些事:http://www.cocoachina.com/ios/20170106/18525.html");
+        NSLog(@"实现iOS中的函数节流和函数防抖:https://satanwoo.github.io/2015/09/30/Debounce-and-Throttle-in-iOS/");
+        /*
+         首先是函数节流（Throttling），意思就是说一个函数在一定时间内，只能执行有限次数。比如，一个函数在100毫秒呢，最多只能执行一次。当然，也可以不执行！
+         函数防抖的意思就是，一个函数被执行过一次以后，在一段时间内不能再次执行。比如，一个函数执行完了之后，100毫秒之内不能第二次执行。
+         这两玩意有啥区别啊？这么解释吧，函数防抖可能会被无限延迟。用现实乘坐公交车中的例子来说，Throttle就是准点就发车（比如15分钟一班公交车）；Debounce就是黑车，上了一个人以后，司机说，再等一个人，等不到，咱么10分钟后出发。但是呢，如果在10分钟内又有一个人上车，这个10分钟自动延后直到等待的10分钟内没人上车了。换句话说，Debounce可以理解成merge一段时间的一系列相同函数调用。
+         */
+    });
 }
 
 /**

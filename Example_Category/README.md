@@ -76,6 +76,7 @@
 
         不需要修改现有的代码，对现有代码的侵入性降低到最低，不需要添加大量重复的逻辑判断代码。
 
+     **详细参见：http://www.cocoachina.com/ios/20170122/18602.html 或者 /Users/machunlei/Desktop/DEMO/MayerWorkSpace_OC/CrashDemo-master
 */]
 
 [/** 6 appledoc的使用：
