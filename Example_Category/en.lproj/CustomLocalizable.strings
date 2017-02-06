@@ -1,0 +1,18 @@
+/* 
+  CustomLocalizable.strings
+  Example_Category
+
+  Created by MCL on 2017/2/6.
+  Copyright © 2017年 MCL. All rights reserved.
+ 
+ 多人开发情况下的字符串本地化
+ 项目开发中，独立开发的还是少数。经常会有多人开发的情况，这种情况，如果多人同时操作本地化文件，极有可能会存在冲突。另一方面，我们又不希望自己的本地化文件受到对方的污染，也就是说，我们不希望对方操作我们的本地化文件。但是上面介绍的代码中字符串的本地化是使用的是默认的文件名"Localizable",因为启动程序时，系统将根据语言加载相应的文件得到其对应的字符串文件，这个字符串可以通过系统将NSLocalizedString中的宏生成名为“Localizable.strings”的文件。那么如何让系统加载我们自己命名的本地化文件而非系统默认的Localizable.strings呢？这就是 NSLocalizedStringFromTable(<#key#>, <#tbl#>, <#comment#>)的用处。
+ 
+ 也就是说，如果你的strings文件名字不是Localizable而是自定义的话，如VVS.strings，那么你就得使用NSLocalizedStringFromTable这个宏来读取本地化字符串。
+
+ // key：系统根据key取字符串
+ // tbl：自定义strings文件的名字
+ // comment：可以不传
+ NSLocalizedStringFromTable(, , )
+*/
+"CustomLocalizableString" = "CustomLocalizableString";

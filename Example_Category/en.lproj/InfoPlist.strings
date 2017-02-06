@@ -1,0 +1,18 @@
+/* 
+  InfoPlist.strings
+  Example_Category
+
+  Created by MCL on 2017/2/6.
+  Copyright © 2017年 MCL. All rights reserved.
+ 
+  本地化App名称de步骤就是：
+ 
+  0 选中Info.plist，按下键盘上的command + N，选择Strings File（iOS->Resource->Strings File）,文件名字命名为InfoPlist，且必须是这个名字，点击create后，Xcode左侧导航列表就会出现名为InfoPlist.strings的文件, 选中InfoPlist.strings，在Xcode的File inspection（Xcode右侧文件检查器）中点击Localize，目的是选择我们需要本地化的语言。
+ 
+  1 在Project的设置中通过点击"+"添加需要本地化的语言。
+ 
+  2 然后在Xcode右侧的File inspection中点击Localize，选中需要本地化App名称的语言。
+ 
+  3 最后在每个语言对应的文件中以key = value(CFBundleDisplayName = "App名称";);的形式设置App的名称。
+*/
+CFBundleDisplayName = "Localizable App Name";

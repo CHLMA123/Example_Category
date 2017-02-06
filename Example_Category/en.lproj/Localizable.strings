@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  Example_Category
+
+  Created by MCL on 2017/2/6.
+  Copyright © 2017年 MCL. All rights reserved.
+ 
+  代码中字符串的本地化
+ 
+  字符本地化和App名称本地化过程如出一辙，只是创建的文件名成不一样（连同后缀一起，文件名必须是Localizable.strings），其他步骤完全相同。
+ 
+  NSLocalizedString(@"LocalizableString", nil);
+ 
+*/
+"LocalizableString" = "LocalizableString";

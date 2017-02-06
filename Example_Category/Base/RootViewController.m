@@ -52,7 +52,6 @@
     // Do any additional setup after loading the view.
     self.title = @"Demo";
     self.view.backgroundColor = RGBCOLOR(48.f, 48.f, 64.f);
-    
     [self initNavView];
     
     [self setupData];
@@ -63,6 +62,7 @@
     [oberver startNotifier];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkStatusChanged:) name:SGReachabilityChangedNotification object:nil];
     //[self lldbDebugTest];
+    //[self testLocalizedString];
 }
 
 - (void)dealloc{
@@ -71,6 +71,19 @@
 
 - (void)networkStatusChanged:(NSNotification *)notify{
     NSLog(@"notify-------%@",notify.userInfo);
+}
+
+- (void)testLocalizedString{
+
+    NSArray *languages = [[NSUserDefaults standardUserDefaults] valueForKey:@"AppleLanguages"];
+    NSString *currentLanguage = languages.firstObject;
+    NSLog(@"模拟器当前语言：%@",currentLanguage);
+    
+    //多人开发使用自定义命名的本地字符串文件table
+    self.title = NSLocalizedStringFromTable(@"CustomLocalizableString", @"CustomLocalizable", nil);
+    //本地化字符串文件table
+    NSString *navTitle = NSLocalizedString(@"LocalizableString", nil);
+    [_customRNavBtn setTitle:navTitle forState:UIControlStateNormal];
 }
 
 /**
@@ -95,7 +108,8 @@
     //    self.navigationItem.rightBarButtonItem = btn;
     
     UITapImageView *tapImgV = [[UITapImageView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
-    tapImgV.image = [UIImage imageNamed:@"添加朋友"];
+    tapImgV.image = [UIImage imageNamed:@"Icon-120"];
+//    tapImgV.image = [UIImage imageNamed:@"添加朋友"];
     [tapImgV addTapBlock:^(id obj) {
         
         NSLog(@"添加朋友被点击了。。。");
