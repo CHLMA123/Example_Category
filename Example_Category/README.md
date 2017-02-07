@@ -136,6 +136,10 @@
     5、代码中 某文件后面有 “C” 标记，表示该文件与服务器的文件冲突。
 */]
 
+
+/*textfield:_placeholderLabel.textColor*/
+[textfield setValue:[UIColor blackColor] forKeyPath:@"_placeholderLabel.textColor"];
+
 [self networkMonitoringAction];             // 0『iOS应用networkMonitoring』
 #pragma mark - Examples (1 - 15)
 
