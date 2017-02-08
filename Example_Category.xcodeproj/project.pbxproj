@@ -1182,11 +1182,11 @@
 				36E49BAA1E0A4EB700F4F0FF /* FunctionalModule */,
 				36C891711D0CEAE100DC86E0 /* AppDelegate.h */,
 				36C891721D0CEAE100DC86E0 /* AppDelegate.m */,
-				364C729A1E3051F300ADC0D4 /* ModuleViewController.h */,
-				364C729B1E3051F300ADC0D4 /* ModuleViewController.m */,
 				364C729C1E3051F300ADC0D4 /* RootViewController.h */,
 				364C729D1E3051F300ADC0D4 /* RootViewController.m */,
 				36514A001D7A6C8A0047BDBC /* README.md */,
+				364C729A1E3051F300ADC0D4 /* ModuleViewController.h */,
+				364C729B1E3051F300ADC0D4 /* ModuleViewController.m */,
 				36C8916E1D0CEAE100DC86E0 /* Supporting Files */,
 			);
 			path = Example_Category;
