@@ -49,20 +49,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Objective-C 中self 和 super
-    NSLog(@"self ' class is %@", [self class]);
-    NSLog(@"super' class is %@", [super class]);
-    /*
-     2017-02-09 15:35:10.424 Example_Category[11607:159962] self ' class is RootViewController
-     2017-02-09 15:35:10.425 Example_Category[11607:159962] super' class is RootViewController
-     真相
-     
-     self 是类的隐藏的参数，指向当前当前调用方法的类，另一个隐藏参数是 _cmd，代表当前类方法的 selector。这里只关注这个 self。super 是个啥？super 并不是隐藏的参数，它只是一个“编译器指示符”，它和 self 指向的是相同的消息接收者，拿上面的代码为例，不论是用 [self viewDidLoad] 还是 [super viewDidLoad]，接收“viewDidLoad”这个消息的接收者都是 同一个对象。不同的是，super 告诉编译器，当调用 viewDidLoad 的方法时，要去调用父类的方法，而不是本类里的。
-     
-     当使用 self 调用方法时，会从当前类的方法列表中开始找，如果没有，就从父类中再找；而当使用 super 时，则从父类的方法列表中开始找，然后调用父类的这个方法。
-     */
-    
     // Do any additional setup after loading the view.
     self.title = @"Demo";
     self.view.backgroundColor = RGBCOLOR(48.f, 48.f, 64.f);
@@ -79,6 +65,20 @@
     //[self testLocalizedString];
     //[self printfSandBoxPaths];
     
+    
+//    // Objective-C 中self 和 super
+//    NSLog(@"self ' class is %@", [self class]);
+//    NSLog(@"super' class is %@", [super class]);
+    /*
+     2017-02-09 15:35:10.424 Example_Category[11607:159962] self ' class is RootViewController
+     2017-02-09 15:35:10.425 Example_Category[11607:159962] super' class is RootViewController
+     真相
+     
+     self 是类的隐藏的参数，指向当前当前调用方法的类，另一个隐藏参数是 _cmd，代表当前类方法的 selector。这里只关注这个 self。super 是个啥？super 并不是隐藏的参数，它只是一个“编译器指示符”，它和 self 指向的是相同的消息接收者，拿上面的代码为例，不论是用 [self viewDidLoad] 还是 [super viewDidLoad]，接收“viewDidLoad”这个消息的接收者都是 同一个对象。不同的是，super 告诉编译器，当调用 viewDidLoad 的方法时，要去调用父类的方法，而不是本类里的。
+     
+     当使用 self 调用方法时，会从当前类的方法列表中开始找，如果没有，就从父类中再找；而当使用 super 时，则从父类的方法列表中开始找，然后调用父类的这个方法。
+     http://blog.csdn.net/yhawaii/article/details/6991127
+     */
 }
 
 - (void)dealloc{
@@ -197,27 +197,28 @@
     view1.delegate = self;
     [view1 popView];
 }
+
 - (void)selectIndexPathRow:(NSInteger)index
 {
     switch (index) {
         case 0:
         {
-            NSLog(@"Click 0 ......");
+            NSLog(@"Click 0 ...");
         }
             break;
         case 1:
         {
-            NSLog(@"Clikc 1 ......");
+            NSLog(@"Click 1 ...");
         }
             break;
         case 2:
         {
-            NSLog(@"Clikc 2 ......");
+            NSLog(@"Click 2 ...");
         }
             break;
         case 3:
         {
-            NSLog(@"Clikc 3 ......");
+            NSLog(@"Click 3 ...");
         }
             break;
         default:
