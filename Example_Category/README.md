@@ -1,5 +1,29 @@
 # Example_Category
 
+[/**
+    利用symbollicatecrash工具查看crash文件
+
+    1.打开终端输入以下命令：
+    find /Applications/Xcode.app -name symbolicatecrash -type f 
+
+    APP210deMacBook-Pro:~ APP210$ find /Applications/Xcode-beta.app -name symbolicatecrash -type f
+    /Applications/Xcode-beta.app/Contents/Developer/Platforms/AppleTVSimulator.platform/Developer/Library/PrivateFrameworks/DVTFoundation.framework/symbolicatecrash
+    /Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/DVTFoundation.framework/symbolicatecrash
+    /Applications/Xcode-beta.app/Contents/Developer/Platforms/WatchSimulator.platform/Developer/Library/PrivateFrameworks/DVTFoundation.framework/symbolicatecrash
+    /Applications/Xcode-beta.app/Contents/SharedFrameworks/DVTFoundation.framework/Versions/A/Resources/symbolicatecrash
+
+    2）设置xcode DEVELOPER_DIR:
+    export DEVELOPER_DIR="/Applications/Xcode.app/Contents/Developer" 
+
+    APP210deMacBook-Pro:crash8 APP210$ export DEVELOPER_DIR=/Applications/Xcode-beta.app/Contents/developer
+
+    3) 然后执行命令：
+    ./symbolicatecrash ./*.crash ./*.app.dSYM>symbolic.crash
+
+    APP210deMacBook-Pro:crash8 APP210$ ./symbolicatecrash ./*.crash ./*.app.dSYM>symbolic.crash
+
+*/]
+
 [/** 1 MAC 电脑如果新建txt文本文档:
 
     第一:  打开: 文本编辑 -- 新建  (此时默认的新建格式是rtf格式的)
