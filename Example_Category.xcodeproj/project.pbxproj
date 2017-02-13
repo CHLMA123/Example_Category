@@ -289,6 +289,8 @@
 		56AC89951E4C72A000F06004 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 56AC898E1E4C72A000F06004 /* README.md */; };
 		56AC89961E4C72A000F06004 /* UIControl+EverPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AC89901E4C72A000F06004 /* UIControl+EverPath.m */; };
 		56AC89971E4C72A000F06004 /* UIViewController+EverPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AC89921E4C72A000F06004 /* UIViewController+EverPath.m */; };
+		56B0DB721E515D8700D07E07 /* MyRuntimeClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B0DB711E515D8700D07E07 /* MyRuntimeClass.m */; };
+		56B0DB751E515E3600D07E07 /* MyRuntimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B0DB741E515E3600D07E07 /* MyRuntimeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -727,6 +729,10 @@
 		56AC89901E4C72A000F06004 /* UIControl+EverPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+EverPath.m"; sourceTree = "<group>"; };
 		56AC89911E4C72A000F06004 /* UIViewController+EverPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+EverPath.h"; sourceTree = "<group>"; };
 		56AC89921E4C72A000F06004 /* UIViewController+EverPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+EverPath.m"; sourceTree = "<group>"; };
+		56B0DB701E515D8700D07E07 /* MyRuntimeClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRuntimeClass.h; sourceTree = "<group>"; };
+		56B0DB711E515D8700D07E07 /* MyRuntimeClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRuntimeClass.m; sourceTree = "<group>"; };
+		56B0DB731E515E3600D07E07 /* MyRuntimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRuntimeViewController.h; sourceTree = "<group>"; };
+		56B0DB741E515E3600D07E07 /* MyRuntimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRuntimeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1349,6 +1355,7 @@
 		36E49BAA1E0A4EB700F4F0FF /* FunctionalModule */ = {
 			isa = PBXGroup;
 			children = (
+				56B0DB6F1E515D6100D07E07 /* RuntimeExample */,
 				361FC4D11E2727E3007243FC /* JS_OC_Control */,
 				362DB7901E164F1500CC9778 /* KeyChain */,
 				362DB78C1E164C4900CC9778 /* CoreLocation */,
@@ -1808,6 +1815,17 @@
 			path = EverShowPath;
 			sourceTree = "<group>";
 		};
+		56B0DB6F1E515D6100D07E07 /* RuntimeExample */ = {
+			isa = PBXGroup;
+			children = (
+				56B0DB701E515D8700D07E07 /* MyRuntimeClass.h */,
+				56B0DB711E515D8700D07E07 /* MyRuntimeClass.m */,
+				56B0DB731E515E3600D07E07 /* MyRuntimeViewController.h */,
+				56B0DB741E515E3600D07E07 /* MyRuntimeViewController.m */,
+			);
+			path = RuntimeExample;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2110,6 +2128,7 @@
 				36D391991E13B7D9008C2F66 /* SimplePinger.m in Sources */,
 				364C72C61E30522800ADC0D4 /* UITabBarController+MemoryLeak.m in Sources */,
 				36514A4B1D7A799C0047BDBC /* UIControl+Additions.m in Sources */,
+				56B0DB751E515E3600D07E07 /* MyRuntimeViewController.m in Sources */,
 				36E49CD11E0A4FFE00F4F0FF /* CrashReport.m in Sources */,
 				362DB78B1E164A9500CC9778 /* imageCompressHelper.m in Sources */,
 				362DF5E31E0BD41100260F15 /* AFNetManager.m in Sources */,
@@ -2127,6 +2146,7 @@
 				56AC89971E4C72A000F06004 /* UIViewController+EverPath.m in Sources */,
 				364C72BD1E30522800ADC0D4 /* MLeakedObjectProxy.m in Sources */,
 				36E49CB31E0A4EB700F4F0FF /* XJQRCodeModel.m in Sources */,
+				56B0DB721E515D8700D07E07 /* MyRuntimeClass.m in Sources */,
 				36E49CAD1E0A4EB700F4F0FF /* NSLayoutConstraint+PureLayout.m in Sources */,
 				362DF5AD1E0BAFA500260F15 /* View+MASAdditions.m in Sources */,
 				36E49CB81E0A4EB700F4F0FF /* STDDebugPingViewController.m in Sources */,

@@ -29,6 +29,7 @@
 #import "LocationViewController.h"
 #import "KeyChainViewController.h"
 #import "JS_OC_ControlViewController.h"
+#import "MyRuntimeViewController.h"
 
 #define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
 
@@ -255,6 +256,7 @@
     
     // 15 ~ 19
     [mArr addObject:@"JS_OC_Control"];
+    [mArr addObject:@"RuntimeMethodTest"];
     
     self.datasource = mArr;
 }
@@ -297,6 +299,8 @@
             
         case 15:{ [self JS_OC_Control]; }
             break;
+        case 16:{ [self MyRuntimeMethodTest]; };
+            break;
             
         default:
             break;
@@ -304,6 +308,14 @@
 }
 
 #pragma mark ------------------------------------------------------------------------
+
+#pragma mark -
+- (void)MyRuntimeMethodTest{
+    
+    MyRuntimeViewController *push = [[MyRuntimeViewController alloc] init];
+    push.view.backgroundColor = [UIColor whiteColor];
+    [self.navigationController pushViewController:push animated:YES];
+}
 
 #pragma mark - JS_OC_Control
 - (void)JS_OC_Control{

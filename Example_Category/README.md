@@ -12,7 +12,7 @@
     /Applications/Xcode-beta.app/Contents/Developer/Platforms/WatchSimulator.platform/Developer/Library/PrivateFrameworks/DVTFoundation.framework/symbolicatecrash
     /Applications/Xcode-beta.app/Contents/SharedFrameworks/DVTFoundation.framework/Versions/A/Resources/symbolicatecrash
 
-    2）设置xcode DEVELOPER_DIR:
+    2）设置Xcode DEVELOPER_DIR:
     export DEVELOPER_DIR="/Applications/Xcode.app/Contents/Developer" 
 
     APP210deMacBook-Pro:crash8 APP210$ export DEVELOPER_DIR=/Applications/Xcode-beta.app/Contents/developer
@@ -36,7 +36,7 @@
     App名称本地化
     代码中字符串本地化
     多人开发情况下的字符串本地化
-    图片本地化（两种方式两种方式）
+    图片本地化（两种方式）
     查看/切换本地语言
 */]
 
@@ -54,7 +54,7 @@
 */]
 
 [/**
-    4. view的生命周期 —— 只要是View开头的都是View的生命周期方法 
+    4. View的生命周期 —— 只要是View开头的都是View的生命周期方法 
 
         loadView：第一次使用view的时候调用
         viewDidLoad：控制器的view加载完成的时候调用
@@ -122,7 +122,7 @@
 
 
     2.在Xcode里使用
-        2.1 首先创建一个Aggregate类型的Target，取名Document
+        2.1 首先创建一个Target，取名Document
         2.2 选择Build Phases，点击左边的小加号，选择New Run Script Phase，建好了以后打开刚刚建立的Run Script，在框里输入命令，命令与终端一样，这里我们输入：
             appledoc --output ./doc --project-name Example_Category --project-company mayer --company-id 029 .
         2.3 然后点左上角选择Document，编译一下，成功后文档就生成在doc目录下了。
@@ -148,7 +148,7 @@
     '?'  未受控
     '!'  丢失，一般是将受控文件直接删除导致
 
-    这些标记跟你使用的代码托管工具或者xcode自带的svn代码托管工具有关，怎样消除：
+    这些标记跟你使用的代码托管工具或者Xcode自带的svn代码托管工具有关，怎样消除：
 
     1、代码中 某文件后面有 “M” 标记，表示该文件已被修改，需要 commit.
     （右键该文件 -> source control -> commit selected file...）
@@ -160,9 +160,42 @@
     5、代码中 某文件后面有 “C” 标记，表示该文件与服务器的文件冲突。
 */]
 
+[/**8 ObjC中的键值编码（KVC）、键值监听（KVO）特性 
 
-/*textfield:_placeholderLabel.textColor*/
-[textfield setValue:[UIColor blackColor] forKeyPath:@"_placeholderLabel.textColor"];
+键值编码KVC
+    下面是KVC最为重要的四个方法：
+
+    - (nullable id)valueForKey:(NSString *)key;                          //直接通过Key来取值
+    - (void)setValue:(nullable id)value forKey:(NSString *)key;          //通过Key来设值
+    - (nullable id)valueForKeyPath:(NSString *)keyPath;                  //通过KeyPath来取值
+    - (void)setValue:(nullable id)value forKeyPath:(NSString *)keyPath;  //通过KeyPath来设值
+
+    iOS开发中KVC的使用场景：
+
+    1. 动态地取值和设值
+    2. 用KVC来访问和修改私有变量
+    3. Model和字典转换
+    4. 修改一些控件的内部属性, 最常用的就是个性化UITextField中的placeHolderText：
+     /**/[textfield setValue:[UIColor blackColor] forKeyPath:@"_placeholderLabel.textColor"]; */]
+
+[/** 键值监听KVO
+    KVO其实是一种观察者模式，在ObjC中使用KVO操作常用的方法如下：
+
+    注册指定Key路径的监听器： addObserver: forKeyPath: options:  context:
+    删除指定Key路径的监听器： removeObserver: forKeyPath、removeObserver: forKeyPath: context:
+    回调监听： observeValueForKeyPath: ofObject: change: context:
+
+    KVO的使用步骤也比较简单：
+
+    通过addObserver: forKeyPath: options: context:为被监听对象（它通常是数据模型）注册监听器
+    重写监听器的observeValueForKeyPath: ofObject: change: context:方法
+*/]
+
+[/**9 Model就是MVC和MVVM最前面的M，只有在将网络&数据库获取的数据正确转化成Model后,才能更好地服务ViewController和View。
+
+--Model是应用逻辑层的对象，负责应用的逻辑计算和诸多与业务相关的方法和操作。首先Model将未处理的数据转化成Model后，再传给ViewController，再传给ViewController再将处理好的Model数据显示到View上去。相反View产生的数据可也可以转化为Model，通过ViewConroller传到Model层处理后再保存&更新。
+*/]
+
 
 [self networkMonitoringAction];             // 0『iOS应用networkMonitoring』
 #pragma mark - Examples (1 - 15)
