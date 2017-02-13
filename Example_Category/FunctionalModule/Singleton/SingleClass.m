@@ -26,6 +26,10 @@ static SingleClass* _instance = nil;
     return _instance ;
 }
 
+/**
+  alloc 给对象分配内存空间，init是对对象的初始化，包括设置成员变量初值这些工作。而给对象分配空间，除了alloc方法之外，还有另一个方法： allocWithZone.
+  在NSObject 这个类的官方文档里面，allocWithZone方法介绍说，该方法的参数是被忽略的，正确的做法是传nil或者NULL参数给它。
+ */
 + (id) allocWithZone:(struct _NSZone *)zone
 {
     return [SingleClass shareInstance] ;

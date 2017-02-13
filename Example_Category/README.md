@@ -1,7 +1,25 @@
 # Example_Category
+[/**Grand Central Dispatch 简称（GCD）
+
+GCD会自动根据任务在多核处理器上分配资源，优化程序。
+
+1.Dispatch After 主要用于延迟执行一些代码。
+2.Dispatch Once 只执行一次，用于一些单例。
+
+dispatch queue
+
+1、常用的方法dispatch_async
+为了避免界面在处理耗时的操作时卡死，比如读取网络数据，IO,数据库读写等，我们会在另外一个线程中处理这些操作，然后通知主线程更新界面。
+2、dispatch_group_async的使用
+dispatch_group_async可以实现监听一组任务是否完成，完成后得到通知执行其他的操作。这个方法很有用，比如你执行三个下载任务，当三个任务都下载完成后你才通知界面说完成的了。
+3、dispatch_barrier_async的使用
+dispatch_barrier_async是在前面的任务执行结束后它才执行，而且它后面的任务等它执行完成之后才会执行
+
+*/]
+
 
 [/**
-    利用symbollicatecrash工具查看crash文件
+    0 利用symbollicatecrash工具查看crash文件
 
     1.打开终端输入以下命令：
     find /Applications/Xcode.app -name symbolicatecrash -type f 
@@ -191,11 +209,56 @@
     重写监听器的observeValueForKeyPath: ofObject: change: context:方法
 */]
 
-[/**9 Model就是MVC和MVVM最前面的M，只有在将网络&数据库获取的数据正确转化成Model后,才能更好地服务ViewController和View。
+[/**9 iOS 软件架构模式MVC(Model-View-Controller)，MVP以及MVVM（Model-View-ViewModel）
+
+都是把一个应用中的实体分为以下三类：
+
+    Models--负责主要的数据或者操作数据的数据访问层，可以想象 Perspn 和 PersonDataProvider 类。
+
+    Views--负责展示层（GUI），对于iOS环境可以联想一下以 UI 开头的所有类。
+
+    Controller/Presenter/ViewModel--负责协调 Model 和 View，通常根据用户在View上的动作在Model上作出对应的更改，同时将更改的信息返回到View上。
+
+在 iOS 开发中实践 MVVM 的话，通常会把大量原来放在 ViewController 里的视图逻辑和数据逻辑移到 ViewModel 里，从而有效的减轻了 ViewController 的负担。
+
+Model就是MVC和MVVM最前面的M，只有在将网络&数据库获取的数据正确转化成Model后,才能更好地服务ViewController和View。
 
 --Model是应用逻辑层的对象，负责应用的逻辑计算和诸多与业务相关的方法和操作。首先Model将未处理的数据转化成Model后，再传给ViewController，再传给ViewController再将处理好的Model数据显示到View上去。相反View产生的数据可也可以转化为Model，通过ViewConroller传到Model层处理后再保存&更新。
+
+1、Model做好数据加工，负责封装数据、存储和处理数据运算等工作
+2、view应该提供简洁的构造方法，确保view的初始化工作完全封闭在view中，代码重用性高，分工明确！负责数据展示、监听用户触摸等工作
+3、控制器Controller： 负责业务逻辑、事件响应、数据加工等工作
 */]
 
+[/**11 __weak 和 __block 关键字的区别 
+
+对于 static 变量，全局变量，在 block 中是有读写权限的，因为在 block 的内部实现中，拷贝的是指向这些变量的指针。
+总结一下就是：
+
+    1、在MRC 时代，__block 修饰，可以避免循环引用；ARC时代，__block 修饰，同样会引起循环引用问题；
+    2、__block不管是ARC还是MRC模式下都可以使用，可以修饰对象，还可以修饰基本数据类型；
+    3、__weak只能在ARC模式下使用，也只能修饰对象，不能修饰基本数据类型；
+    4、__block对象可以在block中被重新赋值，__weak不可以；
+    5、__unsafe_unretained修饰符可以被视为iOS SDK 4.3以前版本的__weak的替代品，不过不会被自动置空为nil。所以尽可能不要使用这个修饰符。(__weak 会自动置为nil)
+*/]
+
+[/**12 Cocoa框架
+iOS中，Cocoa众多框架中最重要最基本的两个框架是：Foundation 和 UIKit。
+Foundation 和界面无关，也可以说和界面无关的类基本是Foundation框架的，和界面相关的是UIKit框架。
+
+Objective-C的优点是它是动态的。动态能力有三种：
+    动态类--运行时确定类的对象
+    动态绑定--运行时确定要调用的方法
+    动态加载--运行时为程序加载新的模块
+
+iOS 生成不重复随机数 
+
+    常用方法：arc4random
+    例： 获取一个随机整数范围在：[0,100)包括0，不包括100
+    int x = arc4random() % 100;
+
+
+*/]
 
 [self networkMonitoringAction];             // 0『iOS应用networkMonitoring』
 #pragma mark - Examples (1 - 15)
