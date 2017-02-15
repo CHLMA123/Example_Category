@@ -296,6 +296,9 @@
 		56B8676A1E543306001718FF /* push.php in Resources */ = {isa = PBXBuildFile; fileRef = 56B867661E543306001718FF /* push.php */; };
 		56B8676B1E543306001718FF /* PushChat命名标准.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 56B867671E543306001718FF /* PushChat命名标准.rtf */; };
 		56B8676C1E543306001718FF /* 通过终端推送_TEST.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 56B867681E543306001718FF /* 通过终端推送_TEST.rtf */; };
+		56B867721E543548001718FF /* CocoaPods .rtf in Resources */ = {isa = PBXBuildFile; fileRef = 56B8676E1E543548001718FF /* CocoaPods .rtf */; };
+		56B867731E543548001718FF /* #pragma mark -.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 56B867701E543548001718FF /* #pragma mark -.rtf */; };
+		56B867741E543548001718FF /* 安装Chisel.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 56B867711E543548001718FF /* 安装Chisel.rtf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -743,6 +746,9 @@
 		56B867661E543306001718FF /* push.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = push.php; sourceTree = "<group>"; };
 		56B867671E543306001718FF /* PushChat命名标准.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "PushChat命名标准.rtf"; sourceTree = "<group>"; };
 		56B867681E543306001718FF /* 通过终端推送_TEST.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "通过终端推送_TEST.rtf"; sourceTree = "<group>"; };
+		56B8676E1E543548001718FF /* CocoaPods .rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "CocoaPods .rtf"; sourceTree = "<group>"; };
+		56B867701E543548001718FF /* #pragma mark -.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "#pragma mark -.rtf"; sourceTree = "<group>"; };
+		56B867711E543548001718FF /* 安装Chisel.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "安装Chisel.rtf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1366,6 +1372,8 @@
 		36E49BAA1E0A4EB700F4F0FF /* FunctionalModule */ = {
 			isa = PBXGroup;
 			children = (
+				56B8676D1E543548001718FF /* CocoaPods使用 */,
+				56B8676F1E543548001718FF /* DebugCMD */,
 				56B867641E543306001718FF /* Cer2Pem_iOS消息推送证书 */,
 				56B0DB6F1E515D6100D07E07 /* RuntimeExample */,
 				361FC4D11E2727E3007243FC /* JS_OC_Control */,
@@ -1849,6 +1857,23 @@
 			path = "Cer2Pem_iOS消息推送证书";
 			sourceTree = "<group>";
 		};
+		56B8676D1E543548001718FF /* CocoaPods使用 */ = {
+			isa = PBXGroup;
+			children = (
+				56B8676E1E543548001718FF /* CocoaPods .rtf */,
+			);
+			path = "CocoaPods使用";
+			sourceTree = "<group>";
+		};
+		56B8676F1E543548001718FF /* DebugCMD */ = {
+			isa = PBXGroup;
+			children = (
+				56B867701E543548001718FF /* #pragma mark -.rtf */,
+				56B867711E543548001718FF /* 安装Chisel.rtf */,
+			);
+			path = DebugCMD;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1943,6 +1968,7 @@
 				36E49BA31E0A4EA600F4F0FF /* findhome_20160223203656xiawucha.png in Resources */,
 				361FC4E61E273064007243FC /* ActiveSuccess.html in Resources */,
 				36C8917E1D0CEAE100DC86E0 /* LaunchScreen.storyboard in Resources */,
+				56B867721E543548001718FF /* CocoaPods .rtf in Resources */,
 				36E49B8D1E0A4EA600F4F0FF /* findhome_20160126203251waimai.png in Resources */,
 				56B8676A1E543306001718FF /* push.php in Resources */,
 				36E49B8A1E0A4EA600F4F0FF /* findhome_20160126202805dianying.png in Resources */,
@@ -1989,6 +2015,7 @@
 				36E49C9F1E0A4EB700F4F0FF /* app_9.png in Resources */,
 				36E49BA71E0A4EA600F4F0FF /* findhome_dot_pressed@3x.png in Resources */,
 				361FC4EA1E273064007243FC /* NetConnect.html in Resources */,
+				56B867731E543548001718FF /* #pragma mark -.rtf in Resources */,
 				361A62F31DF258BC007050C2 /* record_success@2x.png in Resources */,
 				36E49C7F1E0A4EB700F4F0FF /* addcamera_loading8@3x.png in Resources */,
 				3692B3531D8FC10E00D884CF /* CheckBox@2x.png in Resources */,
@@ -2027,6 +2054,7 @@
 				36E49C6F1E0A4EB700F4F0FF /* addcamera_loading13@3x.png in Resources */,
 				36E49BA51E0A4EA600F4F0FF /* findhome_dot@3x.png in Resources */,
 				36E49B921E0A4EA600F4F0FF /* findhome_20160126203617jianshen.png in Resources */,
+				56B867741E543548001718FF /* 安装Chisel.rtf in Resources */,
 				36E49C751E0A4EB700F4F0FF /* addcamera_loading3@3x.png in Resources */,
 				363ED98D1E480E4E001850F8 /* CustomLocalizable.strings in Resources */,
 				36E49C861E0A4EB700F4F0FF /* help.css in Resources */,
