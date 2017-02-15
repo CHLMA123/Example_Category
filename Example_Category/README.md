@@ -276,6 +276,22 @@ Model就是MVC和MVVM最前面的M，只有在将网络&数据库获取的数据
 1、Model做好数据加工，负责封装数据、存储和处理数据运算等工作
 2、view应该提供简洁的构造方法，确保view的初始化工作完全封闭在view中，代码重用性高，分工明确！负责数据展示、监听用户触摸等工作
 3、控制器Controller： 负责业务逻辑、事件响应、数据加工等工作
+
+MVC（Model-View-Controller）是最常见的软件架构
+
+•	视图（View）：用户界面。
+•	控制器（Controller）：业务逻辑
+•	模型（Model）：数据保存
+
+1.	View 传送指令到 Controller
+2.	Controller 完成业务逻辑后，要求 Model 改变状态
+3.	Model 将新的数据发送到 View，用户得到反馈
+
+Controller 里面就只应该存放这些不能复用的代码，这些代码包括：
+•	在初始化时，构造相应的 View 和 Model。
+•	监听 Model 层的事件，将 Model 层的数据传递到 View 层。
+•	监听 View 层的事件，并且将 View 层的事件转发到 Model 层。
+
 */]
 
 [/**11 __weak 和 __block 关键字的区别 

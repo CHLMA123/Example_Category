@@ -299,6 +299,8 @@
 		56B867721E543548001718FF /* CocoaPods .rtf in Resources */ = {isa = PBXBuildFile; fileRef = 56B8676E1E543548001718FF /* CocoaPods .rtf */; };
 		56B867731E543548001718FF /* #pragma mark -.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 56B867701E543548001718FF /* #pragma mark -.rtf */; };
 		56B867741E543548001718FF /* 安装Chisel.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 56B867711E543548001718FF /* 安装Chisel.rtf */; };
+		56B867771E543761001718FF /* PushNotification_FlowChart.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 56B867751E543761001718FF /* PushNotification_FlowChart.jpg */; };
+		56B867781E543761001718FF /* PushNotification_FlowChartDetail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 56B867761E543761001718FF /* PushNotification_FlowChartDetail.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -749,6 +751,8 @@
 		56B8676E1E543548001718FF /* CocoaPods .rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "CocoaPods .rtf"; sourceTree = "<group>"; };
 		56B867701E543548001718FF /* #pragma mark -.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "#pragma mark -.rtf"; sourceTree = "<group>"; };
 		56B867711E543548001718FF /* 安装Chisel.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "安装Chisel.rtf"; sourceTree = "<group>"; };
+		56B867751E543761001718FF /* PushNotification_FlowChart.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PushNotification_FlowChart.jpg; sourceTree = "<group>"; };
+		56B867761E543761001718FF /* PushNotification_FlowChartDetail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PushNotification_FlowChartDetail.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1849,10 +1853,12 @@
 		56B867641E543306001718FF /* Cer2Pem_iOS消息推送证书 */ = {
 			isa = PBXGroup;
 			children = (
-				56B867651E543306001718FF /* cert-mk.zip */,
-				56B867661E543306001718FF /* push.php */,
 				56B867671E543306001718FF /* PushChat命名标准.rtf */,
 				56B867681E543306001718FF /* 通过终端推送_TEST.rtf */,
+				56B867661E543306001718FF /* push.php */,
+				56B867651E543306001718FF /* cert-mk.zip */,
+				56B867751E543761001718FF /* PushNotification_FlowChart.jpg */,
+				56B867761E543761001718FF /* PushNotification_FlowChartDetail.jpg */,
 			);
 			path = "Cer2Pem_iOS消息推送证书";
 			sourceTree = "<group>";
@@ -1965,6 +1971,7 @@
 				36E49C9C1E0A4EB700F4F0FF /* app_6.png in Resources */,
 				56B8676B1E543306001718FF /* PushChat命名标准.rtf in Resources */,
 				36E49C911E0A4EB700F4F0FF /* app_17.png in Resources */,
+				56B867771E543761001718FF /* PushNotification_FlowChart.jpg in Resources */,
 				36E49BA31E0A4EA600F4F0FF /* findhome_20160223203656xiawucha.png in Resources */,
 				361FC4E61E273064007243FC /* ActiveSuccess.html in Resources */,
 				36C8917E1D0CEAE100DC86E0 /* LaunchScreen.storyboard in Resources */,
@@ -2054,6 +2061,7 @@
 				36E49C6F1E0A4EB700F4F0FF /* addcamera_loading13@3x.png in Resources */,
 				36E49BA51E0A4EA600F4F0FF /* findhome_dot@3x.png in Resources */,
 				36E49B921E0A4EA600F4F0FF /* findhome_20160126203617jianshen.png in Resources */,
+				56B867781E543761001718FF /* PushNotification_FlowChartDetail.jpg in Resources */,
 				56B867741E543548001718FF /* 安装Chisel.rtf in Resources */,
 				36E49C751E0A4EB700F4F0FF /* addcamera_loading3@3x.png in Resources */,
 				363ED98D1E480E4E001850F8 /* CustomLocalizable.strings in Resources */,

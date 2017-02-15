@@ -1,0 +1,92 @@
+http://blog.csdn.net/wangctong/article/details/44563689
+
+删除
+~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins/Alcatraz.xcplugin
+
+rm -rf ~/Library/Application\ Support/Alcatraz
+安装命令行：
+mkdir -p ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins
+
+curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
+
+
+1.全能搜索家CodePilot 2.0
+你要找的是文件？是文件夹？是代码？Never Mind，CMD+SHIFT+X调出CodePilot，输入任何你想到搜的东西吧！想搜appFinishLaunchingWithOptions？忘记咋拼了？没关系强大的代码搜索能力，appflaun一样也可以找到！超级强大的正则匹配，匹配任何你所想！
+
+2.YouCompleteMe（vim的插件）
+如果你比较喜欢用vim来写代码的话，这里有一个非常棒的vim插件——YouCompleteMe——当你在编写OC代码时，可以提升体验。YouCompleteMe可以在Vim中添加代码自动补全功能，并且不需要你来按某个键来查看代码补全建议——针对OC、OC++、C++以及C该插件可以自动补全建议。
+项目地址：https://github.com/Valloric/YouCompleteMe
+
+3.规范注释生成器VVDocumenter
+很多时候，为了快速开发，很多的技术文档都是能省则省，这个时候注释就变得异常重要，再配合Doxygen这种注释自动生成文档的，就完美了。但是每次都要手动输入规范化的注释，着实也麻烦，但有了VVDocumenter，规范化的注释，主需要输入三个斜线“///”，就OK啦！（VVDocumenter在Mac OSX 10.8.5和Xcode 4.6.3上进行开发，应该能支持所有Xcode 4版本，如果想支持Xcode 5，可以对plist文件稍作修改。
+项目地址：https://github.com/onevcat/VVDocumenter-Xcode
+
+4. KSImageNamed-Xcode
+为项目中使用的UIImage的imageNamed提供文件名自动补全功能。使用[UIImage imageNamed:@"xxx"]时，该插件会扫描整个workspace中的图片文件。
+项目地址： https://github.com/ksuther/KSImageNamed-Xcode
+
+
+5.FuzzyAutocompletePlugin--Xcode 5代码自动补全插件
+FuzzyAutocompletePlugin是一个Xcode 5兼容的插件，通过添加模糊匹配来提高Xcode代码自动补全功能，开发者无需遵循从头匹配的原则，只要记得方法里某个关键字即可进行匹配，很好地提高了工作效率。
+注意：该插件只在Xcode 5上进行过测试，没有测试和其他插件之间的兼容性（KSImageNamed除外）。
+项目地址：https://github.com/chendo/FuzzyAutocompletePlugin
+
+
+6.一个用来对齐常规代码的Xcode插件--XAlign
+一个用来对齐常规代码的Xcode插件，十分强大的自定义对齐模式。这里是一个对齐模式示例，模式文件在main/main/patterns.plist.
+
+shift+command+x;
+
+
+7.SCXcodeMiniMap
+一个Xcode插件，可以在当前的窗口内创建一个代码迷你地图，并在屏幕上高亮提示。
+
+
+
+
+
+
+
+http://www.csdn123.com/html/exception/710/710301_710161_709924.htm
+
+
+                         XCode升级后插件失效的原理与修复办法
+
+
+　　XCode的插件大大丰富了XCode的功能，而且有了Alcatraz，插件的管理也非常容易，像我这种Vim党完全离不开XVim。但是有个非常恼人的问题：一旦升级XCode，插件就失效!
+
+　　之前XCode升级到6.2的时候遇到过插件失效的问题，Google之后把一段很长命令复制到Terminal后运行一下即可，当时一看解决了，顿时觉得满足感爆棚，自己可以拯救地球了~就没有再深入，结果升级到6.3时又遇到了。“同样的招式对圣斗士是不能使用第二次的!”，同样的坑对有节操的程序员是不能掉进去第二次的!因此这一次一定要搞清楚为什么会这样，以后再次遇到了如何解决。
+
+　　问题原因
+
+　　XCode的插件放置在目录~/Library/Application Support/Developer/Shared/Xcode/Plug-ins(要根据自己的电脑目录实际情况)目录下，为.xcplugin格式。通过Show Content可以看到xcplugin中存在一个Info.plist，其中有一项为DVTPlugInCompatibilityUUIDs，而这就是插件失效的原因。
+
+　　由于Apple没有公开插件开发的相关资料，这里我只能通过命名跟值猜测DVTPlugInCompatibilityUUIDs的作用：插件通过DVTPlugInCompatibilityUUIDs来指定能够运行此插件的XCode版本。因此，DVTPlugInCompatibilityUUIDs中存放的是XCode版本对应的UUID，XCode在启动加载控件时，将当前UUID同插件Info.plist中DVTPlugInCompatibilityUUIDs存放的UUID数组进行匹配，如果没有匹配项，说明此插件无法在该版本的XCode运行，插件也就失效了。
+
+　　解决办法
+
+　　解决办法非常简单：将当前版本的UUID加到DVTPlugInCompatibilityUUIDs中即可。但是插件比较多(1个及以上)的情况下，一个个的打开修改非常无聊跟低效，作为“懒惰”的程序员，这时候就要用上命令行，让重复劳动自动化。思路为将命令分为两部分：
+
+　　通过find命令在插件目录下找到所有插件的Info.plist文件
+
+　　通过xargs命令对上一步的搜索结果进行“for循环”(就这样理解吧)，针对每一个Info.plist文件，利用defaults write命令将当前版本的UUID加到DVTPlugInCompatibilityUUIDs中。
+
+　　此时问题来了，挖掘机技术。。。不对，是如何获取当前版本XCode的UUID呢?首先关掉XCode，打开Terminal，输入tail -f /var/log/system.log，再次打开XCode，就能看到如下log信息：
+
+　　[MT] PluginLoading: Required plug-in compatibility UUID 9F75337B-21B4-4ADC-B558-F9CADF7073A7 for plug-in at path ‘~/Library/Application Support/Developer/Shared/Xcode/Plug-ins/Alcatraz.xcplugin’ not present in DVTPlugInCompatibilityUUIDs
+
+　　可以看到，log信息表明XCode加载插件失败的原因，并且能够看到当前版本(6.3)XCode的UUID为9F75337B-21B4-4ADC-B558-F9CADF7073A7。经过@Kyrrr的提醒，有一种更好的方式来获取当前版本XCode的UUID：通过defaults read命令从XCode的Info.plist读取DVTPlugInCompatibilityUUID。
+
+　　最终的命令为：
+
+　find ~/Library/Application Support/Developer/Shared/Xcode/Plug-ins -name Info.plist -maxdepth 3 | xargs -I{} defaults write {} DVTPlugInCompatibilityUUIDs -array-add `defaults read /Applications/Xcode.app/Contents/Info.plist DVTPlugInCompatibilityUUID`
+
+　　在Terminal中运行上述命令就解决了插件失效的问题，在插件Info.plist的DVTPlugInCompatibilityUUIDs中也能看到新增的UUID了。（本文摘自CSDN传人的技术博客） 
+
+
+自动提示图片插件KSImageNamed有时不灵_分类或宏之类不能自动提示:解决网址在下：
+http://www.07net01.com/2015/07/879479.html
+
+
+我的Xcode6.4 UUID:   7FDF5C7A-131F-4ABB-9EDC-8C5F8F0B8A90
+7.1 7265231C-39B4-402C-89E1-16167C4CC990
