@@ -1,0 +1,130 @@
+{\rtf1\ansi\ansicpg936\cocoartf1404\cocoasubrtf340
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset134 PingFangSC-Regular;\f2\fmodern\fcharset0 Courier;
+\f3\fnil\fcharset0 ComicSansMS;\f4\fnil\fcharset134 STKaiti-SC-Regular;\f5\fswiss\fcharset0 ArialMT;
+}
+{\colortbl;\red255\green255\blue255;\red83\green85\blue2;\red82\green0\blue83;\red252\green79\blue8;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww12960\viewh10320\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 APP
+\f1 \'c3\'fb\'b3\'c6
+\f0 _
+\f2\fs36 \expnd0\expndtw0\kerning0
+aps_production\cf2 .\cf0 cer\
+
+\f0\fs24 \kerning1\expnd0\expndtw0 APP
+\f1 \'c3\'fb\'b3\'c6
+\f0 _
+\f2\fs36 \expnd0\expndtw0\kerning0
+aps_production\cf3 _key.p12\
+
+\f0\fs24 \cf0 \kerning1\expnd0\expndtw0 APP
+\f1 \'c3\'fb\'b3\'c6
+\f0 _
+\f2\fs36 \cf3 \expnd0\expndtw0\kerning0
+PushChat_\cf0 production.pem\
+\pard\pardeftab720\sl560\partightenfactor0
+\cf3 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \kerning1\expnd0\expndtw0 APP
+\f1 \'c3\'fb\'b3\'c6
+\f0 _
+\f2\fs36 \expnd0\expndtw0\kerning0
+aps_development\cf2 .\cf0 cer\
+
+\f0\fs24 \kerning1\expnd0\expndtw0 APP
+\f1 \'c3\'fb\'b3\'c6
+\f0 _
+\f2\fs36 \expnd0\expndtw0\kerning0
+aps_development\cf3 _key.p12\
+
+\f0\fs24 \cf0 \kerning1\expnd0\expndtw0 APP
+\f1 \'c3\'fb\'b3\'c6
+\f0 _
+\f2\fs36 \cf3 \expnd0\expndtw0\kerning0
+PushChat_\cf0 development.pem\
+\pard\pardeftab720\sl560\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl380\partightenfactor0
+
+\f3\fs28 \cf0 1.
+\f4 \'b0\'d1
+\f3 aps_development .cer
+\f4 \'ce\'c4\'bc\'fe\'c9\'fa\'b3\'c9
+\f3 .pem
+\f4 \'ce\'c4\'bc\'fe\
+openssl x509 -in FormeraViewer_aps_development.cer -inform der -out FormeraViewer_aps_development.pem\
+\
+openssl x509 -in FormeraViewer_aps_production.cer -inform der -out FormeraViewer_aps_production.pem\
+\
+
+\f3 2.
+\f4 \'b0\'d1
+\f3 push.p12
+\f4 \'ce\'c4\'bc\'fe\'c9\'fa\'b3\'c9\'ce\'aa
+\f3 .pem
+\f4 \'ce\'c4\'bc\'fe\
+2.1  \'b4\'f2\'bf\'aa\'d6\'d5\'b6\'cb\'bd\'abp12\'ce\'c4\'bc\'fe\'d7\'aa\'bb\'bb\'ce\'aaPEM\'b8\'f1\'ca\'bd\'a3\'ba\
+openssl pkcs12 -nocerts -out FormeraViewer_aps_development_key.pem -in FormeraViewer_aps_development_key.p12\
+\
+openssl pkcs12 -nocerts -out FormeraViewer_aps_production_key.pem -in FormeraViewer_aps_production_key.p12\
+\
+2.2 \'d0\'e8\'d2\'aa\'d2\'c6\'b3\'fd\'c3\'dc\'c2\'eb\'a3\'ac\'b5\'bc\'b3\'f6/\'d7\'aa\'bb\'bb\'ca\'b1\'b2\'bb\'d2\'aa\'c9\'e8\'b6\'a8\'bb\'f2\'d5\'df\'d6\'b4\'d0\'d0\'a3\'ba\
+openssl rsa -in FormeraViewer_aps_production_key.pem -out FormeraViewer_aps_production_key-noenc.pem\
+\
+
+\f3 3.
+\f4 \'ba\'cf\'b2\'a2\'d6\'a4\'ca\'e9\'ba\'cd
+\f3 key
+\f4 \'a3\'ac\'ca\'b9\'d3\'c3
+\f3 ssl
+\f4 \'c1\'ac\'bd\'d3\'b5\'bd
+\f3 apns
+\f4 \'ca\'b1\'bd\'ab\'d2\'aa\'ca\'b9\'d3\'c3\'a3\'ba\'b0\'d1
+\f3 PushChatCert.pem
+\f4 \'ba\'cd
+\f3 PushChatKey.pem
+\f4 \'ba\'cf\'b2\'a2\'ce\'aa\'d2\'bb\'b8\'f6
+\f3 pem
+\f4 \'ce\'c4\'bc\'fe\
+cat FormeraViewer_aps_development.pem FormeraViewer_aps_development_key.pem >PHPPushChat_development.pem\
+\pard\pardeftab720\sl380\partightenfactor0
+
+\f2\fs36 \cf0 \
+\pard\pardeftab720\sl380\partightenfactor0
+
+\f4\fs28 \cf0 cat FormeraViewer_aps_production.pem FormeraViewer_aps_production_key.pem >PHPPushChat_production.pem
+\f2\fs36 \
+\pard\pardeftab720\sl560\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f1 \cf0 \'d7\'a2\'d2\'e2\'a3\'ba\'d4\'da\'c9\'fa\'b3\'c9
+\f2 pem
+\f1 \'ce\'c4\'bc\'fe\'d7\'ee\'ba\'c3\'ca\'c7\'cf\'c8\'b2\'e2\'ca\'d4\'d2\'bb\'cf\'c2\'a3\'ac
+\f2 cer
+\f1 \'ce\'c4\'bc\'fe\'ca\'c7\'b2\'bb\'ca\'c7\'d0\'e8\'d2\'aa\'b5\'c4\'a3\'ac\'d2\'d4\'c3\'e2\'c9\'fa\'b3\'c9\'b4\'ed\'ce\'f3\'b5\'c4
+\f2 pem
+\f1 \'ce\'c4\'bc\'fe\'a1\'a3
+\f2 \
+
+\f1 \'d1\'e9\'d6\'a4\'c9\'fa\'b3\'c9\'b5\'c4
+\f2 pem
+\f1 \'ca\'c7\'b7\'f1\'d5\'fd\'c8\'b7\'a3\'ba
+\f2 \
+\pard\pardeftab720\sl520\partightenfactor0
+
+\f5\b \cf0 openssl s_client -connect gateway.sandbox.push.apple.com:2195 -cert\'a0\cf4 PushChatCert.pem\cf0 \'a0-key\'a0\cf4 PushChatKey.pem
+\f1 \cf0 \'d1\'d5\'c9\'ab\'b2\'bf\'b7\'d6\'bb\'bb\'b3\'c9\'d7\'d4\'bc\'ba\'b5\'c4
+\f5 cer
+\f1 \'ce\'c4\'bc\'fe\'ba\'cd
+\f5 key
+\f1 \'ce\'c4\'bc\'fe\
+\
+\'b2\'ce\'bf\'bc\'ce\'c4\'bc\'fe\'c1\'ac\'bd\'d3\'a3\'ba\
+http://blog.csdn.net/shenjie12345678/article/details/41120637\
+
+\f2\b0 \
+}

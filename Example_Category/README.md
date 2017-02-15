@@ -49,12 +49,48 @@ dispatch_barrier_async是在前面的任务执行结束后它才执行，而且�
 ◦	【不会】进入UIControlStateDisabled状态，继续保持当前状态
 */]
 
+<!--**设置特殊字段的大小，颜色，字体-->
+<!--NSInteger leght = [pLabel.text length];-->
+<!--NSMutableAttributedString *richText = [[NSMutableAttributedString alloc] initWithString:pLabel.text];-->
+<!--//设置特殊字段的大小，颜色，字体-->
+<!-- -->
+<!--[richText addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:16.0] range:NSMakeRange(0, leght)];//设置字体大小-->
+<!--[richText addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(0, leght)];//设置字体颜色-->
+<!---->
+<!--[richText addAttribute:NSObliquenessAttributeName value:@1 range:NSMakeRange(0, leght)];//设置的是斜体-->
+<!--[richText addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleDouble] range:NSMakeRange(0, leght)];//设置下划线-->
+<!-- -->
+<!--[richText addAttribute:NSStrikethroughStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleSingle] range:NSMakeRange(0,leght)];//设置删除线-->
+<!-- -->
+<!--[richText addAttribute:NSStrikethroughColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(0, leght)];//设置删除线的颜色-->
+<!--//属性参数-->
+<!--NSFontAttributeName //字体 默认是12号-->
+<!--NSParagraphStyleAttributeName//段落样式-->
+<!--NSForegroundColorAttributeName//指定字体颜色-->
+<!--NSBackgroundColorAttributeName//字体背景颜色-->
+<!--NSLigatureAttributeName//连体字符-->
+<!--NSKernAttributeName//字距的像素-->
+<!--NSStrikethroughStyleAttributeName//指定字上加删除线-->
+<!--NSUnderlineStyleAttributeName//指定字加下划线-->
+<!--NSStrokeColorAttributeName//填充部分颜色-->
+<!--NSStrokeWidthAttributeName//填充宽度-->
+<!--NSShadowAttributeName//阴影-->
+<!--NSUnderlineColorAttributeName//下划线颜色-->
+
 [/** 1 MAC 电脑如果新建txt文本文档:
 
     第一:  打开: 文本编辑 -- 新建  (此时默认的新建格式是rtf格式的)
     第二:  shift⇧+command⌘+T  这样rtf格式的文本就变为txt格式的了
-*/]
 
+MAC怎么获取文件路径？
+1> 打开浏览器，将文件拖动到浏览器的地址栏。(这样即可获得文件路径，但此方法不能直接获得文件夹路径，即拖动文件夹获取不到路径。)
+2> 和浏览器一样，先打开终端，将文件或文件夹拖入到终端。这样就可以获得文件或者文件夹的路径。
+
+option进入资源库
+
+清Xcode的缓存: option进入资源库->Developer->Xcode->DerivedData, 删掉目录下文件
+~/Library/MobileDevice/Provisioning Profiles  
+*/]
 
 [/** 2 实现iOS语言本地化/国际化
 
@@ -98,6 +134,11 @@ dispatch_barrier_async是在前面的任务执行结束后它才执行，而且�
     b. 注意
 
         内存警告处理时，ViewWillUnload和ViewDidUnload不一定被调用，因为这是系统自动判断的
+***
+1、iOS7新增加了导航控制器侧滑手势，当触发侧滑返回时，会调用系统的viewWillDisappear:方法，取消侧滑返回时又会调用viewWillAppear:方法。
+2、在做手势和通知等一系列操作之时尽量在dealloc方法中执行，添加通知尽量在viewDidLoad等一次性方法中执行。
+3、在viewWillAppear:、viewWillDisappear:、viewDidAppear:、viewDidDisappear:等类似于这种会多次调用的系统方法中添加代码时，一定要多考虑业务逻辑，以免出现不必要的麻烦。
+
 */]
 
 

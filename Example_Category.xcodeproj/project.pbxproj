@@ -292,6 +292,10 @@
 		56B0DB721E515D8700D07E07 /* MyRuntimeClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B0DB711E515D8700D07E07 /* MyRuntimeClass.m */; };
 		56B0DB751E515E3600D07E07 /* MyRuntimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B0DB741E515E3600D07E07 /* MyRuntimeViewController.m */; };
 		56B0DB771E518DDA00D07E07 /* Cocoa框架.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 56B0DB761E518DDA00D07E07 /* Cocoa框架.jpeg */; };
+		56B867691E543306001718FF /* cert-mk.zip in Resources */ = {isa = PBXBuildFile; fileRef = 56B867651E543306001718FF /* cert-mk.zip */; };
+		56B8676A1E543306001718FF /* push.php in Resources */ = {isa = PBXBuildFile; fileRef = 56B867661E543306001718FF /* push.php */; };
+		56B8676B1E543306001718FF /* PushChat命名标准.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 56B867671E543306001718FF /* PushChat命名标准.rtf */; };
+		56B8676C1E543306001718FF /* 通过终端推送_TEST.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 56B867681E543306001718FF /* 通过终端推送_TEST.rtf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -735,6 +739,10 @@
 		56B0DB731E515E3600D07E07 /* MyRuntimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRuntimeViewController.h; sourceTree = "<group>"; };
 		56B0DB741E515E3600D07E07 /* MyRuntimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRuntimeViewController.m; sourceTree = "<group>"; };
 		56B0DB761E518DDA00D07E07 /* Cocoa框架.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Cocoa框架.jpeg"; sourceTree = "<group>"; };
+		56B867651E543306001718FF /* cert-mk.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "cert-mk.zip"; sourceTree = "<group>"; };
+		56B867661E543306001718FF /* push.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = push.php; sourceTree = "<group>"; };
+		56B867671E543306001718FF /* PushChat命名标准.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "PushChat命名标准.rtf"; sourceTree = "<group>"; };
+		56B867681E543306001718FF /* 通过终端推送_TEST.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "通过终端推送_TEST.rtf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1358,6 +1366,7 @@
 		36E49BAA1E0A4EB700F4F0FF /* FunctionalModule */ = {
 			isa = PBXGroup;
 			children = (
+				56B867641E543306001718FF /* Cer2Pem_iOS消息推送证书 */,
 				56B0DB6F1E515D6100D07E07 /* RuntimeExample */,
 				361FC4D11E2727E3007243FC /* JS_OC_Control */,
 				362DB7901E164F1500CC9778 /* KeyChain */,
@@ -1829,6 +1838,17 @@
 			path = RuntimeExample;
 			sourceTree = "<group>";
 		};
+		56B867641E543306001718FF /* Cer2Pem_iOS消息推送证书 */ = {
+			isa = PBXGroup;
+			children = (
+				56B867651E543306001718FF /* cert-mk.zip */,
+				56B867661E543306001718FF /* push.php */,
+				56B867671E543306001718FF /* PushChat命名标准.rtf */,
+				56B867681E543306001718FF /* 通过终端推送_TEST.rtf */,
+			);
+			path = "Cer2Pem_iOS消息推送证书";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1918,11 +1938,13 @@
 				36E49C941E0A4EB700F4F0FF /* app_2.png in Resources */,
 				36E49C8A1E0A4EB700F4F0FF /* app_10.png in Resources */,
 				36E49C9C1E0A4EB700F4F0FF /* app_6.png in Resources */,
+				56B8676B1E543306001718FF /* PushChat命名标准.rtf in Resources */,
 				36E49C911E0A4EB700F4F0FF /* app_17.png in Resources */,
 				36E49BA31E0A4EA600F4F0FF /* findhome_20160223203656xiawucha.png in Resources */,
 				361FC4E61E273064007243FC /* ActiveSuccess.html in Resources */,
 				36C8917E1D0CEAE100DC86E0 /* LaunchScreen.storyboard in Resources */,
 				36E49B8D1E0A4EA600F4F0FF /* findhome_20160126203251waimai.png in Resources */,
+				56B8676A1E543306001718FF /* push.php in Resources */,
 				36E49B8A1E0A4EA600F4F0FF /* findhome_20160126202805dianying.png in Resources */,
 				36E49CDE1E0A504700F4F0FF /* checkbox_nor@2x.png in Resources */,
 				36E49C7A1E0A4EB700F4F0FF /* addcamera_loading6@2x.png in Resources */,
@@ -1939,6 +1961,7 @@
 				362DB7541E16345F00CC9778 /* back_arrow@2x.png in Resources */,
 				36E49B941E0A4EA600F4F0FF /* findhome_20160126203720gouwu.png in Resources */,
 				36E49C6C1E0A4EB700F4F0FF /* addcamera_loading12@2x.png in Resources */,
+				56B867691E543306001718FF /* cert-mk.zip in Resources */,
 				36E49C8F1E0A4EB700F4F0FF /* app_15.png in Resources */,
 				36E49B911E0A4EA600F4F0FF /* findhome_20160126203542ktv.png in Resources */,
 				36E49C7D1E0A4EB700F4F0FF /* addcamera_loading7@3x.png in Resources */,
@@ -2021,6 +2044,7 @@
 				36E49C791E0A4EB700F4F0FF /* addcamera_loading5@3x.png in Resources */,
 				36E49C781E0A4EB700F4F0FF /* addcamera_loading5@2x.png in Resources */,
 				36E49B951E0A4EA600F4F0FF /* findhome_20160126203742aiche.png in Resources */,
+				56B8676C1E543306001718FF /* 通过终端推送_TEST.rtf in Resources */,
 				36C891791D0CEAE100DC86E0 /* Main.storyboard in Resources */,
 				36E49C8C1E0A4EB700F4F0FF /* app_12.png in Resources */,
 				36E49C851E0A4EB700F4F0FF /* 启动页_1242x2208.png in Resources */,
