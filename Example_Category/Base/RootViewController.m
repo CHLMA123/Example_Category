@@ -230,6 +230,9 @@
 - (void)setupView{
     
     [self.view addSubview:self.tableview];
+    @synchronized (self) {
+        NSLog(@"iOS 中线程同步：使用@synchronized解决线程同步问题相比较NSLock要简单一些，日常开发中也更推荐使用此方法。首先选择一个对象作为同步对象（一般使用self），然后将”加锁代码”（争夺资源的读取、修改代码）放到代码块中。@synchronized中的代码执行时先检查同步对象是否被另一个线程占用，如果占用该线程就会处于等待状态，直到同步对象被释放。http://www.cnblogs.com/kenshincui/p/3983982.html#synchronized");
+    }
 }
 
 - (void)setupData{

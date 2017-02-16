@@ -1,20 +1,4 @@
 # Example_Category
-[/**Grand Central Dispatch 简称（GCD）
-
-GCD会自动根据任务在多核处理器上分配资源，优化程序。
-
-1.Dispatch After 主要用于延迟执行一些代码。
-2.Dispatch Once 只执行一次，用于一些单例。
-
-dispatch queue
-
-1、常用的方法dispatch_async
-为了避免界面在处理耗时的操作时卡死，比如读取网络数据，IO,数据库读写等，我们会在另外一个线程中处理这些操作，然后通知主线程更新界面。
-2、dispatch_group_async的使用
-dispatch_group_async可以实现监听一组任务是否完成，完成后得到通知执行其他的操作。这个方法很有用，比如你执行三个下载任务，当三个任务都下载完成后你才通知界面说完成的了。
-3、dispatch_barrier_async的使用
-dispatch_barrier_async是在前面的任务执行结束后它才执行，而且它后面的任务等它执行完成之后才会执行
-*/]
 
 
 [/**

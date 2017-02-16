@@ -302,6 +302,7 @@
 		56B867741E543548001718FF /* 安装Chisel.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 56B867711E543548001718FF /* 安装Chisel.rtf */; };
 		56B867771E543761001718FF /* PushNotification_FlowChart.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 56B867751E543761001718FF /* PushNotification_FlowChart.jpg */; };
 		56B867781E543761001718FF /* PushNotification_FlowChartDetail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 56B867761E543761001718FF /* PushNotification_FlowChartDetail.jpg */; };
+		56F45D6E1E559170000C81F6 /* iOS中多线程开发.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 56F45D6D1E559170000C81F6 /* iOS中多线程开发.rtf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -755,6 +756,7 @@
 		56B867711E543548001718FF /* 安装Chisel.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "安装Chisel.rtf"; sourceTree = "<group>"; };
 		56B867751E543761001718FF /* PushNotification_FlowChart.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PushNotification_FlowChart.jpg; sourceTree = "<group>"; };
 		56B867761E543761001718FF /* PushNotification_FlowChartDetail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PushNotification_FlowChartDetail.jpg; sourceTree = "<group>"; };
+		56F45D6D1E559170000C81F6 /* iOS中多线程开发.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = "iOS中多线程开发.rtf"; path = "Resources/iOS中多线程开发.rtf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1236,6 +1238,7 @@
 				364C729B1E3051F300ADC0D4 /* ModuleViewController.m */,
 				565871CF1E553FE700CC3ECF /* README.md */,
 				565871D21E55400200CC3ECF /* GitHub Desktop.rtf */,
+				56F45D6D1E559170000C81F6 /* iOS中多线程开发.rtf */,
 				565871D11E55400200CC3ECF /* Cocoa框架.jpeg */,
 				36E49B601E0A4EA600F4F0FF /*  view的生命周期.png */,
 				36C8916E1D0CEAE100DC86E0 /* Supporting Files */,
@@ -1972,6 +1975,7 @@
 				36E49C941E0A4EB700F4F0FF /* app_2.png in Resources */,
 				36E49C8A1E0A4EB700F4F0FF /* app_10.png in Resources */,
 				36E49C9C1E0A4EB700F4F0FF /* app_6.png in Resources */,
+				56F45D6E1E559170000C81F6 /* iOS中多线程开发.rtf in Resources */,
 				56B8676B1E543306001718FF /* PushChat命名标准.rtf in Resources */,
 				36E49C911E0A4EB700F4F0FF /* app_17.png in Resources */,
 				56B867771E543761001718FF /* PushNotification_FlowChart.jpg in Resources */,
