@@ -257,25 +257,21 @@ option进入资源库
     重写监听器的observeValueForKeyPath: ofObject: change: context:方法
 */]
 
-[/**9 iOS 软件架构模式MVC(Model-View-Controller)，MVP以及MVVM（Model-View-ViewModel）
+[/**9 iOS 中MVC和MVVM软件架构模式
 
-都是把一个应用中的实体分为以下三类：
+把一个应用中的实体分为以下三类：
 
-    Models--负责主要的数据或者操作数据的数据访问层，可以想象 Perspn 和 PersonDataProvider 类。
+    Model: 负责主要的数据或者操作数据的数据访问层，可以想象 Perspn 和 PersonDataProvider 类。
 
-    Views--负责展示层（GUI），对于iOS环境可以联想一下以 UI 开头的所有类。
+    View: 负责展示层（GUI），对于iOS环境可以联想一下以 UI 开头的所有类。
 
-    Controller/Presenter/ViewModel--负责协调 Model 和 View，通常根据用户在View上的动作在Model上作出对应的更改，同时将更改的信息返回到View上。
+    Controller/ViewModel: 负责协调 Model 和 View，通常根据用户在View上的动作在Model上作出对应的更改，同时将更改的信息返回到View上。
 
-在 iOS 开发中实践 MVVM 的话，通常会把大量原来放在 ViewController 里的视图逻辑和数据逻辑移到 ViewModel 里，从而有效的减轻了 ViewController 的负担。
+    Model是应用逻辑层的对象，负责应用的逻辑计算和诸多与业务相关的方法和操作。首先Model将未处理的数据转化成Model后，再传给ViewController，ViewController再将处理好的Model数据显示到View上去。相反View产生的数据可也可以转化为Model，通过ViewConroller传到Model层处理后再保存&更新。
 
-Model就是MVC和MVVM最前面的M，只有在将网络&数据库获取的数据正确转化成Model后,才能更好地服务ViewController和View。
-
---Model是应用逻辑层的对象，负责应用的逻辑计算和诸多与业务相关的方法和操作。首先Model将未处理的数据转化成Model后，再传给ViewController，再传给ViewController再将处理好的Model数据显示到View上去。相反View产生的数据可也可以转化为Model，通过ViewConroller传到Model层处理后再保存&更新。
-
-1、Model做好数据加工，负责封装数据、存储和处理数据运算等工作
-2、view应该提供简洁的构造方法，确保view的初始化工作完全封闭在view中，代码重用性高，分工明确！负责数据展示、监听用户触摸等工作
-3、控制器Controller： 负责业务逻辑、事件响应、数据加工等工作
+1、Model就是MVC和MVVM最前面的M，Model做好数据加工，负责封装数据、存储和处理数据运算等工作,才能更好地服务ViewController和View。
+2、view应该提供简洁的构造方法，确保view的初始化工作完全封闭在view中，代码重用性高，分工明确！负责数据展示、监听用户触摸等工作.
+3、控制器Controller：负责业务逻辑、事件响应、数据加工等工作.
 
 MVC（Model-View-Controller）是最常见的软件架构
 
@@ -292,6 +288,12 @@ Controller 里面就只应该存放这些不能复用的代码，这些代码包
 •	监听 Model 层的事件，将 Model 层的数据传递到 View 层。
 •	监听 View 层的事件，并且将 View 层的事件转发到 Model 层。
 
+MVVM
+
+1. Model与View
+这一层和 MVC 中的 Model、View 含义相同。
+2. ViewModel
+这一层主要作用是将以前写在 ViewController 中的数据处理放在 ViewModel 中，如：网络请求、数据缓存、无法直接展示的数据处理(如 NSNumber 这类的，就在 VM 中处理成 NSString，然后 V 层直接用，而不是在 V 层中处理)，从而有效的减轻了 ViewController 的负担。
 */]
 
 [/**11 __weak 和 __block 关键字的区别 
