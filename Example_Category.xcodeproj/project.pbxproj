@@ -117,7 +117,6 @@
 		364C72C91E30522800ADC0D4 /* UIViewController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 364C72BB1E30522800ADC0D4 /* UIViewController+MemoryLeak.m */; };
 		365149EF1D7A60330047BDBC /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 365149EE1D7A60330047BDBC /* README.md */; };
 		365149F11D7A61560047BDBC /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 365149F01D7A61560047BDBC /* README.md */; };
-		36514A011D7A6C8A0047BDBC /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 36514A001D7A6C8A0047BDBC /* README.md */; };
 		36514A4A1D7A799C0047BDBC /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 36514A3D1D7A799C0047BDBC /* NSString+Additions.m */; };
 		36514A4B1D7A799C0047BDBC /* UIControl+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 36514A401D7A799C0047BDBC /* UIControl+Additions.m */; };
 		36514A4D1D7A799C0047BDBC /* UIScreen+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 36514A461D7A799C0047BDBC /* UIScreen+Additions.m */; };
@@ -284,6 +283,9 @@
 		36E49CE21E0A504700F4F0FF /* CommonMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E49CD81E0A504700F4F0FF /* CommonMode.m */; };
 		36E49CE31E0A504700F4F0FF /* NoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E49CDA1E0A504700F4F0FF /* NoteView.m */; };
 		36E49CE41E0A504700F4F0FF /* SingleClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E49CDD1E0A504700F4F0FF /* SingleClass.m */; };
+		565871D01E553FE700CC3ECF /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 565871CF1E553FE700CC3ECF /* README.md */; };
+		565871D31E55400200CC3ECF /* Cocoa框架.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 565871D11E55400200CC3ECF /* Cocoa框架.jpeg */; };
+		565871D41E55400200CC3ECF /* GitHub Desktop.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 565871D21E55400200CC3ECF /* GitHub Desktop.rtf */; };
 		56AC89891E4C692900F06004 /* RootViewController+CustomCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AC89881E4C692900F06004 /* RootViewController+CustomCategory.m */; };
 		56AC89941E4C72A000F06004 /* NSObject+EverGesturePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AC898D1E4C72A000F06004 /* NSObject+EverGesturePath.m */; };
 		56AC89951E4C72A000F06004 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 56AC898E1E4C72A000F06004 /* README.md */; };
@@ -291,7 +293,6 @@
 		56AC89971E4C72A000F06004 /* UIViewController+EverPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AC89921E4C72A000F06004 /* UIViewController+EverPath.m */; };
 		56B0DB721E515D8700D07E07 /* MyRuntimeClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B0DB711E515D8700D07E07 /* MyRuntimeClass.m */; };
 		56B0DB751E515E3600D07E07 /* MyRuntimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B0DB741E515E3600D07E07 /* MyRuntimeViewController.m */; };
-		56B0DB771E518DDA00D07E07 /* Cocoa框架.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 56B0DB761E518DDA00D07E07 /* Cocoa框架.jpeg */; };
 		56B867691E543306001718FF /* cert-mk.zip in Resources */ = {isa = PBXBuildFile; fileRef = 56B867651E543306001718FF /* cert-mk.zip */; };
 		56B8676A1E543306001718FF /* push.php in Resources */ = {isa = PBXBuildFile; fileRef = 56B867661E543306001718FF /* push.php */; };
 		56B8676B1E543306001718FF /* PushChat命名标准.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 56B867671E543306001718FF /* PushChat命名标准.rtf */; };
@@ -494,7 +495,6 @@
 		364C72BB1E30522800ADC0D4 /* UIViewController+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MemoryLeak.m"; sourceTree = "<group>"; };
 		365149EE1D7A60330047BDBC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		365149F01D7A61560047BDBC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		36514A001D7A6C8A0047BDBC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		36514A3C1D7A799C0047BDBC /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
 		36514A3D1D7A799C0047BDBC /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 		36514A3F1D7A799C0047BDBC /* UIControl+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+Additions.h"; sourceTree = "<group>"; };
@@ -540,7 +540,7 @@
 		36D391931E13B7D9008C2F66 /* SimplePing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePing.m; sourceTree = "<group>"; };
 		36D391941E13B7D9008C2F66 /* SimplePinger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePinger.h; sourceTree = "<group>"; };
 		36D391951E13B7D9008C2F66 /* SimplePinger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePinger.m; sourceTree = "<group>"; };
-		36E49B601E0A4EA600F4F0FF /*  view的生命周期.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = " view的生命周期.png"; sourceTree = "<group>"; };
+		36E49B601E0A4EA600F4F0FF /*  view的生命周期.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = " view的生命周期.png"; path = "Resources/ view的生命周期.png"; sourceTree = "<group>"; };
 		36E49B621E0A4EA600F4F0FF /* Default@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@3x.png"; sourceTree = "<group>"; };
 		36E49B641E0A4EA600F4F0FF /* findhome_1455525720807.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = findhome_1455525720807.png; sourceTree = "<group>"; };
 		36E49B651E0A4EA600F4F0FF /* findhome_20160126194705meishi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = findhome_20160126194705meishi.png; sourceTree = "<group>"; };
@@ -728,6 +728,9 @@
 		36E49CDC1E0A504700F4F0FF /* SingleClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleClass.h; sourceTree = "<group>"; };
 		36E49CDD1E0A504700F4F0FF /* SingleClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleClass.m; sourceTree = "<group>"; };
 		36E8D9E61E0296E7006A2711 /* DebugMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugMacros.h; sourceTree = "<group>"; };
+		565871CF1E553FE700CC3ECF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		565871D11E55400200CC3ECF /* Cocoa框架.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Cocoa框架.jpeg"; path = "Resources/Cocoa框架.jpeg"; sourceTree = "<group>"; };
+		565871D21E55400200CC3ECF /* GitHub Desktop.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = "GitHub Desktop.rtf"; path = "Resources/GitHub Desktop.rtf"; sourceTree = "<group>"; };
 		56AC89861E4C68CD00F06004 /* RootViewController_CustomExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController_CustomExtension.h; sourceTree = "<group>"; };
 		56AC89871E4C692900F06004 /* RootViewController+CustomCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RootViewController+CustomCategory.h"; sourceTree = "<group>"; };
 		56AC89881E4C692900F06004 /* RootViewController+CustomCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RootViewController+CustomCategory.m"; sourceTree = "<group>"; };
@@ -743,7 +746,6 @@
 		56B0DB711E515D8700D07E07 /* MyRuntimeClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRuntimeClass.m; sourceTree = "<group>"; };
 		56B0DB731E515E3600D07E07 /* MyRuntimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRuntimeViewController.h; sourceTree = "<group>"; };
 		56B0DB741E515E3600D07E07 /* MyRuntimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRuntimeViewController.m; sourceTree = "<group>"; };
-		56B0DB761E518DDA00D07E07 /* Cocoa框架.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Cocoa框架.jpeg"; sourceTree = "<group>"; };
 		56B867651E543306001718FF /* cert-mk.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "cert-mk.zip"; sourceTree = "<group>"; };
 		56B867661E543306001718FF /* push.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = push.php; sourceTree = "<group>"; };
 		56B867671E543306001718FF /* PushChat命名标准.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "PushChat命名标准.rtf"; sourceTree = "<group>"; };
@@ -1230,9 +1232,12 @@
 				56AC89871E4C692900F06004 /* RootViewController+CustomCategory.h */,
 				56AC89881E4C692900F06004 /* RootViewController+CustomCategory.m */,
 				56AC89861E4C68CD00F06004 /* RootViewController_CustomExtension.h */,
-				36514A001D7A6C8A0047BDBC /* README.md */,
 				364C729A1E3051F300ADC0D4 /* ModuleViewController.h */,
 				364C729B1E3051F300ADC0D4 /* ModuleViewController.m */,
+				565871CF1E553FE700CC3ECF /* README.md */,
+				565871D21E55400200CC3ECF /* GitHub Desktop.rtf */,
+				565871D11E55400200CC3ECF /* Cocoa框架.jpeg */,
+				36E49B601E0A4EA600F4F0FF /*  view的生命周期.png */,
 				36C8916E1D0CEAE100DC86E0 /* Supporting Files */,
 			);
 			path = Example_Category;
@@ -1241,7 +1246,6 @@
 		36C8916E1D0CEAE100DC86E0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				56B0DB761E518DDA00D07E07 /* Cocoa框架.jpeg */,
 				363ED99B1E48196E001850F8 /* Icon-120.png */,
 				36E49B5F1E0A4EA600F4F0FF /* Resources */,
 				36C8916F1D0CEAE100DC86E0 /* main.m */,
@@ -1319,7 +1323,6 @@
 			children = (
 				36E49B611E0A4EA600F4F0FF /* Images */,
 				36E49B851E0A4EA600F4F0FF /* URL加载框架.png */,
-				36E49B601E0A4EA600F4F0FF /*  view的生命周期.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1987,7 +1990,6 @@
 				36C8917B1D0CEAE100DC86E0 /* Assets.xcassets in Resources */,
 				36E49B8B1E0A4EA600F4F0FF /* findhome_20160126202946liren.png in Resources */,
 				36E49B9E1E0A4EA600F4F0FF /* findhome_20160128153333hangjia.png in Resources */,
-				56B0DB771E518DDA00D07E07 /* Cocoa框架.jpeg in Resources */,
 				36E49BA21E0A4EA600F4F0FF /* findhome_20160204184258rihanliaoli.png in Resources */,
 				36E49C7C1E0A4EB700F4F0FF /* addcamera_loading7@2x.png in Resources */,
 				36E49C691E0A4EB700F4F0FF /* addcamera_loading10@3x.png in Resources */,
@@ -2077,6 +2079,8 @@
 				36E49C9A1E0A4EB700F4F0FF /* app_4.png in Resources */,
 				36E49BA91E0A4EA600F4F0FF /* URL加载框架.png in Resources */,
 				362DF5A41E0BAFA500260F15 /* Info.plist in Resources */,
+				565871D31E55400200CC3ECF /* Cocoa框架.jpeg in Resources */,
+				565871D41E55400200CC3ECF /* GitHub Desktop.rtf in Resources */,
 				36E49C791E0A4EB700F4F0FF /* addcamera_loading5@3x.png in Resources */,
 				36E49C781E0A4EB700F4F0FF /* addcamera_loading5@2x.png in Resources */,
 				36E49B951E0A4EA600F4F0FF /* findhome_20160126203742aiche.png in Resources */,
@@ -2167,6 +2171,7 @@
 				36E49CB71E0A4EB700F4F0FF /* STSimplePing.m in Sources */,
 				36C891701D0CEAE100DC86E0 /* main.m in Sources */,
 				362DF5881E0BAF6500260F15 /* CalendarWeekCell.m in Sources */,
+				565871D01E553FE700CC3ECF /* README.md in Sources */,
 				36E49CA01E0A4EB700F4F0FF /* LoadHtmlDocController.m in Sources */,
 				362DF5D71E0BD27900260F15 /* AFAutoPurgingImageCache.m in Sources */,
 				36E49CE41E0A504700F4F0FF /* SingleClass.m in Sources */,
@@ -2245,7 +2250,6 @@
 				36E49C621E0A4EB700F4F0FF /* AnimatedImageViewController.m in Sources */,
 				36E49CA51E0A4EB700F4F0FF /* AVFoundationController.m in Sources */,
 				362DF5861E0BAF6500260F15 /* CalendarDateCell.m in Sources */,
-				36514A011D7A6C8A0047BDBC /* README.md in Sources */,
 				36E49C651E0A4EB700F4F0FF /* UnderLineLabel.m in Sources */,
 				36E49CE31E0A504700F4F0FF /* NoteView.m in Sources */,
 				362DF5BD1E0BD26A00260F15 /* AFNetworkReachabilityManager.m in Sources */,
