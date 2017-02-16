@@ -1,5 +1,34 @@
 # Example_Category
+[/**App扩展开发(Today扩展（也叫做Widget）)
+扩展依附于应用而不能单独发布和部署；
+扩展和包含扩展的应用（containing app）生命周期是独立的，分别运行在两个不同的进程中；
+扩展的运行依赖于宿主应用（或者叫载体应用 host app，而不是containing app）其生命周期由宿主应用确定；
+对开发者而言扩展作为一个单独的target而存在；
+扩展通常展现在系统UI或者其他应用中，运行应该尽可能的迅速而功能单一；
 
+iOS 8 新增了App Groups功能用于实现应用之间的数据共享问题:
+在Xcode中开启并设置App Groups，Xcode - Capabilities中找到App Groups打开并添加一个名为“group.com.cmjstudio.todolist”组（注意组名称必须以group开头，这一步操作相当于在iOS的开发证书中启用App Groups服务并注册分组，同时在Xcode - Build Settings - Code Signing Entitlements中配置对应的分组配置文件。
+App Groups支持的常用数据共享包括NSUserDefaults、NSFileManager、NSFileCoordinator、NSFilePresenter、UIPasteboard、KeyChain、NSURLSession等
+*/]
+
+[/**SQLite
+SQLite数据库的几个特点：
+
+基于C语言开发的轻型数据库
+在iOS中需要使用C语言语法进行数据库操作、访问（无法使用ObjC直接访问，因为libsqlite3框架基于C语言编写）
+SQLite中采用的是动态数据类型，即使创建时定义了一种类型，在实际操作时也可以存储其他类型，但是推荐建库时使用合适的类型（特别是应用需要考虑跨平台的情况时）
+建立连接后通常不需要关闭连接（尽管可以手动关闭）
+
+使用SQLite很简单，如果在Mac OSX上使用可以考虑到SQLite官方网站下载命令行工具，也可以使用类似于SQLiteManager、Navicat for SQLite等工具。为了方便大家开发调试，建议在开发环境中安装上述工具。
+http://www.sqlite.org/download.html
+
+在iOS中操作SQLite数据库可以分为以下几步（注意先在项目中导入libsqlite3框架）：
+
+打开数据库，利用sqlite3_open()打开数据库会指定一个数据库文件保存路径，如果文件存在则直接打开，否则创建并打开。打开数据库会得到一个sqlite3类型的对象，后面需要借助这个对象进行其他操作。
+执行SQL语句，执行SQL语句又包括有返回值的语句和无返回值语句。
+对于无返回值的语句（如增加、删除、修改等）直接通过sqlite3_exec()函数执行；
+对于有返回值的语句则首先通过sqlite3_prepare_v2()进行sql语句评估（语法检测），然后通过sqlite3_step()依次取出查询结果的每一行数据，对于每行数据都可以通过对应的sqlite3_column_类型()方法获得对应列的数据，如此反复循环直到遍历完成。当然，最后需要释放句柄。
+*/]
 
 [/**
     0 利用symbollicatecrash工具查看crash文件
