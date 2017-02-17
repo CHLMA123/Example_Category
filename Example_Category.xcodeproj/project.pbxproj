@@ -247,6 +247,7 @@
 		36E49CE21E0A504700F4F0FF /* CommonMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E49CD81E0A504700F4F0FF /* CommonMode.m */; };
 		36E49CE31E0A504700F4F0FF /* NoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E49CDA1E0A504700F4F0FF /* NoteView.m */; };
 		36E49CE41E0A504700F4F0FF /* SingleClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E49CDD1E0A504700F4F0FF /* SingleClass.m */; };
+		561CF4571E56A5340080846D /* GestureRecognizerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 561CF4561E56A5340080846D /* GestureRecognizerController.m */; };
 		565871D01E553FE700CC3ECF /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 565871CF1E553FE700CC3ECF /* README.md */; };
 		56AC89891E4C692900F06004 /* RootViewController+CustomCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AC89881E4C692900F06004 /* RootViewController+CustomCategory.m */; };
 		56AC89941E4C72A000F06004 /* NSObject+EverGesturePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AC898D1E4C72A000F06004 /* NSObject+EverGesturePath.m */; };
@@ -694,6 +695,8 @@
 		36E49CDC1E0A504700F4F0FF /* SingleClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleClass.h; sourceTree = "<group>"; };
 		36E49CDD1E0A504700F4F0FF /* SingleClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleClass.m; sourceTree = "<group>"; };
 		36E8D9E61E0296E7006A2711 /* DebugMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugMacros.h; sourceTree = "<group>"; };
+		561CF4551E56A5340080846D /* GestureRecognizerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureRecognizerController.h; sourceTree = "<group>"; };
+		561CF4561E56A5340080846D /* GestureRecognizerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureRecognizerController.m; sourceTree = "<group>"; };
 		565871CF1E553FE700CC3ECF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		56AC89861E4C68CD00F06004 /* RootViewController_CustomExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController_CustomExtension.h; sourceTree = "<group>"; };
 		56AC89871E4C692900F06004 /* RootViewController+CustomCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RootViewController+CustomCategory.h"; sourceTree = "<group>"; };
@@ -1332,6 +1335,7 @@
 		36E49BAA1E0A4EB700F4F0FF /* FunctionalModule */ = {
 			isa = PBXGroup;
 			children = (
+				561CF4541E56A51B0080846D /* UIGestureRecognizer */,
 				56B8676D1E543548001718FF /* CocoaPods使用 */,
 				56B8676F1E543548001718FF /* DebugCMD */,
 				56B867641E543306001718FF /* Cer2Pem_iOS消息推送证书 */,
@@ -1780,6 +1784,15 @@
 			path = Singleton;
 			sourceTree = "<group>";
 		};
+		561CF4541E56A51B0080846D /* UIGestureRecognizer */ = {
+			isa = PBXGroup;
+			children = (
+				561CF4551E56A5340080846D /* GestureRecognizerController.h */,
+				561CF4561E56A5340080846D /* GestureRecognizerController.m */,
+			);
+			path = UIGestureRecognizer;
+			sourceTree = "<group>";
+		};
 		56AC898A1E4C72A000F06004 /* EverShowPath */ = {
 			isa = PBXGroup;
 			children = (
@@ -2187,6 +2200,7 @@
 				362DF5DB1E0BD27900260F15 /* UIButton+AFNetworking.m in Sources */,
 				36D391981E13B7D9008C2F66 /* SimplePing.m in Sources */,
 				362DF5DA1E0BD27900260F15 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				561CF4571E56A5340080846D /* GestureRecognizerController.m in Sources */,
 				36E49CA91E0A4EB700F4F0FF /* MovieFileController.m in Sources */,
 				364C729E1E3051F300ADC0D4 /* ModuleViewController.m in Sources */,
 				362DF5DC1E0BD27900260F15 /* UIImageView+AFNetworking.m in Sources */,

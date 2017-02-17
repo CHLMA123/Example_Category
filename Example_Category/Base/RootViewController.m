@@ -30,8 +30,32 @@
 #import "KeyChainViewController.h"
 #import "JS_OC_ControlViewController.h"
 #import "MyRuntimeViewController.h"
+#import "GestureRecognizerController.h"
 
 #define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
+
+typedef NS_ENUM(NSInteger, TableviewCellIndex) {
+    LoadModuleViewCellIndex =0,
+    LoadHtmlDocViewCellIndex,
+    attributeTextTapActionCellIndex,
+    overviewSingletonModeCellIndex,
+    overviewAVFoundationCellIndex,
+    overviewStructureCellIndex,
+    overviewNoteViewCellIndex,
+    overviewPaoMaViewCellIndex,
+    LoadNSURLSessionRequestCellIndex,
+    overviewSimplePingCellIndex,
+    overviewNSDateCellIndex,
+    OverviewRegularExpressionCellIndex,
+    BackBarWebBrowserCellIndex,
+    LocationViewCellIndex,
+    KeyChainViewCellIndex,
+    JS_OC_ControlCellIndex,
+    RuntimeMethodTestCellIndex,
+    GestureMethodTestCellIndex,
+    
+    TableviewCellIndexCount,		  // Cell 总个数
+};
 
 @interface RootViewController ()<UITableViewDelegate, UITableViewDataSource, XTPopViewDelegate>
 
@@ -260,6 +284,7 @@
     // 15 ~ 19
     [mArr addObject:@"JS_OC_Control"];
     [mArr addObject:@"RuntimeMethodTest"];
+    [mArr addObject:@"GestureMethodTest"];
     
     self.datasource = mArr;
 }
@@ -267,42 +292,62 @@
 - (void)responseCellAction:(NSIndexPath *)indexpath{
 
     switch (indexpath.row) {
-        case 0:{ [self LoadModuleView]; }
+        case LoadModuleViewCellIndex:
+            [self LoadModuleView];
             break;
-        case 1:{ [self LoadHtmlDocView]; }
+        case LoadHtmlDocViewCellIndex:
+            [self LoadHtmlDocView];
             break;
-        case 2:{ [self attributeTextTapAction]; }
+        case attributeTextTapActionCellIndex:
+            [self attributeTextTapAction];
             break;
-        case 3:{ [self overviewSingletonMode]; }
+        case overviewSingletonModeCellIndex:
+            [self overviewSingletonMode];
             break;
-        case 4:{ [self overviewAVFoundation]; }
-            break;
-            
-        case 5:{ [self overviewStructure]; }
-            break;
-        case 6:{ [self overviewNoteView]; }
-            break;
-        case 7:{ [self overviewPaoMaView]; }
-            break;
-        case 8:{ [self LoadNSURLSessionRequest]; }
-            break;
-        case 9:{ [self overviewSimplePing]; }
+        case overviewAVFoundationCellIndex:
+            [self overviewAVFoundation];
             break;
             
-        case 10:{ [self overviewNSDate]; }
+        case overviewStructureCellIndex:
+            [self overviewStructure];
             break;
-        case 11:{ [self OverviewRegularExpression]; }
+        case overviewNoteViewCellIndex:
+            [self overviewNoteView];
             break;
-        case 12:{ [self BackBarWebBrowser]; }
+        case overviewPaoMaViewCellIndex:
+            [self overviewPaoMaView];
             break;
-        case 13:{ [self LocationView]; }
+        case LoadNSURLSessionRequestCellIndex:
+            [self LoadNSURLSessionRequest];
             break;
-        case 14:{ [self KeyChainView]; }
+        case overviewSimplePingCellIndex:
+            [self overviewSimplePing];
             break;
             
-        case 15:{ [self JS_OC_Control]; }
+        case overviewNSDateCellIndex:
+            [self overviewNSDate];
             break;
-        case 16:{ [self MyRuntimeMethodTest]; };
+        case OverviewRegularExpressionCellIndex:
+            [self OverviewRegularExpression];
+            break;
+        case BackBarWebBrowserCellIndex:
+            [self BackBarWebBrowser];
+            break;
+        case LocationViewCellIndex:
+            [self LocationView];
+            break;
+        case KeyChainViewCellIndex:
+            [self KeyChainView];
+            break;
+            
+        case JS_OC_ControlCellIndex:
+            [self JS_OC_Control];
+            break;
+        case RuntimeMethodTestCellIndex:
+            [self MyRuntimeMethodTest];
+            break;
+        case GestureMethodTestCellIndex:
+            [self GestureMethodTest];
             break;
             
         default:
@@ -313,6 +358,14 @@
 #pragma mark ------------------------------------------------------------------------
 
 #pragma mark -
+- (void)GestureMethodTest{
+    
+    GestureRecognizerController *push = [[GestureRecognizerController alloc] init];
+    push.view.backgroundColor = [UIColor whiteColor];
+    [self.navigationController pushViewController:push animated:YES];
+}
+
+#pragma mark - RuntimeMethodTest
 - (void)MyRuntimeMethodTest{
     
     MyRuntimeViewController *push = [[MyRuntimeViewController alloc] init];
@@ -532,7 +585,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
 
-    return _datasource.count;
+    return TableviewCellIndexCount;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
