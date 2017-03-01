@@ -32,6 +32,8 @@
 #import "MyRuntimeViewController.h"
 #import "GestureRecognizerController.h"
 
+#import "NSThread+Externsion.h"
+
 #define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
 
 typedef NS_ENUM(NSInteger, TableviewCellIndex) {
@@ -90,6 +92,22 @@ typedef NS_ENUM(NSInteger, TableviewCellIndex) {
     //[self testLocalizedString];
     //[self printfSandBoxPaths];
     
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        BOOL b = [[NSThread currentThread] isMainQueue];
+        NSLog(@"111 %d", b);
+    });
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            
+            BOOL b1 = [[NSThread currentThread] isMainQueue];
+            NSLog(@"222 %d", b1);
+        });
+    });
+    
+    
     
 //    // Objective-C 中self 和 super
 //    NSLog(@"self ' class is %@", [self class]);
@@ -104,6 +122,8 @@ typedef NS_ENUM(NSInteger, TableviewCellIndex) {
      当使用 self 调用方法时，会从当前类的方法列表中开始找，如果没有，就从父类中再找；而当使用 super 时，则从父类的方法列表中开始找，然后调用父类的这个方法。
      http://blog.csdn.net/yhawaii/article/details/6991127
      */
+    
+    
 }
 
 - (void)dealloc{
@@ -255,7 +275,7 @@ typedef NS_ENUM(NSInteger, TableviewCellIndex) {
     
     [self.view addSubview:self.tableview];
     @synchronized (self) {
-        NSLog(@"iOS 中线程同步：使用@synchronized解决线程同步问题相比较NSLock要简单一些，日常开发中也更推荐使用此方法。首先选择一个对象作为同步对象（一般使用self），然后将”加锁代码”（争夺资源的读取、修改代码）放到代码块中。@synchronized中的代码执行时先检查同步对象是否被另一个线程占用，如果占用该线程就会处于等待状态，直到同步对象被释放。http://www.cnblogs.com/kenshincui/p/3983982.html#synchronized");
+//        NSLog(@"iOS 中线程同步：使用@synchronized解决线程同步问题相比较NSLock要简单一些，日常开发中也更推荐使用此方法。首先选择一个对象作为同步对象（一般使用self），然后将”加锁代码”（争夺资源的读取、修改代码）放到代码块中。@synchronized中的代码执行时先检查同步对象是否被另一个线程占用，如果占用该线程就会处于等待状态，直到同步对象被释放。http://www.cnblogs.com/kenshincui/p/3983982.html#synchronized");
     }
 }
 

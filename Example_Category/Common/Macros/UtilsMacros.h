@@ -12,6 +12,8 @@
 /**
  *  工具类的宏
  */
+#pragma mark - Funtion Method (宏 方法)
+
 // Get weak reference object.
 #define kWeakObject(object) __weak __typeof(object) weakObject = object;
 
@@ -43,11 +45,17 @@
 /**---------------------------------Load Image-------------------------------*/
 #pragma mark - Load Image
 
+// PNG JPG 图片路径
+#define PNGPATH(NAME)           [[NSBundle mainBundle] pathForResource:[NSString stringWithUTF8String:NAME] ofType:@"png"]
+#define JPGPATH(NAME)           [[NSBundle mainBundle] pathForResource:[NSString stringWithUTF8String:NAME] ofType:@"jpg"]
+#define PATH(NAME, EXT)         [[NSBundle mainBundle] pathForResource:(NAME) ofType:(EXT)]
+
 // More easy way to load an image.
 #define kImage(Name) ([UIImage imageNamed:Name])
 
 // More easy to load an image from file.
-#define kImageOfFile(Name) ([UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:Name ofType:nil]])
+#define kImageOfPNGFile(Name) ([UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:Name ofType:@"png"]])
+#define kImageOfJPGFile(Name) ([UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:Name ofType:@"jpg"]])
 
 /**---------------------------------System Singletons-------------------------------*/
 #pragma mark - System Singletons
@@ -86,6 +94,24 @@
 
 //获取系统时间戳 (UTC)
 #define getCurentTime [NSString stringWithFormat:@"%ld", (long)[[NSDate date] timeIntervalSince1970]]
+
+//number转String
+#define IntTranslateStr(int_str) [NSString stringWithFormat:@"%d",int_str];
+#define FloatTranslateStr(float_str) [NSString stringWithFormat:@"%.2d",float_str];
+
+// View 圆角和加边框
+#define ViewBorderRadius(View, Radius, Width, Color)\
+\
+[View.layer setCornerRadius:(Radius)];\
+[View.layer setMasksToBounds:YES];\
+[View.layer setBorderWidth:(Width)];\
+[View.layer setBorderColor:[Color CGColor]]
+
+// View 圆角
+#define ViewRadius(View, Radius)\
+\
+[View.layer setCornerRadius:(Radius)];\
+[View.layer setMasksToBounds:YES]
 
 /*
  * 工程字体

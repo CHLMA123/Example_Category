@@ -23,15 +23,23 @@
 /**
  *  获取屏幕 宽度、高度
  */
-#pragma mark - Device Frame
+#pragma mark - Device Frame (宏 x, y, width, height)
+
+// App Frame
+#define Application_Frame       [[UIScreen mainScreen] applicationFrame]
+
+// App Frame Height&Width
+#define App_Frame_Height        [[UIScreen mainScreen] applicationFrame].size.height
+#define App_Frame_Width         [[UIScreen mainScreen] applicationFrame].size.width
+
+// Get the screen's bounds.
+#define SCREEN_BOUNDS ([UIScreen mainScreen].bounds)
+
 // Get the screen's height.
 #define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
 
 // Get the screen's width.
 #define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
-
-// Get the screen's bounds.
-#define SCREEN_BOUNDS ([UIScreen mainScreen].bounds)
 
 #define CONTENT_HEIGHT (SCREEN_HEIGHT - NAVIGATION_BAR_HEIGHT - STATUS_BAR_HEIGHT)
 
@@ -55,6 +63,30 @@
 #define IS_IPHONE_5     (kIS_iPhone && SCREEN_HEIGHT == 568.0)//320
 #define IS_IPHONE_6     (kIS_iPhone && SCREEN_HEIGHT == 667.0)//375
 #define IS_IPHONE_6p    (kIS_iPhone && SCREEN_HEIGHT == 736.0)//414
+
+// 是否Retina屏
+#define isRetinaMode                ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? \
+                                    CGSizeEqualToSize(CGSizeMake(640, 960), \
+                                                        [[UIScreen mainScreen] currentMode].size) : \
+                                    NO)
+
+// 是否iPhone5
+#define isiPhone5                   ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? \
+                                    CGSizeEqualToSize(CGSizeMake(640, 1136), \
+                                                        [[UIScreen mainScreen] currentMode].size) : \
+                                    NO)
+// 是否iPhone4
+#define isiPhone4                   ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? \
+                                    CGSizeEqualToSize(CGSizeMake(640, 960), \
+                                                        [[UIScreen mainScreen] currentMode].size) : \
+                                    NO)
+
+// 是否iOS7
+#define isIOS7                  ([[[UIDevice currentDevice]systemVersion]floatValue] >= 7.0)
+// 是否iOS6
+#define isIOS6                  ([[[UIDevice currentDevice]systemVersion]floatValue] < 7.0)
+// 是否iPad
+#define isPad                   (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 
 //针对iOS8添加 横屏时 width跟height调转
 #define SCREEN_MIN      MIN(SCREEN_WIDTH,SCREEN_HEIGHT)

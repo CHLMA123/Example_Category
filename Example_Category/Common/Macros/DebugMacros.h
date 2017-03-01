@@ -42,14 +42,27 @@
  */
 
 #ifdef DEBUG
-#define DebugLog(...)       NSLog(__VA_ARGS__)
-#define DebugLogMethod()    NSLog(@"%s (%d)", __PRETTY_FUNCTION__, __LINE__)
-//#define DebugLogMoreInfo(...)     NSLog(@"%s (%d): %@", __func__, __LINE__, [NSString stringWithFormat:__VA_ARGS__])
+#define kDebugLog(...)              NSLog(__VA_ARGS__)
+#define kDebugLogMethod()           NSLog(@"%s (%d)", __PRETTY_FUNCTION__, __LINE__)
+#define kDebugLogMethods( s, ... )   NSLog( @"< %@:(%d) > %@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )//< AppDelegate.m:(37) > 2
+
 #else
-#define DebugLog(...)
-#define DebugLogMethod()
-//#define DebugLogMoreInfo(...)
+#define kDebugLog(...)
+#define kDebugLogMethod()
+#define kDebugLogMethods( s, ... )
+
 #endif
+
+#ifdef DEBUG
+
+
+
+#else
+
+#define kDebugLogMethod( s, ... )
+
+#endif
+
 
 /**
  *  4 计算方法耗时时间间隔

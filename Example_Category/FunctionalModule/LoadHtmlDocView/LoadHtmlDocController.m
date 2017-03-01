@@ -20,6 +20,46 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setupView];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        UIViewController *topVC = [self getCurrentTopVC];
+        NSLog(@"topVC = %@", [topVC class]);
+        NSLog(@"self.class ... : %@",NSStringFromClass(self.class));
+        NSLog(@"currentVC = %@", [self getCurrentVC]);
+    });
+    
+//    UIViewController *topVC = [self getCurrentTopVC];
+//    NSLog(@"topVC = %@", [topVC class]);
+//    NSLog(@"self.class ... : %@",NSStringFromClass(self.class));
+//    NSLog(@"currentVC = %@", [self getCurrentVC]);
+    /*
+     2017-02-28 16:06:01.369017 Example_Category[1401:547218] topVC = UINavigationController
+     2017-02-28 16:06:01.369158 Example_Category[1401:547218] self.class ... : LoadHtmlDocController
+     2017-02-28 16:06:01.369255 Example_Category[1401:547218] currentVC = <LoadHtmlDocController: 0x131d1eec0>
+     */
+}
+
+- (UIViewController *)getCurrentTopVC{
+
+    UIViewController *tempVC = [UIApplication sharedApplication].keyWindow.rootViewController;
+    UIViewController *topVC = tempVC;
+    while (topVC.presentedViewController) {
+        topVC = topVC.presentedViewController;
+    }
+    return topVC;
+}
+
+- (UIViewController *)getCurrentVC{
+
+    NSArray *vcArray = self.navigationController.viewControllers;
+    if (vcArray.count > 0) {
+        return vcArray[0];
+    }else{
+    
+        return self;
+    }
+    
 }
 
 - (void)setupView{

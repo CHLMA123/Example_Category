@@ -10,7 +10,7 @@
 #define PathMacros_h
 
 /**
- *  定义沙盒目录文件的宏
+ *  沙盒路径
  */
 
 //获取沙盒Document路径

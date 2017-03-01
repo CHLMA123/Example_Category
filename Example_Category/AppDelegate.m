@@ -33,6 +33,13 @@
  }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    kDebugLogMethod();
+    kDebugLogMethods(@"111");
+    /*
+     2017-03-01 11:33:27.396157 Example_Category[2506:1139779] -[AppDelegate application:didFinishLaunchingWithOptions:] (37)
+     2017-03-01 11:33:27.396507 Example_Category[2506:1139779] < AppDelegate.m:(38) > 111
+     */
     // Override point for customization after application launch.
     [[TimeIntervalManager shareManager] beginInterval];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
@@ -51,9 +58,6 @@
     // APP发生异常时，打印当前堆栈信息
     //[[CrashReport sharedInstance] startUp];
     
-    NSString *str = @"abcdef";
-    DebugLog(@"%@", str);
-    DebugLogMethod();
     [[TimeIntervalManager shareManager] endIntervalWithTip:@"Application FinishLaunching..."];
     
 //    [JSPatch startWithAppKey:@"8cb0eec5166c6a22"];
